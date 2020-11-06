@@ -137,11 +137,11 @@
                         <br>
                         <div class="col">
                         Banbros Commercial Inc. is beyond
-The traditional distribution / trading company By focusing on BRANDING strategies for its Products.
+                        The traditional distribution / trading company By focusing on BRANDING strategies for its Products.
 
-The company believes in brand building As the key to the success of products  In the market for the long term.
+                        The company believes in brand building As the key to the success of products  In the market for the long term.
 
-90% of our products are successful due to our Branding activities
+                        90% of our products are successful due to our Branding activities
 
                         </div>
                     </div>
@@ -150,7 +150,150 @@ The company believes in brand building As the key to the success of products  In
             <div class="col"></div>
             <img src="assets/img/rightnode.png" class="node-right" alt="">
         </div>
+      </section>`
+
+      <div class="container">
+
+          <div class="mx-auto font-weight-bold">
+            <h3 class="text-center" style="color: ">ORGANIZATIONAL CHART <br> LUZON</h3>
+          </div>
+          <div class="mx-auto text-center org_chart">
+            <img src="assets/img/org-chart/org1.jpg" alt="">
+            <img src="assets/img/org-chart/org2.jpg" alt="">
+          </div>
+
+          <div class="mx-auto font-weight-bold">
+            <h3 class="text-center" style="color: ">ORGANIZATIONAL CHART <br> CEBU & DAVAO</h3>
+          </div>
+          <div class="mx-auto text-center org_chart">
+            <img src="assets/img/org-chart/org3.jpg" alt="">
+          </div>
+
+      </div>
+
+      <section>
+        <div class="container">
+          <div class="mx-auto">
+              <h3 class="text-center">Products</h3>
+              <img src="assets/img/products.jpg" class="products" alt="">
+          </div>
+        </div>
       </section>
+
+      <section>
+        <div class="container mt-8">
+            <div class="mx-auto text-center">
+              <h3>AFFILIATE COMPANIES</h3>
+            </div>
+            <div class="text-center">
+            <p>
+            
+            <span style="color: #1d3982; font-weight: bold; font-style: italic">Tekzone Inc.</span>
+              Service Company Handling Repairs and logistics for both end user and	channel . Tekzone has invested on a ( Ball Grid Array Machine) BGM	machine to further increase the capability of Tekzone to do board repair	of	components.
+
+              Main Service Centers:
+              Manila : Tekzone
+              1000 sq meter facility dedicated fro logistics, after sales support and	parts depot Located in Makati Area covers Luzon area
+
+              Cebu: Banbros Cebu Office
+              Covers Visayas and Mindanao Areas
+              Our service centers serve as parts depot with complete after sales	support including full staff of technicians
+            </p>
+            </div>
+
+        </div>
+     
+
+        <div class="container mt-8">
+            <div class="mx-auto text-center">
+              <h3>DISTRIBUTION CHANNEL <br> Partner for	Growth</h3>
+            </div>
+            <div >
+
+                <p class="text-center">
+                <b>Banbros Commercial Inc.</b> has a network of over 500 dealers from small to medium to large resellers.
+                </p>
+                <div class="mx-auto col-lg-8 col-sm-6">
+                    <ul>
+                        <li>IT Retailers – from small to large retail chains</li>
+                        <li>Corporate Resellers – corporate resellers both large and small</li>
+                        <li>System Integrators</li>
+                        <li>CE/Audio/Mobile Shops	– large appliance chains such as SM (consignor), Emcor , Wellcom, Semicon, Sony Centers, Sony Xperia Shops, Anson’s Appliance, Astro Vision, Robinson’s Appliance, K-Servico </li>
+                    </ul>
+                </div>
+                <p class="text-center">
+                <b>Channel partners spread among all major cities nationwide: </b> <br>
+                  Manila Office – serves Luzon Area and parts of Mindanao <br>
+                  Cebu Office – serves Visayas and Mindanao Area
+                </p>
+           
+            </div>
+
+        </div>
+      </section>
+
+      <section class="mt-9">
+        <div class="container">
+          <div class="mx-auto">
+            <h3 class="text-center">GEOGRAPHIC DISTRIBUTION</h3>
+            <img src="assets/img/map.png" class="products" alt="">
+          </div>
+        </div>
+
+        <div class="container mt-6">
+        <h3 class="text-center">CHANNEL DISTRIBUTION</h3>
+          <div class="row">
+            <div class="col-lg-6 text-center">
+              <img src="assets/img/org-chart/circle.png" class="circle">
+            </div>
+            <div class="col-lg-6">
+              <p class="d-none d-lg-block mt-7">Chart indicates that	Banbros has a wide	network of clients serving not only IT retailers as	well as covering the CE	Channels, the System	Integrators, Corporate and Cellphone Shops</p>
+
+              <p class="d-block d-lg-none text-center">Chart indicates that	Banbros has a wide	network of clients serving not only IT retailers as	well as covering the CE	Channels, the System	Integrators, Corporate and Cellphone Shops</p>
+
+              <p class="d-none d-lg-block">Chart also indicates that Banbros is able to	maintain sales growth	while maintaining a healthy distribution	across all channels.</p>
+
+              <p class="d-block d-lg-none text-center">Chart also indicates that Banbros is able to	maintain sales growth	while maintaining a healthy distribution	across all channels.</p>
+              
+            </div>
+          </div>
+          <div class="mx-auto text-center mt-5">
+            <img src="assets/img/org-chart/diamond.png" class="circle">
+          </div>
+        </div>
+      </section>
+
+      <section> 
+        <div class="container mt-9">
+          <div class="row">
+              <div class="col-lg-6 text-center">
+              <div class="col mt-9"></div>
+                <h1>SOCIAL </h1>
+                <h1>MEDIA </h1>
+                <hr width="150">
+                <p>Connecting bridges to the Virtual World</p>
+              </div>
+              <div class="col-lg-6">
+                <img src="assets/img/org-chart/social.png" class="social">
+              </div>
+          </div>
+        </div>      
+      </section>
+
+      <section>
+          <div class="row">
+           <div class="mx-auto my-6">
+           <a style="background: #3c5b9a; color: white" class="btn" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+           <i class="fab fa-facebook"></i> facebook
+            </a>
+
+            <a style="background: #f05161; color: white" class="btn" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <i class="fab fa-instagram"></i> Instagram
+            </a>
+           </div>
+          </div>
+      </section>
+
      
 
     </main>
