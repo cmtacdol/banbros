@@ -5,7 +5,7 @@
     <div style="z-index: 99;" class="container text-center text-white">
         <div class="pt-9">
             <div class="col">
-                <h2 class="font-weight-bold">Bocor</h2>
+                <h2 class="font-weight-bold">News Letter</h2>
             </div>
             <div class="mx-auto" style="width: 50%;">
                 <p><small class="font-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium enim ipsa blanditiis qui nulla, cumque est temporibus accusamus harum numquam eveniet fugiat </small></p>
