@@ -3,8 +3,8 @@
         <div class="container">
           <!-- Testimonials: Header -->
           <header class="text-center w-md-50 mx-auto mb-8">
-            <h2 class="h1">Testimonials</h2>
-            <p class="h5">Happy Clients</p>
+            <h2 class="h1">Press Release</h2>
+            <p class="h5">What's New</p>
           </header>
           <!-- End Testimonials: Header -->
 

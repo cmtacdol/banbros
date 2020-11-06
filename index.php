@@ -5,14 +5,14 @@
   <?php include 'view/common/nav.php'; ?>
 
       <!-- Promo Block -->
-      <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url(assets/img-temp/1920x1080/img3.jpg);">
+      <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url(assets/1920x1080/img10.jpg);">
         <!-- Promo Content -->
         <div class="container u-overlay__inner u-ver-center u-content-space">
           <div class="row justify-content-center">
             <div class="col-12">
               <div class="text-center">
-                <p class="text-uppercase u-letter-spacing-sm mb-0">Clean and Fully Responsive</p>
-                <h1 class="display-sm-4 display-lg-3 mb-3">We are <span class="js-display-typing"></span></h1>
+                <p class="text-uppercase u-letter-spacing-sm mb-0"></p>
+                <h1 class="display-sm-4 display-lg-3 mb-3"> <span class="js-display-typing"></span></h1>
                
               </div>
             </div>
@@ -63,32 +63,31 @@
             <div class="col-lg-6 align-self-center mb-5 mb-lg-0 pr-lg-5">
               <header class="mb-2">
                 <small style="color: grey">About Us</small>
-                <h5 style="color: #474a21" class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore omnis, cumque eius eveniet nam </h5>
-              </header>
+                <h5 style="color: #474a21" class="font-weight-bold">Banbros Commercial, Inc. </header>
 
-              <p class="mb-4"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem error beatae vitae deleniti nulla soluta inventore voluptas illo mollitia, fugit nemo sit eligendi alias laboriosam necessitatibus corporis veniam enim.</small></p>
+              <p class="mb-4"><small>Established in 1997, carrying the primary purpose of distributing high quality IT products in the Philippine Market.</small></p>
 
               <div class="row">
                 <div class="mx-auto mt-2">
                   <div class="rounded-border">
-                      <i class="fas fa-gift"></i>
+                    <i class="far fa-eye"></i>
                   </div>
                 </div>
                 <div class="col">
-                  <h5 class="mb-0">Lorem</h5>
-                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, consequuntur provident. Officiis incidun</small>
+                  <h5 class="mb-0">VISION</h5>
+                    <small>Banbros Commercial Inc. vision is to be the Global forefront Top Tier value-added Supplier  of Innovative IT products and end-to-end  services in the Information Technology  distribution industry by providing holistic and  complementing products to provide strong and  consistent growth in both revenues and profit  for the company and for its partners.</small>
                 </div>
               </div>
 
               <div class="row mt-4">
                 <div class="mx-auto mt-2">
                   <div class="rounded-border">
-                      <i class="fas fa-gift"></i>
+                    <i class="fas fa-rocket"></i>
                   </div>
                 </div>
                 <div class="col">
-                  <h5 class="mb-0">Lorem</h5>
-                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, consequuntur provident. Officiis incidun</small>
+                  <h5 class="mb-0">MISSION</h5>
+                    <small>Banbros Commercial Inc. mission is to be  the top forefront Innovator that provides IT  products, essentials, holistic solution and  excellent services all in one for customer  Satisfaction. We continuously seek improvements for more  efficient, productive and satisfied employees,  reseller and customer so we can all gain  growth in all aspects.</small>
                 </div>
               </div>
 
@@ -139,61 +138,159 @@
           <ul class="js-shuffle-controls u-portfolio-controls text-center mb-5">
             <li class="u-portfolio-controls__item"><a href="#!" data-group="all" class="active">All</a></li>
             <li class="u-portfolio-controls__item"><a href="#!" data-group="lifaAir">Lifa Air</a></li>
-            <li class="u-portfolio-controls__item"><a href="#!" data-group="acer">Acer</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="gamdias">Gamdias</a></li>
             <li class="u-portfolio-controls__item"><a href="#!" data-group="edifier">Edifier</a></li>
           </ul>
 
           <!-- Work Content -->
           <div class="js-shuffle u-portfolio row no-gutters mb-6">
             <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["lifaAir"]'>
-              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img1.jpg" alt="Image Description">
+              <img class="u-portfolio__image" src="assets/portfolio/img7.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
-                <h6 class="mb-0">IX Project</h6>
-                <small class="d-block">Branding</small>
+                <h6 class="mb-0">LA500V</h6>
+                <small class="d-block">LIFA AIR</small>
               </figcaption>
-              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img1.jpg">Zoom</a>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img7.jpg">Zoom</a>
             </figure>
-
-            <?php for($i=0; $i<3; $i++){ ?>
-
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["acer"]'>
-              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img2.jpg" alt="Image Description">
-              <figcaption class="u-portfolio__info">
-                <h6 class="mb-0">Bottle Design</h6>
-                <small class="d-block">Mockup</small>
-              </figcaption>
-              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img2.jpg">Zoom</a>
-            </figure>
-
-            <?php } ?>
-            
-
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
-              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img3.jpg" alt="Image Description">
-              <figcaption class="u-portfolio__info">
-                <h6 class="mb-0">App Developement</h6>
-                <small class="d-block">Åpp</small>
-              </figcaption>
-              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img3.jpg">Zoom</a>
-            </figure>
-
             <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["lifaAir"]'>
-              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img5.jpg" alt="Image Description">
+              <img class="u-portfolio__image" src="assets/portfolio/img8.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
-                <h6 class="mb-0">Cake Lab</h6>
-                <small class="d-block">Graphic</small>
+                <h6 class="mb-0">LA350A</h6>
+                <small class="d-block">LIFA AIR</small>
               </figcaption>
-              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img5.jpg">Zoom</a>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img8.jpg">Zoom</a>
+            </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["lifaAir"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img9.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">LAC52</h6>
+                <small class="d-block">LIFA AIR</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img9.jpg">Zoom</a>
+            </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["lifaAir"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img10.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">LAC100</h6>
+                <small class="d-block">LIFA AIR</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img10.jpg">Zoom</a>
+            </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["lifaAir"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img11.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">LM991</h6>
+                <small class="d-block">LIFA AIR</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img11.jpg">Zoom</a>
+            </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["lifaAir"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img12.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">LAF200</h6>
+                <small class="d-block">LIFA AIR</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img12.jpg">Zoom</a>
+            </figure>
+
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["gamdias"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img13.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">Achilles M1A</h6>
+                <small class="d-block">GAMDIAS</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img13.jpg">Zoom</a>
+            </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["gamdias"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img14.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">Apollo DHD 356C Curved</h6>
+                <small class="d-block">GAMDIAS</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img14.jpg">Zoom</a>
+            </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["gamdias"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img15.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">Atlas HD275C Curved Monitor</h6>
+                <small class="d-block">GAMDIAS</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img15.jpg">Zoom</a>
+            </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["gamdias"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img16.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">Gaming Keyboard Hermes E2A</h6>
+                <small class="d-block">GAMDIAS</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img16.jpg">Zoom</a>
+            </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["gamdias"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img17.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">Gaming Mouse Zeus E1</h6>
+                <small class="d-block">GAMDIAS</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img17.jpg">Zoom</a>
+            </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["gamdias"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img18.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">Hebe E1</h6>
+                <small class="d-block">GAMDIAS</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img18.jpg">Zoom</a>
             </figure>
 
             <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
-              <img class="u-portfolio__image" src="assets/img-temp/portfolio/img6.jpg" alt="Image Description">
+              <img class="u-portfolio__image" src="assets/portfolio/img19.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
-                <h6 class="mb-0">NB Project</h6>
-                <small class="d-block">Logo</small>
+                <h6 class="mb-0">XM3BT Multimedia Speaker</h6>
+                <small class="d-block">EDIFIER</small>
               </figcaption>
-              <a class="js-popup-image u-portfolio__zoom" href="assets/img-temp/portfolio/img6.jpg">Zoom</a>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img19.jpg">Zoom</a>
             </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img20.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">W855BT Premiere Bluetooth Headset</h6>
+                <small class="d-block">EDIFIER</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img20.jpg">Zoom</a>
+            </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img21.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">W820BT Bluetooth Headset</h6>
+                <small class="d-block">EDIFIER</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img21.jpg">Zoom</a>
+            </figure> 
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img22.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">V4 Gaming Headset</h6>
+                <small class="d-block">EDIFIER</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img22.jpg">Zoom</a>
+            </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img23.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">TWS5 True Wireless Earbuds</h6>
+                <small class="d-block">EDIFIER</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img23.jpg">Zoom</a>
+            </figure>
+            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
+              <img class="u-portfolio__image" src="assets/portfolio/img24.jpg" alt="Image Description">
+              <figcaption class="u-portfolio__info">
+                <h6 class="mb-0">MP100</h6>
+                <small class="d-block">EDIFIER</small>
+              </figcaption>
+              <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img24.jpg">Zoom</a>
+            </figure>
+
 
             <!-- sizer -->
             <figure class="col-sm-6 col-md-4 u-portfolio__item shuffle_sizer"></figure>
@@ -249,9 +346,8 @@
         // initialization of text animation (typing)
         $(".js-display-typing").typed({
           strings: [
-            "Stream",
-            "Creative",
-            "Innovative"
+            "Your Value",
+            "Added Distributor"
           ],
           typeSpeed: 60,
           loop: true,
