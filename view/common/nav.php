@@ -25,10 +25,10 @@
                 <a class="nav-link active" href="about.php">About</a>
               </li>
               <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <a class="nav-link" href="#">Business</a>
+                <a class="nav-link" href="business.php">Business</a>
               </li>
               <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <a class="nav-link" href="#">Consumer</a>
+                <a class="nav-link" href="consumer.php">Consumer</a>
               </li>
               <!-- <li class="nav-item dropdown mr-4 mb-2 mb-lg-0">
                 <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,13 +40,13 @@
                 </div>
               </li> -->
               <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <a class="nav-link" href="#">News</a>
+                <a class="nav-link" href="news.php">News</a>
               </li>
               <li class="nav-item mr-4 mb-2 mb-lg-0">
                 <a class="nav-link" href="#">Career</a>
               </li>
               <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <a class="nav-link" href="#">Contacts</a>
+                <a class="nav-link" href="contact.php">Contacts</a>
               </li>
             </ul>
             <div class="nav-item mb-lg-0 row">

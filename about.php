@@ -150,7 +150,7 @@
             <div class="col"></div>
             <img src="assets/img/rightnode.png" class="node-right" alt="">
         </div>
-      </section>`
+      </section>
 
       <div class="container">
 
