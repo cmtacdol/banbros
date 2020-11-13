@@ -13,9 +13,6 @@
           <img class="u-clients__image" src="assets/img-temp/partners/ANYTEK (1).png" alt="Image Description">
         </div>
         <div class="u-clients__item">
-          <img class="u-clients__image" src="assets/img-temp/partners/ACER (1).png" alt="Image Description">
-        </div>
-        <div class="u-clients__item">
           <img class="u-clients__image" src="assets/img-temp/partners/belkin.png" alt="Image Description">
         </div>
         <div class="u-clients__item">
@@ -79,7 +76,7 @@
           <img class="u-clients__image" src="assets/img-temp/partners/THIEYE.png" alt="Image Description">
         </div>
         <div class="u-clients__item">
-          <img class="u-clients__image" src="assets/img-temp/partners/Tough-Tested-Logo.png" alt="Image Description">
+          <img class="u-clients__image" src="assets/img-temp/partners/toughtested.png" alt="Image Description">
         </div>
         <div class="u-clients__item">
           <img class="u-clients__image" src="assets/img-temp/partners/ubtech.png" alt="Image Description">
