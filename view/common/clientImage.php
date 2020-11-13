@@ -1,10 +1,10 @@
  <!-- Clients Section -->
  <section class="js-clients u-clients">
         <div class="u-clients__item">
-          <img class="u-clients__image" src="assets/img-temp/partners/ablerex.png" alt="Image Description">
+          <img class="u-clients__image" src="assets/img-temp/partners/Ablerex SG Logo-01.png" alt="Image Description">
         </div>
         <div class="u-clients__item">
-          <img class="u-clients__image" src="assets/img-temp/partners/acer.png" alt="Image Description">
+          <img class="u-clients__image" src="assets/img-temp/partners/ACER (1).png" alt="Image Description">
         </div>
         <div class="u-clients__item">
           <img class="u-clients__image" src="assets/img-temp/partners/altec-lansing-vector-logo.png" alt="Image Description">
@@ -13,10 +13,7 @@
           <img class="u-clients__image" src="assets/img-temp/partners/ANYTEK (1).png" alt="Image Description">
         </div>
         <div class="u-clients__item">
-          <img class="u-clients__image" src="assets/img-temp/partners/ASUS.png" alt="Image Description">
-        </div>
-        <div class="u-clients__item">
-          <img class="u-clients__image" src="assets/img-temp/partners/BANBROS LOGO TEXT-01 (2).png" alt="Image Description">
+          <img class="u-clients__image" src="assets/img-temp/partners/ACER (1).png" alt="Image Description">
         </div>
         <div class="u-clients__item">
           <img class="u-clients__image" src="assets/img-temp/partners/belkin.png" alt="Image Description">
@@ -28,7 +25,7 @@
           <img class="u-clients__image" src="assets/img-temp/partners/EDGECORE.png" alt="Image Description">
         </div>
         <div class="u-clients__item">
-          <img class="u-clients__image" src="assets/img-temp/partners/Edifier1.png" alt="Image Description">
+          <img class="u-clients__image" src="assets/img-temp/partners/Edifier.png" alt="Image Description">
         </div>
         <div class="u-clients__item">
           <img class="u-clients__image" src="assets/img-temp/partners/GD_Logo_Glod_H.png" alt="Image Description">
