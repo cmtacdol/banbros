@@ -51,24 +51,25 @@
 
       
       <section class="u-content-space">
-      <div class="container">
+      <div class="container mx-auto w-100 ">
           <div class="row">
                 <!-- Article Image -->
-                <div class="col-lg-6 align-self-center text-left">
+            <div class="col-lg-6">
               <img class="img-fluid products rounded" src="assets/img/sampleImage.jpg" alt="Iamge Description">
             </div>
             <!-- End Article Image -->
 
             <!-- Article Content -->
-            <div class="col-lg-6 align-self-center mb-5 mb-lg-0 pr-lg-5">
-              <header class="mb-2">
-                <small style="color: grey">About Us</small>
-                <h5 style="color: #474a21" class="font-weight-bold">Banbros Commercial, Inc. </header>
+            <div class="col-lg-6 mb-5 mb-lg-0 p-2 text-center text-lg-left">
+              <header class="mb-2 text-center text-lg-left">
+                <p class="mb-0" style="color: grey">About Us</p>
+                <h5 style="color: #474a21" class="font-weight-bold">Banbros Commercial, Inc. 
+              </header>
 
               <p class="mb-4"><small>Established in 1997, carrying the primary purpose of distributing high quality IT products in the Philippine Market.</small></p>
 
               <div class="row">
-                <div class="mx-auto mt-2">
+                <div class="mt-2 d-none d-lg-block">
                   <div class="rounded-border">
                     <i class="far fa-eye"></i>
                   </div>
@@ -80,7 +81,7 @@
               </div>
 
               <div class="row mt-4">
-                <div class="mx-auto mt-2">
+                <div class="mt-2 d-none d-lg-block">
                   <div class="rounded-border">
                     <i class="fas fa-rocket"></i>
                   </div>
@@ -335,6 +336,54 @@
       </div>
 
     </main>
+
+    <div class=" overFooter">
+    <div class="overlay">
+        <!-- <img src="assets/img/footerimg.jpg" alt="Banbros"> -->
+    </div>
+    <div style="z-index: 99;" class="container text-center text-white">
+        <div class="pt-9">
+            <div class="col">
+                <h2 class="font-weight-bold">News Letter</h2>
+            </div>
+            <div class="mx-auto" style="width: 50%;">
+                <p><small class="font-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium enim ipsa blanditiis qui nulla, cumque est temporibus accusamus harum numquam eveniet fugiat </small></p>
+            </div>
+            <div class="mx-auto" style="width: 50%;">
+                <div class="input-group">
+                    <input type="email" class="form-control border border-none" placeholder="Enter your email">
+                    <div class="input-group-append">
+                        <button class="btn btn-warning text-white" type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col mt-4">
+                <ul class="list-inline text-center mb-0">
+                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Facebook">
+                    <a class="text-white" target="_blank" href="#">
+                    <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Instagram">
+                    <a class="text-white" target="_blank" href="#">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Twitter">
+                    <a class="text-white" target="_blank" href="#">
+                    <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="linkedin">
+                    <a class="text-white" target="_blank" href="#">
+                    <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
     <?php include 'view/common/footer.php'; ?>
 
