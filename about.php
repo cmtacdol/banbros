@@ -26,7 +26,33 @@
 
     <main role="main">
 
-    <?php include 'view/common/clientImage.php'; ?>
+    <!-- Tab navigation -->
+    <section class="u-content-space">
+      <div class="container">
+          <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="pills-one-tab" data-toggle="pill" href="#pills-one" role="tab" aria-controls="pills-one" aria-selected="true">Company History</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-two-tab" data-toggle="pill" href="#pills-two" role="tab" aria-controls="pills-two" aria-selected="false">Affiliates</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-three-tab" data-toggle="pill" href="#pills-three" role="tab" aria-controls="pills-three" aria-selected="false">Channel Distribution</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-four-tab" data-toggle="pill" href="#pills-four" role="tab" aria-controls="pills-contact" aria-selected="false">Organizational chart</a>
+              </li>
+          </ul>
+          <div class="tab-content mt-5" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-one" role="tabpanel" aria-labelledby="pills-one-tab">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae voluptas aliquam id aspernatur praesentium sit sed, labore aut ipsum enim, in explicabo doloribus voluptatibus ipsa cupiditate. Ducimus consequuntur in debitis!</div>
+            <div class="tab-pane fade" id="pills-two" role="tabpanel" aria-labelledby="pills-two-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, reiciendis blanditiis. Dolore voluptas sunt similique, odit amet ut. Rem porro temporibus eius perspiciatis fugiat, corrupti perferendis earum delectus eligendi quibusdam.</div>
+            <div class="tab-pane fade" id="pills-three" role="tabpanel" aria-labelledby="pills-three-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, reiciendis blanditiis. Dolore voluptas sunt similique, odit amet ut. Rem porro temporibus eius perspiciatis fugiat, corrupti perferendis earum delectus eligendi quibusdam.</div>
+            <div class="tab-pane fade" id="pills-four" role="tabpanel" aria-labelledby="pills-four-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, reiciendis blanditiis. Dolore voluptas sunt similique, odit amet ut. Rem porro temporibus eius perspiciatis fugiat, corrupti perferendis earum delectus eligendi quibusdam.</div>
+          </div>
+      </div>
+    </section>
+
+
 
       <section class="u-content-space">
       <div class="container">

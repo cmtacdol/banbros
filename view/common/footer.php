@@ -1,50 +1,4 @@
-<div class=" overFooter">
-    <div class="overlay">
-        <!-- <img src="assets/img/footerimg.jpg" alt="Banbros"> -->
-    </div>
-    <div style="z-index: 99;" class="container text-center text-white">
-        <div class="pt-9">
-            <div class="col">
-                <h2 class="font-weight-bold">News Letter</h2>
-            </div>
-            <div class="mx-auto" style="width: 50%;">
-                <p><small class="font-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium enim ipsa blanditiis qui nulla, cumque est temporibus accusamus harum numquam eveniet fugiat </small></p>
-            </div>
-            <div class="mx-auto" style="width: 50%;">
-                <div class="input-group">
-                    <input type="email" class="form-control border border-none" placeholder="Enter your email">
-                    <div class="input-group-append">
-                        <button class="btn btn-warning text-white" type="submit">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col mt-4">
-                <ul class="list-inline text-center mb-0">
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Facebook">
-                    <a class="text-white" target="_blank" href="#">
-                    <i class="fab fa-facebook"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Instagram">
-                    <a class="text-white" target="_blank" href="#">
-                    <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Twitter">
-                    <a class="text-white" target="_blank" href="#">
-                    <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Dribbble">
-                    <a class="text-white" target="_blank" href="#">
-                    <i class="fab fa-dribbble"></i>
-                    </a>
-                </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!-- Footer -->
 <footer class="bg-dark py-5">
       <div class="container">
@@ -65,13 +19,13 @@
             <div class="row">
                     <div class="col">
                         
-                            <a class="nav-link text-white" href="#">Home</a>
+                            <a class="nav-link text-white" href="index.php">Home</a>
                         
-                            <a class="nav-link text-white" href="#">About Us</a>
+                            <a class="nav-link text-white" href="about.php">About Us</a>
                         
-                            <a class="nav-link text-white" href="#">Products</a>
+                            <a class="nav-link text-white" href="business.php">Products</a>
                         
-                            <a class="nav-link text-white" href="#">News</a>
+                            <a class="nav-link text-white" href="news.php">News</a>
                     </div>
                     <div class="col-auto">
                     
@@ -79,9 +33,9 @@
                         
                             <a class="nav-link text-white" href="#">Become a Reseller</a>
                         
-                            <a class="nav-link text-white" href="#">Contact Us</a>
+                            <a class="nav-link text-white" href="contact.php">Contact Us</a>
                         
-                            <a class="nav-link text-white" href="#">Privacy Policy</a>
+                            <!-- <a class="nav-link text-white" href="#">Privacy Policy</a> -->
                     </div>
             </div>
         </div>
