@@ -22,7 +22,7 @@
           <img class="u-clients__image" src="assets/img-temp/partners/EDGECORE.png" alt="Image Description">
         </div>
         <div class="u-clients__item">
-          <img class="u-clients__image" src="assets/img-temp/partners/Edifier.png" alt="Image Description">
+          <img class="u-clients__image" src="https://ainpex.com/banbros/assets/img-temp/partners/edifier.png" alt="Image Description">
         </div>
         <div class="u-clients__item">
           <img class="u-clients__image" src="assets/img-temp/partners/GD_Logo_Glod_H.png" alt="Image Description">
