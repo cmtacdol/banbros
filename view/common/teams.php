@@ -15,11 +15,11 @@
             <div class="card-group p-3">
                     <div class="card">
                         <div class="fixImage">
-                            <img src="assets/img/m1.jpg" class="card-img-top" alt="">
+                            <img src="assets/img-temp/ava/1.png" class="card-img-top" alt="">
                         </div>
                         <div class="card-body">
-                        <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Sarahngeyo</h5>
-                        <p style="color: grey;" class="text-center pt-0 font-italic"><small>Product Manager</small></p>
+                        <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Lorem Ipsum</h5>
+                        <p style="color: grey;" class="text-center pt-0 font-italic"><small>Vice President</small></p>
                         <div class="row socials mb-0 d-flex justify-content-center">
                             <a class="btn stretched-link" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn stretched-link" href=""><i class="fab fa-twitter"></i></a>
@@ -31,11 +31,11 @@
                     <div class="col-1"></div>
                     <div class="card">
                     <div class="fixImage">
-                        <img src="assets/img/m2.jpg" class="card-img-top" alt="">
+                        <img src="assets/img-temp/ava/1.png" class="card-img-top" alt="">
                     </div>
                         <div class="card-body">
-                         <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Jason</h5>
-                         <p style="color: grey;" class="text-center pt-0 font-italic"><small>CEO</small></p>
+                         <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Lorem Ipsum</h5>
+                         <p style="color: grey;" class="text-center pt-0 font-italic"><small>President</small></p>
                         <div class="row socials mb-0 d-flex justify-content-center">
                             <a class="btn stretched-link" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn stretched-link" href=""><i class="fab fa-twitter"></i></a>
@@ -47,11 +47,11 @@
                     <div class="col-1"></div>
                     <div class="card">
                     <div class="fixImage">
-                        <img src="assets/img/m3.jpg" class="card-img-top" alt="">
+                        <img src="assets/img-temp/ava/1.png" class="card-img-top" alt="">
                     </div>
                         <div class="card-body">
-                         <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Andrew</h5>
-                         <p style="color: grey;" class="text-center pt-0 font-italic"><small>Freelancer</small></p>
+                         <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Lorem Ipsum</h5>
+                         <p style="color: grey;" class="text-center pt-0 font-italic"><small>Opiration Manager</small></p>
                         <div class="row socials mb-0 d-flex justify-content-center">
                             <a class="btn stretched-link" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn stretched-link" href=""><i class="fab fa-twitter"></i></a>
