@@ -5,7 +5,7 @@
   <?php include 'view/common/nav.php'; ?>
 
       <!-- Promo Block -->
-      <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url(assets/1920x1080/img10.jpg);">
+      <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url(assets/1920x1080/img001.jpg);">
         <!-- Promo Content -->
         <div class="container u-overlay__inner u-ver-center u-content-space">
           <div class="row justify-content-center">
