@@ -15,48 +15,48 @@
             <div class="card-group p-3">
                     <div class="card">
                         <div class="fixImage">
-                            <img src="assets/img-temp/ava/1.png" class="card-img-top" alt="">
+                            <!-- <img src="assets/img-temp/ava/1.png" class="card-img-top" alt=""> -->
                         </div>
                         <div class="card-body">
-                        <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Lorem Ipsum</h5>
-                        <p style="color: grey;" class="text-center pt-0 font-italic"><small>Vice President</small></p>
+                        <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Richard Bangayan</h5>
+                        <p style="color: grey;" class="text-center pt-0 font-italic"><small>Vice President for Sales</small></p>
                         <div class="row socials mb-0 d-flex justify-content-center">
                             <a class="btn stretched-link" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn stretched-link" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn stretched-link" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn stretched-link" href=""><i class="fab fa-linkedin"></i></a>
+                            <!-- <a class="btn stretched-link" href=""><i class="fab fa-linkedin"></i></a> -->
                         </div>
                         </div>
                     </div>
                     <div class="col-1"></div>
                     <div class="card">
                     <div class="fixImage">
-                        <img src="assets/img-temp/ava/1.png" class="card-img-top" alt="">
+                        <!-- <img src="assets/img-temp/ava/1.png" class="card-img-top" alt=""> -->
                     </div>
                         <div class="card-body">
-                         <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Lorem Ipsum</h5>
-                         <p style="color: grey;" class="text-center pt-0 font-italic"><small>President</small></p>
+                         <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Paton Lao</h5>
+                         <p style="color: grey;" class="text-center pt-0 font-italic"><small>Vice President for Operations</small></p>
                         <div class="row socials mb-0 d-flex justify-content-center">
                             <a class="btn stretched-link" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn stretched-link" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn stretched-link" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn stretched-link" href=""><i class="fab fa-linkedin"></i></a>
+                            <!-- <a class="btn stretched-link" href=""><i class="fab fa-linkedin"></i></a> -->
                         </div>
                         </div>
                     </div>
                     <div class="col-1"></div>
                     <div class="card">
                     <div class="fixImage">
-                        <img src="assets/img-temp/ava/1.png" class="card-img-top" alt="">
+                        <!-- <img src="assets/img-temp/ava/1.png" class="card-img-top" alt=""> -->
                     </div>
                         <div class="card-body">
-                         <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Lorem Ipsum</h5>
-                         <p style="color: grey;" class="text-center pt-0 font-italic"><small>Opiration Manager</small></p>
+                         <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Gayle Trinidad</h5>
+                         <p style="color: grey;" class="text-center pt-0 font-italic"><small>Vice President for Sales and Marketing</small></p>
                         <div class="row socials mb-0 d-flex justify-content-center">
                             <a class="btn stretched-link" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn stretched-link" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn stretched-link" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn stretched-link" href=""><i class="fab fa-linkedin"></i></a>
+                            <!-- <a class="btn stretched-link" href=""><i class="fab fa-linkedin"></i></a> -->
                         </div>
                         </div>
                     </div>
