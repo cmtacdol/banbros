@@ -3,7 +3,7 @@
   <body>
    
   <?php include 'view/common/nav.php'; ?>
-
+      
       <!-- Promo Block -->
       <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url(assets/1920x1080/BBCC.jpg);">
         <!-- Promo Content -->
@@ -21,7 +21,6 @@
         <!-- End Promo Content -->
       </section>
       <!-- End Promo Block -->
-    </header>
     <!-- End Header -->
 
     <main role="main">
@@ -61,10 +60,10 @@
 
             <!-- Article Content -->
             <div class="col-lg-6 mb-5 mb-lg-0 p-2 text-center text-lg-left">
-              <header class="mb-2 text-center text-lg-left">
+              <div class="mb-2 text-center text-lg-left">
                 <p class="mb-0" style="color: grey">About Us</p>
-                <h5 style="color: #474a21" class="font-weight-bold">Banbros Commercial, Inc. 
-              </header>
+                <h5 style="color: #474a21" class="font-weight-bold">Banbros Commercial, Inc.</h5>
+                </div>
 
               <p class="mb-4"><small>Established in 1997, carrying the primary purpose of distributing high quality IT products in the Philippine Market.</small></p>
 
@@ -131,7 +130,7 @@
 
        <!-- Portfolio -->
        <section class="u-content-space">
-        <div class="container">
+        <div class="container-fliud">
           <header class="text-center w-md-50 mx-auto mb-8">
             <h2 class="h1">Featured Products</h2>
           </header>
@@ -145,7 +144,7 @@
 
           <!-- Work Content -->
           <div class="js-shuffle u-portfolio row no-gutters mb-6">
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["lifaAir"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["lifaAir"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img7.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">LA500V</h6>
@@ -153,7 +152,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img7.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["lifaAir"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["lifaAir"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img8.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">LA350A</h6>
@@ -161,7 +160,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img8.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["lifaAir"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["lifaAir"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img9.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">LAC52</h6>
@@ -169,7 +168,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img9.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["lifaAir"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["lifaAir"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img10.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">LAC100</h6>
@@ -177,7 +176,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img10.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["lifaAir"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["lifaAir"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img11.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">LM991</h6>
@@ -185,7 +184,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img11.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["lifaAir"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["lifaAir"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img12.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">LAF200</h6>
@@ -194,7 +193,7 @@
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img12.jpg">Zoom</a>
             </figure>
 
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["gamdias"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["gamdias"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img13.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">Achilles M1A</h6>
@@ -202,7 +201,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img13.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["gamdias"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["gamdias"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img14.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">Apollo DHD 356C Curved</h6>
@@ -210,7 +209,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img14.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["gamdias"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["gamdias"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img15.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">Atlas HD275C Curved Monitor</h6>
@@ -218,7 +217,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img15.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["gamdias"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["gamdias"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img16.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">Gaming Keyboard Hermes E2A</h6>
@@ -226,7 +225,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img16.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["gamdias"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["gamdias"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img17.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">Gaming Mouse Zeus E1</h6>
@@ -234,7 +233,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img17.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["gamdias"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["gamdias"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img18.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">Hebe E1</h6>
@@ -243,7 +242,7 @@
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img18.jpg">Zoom</a>
             </figure>
 
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["edifier"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img19.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">XM3BT Multimedia Speaker</h6>
@@ -251,7 +250,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img19.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["edifier"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img20.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">W855BT Premiere Bluetooth Headset</h6>
@@ -259,7 +258,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img20.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["edifier"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img21.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">W820BT Bluetooth Headset</h6>
@@ -267,7 +266,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img21.jpg">Zoom</a>
             </figure> 
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["edifier"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img22.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">V4 Gaming Headset</h6>
@@ -275,7 +274,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img22.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["edifier"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img23.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">TWS5 True Wireless Earbuds</h6>
@@ -283,7 +282,7 @@
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img23.jpg">Zoom</a>
             </figure>
-            <figure class="col-sm-6 col-md-4 u-portfolio__item" data-groups='["edifier"]'>
+            <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["edifier"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img24.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">MP100</h6>
@@ -298,7 +297,7 @@
           </div>
           <!-- End Work Content -->
 
-        
+        <
       </section>
       <!-- End Portfolio -->
       

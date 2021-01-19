@@ -69,9 +69,7 @@
         <div class="u-clients__item">
           <img class="u-clients__image" src="assets/img-temp/partners/sony.png" alt="Image Description">
         </div>
-        <div class="u-clients__item">
-          <img class="u-clients__image" src="assets/img-temp/partners/tekplay_logo.png" alt="Image Description">
-        </div>
+        
         <div class="u-clients__item">
           <img class="u-clients__image" src="assets/img-temp/partners/THIEYE.png" alt="Image Description">
         </div>
