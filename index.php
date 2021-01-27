@@ -137,18 +137,19 @@
 
           <ul class="js-shuffle-controls u-portfolio-controls text-center mb-5">
             <li class="u-portfolio-controls__item"><a href="#!" data-group="all" class="active">All</a></li>
-            <li class="u-portfolio-controls__item"><a href="#!" data-group="lifaAir">Lifa Air</a></li>
+            <li class="u-portfolio-controls__item"><a href="#!" data-group="lifaAir">LIFAair</a></li>
             <li class="u-portfolio-controls__item"><a href="#!" data-group="gamdias">Gamdias</a></li>
             <li class="u-portfolio-controls__item"><a href="#!" data-group="edifier">Edifier</a></li>
           </ul>
 
           <!-- Work Content -->
           <div class="js-shuffle u-portfolio row no-gutters mb-6">
+              
             <figure class="col-sm-4 col-md-2 u-portfolio__item" data-groups='["lifaAir"]'>
               <img class="u-portfolio__image" src="assets/portfolio/img7.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">LA500V</h6>
-                <small class="d-block">LIFA AIR</small>
+                <small class="d-block">LIFAair</small>
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img7.jpg">Zoom</a>
             </figure>
@@ -156,7 +157,7 @@
               <img class="u-portfolio__image" src="assets/portfolio/img8.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">LA350A</h6>
-                <small class="d-block">LIFA AIR</small>
+                <small class="d-block">LIFAair</small>
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img8.jpg">Zoom</a>
             </figure>
@@ -164,7 +165,7 @@
               <img class="u-portfolio__image" src="assets/portfolio/img9.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">LAC52</h6>
-                <small class="d-block">LIFA AIR</small>
+                <small class="d-block">LIFAair</small>
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img9.jpg">Zoom</a>
             </figure>
@@ -172,7 +173,7 @@
               <img class="u-portfolio__image" src="assets/portfolio/img10.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">LAC100</h6>
-                <small class="d-block">LIFA AIR</small>
+                <small class="d-block">LIFAair</small>
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img10.jpg">Zoom</a>
             </figure>
@@ -180,7 +181,7 @@
               <img class="u-portfolio__image" src="assets/portfolio/img11.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">LM991</h6>
-                <small class="d-block">LIFA AIR</small>
+                <small class="d-block">LIFAair</small>
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img11.jpg">Zoom</a>
             </figure>
@@ -188,7 +189,7 @@
               <img class="u-portfolio__image" src="assets/portfolio/img12.jpg" alt="Image Description">
               <figcaption class="u-portfolio__info">
                 <h6 class="mb-0">LAF200</h6>
-                <small class="d-block">LIFA AIR</small>
+                <small class="d-block">LIFAair</small>
               </figcaption>
               <a class="js-popup-image u-portfolio__zoom" href="assets/portfolio/img12.jpg">Zoom</a>
             </figure>
@@ -293,11 +294,11 @@
 
 
             <!-- sizer -->
-            <figure class="col-sm-6 col-md-4 u-portfolio__item shuffle_sizer"></figure>
+<!--            <figure class="col-sm-6 col-md-4 u-portfolio__item shuffle_sizer"></figure>-->
           </div>
           <!-- End Work Content -->
 
-        <
+           </div>
       </section>
       <!-- End Portfolio -->
       
@@ -316,19 +317,19 @@
                           <h1 style="color: white;" class="card-title font-weight-bold text-center mb-0">Inquire Now</h1>
                           <div class="col text-center d-flex justify-content-center">
                               <div class="text-white">
-                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint dolore, error, facere repellat nam officiis, commodi alias in dolor voluptates quas ipsam ea aut eum animi nesciunt nobis explicabo voluptatibus!
+                              Are you a customer that needs help?<br> That’s what the BCI is for.
                               </div>
                           </div>
-                          <a href="" style="background: white; border-radius: 15px" type="button" class="btn mt-3 text-dark font-weight-bold">CONNECT</a>
+                          <a href="contact.php" style="background: white; border-radius: 15px" type="button" class="btn mt-3 text-dark font-weight-bold">Connect with us now.</a>
                         </div>
                         <div class="col-md-6 text-center">
                           <h1 style="color: white;" class="card-title font-weight-bold text-center mb-0">Get Support</h1>
                           <div class="col text-center d-flex justify-content-center">
                               <div class="text-white">
-                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint dolore, error, facere repellat nam officiis, commodi alias in dolor voluptates quas ipsam ea aut eum animi nesciunt nobis explicabo voluptatibus!
+                              Need support? just contact<br>TEKZONE Computer Sales and Services, Inc.
                               </div>
                           </div>
-                          <a href="" style="background: white; border-radius: 15px" type="button" class="btn mt-3 text-dark font-weight-bold">GET HELP</a>
+                          <a href="" style="background: white; border-radius: 15px" type="button" class="btn mt-3 text-dark font-weight-bold">Contact support now</a>
                         </div>
                  </div>
               </div>
@@ -346,7 +347,7 @@
                 <h2 class="font-weight-bold">News Letter</h2>
             </div>
             <div class="mx-auto" style="width: 50%;">
-                <p><small class="font-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium enim ipsa blanditiis qui nulla, cumque est temporibus accusamus harum numquam eveniet fugiat </small></p>
+                <p><small class="font-italic">Be updated with the trends in technology.<br>Subscribe to us and we will keep you posted. </small></p>
             </div>
             <div class="mx-auto" style="width: 50%;">
                 <div class="input-group">
@@ -363,6 +364,7 @@
                     <i class="fab fa-facebook"></i>
                     </a>
                 </li>
+<!--
                 <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Instagram">
                     <a class="text-white" target="_blank" href="#">
                     <i class="fab fa-instagram"></i>
@@ -373,6 +375,7 @@
                     <i class="fab fa-twitter"></i>
                     </a>
                 </li>
+-->
                 <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="linkedin">
                     <a class="text-white" target="_blank" href="#">
                     <i class="fab fa-linkedin"></i>

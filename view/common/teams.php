@@ -15,7 +15,7 @@
             <div class="card-group p-3 mx-auto">
                     <div class="card">
                         <div class="fixImage">
-                            <img src="assets/img-temp/ava/1.png" class="card-img-top" alt="">
+                            <img src="assets/img-temp/ava/bangayan.png" class="card-img-top" style="width: 70%; margin-left: 15%"  alt="">
                         </div>
                         <div class="card-body">
                         <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Richard Bangayan</h5>
@@ -31,7 +31,7 @@
                     <div class="col-1"></div>
                     <div class="card">
                     <div class="fixImage">
-                        <img src="assets/img-temp/ava/1.png" class="card-img-top" alt="">
+                        <img src="assets/img-temp/ava/lao.png" class="card-img-top" style="width: 70%; margin-left: 15%"  alt="">
                     </div>
                         <div class="card-body">
                          <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Paton Lao</h5>
@@ -47,8 +47,8 @@
                     <div class="col-1"></div>
                     <div class="card">
                     <div class="fixImage">
-                        <img src="assets/img-temp/ava/1.png" class="card-img-top" alt="">
-                    </div>
+                        <img src="assets/img-temp/ava/trinidad.png" class="card-img-top" style="width: 70%; margin-left: 15%" alt="">
+                    </div> 
                         <div class="card-body">
                          <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Gayle Trinidad</h5>
                          <p style="color: grey;" class="text-center pt-0 font-italic"><small>Vice President for Sales and Marketing</small></p>

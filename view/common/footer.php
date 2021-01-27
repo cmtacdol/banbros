@@ -9,7 +9,7 @@
                 <img src="assets/img/logowhite.png" alt="Banbros" style="width: 300px;">
             </div>
             <div class=" mt-5 ">
-                <small class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ipsam adipisci! Placeat natus fugiat aperiam deserunt et perspiciatis eum magnam delectus reiciendis laudantium ullam optio, quidem tempore itaque illum blanditiis!</small>
+                <small class="text-white">Distributor of high-quality IT products in the Philippines.</small>
             </div>
         </div>
 
