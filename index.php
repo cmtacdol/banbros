@@ -1,4 +1,6 @@
 <?php include 'view/common/header.php'; ?>
+<head>
+</head>
 
   <body>
    
@@ -408,5 +410,3 @@
     </script>
   </body>
   <!-- End Body -->
-  
-</html>
