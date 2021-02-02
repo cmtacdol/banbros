@@ -11,7 +11,7 @@
     <script src="assets/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="assets/vendors/shuffle/jquery.shuffle.min.js"></script>
     <script src="assets/vendors/typedjs/typed.min.js"></script>
-    <script src="assets/vendors/slick-carousel/slick.min.js"></script>
+    <script src="assets/vendors/slick-carousel/slick.min.js"></script> 
     <script src="assets/vendors/counters/waypoint.min.js"></script>
     <script src="assets/vendors/counters/counterup.min.js"></script>
 
