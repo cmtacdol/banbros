@@ -43,7 +43,7 @@
                 <a class="nav-link" href="news.php">News</a>
               </li>
               <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <a class="nav-link" href="#">Career</a>
+                <a class="nav-link" href="career.php">Career</a>
               </li>
               <li class="nav-item mr-4 mb-2 mb-lg-0">
                 <a class="nav-link" href="contact.php">Contacts</a>

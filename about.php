@@ -41,11 +41,14 @@
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="pills-four-tab" data-toggle="pill" href="#pills-four" role="tab" aria-controls="pills-contact" aria-selected="false">Organizational chart</a>
                 </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-four-tab" data-toggle="pill" href="#pills-four" role="tab" aria-controls="pills-contact" aria-selected="false">BCI Satelite Offices</a>
+                </li>
             </ul>
             <div class="tab-content mt-5" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-one" role="tabpanel" aria-labelledby="pills-one-tab">
                     <div class="container">
-                        <h2 class="text-center mb-2">HISTORY & GROWTH BCI SATELLITE OFFICES</h2>
+                        <h2 class="text-center mb-2">HISTORY & GROWTH</h2>
                         <div class="row">
                             <div class="col-lg-4 col-sm-4 mb-4">
                                 <div class="card" style="width: 100%; height: 430px; border-radius: 10px">

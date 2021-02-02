@@ -1308,11 +1308,15 @@ h6 {
     background-size: cover;
 }
 
+.u-promo-block--mheight-400 {
+    min-height: 400px;
+}
+
 .u-promo-block--mheight-450 {
     min-height: 450px;
 }
 
-.u-promo-block--mheight-500 {
+. {
     min-height: 500px;
 }
 
