@@ -83,15 +83,8 @@ include 'view/common/header.php';
                                 (PQD) produced and marketed by Ablerex Electronics (S) Pte Ltd. Headquartered in
                                 Singapore, the company was founded in 2002 and begun its operations in 2003. The Ablerex
                                 brand was launched in 2004.</p>
-                            <button type="button" class="btn btn-outline-info rounded-circle"
-                                data-image="assets/img-temp/partners/Ablerex SG Logo-01.png" data-desc="Ablerex is a brand of uninterruptible power supplies
-                                (UPS) and
-                                power quality devices
-                                (PQD) produced and marketed by Ablerex Electronics (S) Pte Ltd. Headquartered in
-                                Singapore, the company was founded in 2002 and begun its operations in 2003. The Ablerex
-                                brand was launched in 2004." data-toggle="modal" data-target="#right_modal_lg"
-                                id="btnModals" style="width: 40px; height: 40px;"><i
-                                    class="fas fa-arrow-right"></i></button>
+                            <a href="abrelext.php" class="btn btn-outline-info rounded-circle" id="btnModals"
+                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -582,11 +575,8 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                             <p class="business-text text-left">ThiEYE is specialized in an integrated outdoor camera
                                 scheme, focusing on action cameras development, design, production and sales.</p>
 
-                            <button type="button" class="btn btn-outline-info rounded-circle"
-                                data-image="assets/img-temp/partners/THIEYE.png"
-                                data-desc="ThiEYE is specialized in an integrated outdoor camera scheme, focusing on action cameras development, design, production and sales."
-                                data-toggle="modal" data-target="#right_modal_lg" id="btnModals"
-                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></button>
+                            <a href="thieye.php" class="btn btn-outline-info rounded-circle" id="btnModals"
+                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
