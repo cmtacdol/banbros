@@ -1,4 +1,11 @@
-<?php include 'view/common/header.php'; ?>
+<?php 
+session_start();
+$_SESSION['PAGE_TITLE'] = "Consumer";
+$_SESSION['PAGE_NAV_TITLE'] = "Consumer"; 
+
+include 'view/common/header.php'; 
+
+?>
 
   <body>
    
@@ -194,6 +201,7 @@
 
     </main>
 
+    <?php include 'view/common/fb_plugins.php'; ?>
     <?php include 'view/common/footer.php'; ?>
 
     <?php include 'view/common/scripts.php'; ?>

@@ -1,9 +1,13 @@
 <?php 
+session_start();
+$_SESSION['PAGE_TITLE'] = "Contacts";
+$_SESSION['PAGE_NAV_TITLE'] = "Contacts"; 
+
 include 'view/common/header.php'; 
 include 'controllers/inquiry.php'; 
 
-if(isset($_POST['sendEmail'])){
-    sendEmail($_POST);
+if(isset($_POST['sendEmails'])){
+    sendToEmail($_POST);
 }
 
 ?>
@@ -76,8 +80,8 @@ if(isset($_POST['sendEmail'])){
         <div class="container">
             <div class="mx-auto mt-8">
                 <h1 class="text-center">Inquire now</h1>
-                <form action="" method="post">
-                    <div class="col-lg-8 mx-auto">
+                <div class="col-lg-8 mx-auto">
+                    <form action="" method="post">
                         <div class="row">
                             <div class="col">
                                 <label>Your Name:</label>
@@ -113,15 +117,15 @@ if(isset($_POST['sendEmail'])){
                         </div>
                         <div class="form-group mt-4">
                             <label for="exampleFormControlTextarea1">Message:</label>
-                            <textarea class="form-control" name="message" id="exampleFormControlTextarea1" placeholder="Write Something..." rows="4"
-                                required></textarea>
+                            <textarea class="form-control" name="message" id="exampleFormControlTextarea1"
+                                placeholder="Write Something..." rows="4" required></textarea>
                         </div>
                         <div class="form-group mt-4">
-                            <button class="btn btn-info" name="sendEmail" type="submit"
+                            <button class="btn btn-info" name="sendEmails" type="submit"
                                 style="width: 100%">Submit</button>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -143,6 +147,7 @@ if(isset($_POST['sendEmail'])){
 
     </main>
 
+    <?php include 'view/common/fb_plugins.php'; ?>
     <?php include 'view/common/footer.php'; ?>
 
     <?php include 'view/common/scripts.php'; ?>

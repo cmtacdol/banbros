@@ -397,6 +397,7 @@
         </div>
     </div>
 
+    <?php include 'view/common/fb_plugins.php'; ?>
     <?php include 'view/common/footer.php'; ?>
 
     <?php include 'view/common/scripts.php'; ?>

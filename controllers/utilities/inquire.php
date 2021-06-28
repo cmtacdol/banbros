@@ -21,17 +21,17 @@
 <body>
     <div style="height: 120px;border-top: #A8CF45 thick solid; background: #0094da">
         <img style="margin-top:20px;width: 200px; display: block;margin-left: auto;margin-right: auto;"
-            src="../../assets/img/logowhite.png" alt="banbros">
+            src="https://www.banbros.ph/assets/img/logowhite.png" alt="banbros">
     </div>
 
     <div style="margin-top: 33px; max-width: 250px;display: block;margin-left: auto;margin-right: auto;">
 
         <p style="text-align: left;">New Inquiry:</p>
         <hr>
-        <p style="text-align: left;">{NAME}</p>
-        <p style="text-align: left;">{EMAIL}</p>
-        <p style="text-align: left;">{PURPOSE}</p>
-        <p style="text-align: left;">{MESSAGE}</p>
+        <p style="text-align: left;">Name: {NAME}</p>
+        <p style="text-align: left;">Email: {EMAIL}</p>
+        <p style="text-align: left;">Purpose: {PURPOSE}</p>
+        <p style="text-align: left;">Message: {MESSAGE}</p>
 
     </div>
 
