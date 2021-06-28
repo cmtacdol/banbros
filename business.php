@@ -182,9 +182,9 @@ include 'view/common/header.php';
                             <p class="business-text text-left">No Description</p>
 
                             <button type="button" class="btn btn-outline-info rounded-circle"
-                                data-image="assets/img-temp/partners/balance.png" data-desc="No Description" data-toggle="modal"
-                                data-target="#right_modal_lg" id="btnModals" style="width: 40px; height: 40px;"><i
-                                    class="fas fa-arrow-right"></i></button>
+                                data-image="assets/img-temp/partners/balance.png" data-desc="No Description"
+                                data-toggle="modal" data-target="#right_modal_lg" id="btnModals"
+                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
 
@@ -237,9 +237,9 @@ include 'view/common/header.php';
                             <p class="business-text text-left">No Description</p>
 
                             <button type="button" class="btn btn-outline-info rounded-circle"
-                                data-image="assets/img-temp/partners/EDGECORE.png" data-desc="No Description" data-toggle="modal"
-                                data-target="#right_modal_lg" id="btnModals" style="width: 40px; height: 40px;"><i
-                                    class="fas fa-arrow-right"></i></button>
+                                data-image="assets/img-temp/partners/EDGECORE.png" data-desc="No Description"
+                                data-toggle="modal" data-target="#right_modal_lg" id="btnModals"
+                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
 
