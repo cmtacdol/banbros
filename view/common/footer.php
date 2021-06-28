@@ -85,7 +85,7 @@
                             <small class="mb-0 text-white">Copyright 2020 Banbros Commercial Incorporated</small>
                     </div>
                     <div class="col text-center">
-                            <small class="mb-0 text-white">Privacy Policy</small>
+                            <a href=""><small class="mb-0 text-white">Privacy Policy</small></a>
                     </div>
                     <div class="col text-center">
                             <small class="mb-0 text-white">Powered by Ainpex Solutions</small>
@@ -99,7 +99,7 @@
                             <small class="mb-0 text-white">Copyright 2020 Banbros Commercial Incorporated</small>
                     </div>
                     <div class="col-md-5 text-center">
-                            <small class="mb-0 text-white">Privacy Policy</small>
+                            <a href=""><small class="mb-0 text-white">Privacy Policy</small></a>
                     </div>
                     <div class="col-md-5 text-center">
                             <small class="mb-0 text-white">Powered by Ainpex Solutions</small>

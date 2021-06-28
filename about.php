@@ -49,7 +49,7 @@ include 'view/common/header.php';
                     <a class="nav-link" id="pills-four-tab" data-toggle="pill" href="#pills-four" role="tab" aria-controls="pills-contact" aria-selected="false">Organizational chart</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="pills-four-tab" data-toggle="pill" href="#pills-four" role="tab" aria-controls="pills-contact" aria-selected="false">BCI Satelite Offices</a>
+                    <a class="nav-link" id="pills-four-tab" data-toggle="pill" href="#pills-five" role="tab" aria-controls="pills-contact" aria-selected="false">BCI Satelite Offices</a>
                 </li>
             </ul>
             <div class="tab-content mt-5" id="pills-tabContent">
@@ -173,24 +173,14 @@ include 'view/common/header.php';
 
                 <div class="tab-pane fade" id="pills-two" role="tabpanel" aria-labelledby="pills-two-tab">
                     <div class="container mt-8">
+                         <div class="container mt-8">
                         <div class="mx-auto text-center">
-                            <h3>AFFILIATE COMPANIES</h3>
+                            <div class="mx-auto text-center org_chart">
+                                <img src="assets/img/org-chart/tekzone.png" alt="">
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <p>
 
-                                <span style="color: #1d3982; font-weight: bold; font-style: italic">Tekzone Inc.</span>
-                                Service Company Handling Repairs and logistics for both end user and channel . Tekzone has invested on a ( Ball Grid Array Machine) BGM machine to further increase the capability of Tekzone to do board repair of components.
-
-                                Main Service Centers:
-                                Manila : Tekzone
-                                1000 sq meter facility dedicated fro logistics, after sales support and parts depot Located in Makati Area covers Luzon area
-
-                                Cebu: Banbros Cebu Office
-                                Covers Visayas and Mindanao Areas
-                                Our service centers serve as parts depot with complete after sales support including full staff of technicians
-                            </p>
-                        </div>
+                    </div>
 
                     </div>
                 </div>
@@ -225,20 +215,23 @@ include 'view/common/header.php';
                 <div class="tab-pane fade" id="pills-four" role="tabpanel" aria-labelledby="pills-four-tab">
                     <div class="container">
 
-                        <div class="mx-auto font-weight-bold">
-                            <h3 class="text-center" style="color: ">ORGANIZATIONAL CHART <br> LUZON</h3>
-                        </div>
+                      
                         <div class="mx-auto text-center org_chart">
-                            <img src="assets/img/org-chart/org1.jpg" alt="">
-                            <img src="assets/img/org-chart/org2.jpg" alt="">
+                            <img src="assets/img/org-chart/org4.png" alt=""><br><br><br>
+                            <img src="assets/img/org-chart/org5.png" alt="">
                         </div>
 
-                        <div class="mx-auto font-weight-bold">
-                            <h3 class="text-center" style="color: ">ORGANIZATIONAL CHART <br> CEBU & DAVAO</h3>
-                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-five" role="tabpanel" aria-labelledby="pills-five-tab">
+                    <div class="container">
+
+                      
                         <div class="mx-auto text-center org_chart">
-                            <img src="assets/img/org-chart/org3.jpg" alt="">
+                            <img src="assets/img/org-chart/satelite.jpg" alt="">
                         </div>
+
 
                     </div>
                 </div>
