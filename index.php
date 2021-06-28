@@ -1,4 +1,5 @@
-<?php include 'view/common/header.php'; ?>
+<?php session_start(); $_SESSION['PAGE_TITLE']="Banbros | Home";   include 'view/common/header.php'; ?>
+
 
 <head>
 </head>
@@ -346,7 +347,7 @@
                                 Need support? just contact TEKZONE<br>Computer Sales and Services, Inc.
                             </div>
                         </div>
-                        <a href="" style="background: white; border-radius: 15px" type="button" class="btn mt-3 text-dark font-weight-bold">Contact support now.</a>
+                        <a href="https://tekzoneph.com/index.php/contact/" style="background: white; border-radius: 15px" type="button" class="btn mt-3 text-dark font-weight-bold">Contact support now.</a>
                     </div>
                     <div class="col-md-4 text-center">
                         <h1 style="color: white;" class="card-title font-weight-bold text-center mb-0">Be Our Partner</h1>
@@ -410,29 +411,6 @@
             </div>
         </div>
 
-        <?php include 'view/common/footer.php'; ?>
-
-        <?php include 'view/common/scripts.php'; ?>
-
-
-        <script>
-            $(document).on('ready', function() {
-                // initialization of text animation (typing)
-                $(".js-display-typing").typed({
-                    strings: [
-                        "Your Value",
-                        "Added Distributor"
-                    ],
-                    typeSpeed: 60,
-                    loop: true,
-                    backDelay: 2500
-                });
-            });
-
-        </script>
-</body>
-<!-- End Body -->
-    </div>
 
     <?php include 'view/common/fb_plugins.php'; ?>
     <?php include 'view/common/footer.php'; ?>
