@@ -432,3 +432,27 @@
         </script>
 </body>
 <!-- End Body -->
+    </div>
+
+    <?php include 'view/common/fb_plugins.php'; ?>
+    <?php include 'view/common/footer.php'; ?>
+
+    <?php include 'view/common/scripts.php'; ?>
+
+
+    <script>
+    $(document).on('ready', function() {
+        // initialization of text animation (typing)
+        $(".js-display-typing").typed({
+            strings: [
+                "Your Value",
+                "Added Distributor"
+            ],
+            typeSpeed: 60,
+            loop: true,
+            backDelay: 2500
+        });
+    });
+    </script>
+  </body>
+  <!-- End Body -->

@@ -1,4 +1,11 @@
-<?php include 'view/common/header.php'; ?>
+<?php 
+session_start();
+$_SESSION['PAGE_TITLE'] = "About Us";
+$_SESSION['PAGE_NAV_TITLE'] = "About Us"; 
+
+include 'view/common/header.php'; 
+
+?>
 
 <head>
     <?php include 'view/common/nav.php'; ?>
@@ -500,6 +507,7 @@
 
 </main>
 
+<?php include 'view/common/fb_plugins.php'; ?>
 <?php include 'view/common/footer.php'; ?>
 
 <?php include 'view/common/scripts.php'; ?>
