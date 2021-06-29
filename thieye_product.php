@@ -155,7 +155,7 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/thieyei30.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/thieye/thieyei30.jpg" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6><span class="font-weight-bold">ThiEye i30</span></h6>
@@ -167,7 +167,7 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/t5wifi.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/thieye/t5wifi.jpg" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6><span class="font-weight-bold">ThiEye T5</span></h6>
@@ -180,7 +180,7 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/t5e.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/thieye/t5e.jpg" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6><span class="font-weight-bold">ThiEye T5 Edge</span></h6>
@@ -193,7 +193,7 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/b64kwifi.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/thieye/b64kwifi.jpg" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6><span class="font-weight-bold">ThiEye V6</span></h6>

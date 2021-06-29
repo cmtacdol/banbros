@@ -23,7 +23,7 @@ include 'view/common/header.php';
 }
 
 #businessImage {
-    width: 80%;
+    width: 70%;
 }
 </style>
 
@@ -72,7 +72,7 @@ include 'view/common/header.php';
 
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/Ablerex SG Logo-01.png" class="card-img-top"
                                 id="businessImage">
                         </div>
@@ -90,7 +90,7 @@ include 'view/common/header.php';
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/ACER (1).png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -109,13 +109,13 @@ include 'view/common/header.php';
                 </div>
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/altec-lansing-vector-logo.png" class="card-img-top"
                                 id="businessImage">
                         </div>
                         <div class="card-body text-center">
-                            <p class="business-text text-left">Altec Lansing, Inc. is a U.S. audio electronics company
-                                .Their primary products are loudspeakers and associated audio electronics for
+                            <p class="business-text text-left">Altec Lansing, Inc. is a U.S. audio electronics company.
+                                Their primary products are loudspeakers and associated audio electronics for
                                 professional, home, automotive and multimedia applications.</p>
 
                             <button type="button" class="btn btn-outline-info rounded-circle"
@@ -129,7 +129,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/ANYTEK (1).png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -148,7 +148,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/asus-world-motherboard-gaming-brand-2.png"
                                 class="card-img-top" id="businessImage">
                         </div>
@@ -168,7 +168,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/balance.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -185,7 +185,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/belkin.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -204,7 +204,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/brother.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -223,7 +223,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/EDGECORE.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -240,7 +240,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/edifier.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -259,7 +259,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/GD_Logo_Glod_H.png" class="card-img-top"
                                 id="businessImage">
                         </div>
@@ -281,7 +281,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/hikvision.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -302,7 +302,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/IFUTURE LOGO-01.png" class="card-img-top"
                                 id="businessImage">
                         </div>
@@ -320,7 +320,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/Ignite Logo-01.png" class="card-img-top"
                                 id="businessImage">
                         </div>
@@ -341,7 +341,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/KEBOS-01.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -360,7 +360,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/KGuard-Security-Logo-1-5029.png" class="card-img-top"
                                 id="businessImage">
                         </div>
@@ -381,7 +381,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/kodak.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -401,7 +401,7 @@ include 'view/common/header.php';
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/LIFAair.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -417,7 +417,7 @@ include 'view/common/header.php';
                                 data-image="assets/img-temp/partners/LIFAair.png"
                                 data-desc="LIFAair is an Air purification experts from Finland. Founded in Helsinki in 1988 and has spent more than 30 years in air pollution control and has worked with worldwide government agencies, healthcare professionals and sporting organizations to improve indoor air quality.
 
-LIFAair uses advanced cleaning technology to develop innovative products underpinning the company’s ethos, “Responsible for Every Breath.”" data-toggle="modal"
+                                LIFAair uses advanced cleaning technology to develop innovative products underpinning the company’s ethos, “Responsible for Every Breath.”" data-toggle="modal"
                                 data-target="#right_modal_lg" id="btnModals" style="width: 40px; height: 40px;"><i
                                     class="fas fa-arrow-right"></i></button>
                         </div>
@@ -427,7 +427,7 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/LOGO F_D-01.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -448,7 +448,7 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/Philips_logo_logotype_emblem.png" class="card-img-top"
                                 id="businessImage">
                         </div>
@@ -469,7 +469,7 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/plantronics.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -488,7 +488,7 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/SDigital logo+box-red_HR.png" class="card-img-top"
                                 id="businessImage">
                         </div>
@@ -509,7 +509,7 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/Silicon_Power_logo.png" class="card-img-top"
                                 id="businessImage">
                         </div>
@@ -531,7 +531,7 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/sony.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -550,7 +550,7 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/tekplay_logo.png" class="card-img-top"
                                 id="businessImage">
                         </div>
@@ -568,14 +568,14 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/THIEYE.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
                             <p class="business-text text-left">ThiEYE is specialized in an integrated outdoor camera
                                 scheme, focusing on action cameras development, design, production and sales.</p>
 
-                            <a href="thieye.php" class="btn btn-outline-info rounded-circle" id="btnModals"
+                            <a href="thieye_product.php" class="btn btn-outline-info rounded-circle" id="btnModals"
                                 style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -584,7 +584,7 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/toughtested.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -603,7 +603,7 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/ubtech.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
@@ -612,11 +612,8 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                                 tools, to advanced devices offering complex capabilities solving difficult challenges.
                             </p>
 
-                            <button type="button" class="btn btn-outline-info rounded-circle"
-                                data-image="assets/img-temp/partners/ubtech.png"
-                                data-desc="UBTECH is the only company offering such a broad, open ecosystem of robot innovations, from entry level consumer products, to educational tools, to advanced devices offering complex capabilities solving difficult challenges."
-                                data-toggle="modal" data-target="#right_modal_lg" id="btnModals"
-                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></button>
+                            <a href="ubtech_product.php" class="btn btn-outline-info rounded-circle" id="btnModals"
+                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
@@ -624,7 +621,7 @@ LIFAair uses advanced cleaning technology to develop innovative products underpi
                 <div class="col-lg-3 col-md-4 col-6 previewImg">
 
                     <div class="card shadow-sm mb-4">
-                        <div class="text-center">
+                        <div class="text-center border">
                             <img src="assets/img-temp/partners/WST.png" class="card-img-top" id="businessImage">
                         </div>
                         <div class="card-body text-center">
