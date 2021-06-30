@@ -211,11 +211,8 @@ include 'view/common/header.php';
                             <p class="business-text text-left">Brother Industries, Ltd. is a Japanese multinational
                                 electronics and electrical equipment company headquartered in Nagoya, Japan</p>
 
-                            <button type="button" class="btn btn-outline-info rounded-circle"
-                                data-image="assets/img-temp/partners/brother.png"
-                                data-desc="Brother Industries, Ltd. is a Japanese multinational electronics and electrical equipment company headquartered in Nagoya, Japan"
-                                data-toggle="modal" data-target="#right_modal_lg" id="btnModals"
-                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></button>
+                                <a href="product_brother.php" class="btn btn-outline-info rounded-circle" id="btnModals"
+                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
@@ -290,11 +287,8 @@ include 'view/common/header.php';
                                 for civilian and military purposes, headquartered in Hangzhou, China. Its controlling
                                 shares are owned by the Chinese government.</p>
 
-                            <button type="button" class="btn btn-outline-info rounded-circle"
-                                data-image="assets/img-temp/partners/hikvision.png"
-                                data-desc="Hangzhou Hikvision Digital Technology Co., Ltd. is a partially state-owned Chinese manufacturer and supplier of video surveillance equipment for civilian and military purposes, headquartered in Hangzhou, China. Its controlling shares are owned by the Chinese government."
-                                data-toggle="modal" data-target="#right_modal_lg" id="btnModals"
-                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></button>
+                            <a href="product_hikvision.php" class="btn btn-outline-info rounded-circle" id="btnModals"
+                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
@@ -369,11 +363,8 @@ include 'view/common/header.php';
                                 intelligent, and have successfully entered the US, Europe, Middle East, Africa, Latin
                                 America, Australia and Southeast Asia markets.</p>
 
-                            <button type="button" class="btn btn-outline-info rounded-circle"
-                                data-image="assets/img-temp/partners/KGuard-Security-Logo-1-5029.png"
-                                data-desc="KGuard products are highly compatible, stable and intelligent, and have successfully entered the US, Europe, Middle East, Africa, Latin America, Australia and Southeast Asia markets."
-                                data-toggle="modal" data-target="#right_modal_lg" id="btnModals"
-                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></button>
+                            <a href="product_kguard.php" class="btn btn-outline-info rounded-circle" id="btnModals"
+                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
@@ -417,9 +408,9 @@ include 'view/common/header.php';
                                 data-image="assets/img-temp/partners/LIFAair.png"
                                 data-desc="LIFAair is an Air purification experts from Finland. Founded in Helsinki in 1988 and has spent more than 30 years in air pollution control and has worked with worldwide government agencies, healthcare professionals and sporting organizations to improve indoor air quality.
 
-                                LIFAair uses advanced cleaning technology to develop innovative products underpinning the company’s ethos, “Responsible for Every Breath.”" data-toggle="modal"
-                                data-target="#right_modal_lg" id="btnModals" style="width: 40px; height: 40px;"><i
-                                    class="fas fa-arrow-right"></i></button>
+                                LIFAair uses advanced cleaning technology to develop innovative products underpinning the company’s ethos, “Responsible for Every Breath.”"
+                                data-toggle="modal" data-target="#right_modal_lg" id="btnModals"
+                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
 
@@ -436,11 +427,8 @@ include 'view/common/header.php';
                                 electro-acoustic design, wireless technology, software development to give
                                 extra-ordinary experience.</p>
 
-                            <button type="button" class="btn btn-outline-info rounded-circle"
-                                data-image="assets/img-temp/partners/LOGO F_D-01.png"
-                                data-desc="Fenda Company was founded in 2005, starting with loudspeaker development and manufacturing, and achieved its own core competence of electro-acoustic design, wireless technology, software development to give extra-ordinary experience."
-                                data-toggle="modal" data-target="#right_modal_lg" id="btnModals"
-                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></button>
+                            <a href="product_f&d.php" class="btn btn-outline-info rounded-circle" id="btnModals"
+                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
@@ -519,11 +507,8 @@ include 'view/common/header.php';
                                 flash drives, portable hard drives, DRAM modules, card readers, solid state drives, USB
                                 adapters.</p>
 
-                            <button type="button" class="btn btn-outline-info rounded-circle"
-                                data-image="assets/img-temp/partners/Silicon_Power_logo.png"
-                                data-desc="Silicon Power is an international brand and a Taiwan-based manufacturer of flash memory products, including flash memory cards, USB flash drives, portable hard drives, DRAM modules, card readers, solid state drives, USB adapters."
-                                data-toggle="modal" data-target="#right_modal_lg" id="btnModals"
-                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></button>
+                            <a href="product_siliconpower.php" class="btn btn-outline-info rounded-circle"
+                                id="btnModals" style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
@@ -575,7 +560,7 @@ include 'view/common/header.php';
                             <p class="business-text text-left">ThiEYE is specialized in an integrated outdoor camera
                                 scheme, focusing on action cameras development, design, production and sales.</p>
 
-                            <a href="thieye_product.php" class="btn btn-outline-info rounded-circle" id="btnModals"
+                            <a href="product_thieye.php" class="btn btn-outline-info rounded-circle" id="btnModals"
                                 style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -612,7 +597,7 @@ include 'view/common/header.php';
                                 tools, to advanced devices offering complex capabilities solving difficult challenges.
                             </p>
 
-                            <a href="ubtech_product.php" class="btn btn-outline-info rounded-circle" id="btnModals"
+                            <a href="product_ubtech.php" class="btn btn-outline-info rounded-circle" id="btnModals"
                                 style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -628,11 +613,8 @@ include 'view/common/header.php';
                             <p class="business-text text-left">Shenzhen WanShunTong Science & Technology Co.,Ltd. is a
                                 high technology enterprise engaged in manufacturing of mobile phone accessories.</p>
 
-                            <button type="button" class="btn btn-outline-info rounded-circle"
-                                data-image="assets/img-temp/partners/WST.png"
-                                data-desc="Shenzhen WanShunTong Science & Technology Co.,Ltd. is a high technology enterprise engaged in manufacturing of mobile phone accessories."
-                                data-toggle="modal" data-target="#right_modal_lg" id="btnModals"
-                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></button>
+                                <a href="product_wst.php" class="btn btn-outline-info rounded-circle" id="btnModals"
+                                style="width: 40px; height: 40px;"><i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
 
