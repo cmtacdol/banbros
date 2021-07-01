@@ -171,6 +171,35 @@ a {
                     </div>
                 </div>
                 <div class="col-lg-9">
+
+                    <!-- Slider carousel -->
+                    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/banner/kguard.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <!-- <div class="carousel-item">
+                                <img src="assets/banner/asus1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/banner/gam.jpg" class="d-block w-100" alt="...">
+                            </div> -->
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
                     <h6 class="font-weight-light text-center text-lg-left mt-4 mb-0">
                         KGuard products are highly compatible, stable and
                         intelligent, and have successfully entered the US, Europe, Middle East, Africa, Latin
@@ -363,7 +392,7 @@ a {
                             </div>
                         </div>
 
-                        
+
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">

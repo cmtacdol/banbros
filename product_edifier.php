@@ -171,6 +171,34 @@ a {
                     </div>
                 </div>
                 <div class="col-lg-9">
+                    <!-- Slider carousel -->
+                    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/banner/edifier.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <!-- <div class="carousel-item">
+                                <img src="assets/banner/asus1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/banner/gam.jpg" class="d-block w-100" alt="...">
+                            </div> -->
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
                     <h6 class="font-weight-light text-center text-lg-left mt-4 mb-0">
                         Edifier is a Chinese audio manufacturer that produces
                         speakers, music systems, and headphones for personal and home entertainment.
@@ -183,7 +211,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier X3.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier X3.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier X3
@@ -196,7 +225,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier TWS5.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier TWS5.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier TWS5
@@ -210,7 +240,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier GM3SE.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier GM3SE.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier GM3SE
@@ -223,7 +254,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier K800.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier K800.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier K800
@@ -236,10 +268,12 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier W820BT Bluetooth Headset.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier W820BT Bluetooth Headset.jpg"
+                                        class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h6 class="h-custom"><small class="font-weight-bold">Edifier W820BT Bluetooth Headset
+                                    <h6 class="h-custom"><small class="font-weight-bold">Edifier W820BT Bluetooth
+                                            Headset
                                         </small></h6>
                                     <button class="btn btn-info">Check more</button>
                                 </div>
@@ -249,10 +283,12 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier W855BT Premiere Bluetooth Headset.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier W855BT Premiere Bluetooth Headset.jpg"
+                                        class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h6 class="h-custom"><small class="font-weight-bold">Edifier W855BT Premiere Bluetooth Headset
+                                    <h6 class="h-custom"><small class="font-weight-bold">Edifier W855BT Premiere
+                                            Bluetooth Headset
                                         </small></h6>
                                     <button class="btn btn-info">Check more</button>
                                 </div>
@@ -262,7 +298,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier V4 Gaming Headset.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier V4 Gaming Headset.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier V4 Gaming Headset
@@ -275,10 +312,12 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier MP80 Portable Bluetooth Speaker.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier MP80 Portable Bluetooth Speaker.jpg"
+                                        class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h6 class="h-custom"><small class="font-weight-bold">Edifier MP80 Portable Bluetooth Speaker
+                                    <h6 class="h-custom"><small class="font-weight-bold">Edifier MP80 Portable Bluetooth
+                                            Speaker
                                         </small></h6>
                                     <button class="btn btn-info">Check more</button>
                                 </div>
@@ -288,7 +327,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier MP100.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier MP100.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier MP100
@@ -301,7 +341,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier Mp202 black.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier Mp202 black.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier Mp202 black
@@ -314,7 +355,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier Headset SR-L700.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier Headset SR-L700.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier Headset SR-L700
@@ -327,7 +369,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier Stax D10.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier Stax D10.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier Stax D10
@@ -340,7 +383,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier R1280DB.png" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier R1280DB.png" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier R1280DB
@@ -353,7 +397,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier R2000DB.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier R2000DB.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier R2000DB
@@ -366,7 +411,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier S880DB.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier S880DB.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier S880DB
@@ -379,7 +425,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier S2000 Pro.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier S2000 Pro.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier S2000 Pro
@@ -392,7 +439,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier S350DB.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier S350DB.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier S350DB
@@ -405,7 +453,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier E25HD 2.0.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier E25HD 2.0.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier E25HD 2.0
@@ -418,7 +467,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier E235HD 2.1.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier E235HD 2.1.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier E235HD 2.1
@@ -431,7 +481,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier E255 HD 5.1.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier E255 HD 5.1.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier E255 HD 5.1
@@ -444,7 +495,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier CineSound B7.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier CineSound B7.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier CineSound B7
@@ -457,7 +509,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier S50DB.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier S50DB.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier S50DB
@@ -470,7 +523,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier S70DB.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier S70DB.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier S70DB
@@ -483,7 +537,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier R12U.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier R12U.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier R12U
@@ -496,7 +551,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier G2000.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier G2000.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier G2000
@@ -509,7 +565,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier X230.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier X230.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier X230
@@ -522,7 +579,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier XM2PF.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier XM2PF.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier XM2PF
@@ -535,7 +593,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier X100.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier X100.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier X100
@@ -548,7 +607,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/edifier/Edifier M1360.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/edifier/Edifier M1360.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Edifier M1360
