@@ -119,21 +119,21 @@ a {
                             </article>
                             <article class="filter-group p-0 mt-2">
                                 <header class="card-header p-1">
-                                    <a href="#" > 
+                                    <a href="#">
                                         <h6 class="title">Camera </h6>
                                     </a>
                                 </header>
                             </article>
                             <article class="filter-group p-0 mt-2">
                                 <header class="card-header p-1">
-                                    <a href="#" > 
+                                    <a href="#">
                                         <h6 class="title">Camera </h6>
                                     </a>
                                 </header>
                             </article>
                             <article class="filter-group p-0 mt-2">
                                 <header class="card-header p-1">
-                                    <a href="#" > 
+                                    <a href="#">
                                         <h6 class="title">Camera </h6>
                                     </a>
                                 </header>
@@ -143,6 +143,35 @@ a {
                     </div>
                 </div>
                 <div class="col-lg-9">
+
+                    <!-- Slider carousel -->
+                    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/banner/thieye.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <!-- <div class="carousel-item">
+                                <img src="assets/banner/asus1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/banner/gam.jpg" class="d-block w-100" alt="...">
+                            </div> -->
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
                     <h6 class="font-weight-light text-center text-lg-left mt-4 mb-0">ThiEYE is specialized in an
                         integrated
                         outdoor camera scheme, focusing on action cameras development, design, production and sales.
@@ -155,7 +184,7 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/thieyei30.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/thieye/thieyei30.jpg" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6><span class="font-weight-bold">ThiEye i30</span></h6>
@@ -167,7 +196,7 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/t5wifi.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/thieye/t5wifi.jpg" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6><span class="font-weight-bold">ThiEye T5</span></h6>
@@ -180,7 +209,7 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/t5e.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/thieye/t5e.jpg" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6><span class="font-weight-bold">ThiEye T5 Edge</span></h6>
@@ -193,7 +222,7 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/b64kwifi.jpg" class="card-img-top" id="businessImage">
+                                    <img src="view/images/thieye/b64kwifi.jpg" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6><span class="font-weight-bold">ThiEye V6</span></h6>
