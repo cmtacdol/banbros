@@ -365,7 +365,7 @@
         <div style="z-index: 99;" class="container text-center text-white">
             <div class="pt-9">
                 <div class="col">
-                    <h2 class="font-weight-bold">News Letter</h2>
+                    <h2 class="font-weight-bold">Newsletter</h2>
                 </div>
                 <div class="mx-auto" style="width: 50%;">
                     <p><small class="font-italic">Be updated with the trends in technology.<br>Subscribe to us and we
