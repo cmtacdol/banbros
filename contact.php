@@ -38,18 +38,6 @@ if(isset($_POST['sendEmails'])){
 
     <main role="main">
 
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel"
-            style="background: rgb(6,103,148); background: linear-gradient(0deg, rgba(6,103,148,0.6702031154258579) 0%, rgba(70,121,145,0.7707457983193278) 100%);">
-
-            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
         <section class="js-parallax u-promo-block u-promo-block--mheight-450 u-overlay u-overlay--dark text-white"
             style="background-color: #0094da;">
             <!-- Promo Content -->
@@ -60,17 +48,6 @@ if(isset($_POST['sendEmails'])){
                             <p class="text-uppercase u-letter-spacing-sm mb-0"></p>
                             <h1 class="display-sm-4 display-lg-3 mb-3">CONTACT US</h1>
                         </div>
-                        <!--
-              <div class="row">
-                  <div class="col-auto">
-                      <div class="border" style="border: 2px solid; width: 2px; height: 100%"></div>
-                  </div>
-                  <div class="col">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque, aut eligendi deleniti facilis nostrum quam delectus molestias alias placeat dicta amet, eos cumque quaerat minima error repellat? Cum, nisi!</p>
-              
-                  </div>
-                </div>
--->
                     </div>
                 </div>
             </div>

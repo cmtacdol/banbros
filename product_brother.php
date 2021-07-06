@@ -217,7 +217,7 @@ a {
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">Brother HL-L8360CDW Printer
                                         </small></h6>
-                                    <button class="btn btn-info">Check more</button>
+                                    <a href="product_view.php" class="btn btn-info">Check more</a>
                                 </div>
                             </div>
                         </div>

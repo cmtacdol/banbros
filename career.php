@@ -7,6 +7,13 @@ include 'view/common/header.php';
 
 ?>
 <style>
+.banner-image {
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 ul {
     line-height: 2rem;
 }
@@ -16,30 +23,26 @@ ul {
 
     <?php include 'view/common/nav.php'; ?>
 
-    <!-- Promo Block -->
-    <section class="js-parallax u-promo-block u-promo-block--mheight-400 u-overlay u-overlay--dark text-white"
-        style="background-image: url(assets/1920x1080/BBCC3.jpg);">
-        <!-- Promo Content -->
-        <div class="container u-overlay__inner u-ver-center u-content-space">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="text-center">
-                        <p class="text-uppercase u-letter-spacing-sm mb-0"></p>
-                        <h1 class="display-sm-4 display-lg-3 mb-3">CAREERS</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Promo Content -->
-    </section>
-    <!-- End Promo Block -->
 </head>
 <!-- End Header -->
 
 <main role="main">
 
+    <div class="banner-image" style="background-image: url(assets/1920x1080/BBCC3.jpg); ">
+        <!-- <img src="assets/1920x1080/BBCC3.jpg" class="imgCarousel"> -->
+        <div class="container u-overlay__inner u-ver-center u-content-space text-white">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="text-center">
+                        <p class="text-uppercase u-letter-spacing-sm mb-0"></p>
+                        <h1 class="display-sm-4 display-lg-3 mb-3">CAREER</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div class="container">
+    <div class="container mb-7">
         <h1 class="text-center mt-5 text-uppercase">Be Part of our team</h1>
         <div class="mt-5">
             <h4 class="text-center text-uppercase">CHANNEL SALES ACCOUNT MANAGER</h4>
@@ -61,14 +64,6 @@ ul {
                 <li>Knows how to drive or owns a vehicle for easy mobility during client calls</li>
             </ul>
 
-            <div class="my-5">
-                <div class="row justify-content-center">
-                    <div class="col-auto mx-2"><a href="mailto:catherine@banbros.ph"><i class="fas fa-envelope fa-3x"></i></a></div>
-                    <div class="col-auto mx-2"><a href="https://www.facebook.com/BanbrosCommercialIncorporated"><i class="fab fa-facebook-square fa-3x"></i></a></div>
-                    <div class="col-auto mx-2"><a href="https://www.linkedin.com/in/banbroscommercialinc"><i class="fab fa-linkedin fa-3x"></i></a></div>
-                    <div class="col-auto mx-2"><a href="https://m.me/BanbrosCommercialIncorporated"><i class="fab fa-facebook-messenger fa-3x"></i></a></div>
-                </div>
-            </div>
         </div>
     </div>
 

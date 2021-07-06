@@ -8,6 +8,14 @@ include 'view/common/header.php';
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/modal.css">
 <style>
+.carousel-inner{
+    height: 600px;
+}
+.imgCarousel{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 .card {
     height: 53vh;
 }
@@ -44,13 +52,13 @@ include 'view/common/header.php';
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/1920x1080/acer2.jpg" class="d-block w-100" alt="...">
+                    <img src="assets/1920x1080/ACER2.jpg" class="d-block w-100 imgCarousel">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/1920x1080/asus1.jpg" class="d-block w-100" alt="...">
+                    <img src="assets/1920x1080/asus1.jpg" class="d-block w-100 imgCarousel">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/1920x1080/gam.jpg" class="d-block w-100" alt="...">
+                    <img src="assets/1920x1080/gam.jpg" class="d-block w-100 imgCarousel">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

@@ -1,8 +1,17 @@
 <?php session_start(); $_SESSION['PAGE_TITLE']="Banbros | Home";   include 'view/common/header.php'; ?>
 
 
-<head>
-</head>
+<style>
+.card-images {
+    height: 40vh;
+}
+
+#newsImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
 
 <body>
 
@@ -104,7 +113,7 @@
                     </div>
                 </div>
 
-               
+
             </div>
         </section>
         <!-- End Why We? -->
@@ -312,11 +321,122 @@
         <!-- End Portfolio -->
 
 
+        <!-- Testimonials -->
+        <section class="u-content-space">
+            <div class="container">
+                <!-- Testimonials: Header -->
+                <header class="text-center w-md-50 mx-auto mb-8">
+                    <h2 class="h1 font-weight-bold">EXECUTIVES</h2>
 
+                    <div class="d-flex justify-content-center">
+                        <div style="width:30px; padding: 1px;" class="bg-warning"></div>
+                    </div>
+                </header>
+                <!-- End Testimonials: Header -->
 
+                <div class="row">
+                    <div class="card-group p-3 mx-auto">
+                        <div class="card">
+                            <div class="fixImage">
+                                <img src="assets/img-temp/ava/bangayan.png" class="card-img-top"
+                                    style="width: 70%; margin-left: 15%" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Richard
+                                    Bangayan</h5>
+                                <p style="color: grey;" class="text-center pt-0 font-italic"><small>Vice President for
+                                        Sales</small></p>
+                                <div class="row socials mb-0 d-flex justify-content-center">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="card">
+                            <div class="fixImage">
+                                <img src="assets/img-temp/ava/lao.png" class="card-img-top"
+                                    style="width: 70%; margin-left: 15%" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Paton
+                                    Lao</h5>
+                                <p style="color: grey;" class="text-center pt-0 font-italic"><small>Vice President for
+                                        Operations</small></p>
+                                <div class="row socials mb-0 d-flex justify-content-center">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="card">
+                            <div class="fixImage">
+                                <img src="assets/img-temp/ava/trinidad.png" class="card-img-top"
+                                    style="width: 70%; margin-left: 15%" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 style="color: #115f82;" class="card-title font-weight-bold text-center mb-0">Gayle
+                                    Trinidad</h5>
+                                <p style="color: grey;" class="text-center pt-0 font-italic"><small>Vice President for
+                                        Sales and Marketing</small></p>
+                                <div class="row socials mb-0 d-flex justify-content-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Testimonials -->
 
-        <?php include 'view/common/teams.php'; ?>
-        <?php include 'view/common/testimonials.php'; ?>
+        <!-- Testimonials -->
+        <section class="u-content-space">
+            <div class="container">
+                <!-- Testimonials: Header -->
+                <header class="text-center w-md-50 mx-auto mb-8">
+                    <h2 class="h1">Press Release</h2>
+                    <p class="h5">What's New</p>
+                </header>
+                <!-- End Testimonials: Header -->
+
+                <div class="row">
+                    <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5">
+                        <a href="https://preview.mailerlite.com/a8y3t4/1708399749796729310/l9y2/">
+                            <div class="card u-box-shadow-lg">
+                                <div class="card-images">
+                                    <img src="view/images/othersrc/TipEdgecore.PNG" class="card-img-top mx-auto d-block"
+                                        id="newsImage">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5">
+                        <a href="https://mailchi.mp/764e819c6688/mltg-cn-the-best-point-to-point-choice?e=b4e161d2be">
+                            <div class="card u-box-shadow-lg">
+                                <div class="card-images">
+                                    <img src="view/images/othersrc/MetroLinq.PNG" class="card-img-top mx-auto d-block"
+                                        id="newsImage">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5">
+                        <a
+                            href="http://app.edm.sangfor.cn/e/es?s=1587972869&e=121325&elqTrackId=a72ae390af474d9c960befe4cc2eef6c&elq=d065ec4c4e6c48bda7ee0ac72d3acfa2&elqaid=1066&elqat=1">
+                            <div class="card u-box-shadow-lg">
+                                <div class="card-images">
+                                    <img src="view/images/othersrc/sangfor.PNG" class="card-img-top mx-auto d-block"
+                                        id="newsImage">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- End Testimonial -->
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- End Testimonials -->
 
 
         <div style="background: #1b97cf;" class="py-5">
@@ -371,39 +491,13 @@
                     <p><small class="font-italic">Be updated with the trends in technology.<br>Subscribe to us and we
                             will keep you posted. </small></p>
                 </div>
-                <div class="mx-auto" style="width: 50%;">
+                <div class="mx-auto mb-7" style="width: 50%;">
                     <div class="input-group">
                         <input type="email" class="form-control border border-none" placeholder="Enter your email">
                         <div class="input-group-append">
                             <button class="btn btn-warning text-white" type="submit">Subscribe</button>
                         </div>
                     </div>
-                </div>
-                <div class="col mt-4">
-                    <ul class="list-inline text-center mb-0">
-                        <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Facebook">
-                            <a class="text-white" target="_blank" href="#">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                        </li>
-                        <!--
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Instagram">
-                    <a class="text-white" target="_blank" href="#">
-                    <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="Twitter">
-                    <a class="text-white" target="_blank" href="#">
-                    <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
--->
-                        <li class="list-inline-item mx-2" data-toggle="tooltip" data-placement="top" title="linkedin">
-                            <a class="text-white" target="_blank" href="#">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
