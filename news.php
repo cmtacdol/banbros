@@ -6,12 +6,39 @@ $_SESSION['PAGE_NAV_TITLE'] = "News";
 include 'view/common/header.php'; 
 
 ?>
+
 <head>
 
     <?php include 'view/common/nav.php'; ?>
 
+    <style>
+    .card-title{
+        height: 10vh;
+    }
+    .card-text {
+        display: -webkit-box;
+        width: 100%;
+        height: 109.2px;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .card-images {
+        height: 40vh;
+    }
+
+    #newsImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    </style>
+
     <!-- Promo Block -->
-    <section class="js-parallax u-promo-block u-promo-block--mheight-400 u-overlay u-overlay--dark text-white" style="background-image: url(assets/1920x1080/BBCC3.jpg);">
+    <section class="js-parallax u-promo-block u-promo-block--mheight-400 u-overlay u-overlay--dark text-white"
+        style="background-image: url(assets/1920x1080/BBCC3.jpg);">
         <!-- Promo Content -->
         <div class="container u-overlay__inner u-ver-center u-content-space">
             <div class="row justify-content-center">
@@ -21,17 +48,6 @@ include 'view/common/header.php';
                         <h1 class="display-sm-4 display-lg-3 mb-3">NEWS</span></h1>
 
                     </div>
-                    <!--
-              <div class="row">
-                  <div class="col-auto">
-                      <div class="border" style="border: 2px solid; width: 2px; height: 100%"></div>
-                  </div>
-                  <div class="col">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque, aut eligendi deleniti facilis nostrum quam delectus molestias alias placeat dicta amet, eos cumque quaerat minima error repellat? Cum, nisi!</p>
-              
-                  </div>
-                </div>
--->
                 </div>
             </div>
             <!-- End Promo Content -->
@@ -45,76 +61,50 @@ include 'view/common/header.php';
     <div class="container">
         <h1 class="text-center mt-5">BLOGS</h1>
         <div class="card-group my-5">
-            <div class="card" >
-                <img src="assets/img-temp/blog/blog1.jpg" class="card-img-top mx-auto d-block"  alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">LIFAair in our room</h5>
-                    <p class="card-text">Eversince we put LIFAair in our room , our allergies improve a lot. We do not need to tak medicine.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div class="card">
+                <div class="card-images">
+                    <img src="view/images/othersrc/TipEdgecore.PNG" class="card-img-top mx-auto d-block" id="newsImage">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title text-left">TIP OpenWiFi Ready Access Point</h5>
+                    <p class="card-text text-left">Edgecore provides the comprehensive product line of TIP OpenWiFi
+                        Ready Access
+                        Points. From indoor to outdoor, Wi-Fi 5 to Wi-Fi 6, the robust & resilient designs can assist
+                        you to build the optimal networks. </p>
+
+                    <a href="https://preview.mailerlite.com/a8y3t4/1708399749796729310/l9y2/"
+                        class="btn btn-info rounded-circle" id="btnModals" style="width: 40px; height: 40px;"><i
+                            class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="card">
-                <img src="assets/img/m1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <div class="card-images">
+                    <img src="view/images/othersrc/MetroLinq.PNG" class="card-img-top mx-auto d-block" id="newsImage">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title text-left">MetroLinq Terragraph Certified Product-MLTG-CN</h5>
+                    <p class="card-text text-left">MLTG-CN is a Terragraph certified client node. MLTG-CN supports IEEE802.11ay standard to deliver high-speed Internet in a noise-free and unlicensed 60GHz spectrum. When connected with Terragraph certified distribution node, MLTG-CN can function. </p>
+
+                    <a href="https://mailchi.mp/764e819c6688/mltg-cn-the-best-point-to-point-choice?e=b4e161d2be"
+                        class="btn btn-info rounded-circle" id="btnModals" style="width: 40px; height: 40px;"><i
+                            class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="card">
-                <img src="assets/img/m1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <div class="card-images">
+                    <img src="view/images/othersrc/sangfor.PNG" class="card-img-top mx-auto d-block" id="newsImage">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title text-left">Sangfor Hybrid Cloud</h5>
+                    <p class="card-text text-left">The COVID-19 pandemic has largely proven to be an accelerator of cloud adoption and extension and will continue to drive a faster conversion to cloud-centric IT. According to a new whole cloud forecast from International Data Corporation (IDC), total worldwide spending on cloud services, the hardware and software components underpinning cloud services, and the professional and managed services opportunities around</p>
+
+                    <a href="http://app.edm.sangfor.cn/e/es?s=1587972869&e=121325&elqTrackId=a72ae390af474d9c960befe4cc2eef6c&elq=d065ec4c4e6c48bda7ee0ac72d3acfa2&elqaid=1066&elqat=1"
+                        class="btn btn-info rounded-circle" id="btnModals" style="width: 40px; height: 40px;"><i
+                            class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </div>
-
-    <!--
-    <div class="container mt-7">
-        <h1>Promotions</h1>
-        <div class="mx-auto text-center">
-            <div class="promoBox info-box info-ribbon">
-                <aside><p>Ribbon Text</p></aside>
-                <h4>Hero Text Goes Here Yo!</h4>
-                <p>This is where I would type real copy if this wasn't just in codepen!</p>
-            </div>
-
-            <div class="promoBox warning-box danger-ribbon">
-                <aside><p>Ribbon Text</p></aside>
-                <h4>Hero Text Goes Here Yo!</h4>
-                <p>This is where I would type real copy if this wasn't just in codepen!</p>
-            </div>
-
-            <div class="promoBox success-ribbon">
-                <aside><p>Ribbon Text</p></aside>
-                <h4>Hero Text Goes Here Yo!</h4>
-                <p>This is where I would type real copy if this wasn't just in codepen!</p>
-            </div>
-        </div>
-    </div>
--->
-    <!-- 
-    <div class="promoBox success-box info-ribbon">
-        <aside><p>Ribbon Text</p></aside>
-        <h4>Hero Text Goes Here Yo!</h4>
-        <p>This is where I would type real copy if this wasn't just in codepen!</p>
-    </div>
-
-    <div class="promoBox danger-box warning-ribbon">
-        <aside><p>Ribbon Text</p></aside>
-        <h4>Hero Text Goes Here Yo!</h4>
-        <p>This is where I would type real copy if this wasn't just in codepen!</p>
-    </div>
-
-    <div class="promoBox">
-        <aside><p>Ribbon Text</p></aside>
-        <h4>Hero Text Goes Here Yo!</h4>
-        <p>This is where I would type real copy if this wasn't just in codepen!</p>
-    </div> -->
-
 
 
 

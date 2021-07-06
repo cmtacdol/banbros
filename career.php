@@ -6,13 +6,19 @@ $_SESSION['PAGE_NAV_TITLE'] = "Career";
 include 'view/common/header.php'; 
 
 ?>
+<style>
+ul {
+    line-height: 2rem;
+}
+</style>
 
 <head>
 
     <?php include 'view/common/nav.php'; ?>
 
     <!-- Promo Block -->
-    <section class="js-parallax u-promo-block u-promo-block--mheight-400 u-overlay u-overlay--dark text-white" style="background-image: url(assets/1920x1080/BBCC3.jpg);">
+    <section class="js-parallax u-promo-block u-promo-block--mheight-400 u-overlay u-overlay--dark text-white"
+        style="background-image: url(assets/1920x1080/BBCC3.jpg);">
         <!-- Promo Content -->
         <div class="container u-overlay__inner u-ver-center u-content-space">
             <div class="row justify-content-center">
@@ -21,17 +27,6 @@ include 'view/common/header.php';
                         <p class="text-uppercase u-letter-spacing-sm mb-0"></p>
                         <h1 class="display-sm-4 display-lg-3 mb-3">CAREERS</h1>
                     </div>
-                    <!--
-              <div class="row">
-                  <div class="col-auto">
-                      <div class="border" style="border: 2px solid; width: 2px; height: 100%"></div>
-                  </div>
-                  <div class="col">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque, aut eligendi deleniti facilis nostrum quam delectus molestias alias placeat dicta amet, eos cumque quaerat minima error repellat? Cum, nisi!</p>
-              
-                  </div>
-                </div>
--->
                 </div>
             </div>
         </div>
@@ -43,80 +38,39 @@ include 'view/common/header.php';
 
 <main role="main">
 
-    <!--
+
     <div class="container">
-        <h1 class="text-center mt-5">BLOGS</h1>
-        <div class="card-group my-5">
-            <div class="card" >
-                <img src="assets/img-temp/blog/blog1.jpg" class="card-img-top mx-auto d-block"  alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">LIFAair in our room</h5>
-                    <p class="card-text">Eversince we put LIFAair in our room , our allergies improve a lot. We do not need to tak medicine.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/img/m1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/img/m1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <h1 class="text-center mt-5 text-uppercase">Be Part of our team</h1>
+        <div class="mt-5">
+            <h4 class="text-center text-uppercase">CHANNEL SALES ACCOUNT MANAGER</h4>
+            <ul>
+                <li>Candidates must possess at least a Bachelor's/College Degree in Computer Science/Information
+                    Technology,Sales and Marketing, Engineering (Computer/Telecommunication) or equivalent.</li>
+                <li>Preferably with minimum of 2 years relevant sales experience in the following industries:</li>
+            </ul>
+            <p class="mb-0 ml-4">✓ IT Distribution</p>
+            <p class="mb-0 ml-4">✓ Pharmaceutical</p>
+            <p class="ml-4">✓ Insurance</p>
+
+            <ul>
+                <li>Extensive knowledge on all IT products, computer hardware particularly networking,servers, cctv,
+                    ups, medical supplies and equipments such as air purifiers, masks, and the likes</li>
+                <li>Strong verbal and written communication skills;</li>
+                <li>Possess good negotiation and account management skills;</li>
+                <li>Agressive, result oriented, dedicated, and strong passion in selling</li>
+                <li>Knows how to drive or owns a vehicle for easy mobility during client calls</li>
+            </ul>
+
+            <div class="my-5">
+                <div class="row justify-content-center">
+                    <div class="col-auto mx-2"><a href="mailto:catherine@banbros.ph"><i class="fas fa-envelope fa-3x"></i></a></div>
+                    <div class="col-auto mx-2"><a href="https://www.facebook.com/BanbrosCommercialIncorporated"><i class="fab fa-facebook-square fa-3x"></i></a></div>
+                    <div class="col-auto mx-2"><a href="https://www.linkedin.com/in/banbroscommercialinc"><i class="fab fa-linkedin fa-3x"></i></a></div>
+                    <div class="col-auto mx-2"><a href="https://m.me/BanbrosCommercialIncorporated"><i class="fab fa-facebook-messenger fa-3x"></i></a></div>
                 </div>
             </div>
         </div>
     </div>
--->
-
-    <!--
-    <div class="container mt-7">
-        <h1>Promotions</h1>
-        <div class="mx-auto text-center">
-            <div class="promoBox info-box info-ribbon">
-                <aside><p>Ribbon Text</p></aside>
-                <h4>Hero Text Goes Here Yo!</h4>
-                <p>This is where I would type real copy if this wasn't just in codepen!</p>
-            </div>
-
-            <div class="promoBox warning-box danger-ribbon">
-                <aside><p>Ribbon Text</p></aside>
-                <h4>Hero Text Goes Here Yo!</h4>
-                <p>This is where I would type real copy if this wasn't just in codepen!</p>
-            </div>
-
-            <div class="promoBox success-ribbon">
-                <aside><p>Ribbon Text</p></aside>
-                <h4>Hero Text Goes Here Yo!</h4>
-                <p>This is where I would type real copy if this wasn't just in codepen!</p>
-            </div>
-        </div>
-    </div>
--->
-    <!-- 
-    <div class="promoBox success-box info-ribbon">
-        <aside><p>Ribbon Text</p></aside>
-        <h4>Hero Text Goes Here Yo!</h4>
-        <p>This is where I would type real copy if this wasn't just in codepen!</p>
-    </div>
-
-    <div class="promoBox danger-box warning-ribbon">
-        <aside><p>Ribbon Text</p></aside>
-        <h4>Hero Text Goes Here Yo!</h4>
-        <p>This is where I would type real copy if this wasn't just in codepen!</p>
-    </div>
-
-    <div class="promoBox">
-        <aside><p>Ribbon Text</p></aside>
-        <h4>Hero Text Goes Here Yo!</h4>
-        <p>This is where I would type real copy if this wasn't just in codepen!</p>
-    </div> -->
 
 
 
@@ -127,4 +81,3 @@ include 'view/common/header.php';
 <?php include 'view/common/footer.php'; ?>
 
 <?php include 'view/common/scripts.php'; ?>
-
