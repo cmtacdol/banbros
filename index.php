@@ -9,7 +9,8 @@
     <?php include 'view/common/nav.php'; ?>
 
     <!-- Promo Block -->
-    <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white" style="background-image: url(assets/1920x1080/BBCC.jpg);">
+    <section class="js-parallax u-promo-block u-promo-block--mheight-600 u-overlay u-overlay--dark text-white"
+        style="background-image: url(assets/1920x1080/bgnew.jpg);">
         <!-- Promo Content -->
         <div class="container u-overlay__inner u-ver-center u-content-space">
             <div class="row justify-content-center">
@@ -30,90 +31,80 @@
     <main role="main">
         <?php include 'view/common/clientImage.php'; ?>
 
-        <!-- Our Product -->
-        <!-- <section class="u-content-space">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 align-self-center mb-5 mb-lg-0 pr-lg-5">
-              <header class="mb-5">
-              <img src="assets/img/logoblack.png" alt="Banbros" style="width: 70%;">
-              </header>
-
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem error beatae vitae deleniti nulla soluta inventore voluptas illo mollitia, fugit nemo sit eligendi alias laboriosam necessitatibus corporis veniam enim.</p>
-
-              <a href="" type="button" class="btn btn-outline-primary float-right">Read more</a>
-            </div>
-            <div class="col-lg-6 align-self-center text-center">
-              <img class="img-fluid products rounded" src="assets/img/man.png" alt="Iamge Description">
-           
-            </div>
-          </div>
-        </div>
-      </section> -->
         <!-- End Our Product -->
         <section class="u-content-space">
             <div class="container mx-auto w-100 ">
-                <div class="row">
-                    <!-- Article Image -->
-                    <div class="col-lg-6">
-                        <img class="img-fluid products rounded" src="assets/img/about.jpg" alt="Iamge Description">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-center">About Us</h3>
+                        <img class="img-fluid products rounded w-100" src="assets/img/about.jpg"
+                            alt="Iamge Description">
                     </div>
-                    <!-- End Article Image -->
+                </div>
 
-                    <!-- Article Content -->
-                    <div class="col-lg-6 mb-5 mb-lg-0 p-2 text-center text-lg-left">
-                        <div class="mb-2 text-center text-lg-left">
-                            <p class="mb-0" style="color: grey">About Us</p>
-                            <h5 style="color: #474a21" class="font-weight-bold">Banbros Commercial, Inc.</h5>
-                        </div>
-
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 style="color: #474a21" class="font-weight-bold">Banbros Commercial, Inc.</h5>
                         <p class="mb-4"><small>Established in 1997, carrying the primary purpose of distributing high
                                 quality IT products in the Philippine Market.</small></p>
-
-                        <div class="row">
-                            <div class="mt-2 d-none d-lg-block">
-                                <div class="rounded-border">
-                                    <i class="far fa-eye"></i>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h5 class="mb-0">VISION</h5>
-                                <small>Our vision is to be the Global forefront Top
-                                    Tier value-added Supplier of Innovative IT
-                                    products and end-to-end services in the
-                                    Information Technology distribution industry
-                                    by providing holistic and complementing
-                                    products to provide strong and consistent
-                                    growth in both revenues and profit for the
-                                    company and for its partners.</small>
-                            </div>
-                        </div>
-
-                        <div class="row mt-4">
-                            <div class="mt-2 d-none d-lg-block">
-                                <div class="rounded-border">
-                                    <i class="fas fa-rocket"></i>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h5 class="mb-0">MISSION</h5>
-                                <small>Our mission is to be the top forefront
-                                    Innovator that provides IT products,
-                                    essentials, holistic solution and
-                                    excellent services all in one for customer
-                                    Satisfaction.<br><br>
-                                    We continuously seek improvements for
-                                    more efficient, productive and satisfied
-                                    employees, reseller and customer so we
-                                    can all gain growth in all aspects.</small>
-                            </div>
-                        </div>
-
                     </div>
-                    <!-- End Article Content -->
-
-
                 </div>
+
+                <div class="row mt-3">
+                    <div class="col-lg-6 col-sm">
+                        <div class="card" style="height: 40vh">
+                            <div class="card-body">
+                                <div class="row p-2">
+                                    <div class="mt-2 d-none d-lg-block">
+                                        <div class="rounded-border">
+                                            <i class="far fa-eye"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h5 class="mb-0">VISION</h5>
+                                        <small>Our vision is to be the Global forefront Top
+                                            Tier value-added Supplier of Innovative IT
+                                            products and end-to-end services in the
+                                            Information Technology distribution industry
+                                            by providing holistic and complementing
+                                            products to provide strong and consistent
+                                            growth in both revenues and profit for the
+                                            company and for its partners.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm">
+                        <div class="card" style="height: 40vh">
+                            <div class="card-body">
+                                <div class="row p-2">
+                                    <div class="mt-2 d-none d-lg-block">
+                                        <div class="rounded-border">
+                                            <i class="far fa-eye"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h5 class="mb-0">MISSION</h5>
+                                        <small>Our mission is to be the top forefront
+                                            Innovator that provides IT products,
+                                            essentials, holistic solution and
+                                            excellent services all in one for customer
+                                            Satisfaction.<br><br>
+                                            We continuously seek improvements for
+                                            more efficient, productive and satisfied
+                                            employees, reseller and customer so we
+                                            can all gain growth in all aspects.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
             </div>
         </section>
         <!-- End Why We? -->
@@ -338,7 +329,8 @@
                                 Are you a customer that needs help?<br> That’s what the BCI is for.
                             </div>
                         </div>
-                        <a href="contact.php" style="background: white; border-radius: 15px" type="button" class="btn mt-3 text-dark font-weight-bold">Connect with us now.</a>
+                        <a href="contact.php" style="background: white; border-radius: 15px" type="button"
+                            class="btn mt-3 text-dark font-weight-bold">Connect with us now.</a>
                     </div>
                     <div class="col-md-4 text-center">
                         <h1 style="color: white;" class="card-title font-weight-bold text-center mb-0">Get Support</h1>
@@ -347,16 +339,20 @@
                                 Need support? just contact TEKZONE<br>Computer Sales and Services, Inc.
                             </div>
                         </div>
-                        <a href="https://tekzoneph.com/index.php/contact/" style="background: white; border-radius: 15px" type="button" class="btn mt-3 text-dark font-weight-bold">Contact support now.</a>
+                        <a href="https://tekzoneph.com/index.php/contact/"
+                            style="background: white; border-radius: 15px" type="button"
+                            class="btn mt-3 text-dark font-weight-bold">Contact support now.</a>
                     </div>
                     <div class="col-md-4 text-center">
-                        <h1 style="color: white;" class="card-title font-weight-bold text-center mb-0">Be Our Partner</h1>
+                        <h1 style="color: white;" class="card-title font-weight-bold text-center mb-0">Be Our Partner
+                        </h1>
                         <div class="col text-center d-flex justify-content-center">
                             <div class="text-white">
                                 Lorem Ipsum
                             </div>
                         </div>
-                        <a href="" style="background: white; border-radius: 15px" type="button" class="btn mt-3 text-dark font-weight-bold">Register now!</a>
+                        <a href="" style="background: white; border-radius: 15px" type="button"
+                            class="btn mt-3 text-dark font-weight-bold">Register now!</a>
                     </div>
                 </div>
 
@@ -372,7 +368,8 @@
                     <h2 class="font-weight-bold">News Letter</h2>
                 </div>
                 <div class="mx-auto" style="width: 50%;">
-                    <p><small class="font-italic">Be updated with the trends in technology.<br>Subscribe to us and we will keep you posted. </small></p>
+                    <p><small class="font-italic">Be updated with the trends in technology.<br>Subscribe to us and we
+                            will keep you posted. </small></p>
                 </div>
                 <div class="mx-auto" style="width: 50%;">
                     <div class="input-group">
@@ -412,25 +409,25 @@
         </div>
 
 
-    <?php include 'view/common/fb_plugins.php'; ?>
-    <?php include 'view/common/footer.php'; ?>
+        <?php include 'view/common/fb_plugins.php'; ?>
+        <?php include 'view/common/footer.php'; ?>
 
-    <?php include 'view/common/scripts.php'; ?>
+        <?php include 'view/common/scripts.php'; ?>
 
 
-    <script>
-    $(document).on('ready', function() {
-        // initialization of text animation (typing)
-        $(".js-display-typing").typed({
-            strings: [
-                "Your Value",
-                "Added Distributor"
-            ],
-            typeSpeed: 60,
-            loop: true,
-            backDelay: 2500
+        <script>
+        $(document).on('ready', function() {
+            // initialization of text animation (typing)
+            $(".js-display-typing").typed({
+                strings: [
+                    "Your Value",
+                    "Added Distributor"
+                ],
+                typeSpeed: 60,
+                loop: true,
+                backDelay: 2500
+            });
         });
-    });
-    </script>
-  </body>
-  <!-- End Body -->
+        </script>
+</body>
+<!-- End Body -->
