@@ -1258,7 +1258,7 @@ h6 {
 }
 
 .u-portfolio__item:hover .u-portfolio__image {
-    transform: translate3d(0, -60px, 0);
+    transform: scale(1.2);
 }
 
 .u-portfolio__info {
@@ -1318,9 +1318,6 @@ h6 {
     min-height: 450px;
 }
 
-. {
-    min-height: 500px;
-}
 
 .u-promo-block--mheight-600 {
     min-height: 600px;

@@ -12,8 +12,8 @@
                 </div>
                 <div class=" mt-3 ">
                     <div class="row">
-                        <a class="mx-3" href="#"><i class="fab fa-facebook-square fa-lg"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a class="mx-3" href="https://www.facebook.com/BanbrosCommercialIncorporated"><i class="fab fa-facebook-square fa-lg"></i></a>
+                        <a href="https://www.linkedin.com/in/banbroscommercialinc"><i class="fab fa-linkedin-in fa-lg"></i></a>
                     </div>
                 </div>
             </div>

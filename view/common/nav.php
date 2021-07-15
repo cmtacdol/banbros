@@ -4,7 +4,7 @@
       <nav class="js-navbar-scroll navbar fixed-top navbar-expand-lg navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand mt-4" href="index.php">
-            <img src="assets/img/logowhite.png" alt="Banbros" style="width: 200px;">
+            <img src="assets/img/logo.png" alt="Banbros" style="width: 200px;">
           </a>
 
           <button class="navbar-toggler mt-3" type="button"
@@ -19,7 +19,7 @@
 
           <div class="collapse navbar-collapse pt-5 pb-1" id="navbarTogglerDemo">
 
-
+ 
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
               <li class="nav-item mr-4 mb-2 mb-lg-0">
                 <a class="nav-link active" href="about.php">About</a>

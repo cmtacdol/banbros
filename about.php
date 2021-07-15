@@ -8,8 +8,30 @@ include 'view/common/header.php';
 ?>
 <style>
 .bci {
-    height: 40vh;
+    height: 250px;
 }
+
+.card ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.card ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.card ::-webkit-scrollbar-thumb {
+  background: skyblue; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.card ::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
 </style>
 
 <head>
@@ -68,130 +90,128 @@ include 'view/common/header.php';
                     <div class="container">
                         <h2 class="text-center mb-2">HISTORY & GROWTH</h2>
                         <div class="row">
-                            <div class="col-lg-4 col-sm-4 mb-4">
-                                <div class="card" style="width: 100%; height: 430px; border-radius: 10px">
-                                    <div class="card-body">
-                                        <h4 class="card-title mb-0">Banbros Commercial, Inc.</h4>
-                                        <p class="card-text">
-                                            Established in 1997,
-                                            carrying the primary purpose
-                                            of distributing high quality
-                                            IT products in the Philippine
-                                            Market.
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-4 mb-4">
+                                    <div class="card" style="width: 100%; height: 300px; border-radius: 10px">
+                                        <div class="card-body">
+                                            <h4 class="card-title mb-0">Banbros Commercial, Inc.</h4>
+                                            <p class="card-text">
+                                                Established in 1997,
+                                                carrying the primary purpose
+                                                of distributing high quality
+                                                IT products in the Philippine
+                                                Market.
 
-                                        </p>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 mb-4">
-                                <div class="card" style="width: 100%; height: 430px; border-radius: 10px">
-                                    <div class="card-body">
-                                        <h4 class="card-title mb-0">Banbros Commercial Inc. (BCI)</h4>
-                                        <p class="card-text">One of the dominant players in the Innovation &
-                                            Information Technology that provides products which
-                                            have leadership position in the market.
-                                        </p>
+                                <div class="col-lg-4 col-sm-4 mb-4">
+                                    <div class="card" style="width: 100%; height: 300px; border-radius: 10px">
+                                        <div class="card-body">
+                                            <h4 class="card-title mb-0">Banbros Commercial Inc. (BCI)</h4>
+                                            <p class="card-text">One of the dominant players in the Innovation &
+                                                Information Technology that provides products which
+                                                have leadership position in the market.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 mb-4">
-                                <div class="card" style="width: 100%; height: 430px; border-radius: 10px">
-                                    <div class="card-body">
-                                        <h4 class="card-title mb-0">Our company today, BCI continues to provides</h4>
-                                        <p class="card-text">strong and consistent growth in the revenues and
-                                            profits of the company. We aim to be the leader in the
-                                            distribution channel for all products by being number
-                                            one in all product categories.
+                                <div class="col-lg-4 col-sm-4 mb-4">
+                                    <div class="card" style="width: 100%; height: 300px; border-radius: 10px">
+                                        <div class="card-body">
+                                            <h4 class="card-title mb-0">Our company today, BCI continues to provides
+                                            </h4>
+                                            <p class="card-text">strong and consistent growth in the revenues and
+                                                profits of the company. We aim to be the leader in the
+                                                distribution channel for all products by being number
+                                                one in all product categories.
 
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-sm-12 mb-12">
-                                <div class="card" style="width: 100%; height: 280px; border-radius: 10px">
-                                    <div class="card-body">
-                                        <h1 class="card-title font-weight-bold mb-0">VISION</h1>
-                                        <div class="col ">
-                                            <div>
-                                                Banbros Commercial Inc. vision is to be the Global forefront Top Tier
-                                                value-added Supplier of Innovative IT products and end-to-end services
-                                                in the Information Technology distribution industry by providing
-                                                holistic and complementing products to provide strong and consistent
-                                                growth in both revenues and profit for the company and for its partners.
-                                            </div>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-lg-12 col-sm-12 mb-12 mt-5">
-                                <div class="card" style="width: 100%; Height 280px; border-radius: 10px">
-                                    <div class="card-body">
-                                        <h1 class="card-title font-weight-bold mb-0">MISSION</h1>
-                                        <div class="col">
-                                            <div>
-                                                Banbros Commercial Inc. mission is to be the top forefront Innovator
-                                                that provides IT products, essentials, holistic solution and excellent
-                                                services all in one for customer Satisfaction.
-                                                We continuously seek improvements for more
-                                                efficient, productive and satisfied employees, reseller and customer so
-                                                we can all gain growth in all aspects.
-
+                            <div class="row">
+                                <div class="col-lg mb-12">
+                                    <div class="card" style="width: 100%; height: 280px; border-radius: 10px">
+                                        <div class="card-body">
+                                            <h1 class="card-title font-weight-bold mb-0">VISION</h1>
+                                            <div class="col ">
+                                                <div>
+                                                    Banbros Commercial Inc. vision is to be the Global forefront Top
+                                                    Tier
+                                                    value-added Supplier of Innovative IT products and end-to-end
+                                                    services
+                                                    in the Information Technology distribution industry by providing
+                                                    holistic and complementing products to provide strong and consistent
+                                                    growth in both revenues and profit for the company and for its
+                                                    partners.
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 col-sm-12 mb12 mt-5">
-                                <div class="card" style="width: 100%; height 280px; border-radius: 10px">
-                                    <div class="card-body">
-                                        <h1 class="card-title font-weight-bold text-center mb-0">STRATEGY</h1>
-                                        <div class="col text-center">
+
+                                <div class="col-lg mb-12">
+                                    <div class="card" style="width: 100%; height: 280px; border-radius: 10px">
+                                        <div class="card-body">
+                                            <h1 class="card-title font-weight-bold mb-0">MISSION</h1>
                                             <div class="col">
-                                                We believe in a win-win strategy. We want long-term partners And have
-                                                developed and forged relationships with leading Manufacturers so we can
-                                                ensure that our customers Enjoy top of the products with the highest
-                                                level Of quality. We are constantly upgrading the quality of our Service
-                                                and support group in an effort to Enhance value for dealers and
-                                                eventually More value for their respective clients. We are consistently
-                                                expanding our channel assets Covering all distribution networks.
+                                                <div>
+                                                    Banbros Commercial Inc. mission is to be the top forefront Innovator
+                                                    that provides IT products, essentials, holistic solution and
+                                                    excellent
+                                                    services all in one for customer Satisfaction.
+                                                    We continuously seek improvements for more
+                                                    efficient, productive and satisfied employees, reseller and customer
+                                                    so
+                                                    we can all gain growth in all aspects.
 
-                                            </div>
-                                            <br>
-                                            <div class="col">
-                                                Banbros Commercial Inc. is beyond
-                                                The traditional distribution / trading company By focusing on BRANDING
-                                                strategies for its Products.
-
-                                                The company believes in brand building As the key to the success of
-                                                products In the market for the long term.
-
-                                                90% of our products are successful due to our Branding activities
-
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="container">
+                            <div class="row">
+                                <div class="col-lg mb-12 mt-5">
+                                    <div class="card" style="width: 100%; height 280px; border-radius: 10px">
+                                        <div class="card-body">
+                                            <h1 class="card-title font-weight-bold text-center mb-0">STRATEGY</h1>
+                                            <div class="col text-center">
+                                                <div class="col">
+                                                    We believe in a win-win strategy. We want long-term partners And
+                                                    have
+                                                    developed and forged relationships with leading Manufacturers so we
+                                                    can
+                                                    ensure that our customers Enjoy top of the products with the highest
+                                                    level Of quality. We are constantly upgrading the quality of our
+                                                    Service
+                                                    and support group in an effort to Enhance value for dealers and
+                                                    eventually More value for their respective clients. We are
+                                                    consistently
+                                                    expanding our channel assets Covering all distribution networks.
 
-                  <div class="mx-auto font-weight-bold">
-                    <h3 class="text-center" style="color: ">ORGANIZATIONAL CHART <br> LUZON</h3>
-                  </div>
-                  <div class="mx-auto text-center org_chart">
-                    <img src="assets/img/org-chart/org1.jpg" alt="">
-                    <img src="assets/img/org-chart/org2.jpg" alt="">
-                  </div>
+                                                </div>
+                                                <br>
+                                                <div class="col">
+                                                    Banbros Commercial Inc. is beyond
+                                                    The traditional distribution / trading company By focusing on
+                                                    BRANDING
+                                                    strategies for its Products.
 
-                  <div class="mx-auto font-weight-bold">
-                    <h3 class="text-center" style="color: ">ORGANIZATIONAL CHART <br> CEBU & DAVAO</h3>
-                  </div>
-                  <div class="mx-auto text-center org_chart">
-                    <img src="assets/img/org-chart/org3.jpg" alt="">
-                  </div>
+                                                    The company believes in brand building As the key to the success of
+                                                    products In the market for the long term.
 
-                </div> -->
+                                                    90% of our products are successful due to our Branding activities
 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -284,7 +304,7 @@ include 'view/common/header.php';
                             <h1 style="color: #0C65C7; font-weight: bold">BANBROS COMMERCIAL INC. SATELLITE OFFICES</h1>
 
                             <div class="row mt-3">
-                                <div class="col-lg-6 col-sm mb-4">
+                                <div class="col-lg-4 col-sm mb-4">
                                     <div class="card bci">
                                         <div class="card-header bg-info text-white">
                                             <div class="d-flex align-items-center">
@@ -293,7 +313,7 @@ include 'view/common/header.php';
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
+                                        <div class="card-body" style="overflow: auto">
                                             <span><u>Sales Office:</u></span>
                                             <p class="mb-0">BB Corporate Center</p>
                                             <p class="mb-0">32 Pilar Street corner Araullo Streets, Addition Hills
@@ -307,7 +327,7 @@ include 'view/common/header.php';
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-sm mb-4">
+                                <div class="col-lg-4 col-sm mb-4">
                                     <div class="card bci">
                                         <div class="card-header bg-info text-white">
                                             <div class="d-flex align-items-center">
@@ -316,7 +336,7 @@ include 'view/common/header.php';
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
+                                        <div class="card-body" style="overflow: auto">
                                             <span><u>Sales/Logistic/Warehouse:</u></span>
                                             <p class="mb-0">RM ICE-A Copenhagen East Res.</p>
                                             <p class="mb-0">Building A.C Cortes Ave., Cambaro Mandaue City, Cebu</p>
@@ -325,7 +345,7 @@ include 'view/common/header.php';
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-sm mb-4">
+                                <div class="col-lg-4 col-sm mb-4">
                                     <div class="card bci">
                                         <div class="card-header bg-info text-white">
                                             <div class="d-flex align-items-center">
@@ -334,7 +354,7 @@ include 'view/common/header.php';
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
+                                        <div class="card-body" style="overflow: auto">
                                             <span><u>Sales/Logistic/Warehouse:</u></span>
                                             <p class="mb-0">Jin-Long Complex</p>
                                             <p class="mb-0">R. Castillo St., Agdao Davao City</p>
@@ -343,7 +363,7 @@ include 'view/common/header.php';
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-sm mb-4">
+                                <div class="col-lg-4 col-sm mb-4">
                                     <div class="card bci">
                                         <div class="card-header bg-info text-white">
                                             <div class="d-flex align-items-center">
@@ -352,7 +372,7 @@ include 'view/common/header.php';
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
+                                        <div class="card-body" style="overflow: auto">
                                             <span><u>Sales/Logistic/Warehouse:</u></span>
                                             <p class="mb-0">194 Lopez Jaena Norte</p>
                                             <p class="mb-0">St. Lapaz, Iloilo City</p>
@@ -361,7 +381,7 @@ include 'view/common/header.php';
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-sm mb-4">
+                                <div class="col-lg-4 col-sm mb-4">
                                     <div class="card bci">
                                         <div class="card-header bg-info text-white">
                                             <div class="d-flex align-items-center">
@@ -370,7 +390,7 @@ include 'view/common/header.php';
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
+                                        <div class="card-body" style="overflow: auto">
                                             <span><u>Sales/Logistic/Warehouse:</u></span>
                                             <p class="mb-0">105 Tres Montanas J. R,</p>
                                             <p class="mb-0">Borja Extension, Gusa, Cagayan De Oro City</p>

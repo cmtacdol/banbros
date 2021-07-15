@@ -14,10 +14,14 @@ include 'view/common/header.php';
     <style>
     .banner-image {
         height: 600px;
-        background-position: center;
+        position: relative;
+        padding-top: 6.25rem;
+        padding-bottom: 6.25rem;
         background-repeat: no-repeat;
+        background-position: 50% 0;
         background-size: cover;
     }
+
     .card-title {
         height: 10vh;
     }
@@ -50,7 +54,7 @@ include 'view/common/header.php';
 
     <div class="banner-image" style="background-image: url(assets/1920x1080/bgnew.jpg); ">
         <!-- <img src="assets/1920x1080/BBCC3.jpg" class="imgCarousel"> -->
-        <div class="container u-overlay__inner u-ver-center u-content-space text-white">
+        <div class="container u-overlay__inner u-ver-center u-content-space text-white" style="position: none">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="text-center">
@@ -80,8 +84,7 @@ include 'view/common/header.php';
                             you to build the optimal networks. </p>
 
                         <a href="https://preview.mailerlite.com/a8y3t4/1708399749796729310/l9y2/"
-                            class="btn btn-info rounded-circle" id="btnModals" style="width: 40px; height: 40px;"><i
-                                class="fas fa-arrow-right"></i></a>
+                            class="btn btn-info rounded-pill py-1" id="btnModals">Read more</a>
                     </div>
                 </div>
             </div>
@@ -99,8 +102,7 @@ include 'view/common/header.php';
                         </p>
 
                         <a href="https://mailchi.mp/764e819c6688/mltg-cn-the-best-point-to-point-choice?e=b4e161d2be"
-                            class="btn btn-info rounded-circle" id="btnModals" style="width: 40px; height: 40px;"><i
-                                class="fas fa-arrow-right"></i></a>
+                        class="btn btn-info rounded-pill py-1" id="btnModals">Read more</a>
                     </div>
                 </div>
             </div>
@@ -118,8 +120,7 @@ include 'view/common/header.php';
                             cloud services, and the professional and managed services opportunities around</p>
 
                         <a href="http://app.edm.sangfor.cn/e/es?s=1587972869&e=121325&elqTrackId=a72ae390af474d9c960befe4cc2eef6c&elq=d065ec4c4e6c48bda7ee0ac72d3acfa2&elqaid=1066&elqat=1"
-                            class="btn btn-info rounded-circle" id="btnModals" style="width: 40px; height: 40px;"><i
-                                class="fas fa-arrow-right"></i></a>
+                        class="btn btn-info rounded-pill py-1" id="btnModals">Read more</a>
                     </div>
                 </div>
             </div>
