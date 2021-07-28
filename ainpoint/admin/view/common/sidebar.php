@@ -1,4 +1,3 @@
-
 <div class="pcoded-main-container">
     <div class="pcoded-wrapper">
 
@@ -18,14 +17,20 @@
                                 <span class="pcoded-mtext">Dashboard</span>
                             </a>
                         </li>
-                       
+
                     </ul>
-
-
                     <!-- Contents -->
 
-                    <div class="pcoded-navigation-label">Contents</div>
+                    <div class="pcoded-navigation-label">Catalog</div>
                     <ul class="pcoded-item pcoded-left-item">
+                        <li class="">
+                            <a href="banner.php" class="waves-effect waves-dark">
+                                <span class="pcoded-micon">
+                                    <i class="feather icon-image"></i>
+                                </span>
+                                <span class="pcoded-mtext">Banners</span>
+                            </a>
+                        </li>
                         <li class="pcoded-hasmenu">
                             <a href="javascript:void(0)" class="waves-effect waves-dark">
                                 <span class="pcoded-micon">
@@ -112,7 +117,7 @@
                                 </li>
                             </ul>
                         </li>
-                        
+
                     </ul>
 
                     <!-- Navigation -->

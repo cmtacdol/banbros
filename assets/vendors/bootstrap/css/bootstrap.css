@@ -3348,7 +3348,7 @@ input[type="button"].btn-block {
 }
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
-  background-color: #59287a;
+  /* background-color: #59287a; */
 }
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
@@ -4353,7 +4353,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #59287a;
+  color: #2d8af5;
   background-color: #fff;
   border: 1px solid #e6e7e9;
 }
@@ -4362,8 +4362,8 @@ input[type="button"].btn-block {
   z-index: 2;
   color: #fff;
   text-decoration: none;
-  background-color: #59287a;
-  border-color: #59287a;
+  background-color: #2d8af5;
+  border-color: #2d8af5;
 }
 
 .page-link:focus {

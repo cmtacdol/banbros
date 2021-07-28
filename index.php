@@ -1,4 +1,4 @@
-<?php session_start(); $_SESSION['PAGE_TITLE']="Banbros | Home";   include 'view/common/header.php'; ?>
+<?php session_start(); $_SESSION['PAGE_TITLE']="Home";   include 'view/common/header.php'; ?>
 
 
 <style>
@@ -43,6 +43,13 @@
     object-fit: cover;
 }
 
+@media screen and (max-width: 769px) {
+    .imgCarousel {
+        height: 600px;
+        object-fit: cover;
+    }
+}
+
 .blog-title {
     display: -webkit-box;
     width: 100%;
@@ -71,7 +78,8 @@
     border-left: none;
     border-top: none;
 }
-.figures{
+
+.figures {
     box-shadow: 0 0 2px 0 #888888;
 }
 </style>
@@ -133,7 +141,7 @@
         <?php include 'view/common/clientImage.php'; ?>
 
         <!-- End Our Product -->
-        <section class="u-content-space">
+        <section class="u-content-space revealOnScroll" data-animation="fadeInUp">
             <div class="container mx-auto w-100 ">
 
                 <div class="card">
@@ -144,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="card mt-3">
+                <div class="card mt-3 revealOnScroll" data-animation="fadeInRight">
                     <div class="card-body">
                         <h5 style="color: #474a21" class="font-weight-bold">Banbros Commercial, Inc.</h5>
                         <p class="mb-4"><small>Established in 1997, carrying the primary purpose of distributing high
@@ -154,7 +162,7 @@
 
                 <div class="row mt-3">
                     <div class="col-lg-6 col-sm">
-                        <div class="card" style="height: 40vh">
+                        <div class="card revealOnScroll" data-animation="fadeInLeft" style="height: 40vh">
                             <div class="card-body">
                                 <div class="row p-2">
                                     <div class="mt-2 d-none d-lg-block">
@@ -179,7 +187,7 @@
                     </div>
 
                     <div class="col-lg-6 col-sm">
-                        <div class="card" style="height: 40vh">
+                        <div class="card revealOnScroll" data-animation="fadeInRight" style="height: 40vh">
                             <div class="card-body">
                                 <div class="row p-2">
                                     <div class="mt-2 d-none d-lg-block">
@@ -211,14 +219,9 @@
         <!-- End Why We? -->
 
 
-        <div class="container">
+        <div class="container revealOnScroll" data-animation="fadeInUp">
             <!-- Slider mini banner -->
             <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-                <!-- <ol class="carousel-indicators">
-                    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselIndicators" data-slide-to="2"></li>
-                </ol> -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="assets/banner/belkin.jpg" class="d-block w-100" alt="...">
@@ -239,7 +242,7 @@
             </div>
         </div>
 
-        <div class="container my-5 py-5">
+        <div class="container my-5 py-5 revealOnScroll" data-animation="fadeInUp">
             <header class="text-center w-md-50 mx-auto mb-8">
                 <h2 class="h1">Featured Products</h2>
             </header>
@@ -470,7 +473,7 @@
             <div class="container">
                 <!-- Testimonials: Header -->
                 <header class="text-center w-md-50 mx-auto mb-8">
-                    <h2 class="h1 font-weight-bold text-white">EXECUTIVES</h2>
+                    <h2 class="h1 font-weight-bold text-white revealOnScroll" data-animation="fadeInUp">EXECUTIVES</h2>
 
                     <div class="d-flex justify-content-center">
                         <div style="width:30px; padding: 1px;" class="bg-warning"></div>
@@ -479,49 +482,47 @@
                 <!-- End Testimonials: Header -->
 
                 <div class="row">
-                    <div class="card-group p-3 mx-auto">
-                        <div class="card border border-0" style="background: none">
-                            <div class="fixImage p-3">
-                                <img src="assets/img-temp/ava/bangayan.png" class="card-img-top"
-                                    style="width: 70%; margin-left: 15%" alt="">
+                    <div class="col-lg col-sm">
+                        <div class="card text-center border border-0 revealOnScroll" data-animation="fadeInUp"
+                            style="background: none">
+                            <div class="fixImage text-center p-3">
+                                <img src="assets/img-temp/ava/bangayan.png" class="card-img-top" style="width: 80%;"
+                                    alt="">
                             </div>
-                            <div class="card-body p-0">
-                                <h5 style="color:white;" class="card-title font-weight-bold text-center mb-0">Richard
-                                    Bangayan</h5>
-                                <p class="text-center pt-0 font-italic text-white"><small>Vice President for
-                                        Sales</small></p>
-                                <div class="row socials mb-0 d-flex justify-content-center">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-1"></div>
-                        <div class="card border border-0" style="background: none">
-                            <div class="fixImage p-3">
-                                <img src="assets/img-temp/ava/lao.png" class="card-img-top"
-                                    style="width: 70%; margin-left: 15%" alt="">
-                            </div>
-                            <div class="card-body p-0">
-                                <h5 style="color:white;" class="card-title font-weight-bold text-center mb-0">Paton
-                                    Lao</h5>
-                                <p class="text-center pt-0 font-italic text-white"><small>Vice President for
-                                        Operations</small></p>
-                                <div class="row socials mb-0 d-flex justify-content-center">
-                                </div>
+                            <h5 style="color:white;" class="card-title font-weight-bold text-center mb-0">Richard
+                                Bangayan</h5>
+                            <p class="text-center pt-0 font-italic text-white"><small>Vice President for
+                                    Sales</small></p>
+                            <div class="row socials mb-0 d-flex justify-content-center">
                             </div>
                         </div>
-                        <div class="col-1"></div>
-                        <div class="card border border-0" style="background: none">
-                            <div class="fixImage p-3">
-                                <img src="assets/img-temp/ava/trinidad.png" class="card-img-top"
-                                    style="width: 70%; margin-left: 15%" alt="">
+                    </div>
+                    <div class="col-lg col-sm">
+                        <div class="card text-center border border-0 revealOnScroll" data-animation="fadeInDown"
+                            style="background: none">
+                            <div class="fixImage text-center p-3">
+                                <img src="assets/img-temp/ava/lao.png" class="card-img-top" style="width: 80%;" alt="">
                             </div>
-                            <div class="card-body p-0">
-                                <h5 style="color:white;" class="card-title font-weight-bold text-center mb-0">Gayle
-                                    Trinidad</h5>
-                                <p class="text-center pt-0 font-italic text-white"><small>Vice President for
-                                        Sales and Marketing</small></p>
-                                <div class="row socials mb-0 d-flex justify-content-center">
-                                </div>
+                            <h5 style="color:white;" class="card-title font-weight-bold text-center mb-0">Paton
+                                Lao</h5>
+                            <p class="text-center pt-0 font-italic text-white"><small>Vice President for
+                                    Operations</small></p>
+                            <div class="row socials mb-0 d-flex justify-content-center">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg col-sm">
+                        <div class="card text-center border border-0 revealOnScroll" data-animation="fadeInUp"
+                            style="background: none">
+                            <div class="fixImage text-center p-3">
+                                <img src="assets/img-temp/ava/trinidad.png" class="card-img-top" style="width: 80%;"
+                                    alt="">
+                            </div>
+                            <h5 style="color:white;" class="card-title font-weight-bold text-center mb-0">Gayle
+                                Trinidad</h5>
+                            <p class="text-center pt-0 font-italic text-white"><small>Vice President for
+                                    Sales and Marketing</small></p>
+                            <div class="row socials mb-0 d-flex justify-content-center">
                             </div>
                         </div>
                     </div>
@@ -534,14 +535,14 @@
         <section class="u-content-space">
             <div class="container">
                 <!-- Testimonials: Header -->
-                <header class="text-center w-md-50 mx-auto mb-8">
+                <header class="text-center w-md-50 mx-auto mb-8 revealOnScroll" data-animation="fadeInUp">
                     <h2 class="h1">Press Release</h2>
                     <p class="h5">What's New</p>
                 </header>
                 <!-- End Testimonials: Header -->
 
                 <div class="row">
-                    <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5">
+                    <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5 revealOnScroll" data-animation="fadeInLeftBig">
                         <a href="https://preview.mailerlite.com/a8y3t4/1708399749796729310/l9y2/">
                             <div class="card u-box-shadow-lg">
                                 <div class="card-images">
@@ -552,7 +553,7 @@
                         </a>
                     </div>
 
-                    <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5">
+                    <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5 revealOnScroll" data-animation="fadeInUpBig">
                         <a href="https://mailchi.mp/764e819c6688/mltg-cn-the-best-point-to-point-choice?e=b4e161d2be">
                             <div class="card u-box-shadow-lg">
                                 <div class="card-images">
@@ -563,7 +564,7 @@
                         </a>
                     </div>
 
-                    <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5">
+                    <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5 revealOnScroll" data-animation="fadeInRightBig">
                         <a
                             href="http://app.edm.sangfor.cn/e/es?s=1587972869&e=121325&elqTrackId=a72ae390af474d9c960befe4cc2eef6c&elq=d065ec4c4e6c48bda7ee0ac72d3acfa2&elqaid=1066&elqat=1">
                             <div class="card u-box-shadow-lg">
@@ -588,32 +589,33 @@
             <div class="container py-5">
                 <div class="row">
 
-                    <div class="col-lg text-center">
-                        <button type="button" class="btn btn-white btn-circle btn-xl"><i
+                    <div class="col-lg text-center revealOnScroll" data-animation="fadeInUp">
+                        <button onclick="location.href='contact.php';" class="btn btn-white btn-circle btn-xl"><i
                                 class="text-main fas fa-phone-volume fa-2x"></i></button>
                         <h4 class="text-white mt-3">Inquire Now</h4>
                     </div>
 
-                    <div class="col-lg text-center">
+                    <div class="col-lg text-center revealOnScroll" data-animation="fadeInUp">
                         <button type="button" class="btn btn-white btn-circle btn-xl"><i
                                 class="text-main fas fa-tv fa-2x"></i></button>
                         <h4 class="text-white mt-3">Webinar</h4>
                     </div>
 
-                    <div class="col-lg text-center">
+                    <div class="col-lg text-center revealOnScroll" data-animation="fadeInUp">
                         <button type="button" class="btn btn-white btn-circle btn-xl"><i
                                 class="text-main fas fa-tags fa-2x"></i></button>
                         <h4 class="text-white mt-3">Promos</h4>
                     </div>
 
-                    <div class="col-lg text-center">
-                        <button type="button" class="btn btn-white btn-circle btn-xl"><i
+                    <div class="col-lg text-center revealOnScroll" data-animation="fadeInUp">
+                        <button onclick="location.href='https://tekzoneph.com/index.php/contact/';"
+                            class="btn btn-white btn-circle btn-xl"><i
                                 class="text-main fas fa-user-plus fa-2x"></i></button>
                         <h4 class="text-white mt-3">Contact support <br> now</h4>
                     </div>
 
-                    <div class="col-lg text-center">
-                        <button type="button" class="btn btn-white btn-circle btn-xl"><i
+                    <div class="col-lg text-center revealOnScroll" data-animation="fadeInUp">
+                        <button onclick="location.href='partners.php';" class="btn btn-white btn-circle btn-xl"><i
                                 class="text-main fas fa-chart-pie fa-2x"></i></button>
                         <h4 class="text-white mt-3">Do business <br> with us</h4>
                     </div>

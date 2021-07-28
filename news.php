@@ -59,7 +59,7 @@ include 'view/common/header.php';
                 <div class="col-12">
                     <div class="text-center">
                         <p class="text-uppercase u-letter-spacing-sm mb-0"></p>
-                        <h1 class="display-sm-4 display-lg-3 mb-3">NEWS</h1>
+                        <h1 class="display-sm-4 display-lg-3 mb-3 revealOnScroll" data-animation="fadeInUp">NEWS</h1>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ include 'view/common/header.php';
         <h1 class="text-center mt-5">BLOGS</h1>
         <div class="row my-5">
             <div class="col-lg col-sm">
-                <div class="card">
+                <div class="card revealOnScroll" data-animation="fadeInLeftBig">
                     <div class="card-images">
                         <img src="view/images/othersrc/TipEdgecore.PNG" class="card-img-top mx-auto d-block"
                             id="newsImage">
@@ -89,7 +89,7 @@ include 'view/common/header.php';
                 </div>
             </div>
             <div class="col-lg col-sm">
-                <div class="card">
+                <div class="card revealOnScroll" data-animation="fadeInUpBig">
                     <div class="card-images">
                         <img src="view/images/othersrc/MetroLinq.PNG" class="card-img-top mx-auto d-block"
                             id="newsImage">
@@ -107,7 +107,7 @@ include 'view/common/header.php';
                 </div>
             </div>
             <div class="col-lg col-sm">
-                <div class="card">
+                <div class="card revealOnScroll" data-animation="fadeInRightBig">
                     <div class="card-images">
                         <img src="view/images/othersrc/sangfor.PNG" class="card-img-top mx-auto d-block" id="newsImage">
                     </div>

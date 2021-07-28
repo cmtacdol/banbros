@@ -45,7 +45,7 @@ include 'view/common/header.php';
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="text-center">
-                        <h3 class="text-uppercase u-letter-spacing-sm mb-0">OUR COMPANY</h3>
+                        <h3 class="text-uppercase u-letter-spacing-sm mb-0 revealOnScroll" data-animation="fadeInUp">OUR COMPANY</h3>
                         <h1 class="display-sm-4 display-lg-3 mb-3"> <span class="js-display-typing"></span></h1>
 
                     </div>
@@ -92,7 +92,7 @@ include 'view/common/header.php';
                         <div class="row">
                             <div class="row">
                                 <div class="col-lg-4 col-sm-4 mb-4">
-                                    <div class="card" style="width: 100%; height: 300px; border-radius: 10px">
+                                    <div class="card revealOnScroll" data-animation="fadeInLeft" style="width: 100%; height: 300px; border-radius: 10px">
                                         <div class="card-body">
                                             <h4 class="card-title mb-0">Banbros Commercial, Inc.</h4>
                                             <p class="card-text">
@@ -107,7 +107,7 @@ include 'view/common/header.php';
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-4 mb-4">
-                                    <div class="card" style="width: 100%; height: 300px; border-radius: 10px">
+                                    <div class="card revealOnScroll" data-animation="fadeInUp" style="width: 100%; height: 300px; border-radius: 10px">
                                         <div class="card-body">
                                             <h4 class="card-title mb-0">Banbros Commercial Inc. (BCI)</h4>
                                             <p class="card-text">One of the dominant players in the Innovation &
@@ -118,7 +118,7 @@ include 'view/common/header.php';
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-sm-4 mb-4">
-                                    <div class="card" style="width: 100%; height: 300px; border-radius: 10px">
+                                    <div class="card revealOnScroll" data-animation="fadeInRight" style="width: 100%; height: 300px; border-radius: 10px">
                                         <div class="card-body">
                                             <h4 class="card-title mb-0">Our company today, BCI continues to provides
                                             </h4>
@@ -134,7 +134,7 @@ include 'view/common/header.php';
                             </div>
                             <div class="row">
                                 <div class="col-lg mb-12">
-                                    <div class="card" style="width: 100%; height: 280px; border-radius: 10px">
+                                    <div class="card revealOnScroll" data-animation="fadeInUp" style="width: 100%; height: 280px; border-radius: 10px">
                                         <div class="card-body">
                                             <h1 class="card-title font-weight-bold mb-0">VISION</h1>
                                             <div class="col ">
@@ -154,7 +154,7 @@ include 'view/common/header.php';
                                 </div>
 
                                 <div class="col-lg mb-12">
-                                    <div class="card" style="width: 100%; height: 280px; border-radius: 10px">
+                                    <div class="card revealOnScroll" data-animation="fadeInUp" style="width: 100%; height: 280px; border-radius: 10px">
                                         <div class="card-body">
                                             <h1 class="card-title font-weight-bold mb-0">MISSION</h1>
                                             <div class="col">
@@ -176,7 +176,7 @@ include 'view/common/header.php';
                             </div>
                             <div class="row">
                                 <div class="col-lg mb-12 mt-5">
-                                    <div class="card" style="width: 100%; height 280px; border-radius: 10px">
+                                    <div class="card revealOnScroll" data-animation="fadeInUp" style="width: 100%; height 280px; border-radius: 10px">
                                         <div class="card-body">
                                             <h1 class="card-title font-weight-bold text-center mb-0">STRATEGY</h1>
                                             <div class="col text-center">
@@ -218,7 +218,7 @@ include 'view/common/header.php';
                 </div>
 
                 <div class="tab-pane fade" id="pills-two" role="tabpanel" aria-labelledby="pills-two-tab">
-                    <div class="container mt-8">
+                    <div class="container mt-8 revealOnScroll" data-animation="fadeInUp">
                         <div class="container mt-8">
                             <div class="mx-auto text-center">
                                 <div class="mx-auto text-center org_chart">
@@ -253,7 +253,7 @@ include 'view/common/header.php';
                     </div>
                 </div>
                 <div class="tab-pane fade" id="pills-three" role="tabpanel" aria-labelledby="pills-three-tab">
-                    <div class="container mt-8">
+                    <div class="container mt-8 revealOnScroll" data-animation="fadeInUp">
                         <div class="mx-auto text-center">
                             <h3>DISTRIBUTION CHANNEL <br> Partner for Growth</h3>
                         </div>
@@ -284,7 +284,7 @@ include 'view/common/header.php';
                     </div>
                 </div>
                 <div class="tab-pane fade" id="pills-four" role="tabpanel" aria-labelledby="pills-four-tab">
-                    <div class="container">
+                    <div class="container revealOnScroll" data-animation="fadeInUp">
 
 
                         <div class="mx-auto text-center org_chart">
@@ -305,7 +305,7 @@ include 'view/common/header.php';
 
                             <div class="row mt-3">
                                 <div class="col-lg-4 col-sm mb-4">
-                                    <div class="card bci">
+                                    <div class="card bci revealOnScroll" data-animation="fadeInLeftBig">
                                         <div class="card-header bg-info text-white">
                                             <div class="d-flex align-items-center">
                                                 <i class="fas fa-map-marker-alt"></i>
@@ -328,7 +328,7 @@ include 'view/common/header.php';
                                 </div>
 
                                 <div class="col-lg-4 col-sm mb-4">
-                                    <div class="card bci">
+                                    <div class="card bci revealOnScroll" data-animation="fadeInUpBig">
                                         <div class="card-header bg-info text-white">
                                             <div class="d-flex align-items-center">
                                                 <i class="fas fa-map-marker-alt"></i>
@@ -346,7 +346,7 @@ include 'view/common/header.php';
                                 </div>
 
                                 <div class="col-lg-4 col-sm mb-4">
-                                    <div class="card bci">
+                                    <div class="card bci revealOnScroll" data-animation="fadeInRightBig">
                                         <div class="card-header bg-info text-white">
                                             <div class="d-flex align-items-center">
                                                 <i class="fas fa-map-marker-alt"></i>
@@ -364,7 +364,7 @@ include 'view/common/header.php';
                                 </div>
 
                                 <div class="col-lg-4 col-sm mb-4">
-                                    <div class="card bci">
+                                    <div class="card bci revealOnScroll" data-animation="fadeInUpBig">
                                         <div class="card-header bg-info text-white">
                                             <div class="d-flex align-items-center">
                                                 <i class="fas fa-map-marker-alt"></i>
@@ -382,7 +382,7 @@ include 'view/common/header.php';
                                 </div>
 
                                 <div class="col-lg-4 col-sm mb-4">
-                                    <div class="card bci">
+                                    <div class="card bci revealOnScroll" data-animation="fadeInUpBig">
                                         <div class="card-header bg-info text-white">
                                             <div class="d-flex align-items-center">
                                                 <i class="fas fa-map-marker-alt"></i>

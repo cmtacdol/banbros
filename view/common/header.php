@@ -29,5 +29,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     
+    <link rel="stylesheet" href="assets/fade_plugin/fade.css">
 </head>
 <!-- End Head -->

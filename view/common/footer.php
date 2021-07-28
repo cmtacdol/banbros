@@ -11,11 +11,12 @@
                     <small class="text-white">Distributor of high-quality IT products in the Philippines.</small>
                 </div>
                 <div class=" mt-3 ">
-                    <div class="row">
+                    <div class="row justify-content-lg-start justify-content-center">
                         <a class="mx-3" href="https://www.facebook.com/BanbrosCommercialIncorporated"><i class="fab fa-facebook-square fa-lg"></i></a>
                         <a href="https://www.linkedin.com/in/banbroscommercialinc"><i class="fab fa-linkedin-in fa-lg"></i></a>
                     </div>
                 </div>
+                <hr class="d-lg-none d-sm-block">
             </div>
 
             <div class="col-1"></div>

@@ -1,4 +1,13 @@
 <script>
+// toastr.options = {
+//     timeOut: 0,
+//     extendedTimeOut: 100,
+//     tapToDismiss: true,
+//     debug: false,
+//     fadeOut: 10,
+//     positionClass: "toast-bottom-center"
+// };
+
 <?php if(isset($_SESSION['error_message'])){?>
 
 var error = "<?php echo $_SESSION['error_message']; ?>"
