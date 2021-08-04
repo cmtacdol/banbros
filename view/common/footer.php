@@ -24,23 +24,23 @@
             <div style="border-right: 2px solid #0a394f; border-left: 2px solid #0a394f"
                 class="col-md-4 text-center text-md-left">
                 <div class="row">
-                    <div class="col">
+                    <div class="col footernav">
 
-                        <a class="nav-link text-white" href="index.php">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
 
-                        <a class="nav-link text-white" href="about.php">About Us</a>
+                        <a class="nav-link" href="about.php">About Us</a>
 
-                        <a class="nav-link text-white" href="business.php">Products</a>
+                        <a class="nav-link" href="business.php">Products</a>
 
-                        <a class="nav-link text-white" href="news.php">News</a>
+                        <a class="nav-link" href="news.php">News</a>
                     </div>
                     <div class="col-auto">
 
-                        <a class="nav-link text-white" href="#">Events</a>
+                        <a class="nav-link" href="#">Events</a>
 
-                        <a class="nav-link text-white" href="#">Become a Reseller</a>
+                        <a class="nav-link" href="#">Become a Reseller</a>
 
-                        <a class="nav-link text-white" href="contact.php">Contact Us</a>
+                        <a class="nav-link" href="contact.php">Contact Us</a>
 
                         <!-- <a class="nav-link text-white" href="#">Privacy Policy</a> -->
                     </div>

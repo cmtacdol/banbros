@@ -154,7 +154,7 @@ include 'view/common/header.php';
                             id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt
                             ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor
                             aliquam vitae. Curabitur molestie eros. </p>
-                        <button class="btn btn-primary">Apply Now</button>
+                        <button class="btn btn-info">Apply Now</button>
                     </div>
 
                 </div>
@@ -174,7 +174,7 @@ include 'view/common/header.php';
                             id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt
                             ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor
                             aliquam vitae. Curabitur molestie eros. </p>
-                        <button class="btn btn-primary">Apply Now</button>
+                        <button class="btn btn-info">Apply Now</button>
                     </div>
                 </div>
             </div>
@@ -193,7 +193,7 @@ include 'view/common/header.php';
                             id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt
                             ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor
                             aliquam vitae. Curabitur molestie eros. </p>
-                        <button class="btn btn-primary">Apply Now</button>
+                        <button class="btn btn-info">Apply Now</button>
                     </div>
                 </div>
             </div>

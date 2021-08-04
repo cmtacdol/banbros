@@ -91,6 +91,11 @@ body {
                                     style="background-image: url(http://placekitten.com/480/700); width: 80%">
                                 </div>
                             </a>
+                            <a href="#" class="thumbnail" data-big="http://placekitten.com/480/700">
+                                <div class="thumbnail-image"
+                                    style="background-image: url(http://placekitten.com/480/700); width: 80%">
+                                </div>
+                            </a>
                         </aside>
 
                         <main class="primary" style="background-image: url('http://placekitten.com/420/600');"></main>
@@ -114,11 +119,7 @@ body {
                     <a href="#" class="btn btn-info mt-5 mb-2">Inquire Now</a>
                 </div>
 
-
             </div>
-
-
-
         </div>
         <!-- /.container -->
 

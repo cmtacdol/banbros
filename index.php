@@ -144,7 +144,7 @@
         <section class="u-content-space revealOnScroll" data-animation="fadeInUp">
             <div class="container mx-auto w-100 ">
 
-                <div class="card">
+                <div class="card border-0">
                     <div class="card-body">
                         <h3 class="text-center">About Us</h3>
                         <img class="img-fluid products rounded w-100" src="assets/img/about2.jpg"
@@ -152,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="card mt-3 revealOnScroll" data-animation="fadeInRight">
+                <div class="card border-0 mt-3 revealOnScroll" data-animation="fadeInRight">
                     <div class="card-body">
                         <h5 style="color: #474a21" class="font-weight-bold">Banbros Commercial, Inc.</h5>
                         <p class="mb-4"><small>Established in 1997, carrying the primary purpose of distributing high
@@ -162,7 +162,7 @@
 
                 <div class="row mt-3">
                     <div class="col-lg-6 col-sm">
-                        <div class="card revealOnScroll" data-animation="fadeInLeft" style="height: 40vh">
+                        <div class="card border-0 revealOnScroll" data-animation="fadeInLeft" style="height: 40vh">
                             <div class="card-body">
                                 <div class="row p-2">
                                     <div class="mt-2 d-none d-lg-block">
@@ -187,7 +187,7 @@
                     </div>
 
                     <div class="col-lg-6 col-sm">
-                        <div class="card revealOnScroll" data-animation="fadeInRight" style="height: 40vh">
+                        <div class="card border-0 revealOnScroll" data-animation="fadeInRight" style="height: 40vh">
                             <div class="card-body">
                                 <div class="row p-2">
                                     <div class="mt-2 d-none d-lg-block">
@@ -256,10 +256,6 @@
                                 aria-controls="pop2" aria-selected="false">Gamdias</a>
                             <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab"
                                 aria-controls="pop3" aria-selected="false">Edifier</a>
-                            <a class="nav-item nav-link" id="pop4-tab" data-toggle="tab" href="#pop4" role="tab"
-                                aria-controls="pop4" aria-selected="false">Lorem Ipsum</a>
-                            <a class="nav-item nav-link" id="pop5-tab" data-toggle="tab" href="#pop5" role="tab"
-                                aria-controls="pop5" aria-selected="false">Lorem Ipsum</a>
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
@@ -383,84 +379,6 @@
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="pop4" role="tabpanel" aria-labelledby="pop4-tab">
-                            <div class="pt-3"></div>
-
-                            <div class="row">
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img19.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">XM3BT Multimedia Speaker</h6>
-                                        <small class="d-block">EDIFIER</small>
-                                    </figcaption>
-                                </a>
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img20.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">W855BT Premiere Bluetooth Headset</h6>
-                                        <small class="d-block">EDIFIER</small>
-                                    </figcaption>
-                                </a>
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img21.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">W820BT Bluetooth Headset</h6>
-                                        <small class="d-block">EDIFIER</small>
-                                    </figcaption>
-                                </a>
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img21.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">W820BT Bluetooth Headset</h6>
-                                        <small class="d-block">EDIFIER</small>
-                                    </figcaption>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="pop5" role="tabpanel" aria-labelledby="pop5-tab">
-                            <div class="pt-3"></div>
-
-                            <div class="row">
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img19.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">XM3BT Multimedia Speaker</h6>
-                                        <small class="d-block">EDIFIER</small>
-                                    </figcaption>
-                                </a>
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img20.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">W855BT Premiere Bluetooth Headset</h6>
-                                        <small class="d-block">EDIFIER</small>
-                                    </figcaption>
-                                </a>
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img21.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">W820BT Bluetooth Headset</h6>
-                                        <small class="d-block">EDIFIER</small>
-                                    </figcaption>
-                                </a>
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img21.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">W820BT Bluetooth Headset</h6>
-                                        <small class="d-block">EDIFIER</small>
-                                    </figcaption>
-                                </a>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -472,12 +390,8 @@
         <section class="u-content-space pt-5 pb-5" style="background:#0094DA">
             <div class="container">
                 <!-- Testimonials: Header -->
-                <header class="text-center w-md-50 mx-auto mb-8">
+                <header class="text-center w-md-50 mx-auto mb-3">
                     <h2 class="h1 font-weight-bold text-white revealOnScroll" data-animation="fadeInUp">EXECUTIVES</h2>
-
-                    <div class="d-flex justify-content-center">
-                        <div style="width:30px; padding: 1px;" class="bg-warning"></div>
-                    </div>
                 </header>
                 <!-- End Testimonials: Header -->
 
@@ -586,89 +500,38 @@
 
 
         <div style="background: #1b97cf;" class="py-5">
-            <div class="container py-5">
-                <div class="row">
-
-                    <div class="col-lg text-center revealOnScroll" data-animation="fadeInUp">
+            <div class="py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-2 text-center revealOnScroll" data-animation="fadeInUp">
                         <button onclick="location.href='contact.php';" class="btn btn-white btn-circle btn-xl"><i
                                 class="text-main fas fa-phone-volume fa-2x"></i></button>
-                        <h4 class="text-white mt-3">Inquire Now</h4>
+                        <h5 class="text-white mt-3">Inquire Now</h5>
                     </div>
 
-                    <div class="col-lg text-center revealOnScroll" data-animation="fadeInUp">
+                    <div class="col-lg-2 text-center revealOnScroll" data-animation="fadeInUp">
                         <button type="button" class="btn btn-white btn-circle btn-xl"><i
                                 class="text-main fas fa-tv fa-2x"></i></button>
-                        <h4 class="text-white mt-3">Webinar</h4>
+                        <h5 class="text-white mt-3">Webinar</h5>
                     </div>
 
-                    <div class="col-lg text-center revealOnScroll" data-animation="fadeInUp">
+                    <div class="col-lg-2 text-center revealOnScroll" data-animation="fadeInUp">
                         <button type="button" class="btn btn-white btn-circle btn-xl"><i
                                 class="text-main fas fa-tags fa-2x"></i></button>
-                        <h4 class="text-white mt-3">Promos</h4>
+                        <h5 class="text-white mt-3">Promos</h5>
                     </div>
 
-                    <div class="col-lg text-center revealOnScroll" data-animation="fadeInUp">
+                    <div class="col-lg-2 text-center revealOnScroll" data-animation="fadeInUp">
                         <button onclick="location.href='https://tekzoneph.com/index.php/contact/';"
                             class="btn btn-white btn-circle btn-xl"><i
                                 class="text-main fas fa-user-plus fa-2x"></i></button>
-                        <h4 class="text-white mt-3">Contact support <br> now</h4>
+                        <h5 class="text-white mt-3">Contact support</h5>
                     </div>
 
-                    <div class="col-lg text-center revealOnScroll" data-animation="fadeInUp">
+                    <div class="col-lg-2 text-center revealOnScroll" data-animation="fadeInUp">
                         <button onclick="location.href='partners.php';" class="btn btn-white btn-circle btn-xl"><i
                                 class="text-main fas fa-chart-pie fa-2x"></i></button>
-                        <h4 class="text-white mt-3">Do business <br> with us</h4>
+                        <h5 class="text-white mt-3">Do business with us</h5>
                     </div>
-                    <!-- <div class="col-lg col-sm mb-5 text-center">
-                        <a href="contact.php" type="button">
-                            <div class="box-part text-center pt-5">
-                                <i class="fas fa-phone-volume fa-4x mt-2" aria-hidden="true"></i>
-                                <div class="title mt-3">
-                                    <p>Inquire Now</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg col-sm mb-5 text-center">
-                        <a href="#">
-                            <div class="box-part text-center pt-5">
-                                <i class="fas fa-tv fa-4x mt-2" aria-hidden="true"></i>
-                                <div class="title mt-3">
-                                    <p>Webinar</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg col-sm mb-5 text-center">
-                        <a href="#">
-                            <div class="box-part text-center pt-5">
-                                <i class="fas fa-tags fa-4x mt-2" aria-hidden="true"></i>
-                                <div class="title mt-3">
-                                    <p>Promos</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg col-sm text-center">
-                        <a href="https://tekzoneph.com/index.php/contact/">
-                            <div class="box-part text-center pt-5">
-                                <i class="fas fa-user-plus fa-4x mt-2" aria-hidden="true"></i>
-                                <div class="title mt-3">
-                                    <p>Contact support now</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg col-sm text-center">
-                        <a href="https://tekzoneph.com/index.php/contact/">
-                            <div class="box-part text-center pt-5">
-                                <i class="fas fa-chart-pie fa-4x mt-2" aria-hidden="true"></i>
-                                <div class="title mt-3">
-                                    <p>Do business with us</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
                 </div>
             </div>
         </div>

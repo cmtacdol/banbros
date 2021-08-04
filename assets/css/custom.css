@@ -9,9 +9,10 @@
 		width: 100%;
 	}
 }
-#fb-root{
+#fb-root{ 
 	z-index: 9999;
 }
+
 
 .btn-circle {
 	width: 30px;

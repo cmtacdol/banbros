@@ -21,52 +21,38 @@
                     </ul>
                     <!-- Contents -->
 
-                    <div class="pcoded-navigation-label">Catalog</div>
                     <ul class="pcoded-item pcoded-left-item">
-                        <li class="">
-                            <a href="banner.php" class="waves-effect waves-dark">
-                                <span class="pcoded-micon">
-                                    <i class="feather icon-image"></i>
-                                </span>
-                                <span class="pcoded-mtext">Banners</span>
-                            </a>
-                        </li>
+
                         <li class="pcoded-hasmenu">
                             <a href="javascript:void(0)" class="waves-effect waves-dark">
                                 <span class="pcoded-micon">
-                                    <i class="feather icon-file-text"></i>
+                                    <i class="feather icon-tag"></i>
                                 </span>
-                                <span class="pcoded-mtext">Articles</span>
+                                <span class="pcoded-mtext">Catalog</span>
                             </a>
                             <ul class="pcoded-submenu">
                                 <li class="">
-                                    <a href="article_new.php" class="waves-effect waves-dark">
-                                        <span class="pcoded-mtext">New Artile</span>
+                                    <a href="banner.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Banners</span>
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="article_list.php" class="waves-effect waves-dark">
-                                        <span class="pcoded-mtext">List of Articles</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="pcoded-hasmenu">
-                            <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                <span class="pcoded-micon">
-                                    <i class="feather icon-folder"></i>
-                                </span>
-                                <span class="pcoded-mtext">Categories</span>
-                            </a>
-                            <ul class="pcoded-submenu">
-                                <li class="">
-                                    <a href="category_new.php" class="waves-effect waves-dark">
-                                        <span class="pcoded-mtext">New Category</span>
+                                    <a href="category.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Categories</span>
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="category_list.php" class="waves-effect waves-dark">
-                                        <span class="pcoded-mtext">List of Categories</span>
+                                    <a href="#" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Products</span>
                                     </a>
                                 </li>
                             </ul>

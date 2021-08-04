@@ -90,61 +90,61 @@ include 'view/common/header.php';
 
                 <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
                     <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/img-temp/partners/ACER (1).png" alt="">
+                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/ACER (1).png" alt="">
                     </a>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
                     <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail"
+                        <img class="img-fluid border-0 img-thumbnail"
                             src="assets/img-temp/partners/asus-world-motherboard-gaming-brand-2.png" alt="">
                     </a>
                 </div>
                 <!-- asdaaaaaaaaaaaaaaaa -->
                 <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
                     <a href="product_brother.php" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/img-temp/partners/brother.png" alt="">
+                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/brother.png" alt="">
                     </a>
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
                     <a href="product_edifier.php" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/img-temp/partners/edifier.png" alt="">
+                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/edifier.png" alt="">
                     </a>
                 </div>
 
 
                 <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
                     <a href="product_lifaair.php" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/img-temp/partners/LIFAair.png" alt="">
+                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/LIFAair.png" alt="">
                     </a>
                 </div>
 
 
                 <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
                     <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/img-temp/partners/KEBOS-01.png" alt="">
+                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/KEBOS-01.png" alt="">
                     </a>
                 </div>
 
 
                 <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
                     <a href="product_hikvision.php" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/img-temp/partners/hikvision.png" alt="">
+                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/hikvision.png" alt="">
                     </a>
                 </div>
 
 
                 <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
                     <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/img-temp/partners/Ignite Logo-01.png" alt="">
+                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/Ignite Logo-01.png" alt="">
                     </a>
                 </div>
 
 
                 <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
                     <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid img-thumbnail" src="assets/img-temp/partners/EDGECORE.png" alt="">
+                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/EDGECORE.png" alt="">
                     </a>
                 </div>
 

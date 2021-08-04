@@ -8,6 +8,20 @@ body {
     background: #F4F6F9;
     height: 100%;
 }
+.card{
+    position: relative;
+}
+.watermark {
+  content: "";
+  opacity: 0.04;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  /* z-index: -1;   */
+  width:100%;
+}
 </style>
 
 <body>
@@ -21,6 +35,7 @@ body {
 
         <div class="container my-5 py-5 revealOnScroll" data-animation="fadeInUp">
             <div class="card shadow-0 border border-0">
+                <img class="watermark" src="assets/img/circlelogo.png" alt="">
                 <div class="card-body p-5">
                     <header class="text-center w-md-50 mx-auto mb-8">
                         <h2 class="h2 mb-0 font-weight-bold">BANBROS COMMERCIAL, INC.</h2>

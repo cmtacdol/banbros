@@ -3618,10 +3618,14 @@ input[type="button"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  color: white;
 }
-
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
+}
+
+.footernav > a:hover{
+  color: #0094DA;
 }
 
 .nav-link.disabled {
