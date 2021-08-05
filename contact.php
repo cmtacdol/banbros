@@ -13,6 +13,16 @@ if(isset($_POST['sendEmails'])){
 ?>
 
 <style>
+.banner-image {
+    height: 600px;
+    position: relative;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
 .blockquote-custom {
     position: relative;
     font-size: 1.1rem;
@@ -38,22 +48,21 @@ if(isset($_POST['sendEmails'])){
 
     <main role="main">
 
-        <section class="js-parallax u-promo-block u-promo-block--mheight-450 u-overlay u-overlay--dark text-white"
-            style="background-color: #0094da;">
-            <!-- Promo Content -->
-            <div class="container u-overlay__inner u-ver-center u-content-space">
+        <div class="banner-image" style="background-image: url(assets/1920x1080/CONTACT.jpg); ">
+            <!-- <img src="assets/1920x1080/BBCC3.jpg" class="imgCarousel"> -->
+            <div class="container u-overlay__inner u-ver-center u-content-space text-white">
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="text-center">
                             <p class="text-uppercase u-letter-spacing-sm mb-0"></p>
-                            <h1 class="display-sm-4 display-lg-3 mb-3 revealOnScroll" data-animation="fadeInUp">CONTACT
-                                US</h1>
+                            <h1 class="display-sm-4 display-lg-3 mb-3 font-weight-bold revealOnScroll"
+                                data-animation="fadeInUp">CONTACT US
+                            </h1>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- End Promo Content -->
-        </section>
+        </div>
 
         <div class="container revealOnScroll mb-7" data-animation="fadeInUp">
             <div class="mx-auto mt-8">

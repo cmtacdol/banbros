@@ -8,19 +8,40 @@ body {
     background: #F4F6F9;
     height: 100%;
 }
-.card{
+
+.card {
     position: relative;
+    z-index: 999;
 }
+
 .watermark {
-  content: "";
-  opacity: 0.04;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  /* z-index: -1;   */
-  width:100%;
+    content: "";
+    opacity: 0.04;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    /* z-index: -1;   */
+    width: 100%;
+}
+
+.parallax {
+    /* The image used */
+    position: absolute;
+    top: 30px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.05;
+    z-index: -1;
+    background-image: url("assets/img/circlelogo.png");
+    min-height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 </style>
 
@@ -32,11 +53,11 @@ body {
 
         <div class="clas" style="height: 120px; width: 100%; background: #0094DA"></div>
 
-
         <div class="container my-5 py-5 revealOnScroll" data-animation="fadeInUp">
             <div class="card shadow-0 border border-0">
-                <img class="watermark" src="assets/img/circlelogo.png" alt="">
+                <!-- <img class="watermark" src="assets/img/circlelogo.png" alt=""> -->
                 <div class="card-body p-5">
+                <div class="parallax"></div>
                     <header class="text-center w-md-50 mx-auto mb-8">
                         <h2 class="h2 mb-0 font-weight-bold">BANBROS COMMERCIAL, INC.</h2>
                         <p class="my-0">Banbros Corporate Center, No. 32 Pilar cor. Araullo Streets</p>

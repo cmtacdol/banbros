@@ -1,88 +1,11 @@
-<?php session_start(); $_SESSION['PAGE_TITLE']="Home";   include 'view/common/header.php'; ?>
+<?php 
+session_start(); 
+$_SESSION['PAGE_TITLE']="Home";   
+include 'view/common/header.php'; 
 
+?>
 
-<style>
-.carousel-fade .carousel-item {
-    position: relative;
-    opacity: 0;
-    transition-duration: .6s;
-    transition-property: opacity;
-}
-
-.carousel-fade .carousel-item.active,
-.carousel-fade .carousel-item-next.carousel-item-left,
-.carousel-fade .carousel-item-prev.carousel-item-right {
-    opacity: 1;
-}
-
-.carousel-fade .active.carousel-item-left,
-.carousel-fade .active.carousel-item-right {
-    opacity: 0;
-}
-
-.carousel-fade .carousel-item-next,
-.carousel-fade .carousel-item-prev,
-.carousel-fade .carousel-item.active,
-.carousel-fade .active.carousel-item-left,
-.carousel-fade .active.carousel-item-prev {
-    transform: translateX(0);
-    transform: translate3d(0, 0, 0);
-}
-
-.card-images {
-    height: 40vh;
-}
-
-.main-banner-inner {
-    height: 600px;
-}
-
-.imgCarousel {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-@media screen and (max-width: 769px) {
-    .imgCarousel {
-        height: 600px;
-        object-fit: cover;
-    }
-}
-
-.blog-title {
-    display: -webkit-box;
-    width: 100%;
-    height: 10vh;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-#newsImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.text-main {
-    color: #1B97CF;
-}
-
-.nav-tabs .nav-link.active {
-    font-weight: bold;
-    background-color: transparent;
-    border-bottom: 3px solid #0094DA;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-}
-
-.figures {
-    box-shadow: 0 0 2px 0 #888888;
-}
-</style>
+<link rel="stylesheet" href="assets/css/custome_hompage.css">
 
 <body>
 
@@ -136,12 +59,12 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div>
+        </div> 
 
-        <?php include 'view/common/clientImage.php'; ?>
+        <?php include 'view/common/clientImage.php'; ?> 
 
         <!-- End Our Product -->
-        <section class="u-content-space revealOnScroll" data-animation="fadeInUp">
+        <section class="u-content-space pb-1 mb-0 revealOnScroll" data-animation="fadeInUp">
             <div class="container mx-auto w-100 ">
 
                 <div class="card border-0">
@@ -192,7 +115,7 @@
                                 <div class="row p-2">
                                     <div class="mt-2 d-none d-lg-block">
                                         <div class="rounded-border">
-                                            <i class="far fa-eye"></i>
+                                            <i class="far fa-building"></i>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -248,13 +171,13 @@
             </header>
             <div class="row">
                 <div class="col-md-12 text-center ">
-                    <nav class="nav-justified ">
-                        <div class="nav nav-tabs " id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link active" id="pop1-tab" data-toggle="tab" href="#pop1" role="tab"
+                    <nav class="nav-justified tabbable">
+                        <div class="nav nav-tabs pb-2" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link text-dark active" id="pop1-tab" data-toggle="tab" href="#pop1" role="tab"
                                 aria-controls="pop1" aria-selected="true">LIFAair</a>
-                            <a class="nav-item nav-link" id="pop2-tab" data-toggle="tab" href="#pop2" role="tab"
+                            <a class="nav-item nav-link text-dark" id="pop2-tab" data-toggle="tab" href="#pop2" role="tab"
                                 aria-controls="pop2" aria-selected="false">Gamdias</a>
-                            <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab"
+                            <a class="nav-item nav-link text-dark" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab"
                                 aria-controls="pop3" aria-selected="false">Edifier</a>
                         </div>
                     </nav>
@@ -504,33 +427,33 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-2 text-center revealOnScroll" data-animation="fadeInUp">
                         <button onclick="location.href='contact.php';" class="btn btn-white btn-circle btn-xl"><i
-                                class="text-main fas fa-phone-volume fa-2x"></i></button>
-                        <h5 class="text-white mt-3">Inquire Now</h5>
+                                class="text-main fas fa-phone-volume fa-lg"></i></button>
+                        <h6 class="text-white mt-3">Inquire Now</h6>
                     </div>
 
                     <div class="col-lg-2 text-center revealOnScroll" data-animation="fadeInUp">
                         <button type="button" class="btn btn-white btn-circle btn-xl"><i
-                                class="text-main fas fa-tv fa-2x"></i></button>
-                        <h5 class="text-white mt-3">Webinar</h5>
+                                class="text-main fas fa-tv fa-lg"></i></button>
+                        <h6 class="text-white mt-3">Webinar</h6>
                     </div>
 
                     <div class="col-lg-2 text-center revealOnScroll" data-animation="fadeInUp">
                         <button type="button" class="btn btn-white btn-circle btn-xl"><i
-                                class="text-main fas fa-tags fa-2x"></i></button>
-                        <h5 class="text-white mt-3">Promos</h5>
+                                class="text-main fas fa-tags fa-lg"></i></button>
+                        <h6 class="text-white mt-3">Promos</h6>
                     </div>
 
                     <div class="col-lg-2 text-center revealOnScroll" data-animation="fadeInUp">
                         <button onclick="location.href='https://tekzoneph.com/index.php/contact/';"
                             class="btn btn-white btn-circle btn-xl"><i
-                                class="text-main fas fa-user-plus fa-2x"></i></button>
-                        <h5 class="text-white mt-3">Contact support</h5>
+                                class="text-main fas fa-user-plus fa-lg"></i></button>
+                        <h6 class="text-white mt-3">Contact support</h6>
                     </div>
 
                     <div class="col-lg-2 text-center revealOnScroll" data-animation="fadeInUp">
                         <button onclick="location.href='partners.php';" class="btn btn-white btn-circle btn-xl"><i
-                                class="text-main fas fa-chart-pie fa-2x"></i></button>
-                        <h5 class="text-white mt-3">Do business with us</h5>
+                                class="text-main fas fa-chart-pie fa-lg"></i></button>
+                        <h6 class="text-white mt-3">Do business with us</h6>
                     </div>
                 </div>
             </div>
@@ -539,11 +462,9 @@
     </main>
 
     <div class=" overFooter">
-        <div class="overlay">
-            <!-- <img src="assets/img/footerimg.jpg" alt="Banbros"> -->
-        </div>
+        <div class="overlay"></div>
         <div style="z-index: 99;" class="container text-center text-white">
-            <div class="pt-9">
+            <div class="pt-4">
                 <div class="col">
                     <h2 class="font-weight-bold">Newsletter</h2>
                 </div>

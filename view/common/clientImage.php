@@ -1,5 +1,5 @@
  <!-- Clients Section -->
- <section class="js-clients u-clients">
+ <section class="js-clients u-clients"> 
         <div class="u-clients__item">
           <img class="u-clients__image" src="assets/img-temp/partners/Ablerex SG Logo-01.png" alt="Image Description">
         </div>

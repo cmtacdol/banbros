@@ -56,19 +56,19 @@ include 'view/common/header.php';
         <div id="crouselIndicator" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#crouselIndicator" data-slide-to="0" class="active"></li>
-                <li data-target="#crouselIndicator" data-slide-to="1"></li>
-                <li data-target="#crouselIndicator" data-slide-to="2"></li>
+                <!-- <li data-target="#crouselIndicator" data-slide-to="1"></li>
+                <li data-target="#crouselIndicator" data-slide-to="2"></li> -->
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/1920x1080/ACER2.jpg" class="d-block w-100 imgCarousel">
+                    <img src="assets/1920x1080/business.jpg" class="d-block w-100 imgCarousel">
                 </div>
-                <div class="carousel-item">
+                <!-- <div class="carousel-item">
                     <img src="assets/1920x1080/asus1.jpg" class="d-block w-100 imgCarousel">
                 </div>
                 <div class="carousel-item">
                     <img src="assets/1920x1080/gam.jpg" class="d-block w-100 imgCarousel">
-                </div>
+                </div> -->
             </div>
             <a class="carousel-control-prev" href="#crouselIndicator" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -81,12 +81,8 @@ include 'view/common/header.php';
         </div>
 
         <div class="container">
-            <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0 revealOnScroll" data-animation="fadeInUp">
-                Product Catalog</h1>
 
-            <hr class="mt-2 mb-5 revealOnScroll" data-animation="fadeInUp">
-
-            <div class="row text-center text-lg-left">
+            <div class="row text-center text-lg-left mt-5">
 
                 <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
                     <a href="#" class="d-block mb-4 h-100">

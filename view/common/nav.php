@@ -42,31 +42,28 @@
                          <a class="nav-link" href="consumer.php">Consumer</a>
                      </li>
 
-                     <!-- sub nav for pc -->
-                     <li class="nav-item dropdown mr-4 mb-2 mb-lg-0 d-none d-lg-block">
+                     <!-- <li class="nav-item dropdown mr-4 mb-2 mb-lg-0 d-none d-lg-block">
                          <a class="nav-link" href="news.php" id="navbarDropdownMenuLink" aria-haspopup="true"
                              aria-expanded="false"> News </a>
                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                              <li><a class="dropdown-item" href="blog.php">Blog</a></li>
-                             <li><a class="dropdown-item" href="soon.php">Webinar</a></li>
-                             <li><a class="dropdown-item" href="soon.php">Promos</a></li>
+                             <li><a class="dropdown-item" href="webinar.php">Webinar</a></li>
+                             <li><a class="dropdown-item" href="promos.php">Promos</a></li>
                          </ul>
                      </li>
-
-                     <!-- sub nav for mobile -->
                      <li class="nav-item dropdown mr-4 mb-2 mb-lg-0 d-lg-none d-block">
                          <a class="nav-link dropdown-toggle" href="news.php" id="navbarDropdownMenuLink"
                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> News </a>
                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                              <li><a class="dropdown-item" href="news.php">News Page</a></li>
                              <li><a class="dropdown-item" href="blog.php">Blog</a></li>
-                             <li><a class="dropdown-item" href="soon.php">Webinar</a></li>
-                             <li><a class="dropdown-item" href="soon.php">Promos</a></li>
+                             <li><a class="dropdown-item" href="webinar.php">Webinar</a></li>
+                             <li><a class="dropdown-item" href="promos.php">Promos</a></li>
                          </ul>
-                     </li>
-                     <!-- <li class="nav-item mr-4 mb-2 mb-lg-0">
-                         <a class="nav-link" href="news.php">News</a>
                      </li> -->
+                     <li class="nav-item mr-4 mb-2 mb-lg-0">
+                         <a class="nav-link" href="news.php">News</a>
+                     </li>
                      <li class="nav-item mr-4 mb-2 mb-lg-0">
                          <a class="nav-link" href="career.php">Career</a>
                      </li>

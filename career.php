@@ -35,7 +35,7 @@ include 'view/common/header.php';
 
 <main role="main">
 
-    <div class="banner-image" style="background-image: url(assets/1920x1080/BBCC3.jpg); ">
+    <div class="banner-image" style="background-image: url(assets/1920x1080/CAREER.jpg); ">
         <!-- <img src="assets/1920x1080/BBCC3.jpg" class="imgCarousel"> -->
         <div class="container u-overlay__inner u-ver-center u-content-space text-white">
             <div class="row justify-content-center">
@@ -43,6 +43,7 @@ include 'view/common/header.php';
                     <div class="text-center">
                         <p class="text-uppercase u-letter-spacing-sm mb-0"></p>
                         <h1 class="display-sm-4 display-lg-3 mb-3 revealOnScroll" data-animation="fadeInUp">CAREER</h1>
+                        <h4>UNLEASH YOUR POTENTIAL WITH US AND BE PART OF HISTORY IN MAKING A DIFFERENCE</h4>
                     </div>
                 </div>
             </div>
@@ -93,6 +94,19 @@ include 'view/common/header.php';
                 </div>
 
             </div>
+
+            <div class="col-lg revealOnScroll" data-animation="fadeInLeftBig">
+                <div class="row">
+                    <div class="btn-circle btn-lg text-center p-2" style="background: #77CBEF;">
+                        <i class="text-white fas fa-tshirt fa-lg"></i>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-muted pb-0 mb-0">Lorem Ipsum</p>
+                        <p>lorem ipsum</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
         <div class="row mt-3">
@@ -112,6 +126,17 @@ include 'view/common/header.php';
                 <div class="row">
                     <div class="btn-circle btn-lg text-center p-2" style="background: #86BCBE;">
                         <i class="text-white fas fa-clock fa-lg"></i>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-muted pb-0 mb-0">Lorem Ipsum</p>
+                        <p>lorem ipsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg revealOnScroll" data-animation="fadeInLeftBig">
+                <div class="row">
+                    <div class="btn-circle btn-lg text-center p-2" style="background: #B1DEB5;">
+                        <i class="text-white fas fa-user-clock fa-lg"></i>
                     </div>
                     <div class="ml-3">
                         <p class="text-muted pb-0 mb-0">Lorem Ipsum</p>
@@ -154,7 +179,24 @@ include 'view/common/header.php';
                             id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt
                             ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor
                             aliquam vitae. Curabitur molestie eros. </p>
-                        <button class="btn btn-info">Apply Now</button>
+                        <div class="row">
+                            <div class="col-lg">
+                                <button class="btn btn-info">Apply Now</button>
+                            </div>
+                            <div class="col-lg">
+                                <div class="row justify-content-center">
+                                    <div class="col-auto pr-0">
+                                        <a href="#" class="text-dark"><i class="fab fa-facebook-square fa-lg"></i></a>
+                                    </div>
+                                    <div class="col-auto pr-0">
+                                        <a href="#" class="text-dark"><i class="fab fa-twitter-square fa-lg"></i></a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#" class="text-dark"><i class="fab fa-instagram fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -174,7 +216,24 @@ include 'view/common/header.php';
                             id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt
                             ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor
                             aliquam vitae. Curabitur molestie eros. </p>
-                        <button class="btn btn-info">Apply Now</button>
+                        <div class="row">
+                            <div class="col-lg">
+                                <button class="btn btn-info">Apply Now</button>
+                            </div>
+                            <div class="col-lg">
+                                <div class="row justify-content-center">
+                                    <div class="col-auto pr-0">
+                                        <a href="#" class="text-dark"><i class="fab fa-facebook-square fa-lg"></i></a>
+                                    </div>
+                                    <div class="col-auto pr-0">
+                                        <a href="#" class="text-dark"><i class="fab fa-twitter-square fa-lg"></i></a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#" class="text-dark"><i class="fab fa-instagram fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -193,7 +252,24 @@ include 'view/common/header.php';
                             id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt
                             ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor
                             aliquam vitae. Curabitur molestie eros. </p>
-                        <button class="btn btn-info">Apply Now</button>
+                        <div class="row">
+                            <div class="col-lg">
+                                <button class="btn btn-info">Apply Now</button>
+                            </div>
+                            <div class="col-lg">
+                                <div class="row justify-content-center">
+                                    <div class="col-auto pr-0">
+                                        <a href="#" class="text-dark"><i class="fab fa-facebook-square fa-lg"></i></a>
+                                    </div>
+                                    <div class="col-auto pr-0">
+                                        <a href="#" class="text-dark"><i class="fab fa-twitter-square fa-lg"></i></a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#" class="text-dark"><i class="fab fa-instagram fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -703,7 +703,7 @@ h6 {
     color: #0094da;
     font-size: 3.75rem;
 }
-
+ 
 .u-blockquote-v2::after {
     content: "";
     position: absolute;
@@ -730,10 +730,10 @@ h6 {
 
 .u-clients__item {
     border-width: 1px 0 1px 1px;
-    height: 150px;
+    height: 110px;
     border-color: #e6e7e9;
     border-style: solid;
-    padding: 3rem 0;
+    padding: 1rem 0;
 }
 
 .u-clients__image {
