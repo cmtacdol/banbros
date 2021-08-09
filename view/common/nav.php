@@ -97,7 +97,7 @@
          <nav style="background: #000000ad" class="navbar fixed-top navbar-dark py-1">
              <div class="col px-0">
                  <div class="float-right">
-                     <a style="font-size: 12px;" class="nav-link py-0 text-white" href="#">Reseller</a>
+                     <a style="font-size: 12px;" class="nav-link py-0 text-white" href="reseller.php">Reseller</a>
                  </div>
                  <div class="float-right">
                      <a style="font-size: 12px;" class="nav-link py-0 text-white" href="partners.php">Partner</a>
