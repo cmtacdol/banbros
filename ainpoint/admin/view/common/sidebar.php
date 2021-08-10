@@ -32,6 +32,14 @@
                             </a>
                             <ul class="pcoded-submenu">
                                 <li class="">
+                                    <a href="brand.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Brand</span>
+                                    </a>
+                                </li>
+                                <li class="">
                                     <a href="banner.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
@@ -55,6 +63,7 @@
                                         <span class="pcoded-mtext">Products</span>
                                     </a>
                                 </li>
+                               
                             </ul>
                         </li>
                     </ul>

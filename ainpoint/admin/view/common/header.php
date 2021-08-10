@@ -28,7 +28,13 @@
     <link rel="stylesheet" type="text/css" href="assets/vendor/css/datedropper.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/vendor/css/spectrum.css" />
     <link rel="stylesheet" type="text/css" href="assets/vendor/css/jquery.minicolors.css" />
+
+    
+        
     <!-- wysiwyg -->
     <link href="assets/wysiwyg/css/quill.snow.css" rel="stylesheet">
     <link href="assets/wysiwyg/css/quill.bubble.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/vendor/css/toastr.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/vendor/css/select2.min.css">
+    

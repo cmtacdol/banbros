@@ -78,5 +78,9 @@ gtag('config', 'UA-23581568-13');
 <!-- Main Quill library -->
 <script src="assets/wysiwyg/js/quill.js"></script>
 <script src="assets/wysiwyg/js/quill.min.js"></script>
+<script src="assets/wysiwyg/js/quillToolBar.js"></script>
  
 <script src="assets/vendor/js/toastr.min.js"></script>
+
+
+<script src="assets/vendor/js/select2.full.min.js"></script>

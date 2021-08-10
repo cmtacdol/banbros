@@ -1,7 +1,13 @@
 .min-height-content {
-    min-height: 800px;
+    min-height: 400px;
 }
-
+.min-height-content2 {
+    min-height: 200px;
+}
 .ms-list {
     min-height: 600px;
+}
+#previewBanner{
+    width: 100%;
+    height: 151px;
 }
