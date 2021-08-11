@@ -4,8 +4,9 @@ $_SESSION['PAGE_TITLE'] = "Category";
 $_SESSION['PAGE_NAV_TITLE'] = "Category";
 // include 'scripts/session_check.php'; 
 include 'view/common/header.php';
+include 'controller/categoryController.php';
 
-
+$getCategories = getAllCategories();
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
 
@@ -30,7 +31,8 @@ include 'view/common/header.php';
                 <div class="page-header card">
                     <div class="row">
                         <div class="col-lg">
-                            <a href="article_new.php" class="btn btn-success py-1 btn-round waves-effect waves-light"><i
+                            <a href="category_add.php"
+                                class="btn btn-success py-1 btn-round waves-effect waves-light"><i
                                     class="icofont icofont-ui-add"></i> New Category</a>
                         </div>
 
@@ -44,20 +46,18 @@ include 'view/common/header.php';
                                 <table id="ctegory" class="table table-striped table-bordered nowrap">
                                     <thead>
                                         <tr>
-                                            <th class="text-left">Title</th>
-                                            <th class="text-center">Author</th>
-                                            <th class="text-center">Date Created</th>
+                                            <th class="text-left">Category Name</th>
+                                            <th class="text-center">Parent Name</th>
                                             <th class="text-center">Status</th>
-                                            <th style="min-width:150px" class="text-center">Action</th>
+                                            <th class="text-center">&nbsp;</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-
+                                        <?php foreach($getCategories as $category){ ?>
                                         <tr>
-                                            <td class="text-left">asd</td>
-                                            <td class="text-center">asd </td>
-                                            <td class="text-center">asd</td>
-                                            <td class="text-center">asd</td>
+                                            <td class="text-left"><?php echo $category['CategoryName']; ?></td>
+                                            <td class="text-center"><?php echo (getBrandbyId($category['BrandId']) == true) ? getBrandbyId($category['BrandId'])['BrandName'] : ""; ?></td>
+                                            <td class="text-center"><?php echo ($category['CategoryStatus'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?></td>
                                             <td class="text-center">
                                                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                                                     <a href="article_modify.php?article_id=<?php echo $article['IdArticle']; ?>"
@@ -71,9 +71,7 @@ include 'view/common/header.php';
                                                 </form>
                                             </td>
                                         </tr>
-
-
-
+                                        <?php } ?>
                                     </tbody>
 
                                 </table>

@@ -15,6 +15,7 @@ $parentMenu = getMenu();
 
 </head>
 
+
 <body>
     <div class="loader-bg">
         <div class="loader-bar"></div>
@@ -37,37 +38,34 @@ $parentMenu = getMenu();
                                 <button type="submit" name="saveBrand"
                                     class="btn btn-primary py-1 btn-round waves-effect waves-light"><i
                                         class="icofont icofont-edit-alt"></i> Save</button>
-                                <a href="article_list.php"
-                                    class="btn btn-danger py-1 btn-round waves-effect waves-light"><i
+                                <a href="brand.php" class="btn btn-danger py-1 btn-round waves-effect waves-light"><i
                                         class="icofont icofont-error"></i> Close</a>
+
                             </div>
                         </div>
                         <div class="card comp-card mt-3">
                             <div class="card-body p-5">
                                 <div class="row align-items-top">
                                     <div class="col-lg-9">
+                                        <div class="form-group scroll">
+                                            <label for="exampleInputEmail1">Brand Name</label>
+                                            <input class="form-control" type="text" name="BrandName" >
+                                        </div>
+
+                                        <div class="form-group scroll">
+                                            <label for="exampleInputEmail1">Description</label>
+                                            <textarea class="form-control" id="Content" name="Content"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
                                         <div class="form-group">
                                             <label for="title">Parent</label>
                                             <select class="selectpicker" name="Parent[]" multiple="multiple"
                                                 style="width: 100%">
                                                 <?php foreach($parentMenu as $menu){ ?>
-                                                <option value="<?php echo $menu['IdNavMenu']; ?>"><?php echo $menu['NavName']; ?></option>
+                                                <option value="<?php echo $menu['IdNavMenu']; ?>">
+                                                    <?php echo $menu['NavName']; ?></option>
                                                 <?php } ?>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Desctription</label>
-                                            <input id="Content" name="Content" type="hidden">
-                                            <div id="editor-container" class="w-40 min-height-content2">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="form-group">
-                                            <label for="">Status</label>
-                                            <select class="form-control form-control-sm" id="Status" name="Status">
-                                                <option value="0">Active</option>
-                                                <option value="1">Inactive</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
@@ -79,6 +77,14 @@ $parentMenu = getMenu();
                                                     id="LogoImage" name="LogoImage">
                                             </div>
                                         </div>
+                                        <div class="form-group">
+                                            <label for="">Status</label>
+                                            <select class="form-control form-control-sm" id="Status" name="Status">
+                                                <option value="0">Active</option>
+                                                <option value="1">Inactive</option>
+                                            </select>
+                                        </div>
+
                                     </div>
                                 </div>
 
@@ -86,7 +92,7 @@ $parentMenu = getMenu();
                                     <div class="col">
                                         <input type="file" id="bannerImage" name="bannerImage">
                                         <img src="view\images\imgpreview.png" id="previewBanner"
-                                            class="img-thumbnail w-100">
+                                            class="img-thumbnail w-100 previewBanner">
                                     </div>
                                 </div>
 
@@ -104,30 +110,18 @@ $parentMenu = getMenu();
 
 
     <?php include 'view/common/scripts.php'; ?>
+
+    <script src="assets/ckeditor/ckeditor.js"></script>
+    <script src="assets/ckeditor/config.js"></script>
+
     <?php include 'view/common/toast_messages.php'; ?>
     <script>
-    var quill = new Quill('#editor-container', {
-        modules: {
-            toolbar: toolbarOptions
-        },
-        placeholder: 'Compose an epic...',
-        theme: 'snow'
+    CKEDITOR.replace('Content', {
+        filebrowserUploadUrl: 'assets/ckeditor/ck_upload.php',
+        filebrowserUploadMethod: 'form',
+        height: '220px',
     });
 
-    var form = document.querySelector('form');
-    form.onsubmit = function() {
-        // Populate hidden form on submit
-        var content = document.querySelector('input[name=Content]');
-        content.value = quill.root.innerHTML.trim();
-
-        $("#Content").val(content.value);
-
-    };
-
-    $(document).on("click", ".browse", function() {
-        var file = $(this).parents().find(".file");
-        file.trigger("click");
-    });
     $('#bannerImage').change(function(e) {
         var fileName = e.target.files[0].name;
         // $("#ImportImage").val(fileName);

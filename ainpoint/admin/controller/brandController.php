@@ -52,6 +52,7 @@ function saveBrand($formDetails, $filesData){
 
         $data = [
             'NavId' => $naveIdArray[$key],
+            'BrandName' => $formDetails['BrandName'],
             'Logo' => $logoImage,
             'Banner' => $bannerImage,
             'Description' => $formDetails['Content'],
@@ -60,9 +61,9 @@ function saveBrand($formDetails, $filesData){
             'Date_modified' => $date_added,
         ];
 
-        $sql = "INSERT INTO `brand` (`NavId`, `Logo`, `Banner`, `Description`, `Status`, `Date_added`, `Date_modified`) 
+        $sql = "INSERT INTO `brand` (`NavId`, `BrandName`, `Logo`, `Banner`, `Description`, `Status`, `Date_added`, `Date_modified`) 
         VALUES 
-        (:NavId, :Logo, :Banner, :Description, :Status, :Date_added, :Date_modified);";
+        (:NavId, :BrandName, :Logo, :Banner, :Description, :Status, :Date_added, :Date_modified);";
     
         $stmt = $pdo->prepare($sql);
         if($stmt->execute($data)){
@@ -77,9 +78,21 @@ function saveBrand($formDetails, $filesData){
     }
 
 
-   
-
 }
+
+function getBrand(){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM brand")->fetchAll();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
+}
+
 
 function getMenu(){
 
@@ -97,8 +110,8 @@ function getMenu(){
 
 function imageUpload($directory,$file){
 
-    $structure = '../uploads/images/'.$directory.'/';
-    $databasepath = 'uploads/images/'.$directory.'/';
+    $structure = '../../uploads/brand/'.$directory.'/';
+    $databasepath = 'uploads/brand'.$directory.'/';
   
     $finfo = finfo_open(FILEINFO_MIME_TYPE);
     $mimetype = finfo_file($finfo, $file['tmp_name']);

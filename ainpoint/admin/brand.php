@@ -4,7 +4,9 @@ $_SESSION['PAGE_TITLE'] = "Brand List";
 $_SESSION['PAGE_NAV_TITLE'] = "Brand List";
 // include 'scripts/session_check.php'; 
 include 'view/common/header.php';
+include 'controller/brandController.php';
 
+$getBrand = getBrand();
 
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
@@ -46,18 +48,20 @@ include 'view/common/header.php';
                                         <tr>
                                             <th class="text-left">Image</th>
                                             <th class="text-center">Description</th>
-                                            <th class="text-center">Date Created</th>
                                             <th class="text-center">Status</th>
+                                            <th class="text-center">Date Created</th>
                                             <th style="min-width:50px" class="text-center">&nbsp;</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-
+                                        <?php foreach($getBrand as $brand){ ?>
                                         <tr>
-                                            <td class="text-left">asd</td>
-                                            <td class="text-center">asd </td>
-                                            <td class="text-center">asd</td>
-                                            <td class="text-center">asd</td>
+                                            <td class="text-left">
+                                                <img src="../../<?php echo $brand['Logo']; ?>" style="width: 150px; height: 100px; object-fit: contain">
+                                            </td>
+                                            <td class="text-center"><?php echo $brand['Description']; ?> </td>
+                                            <td class="text-center"><?php echo ($brand['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?></td>
+                                            <td class="text-center"><?php echo $brand['Date_added']; ?></td>
                                             <td class="text-center">
                                                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                                                     <a href="article_modify.php?article_id=<?php echo $article['IdArticle']; ?>"
@@ -71,9 +75,7 @@ include 'view/common/header.php';
                                                 </form>
                                             </td>
                                         </tr>
-
-
-
+                                        <?php } ?>
                                     </tbody>
 
                                 </table>
