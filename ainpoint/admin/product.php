@@ -4,9 +4,14 @@ $_SESSION['PAGE_TITLE'] = "Products";
 $_SESSION['PAGE_NAV_TITLE'] = "Products";
 // include 'scripts/session_check.php'; 
 include 'view/common/header.php';
-include 'controller/categoryController.php';
+include 'controller/productController.php';
 
-$getCategories = getAllCategories();
+if(isset($_POST['DeleteProduct'])){
+    deleteProduct($_POST['DeleteProduct']);
+}
+
+$getProduct = getAllProduct();
+
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
 
@@ -31,8 +36,7 @@ $getCategories = getAllCategories();
                 <div class="page-header card">
                     <div class="row">
                         <div class="col-lg">
-                            <a href="product_add.php"
-                                class="btn btn-success py-1 btn-round waves-effect waves-light"><i
+                            <a href="product_add.php" class="btn btn-success py-1 btn-round waves-effect waves-light"><i
                                     class="icofont icofont-ui-add"></i> New Products</a>
                         </div>
 
@@ -46,26 +50,37 @@ $getCategories = getAllCategories();
                                 <table id="ctegory" class="table table-striped table-bordered nowrap">
                                     <thead>
                                         <tr>
-                                            <th class="text-left">Category Name</th>
-                                            <th class="text-center">Parent Name</th>
+                                            <th class="text-center">Image</th>
+                                            <th class="text-left">Product Name</th>
+                                            <th class="text-center">Link</th>
                                             <th class="text-center">Status</th>
+                                            <th class="text-center">Date Added</th>
                                             <th class="text-center">&nbsp;</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach($getCategories as $category){ ?>
+                                        <?php foreach($getProduct as $product){ ?>
                                         <tr>
-                                            <td class="text-left"><?php echo $category['CategoryName']; ?></td>
-                                            <td class="text-center"><?php echo (getBrandbyId($category['BrandId']) == true) ? getBrandbyId($category['BrandId'])['BrandName'] : ""; ?></td>
-                                            <td class="text-center"><?php echo ($category['CategoryStatus'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?></td>
+                                            <td class="text-left">
+                                                <?php if(isset($product['Image']) && $product['Image'] != ""){ ?>
+                                                <img src="../../<?php echo $product['Image']; ?>"
+                                                    style="width: 110px; height: 80px; object-fit: contain">
+                                                <?php }else{ echo 'No uploaded Image'; } ?>
+                                            </td>
+                                            <td class="text-left"><?php echo $product['ProductName']; ?></td>
+                                            <td class="text-left"><?php echo $product['Link']; ?></td>
+                                            <td class="text-center">
+                                                <?php echo ($product['ProductStatus'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?>
+                                            </td>
+                                            <td class="text-left"><?php echo $product['Date_added']; ?></td>
                                             <td class="text-center">
                                                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                                    <a href="article_modify.php?article_id=<?php echo $article['IdArticle']; ?>"
+                                                    <a href="product_edit.php?productId=<?php echo $product['IdProduct']; ?>"
                                                         class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>
-                                                    <button name="IdArticle" type="submit"
-                                                        value="<?php echo $article['IdArticle']; ?>"
+                                                    <button name="DeleteProduct" type="submit"
+                                                        value="<?php echo $product['IdProduct']; ?>"
                                                         class="btn waves-effect waves-dark btn-danger btn-outline-danger btn-icon"><i
                                                             class="icofont icofont-trash"></i></button>
                                                 </form>
@@ -90,6 +105,7 @@ $getCategories = getAllCategories();
 
 
     <?php include 'view/common/scripts.php'; ?>
+    <?php include 'view/common/toast_messages.php'; ?>
 
     <script>
     $('#ctegory').DataTable({

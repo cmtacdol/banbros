@@ -1,4 +1,5 @@
 <?php 
+date_default_timezone_set("Asia/Manila");
 
 $host_name  = "127.0.0.1";
 $host_user  = "root";

@@ -62,7 +62,6 @@ function getBrandbyId($idBrand){
     global $pdo;
 
     $query = $pdo->prepare("SELECT * FROM brand Where IdBrand  = :id");
-
     $query->execute(['id' => $idBrand]);
     $data = $query->fetch();
 
