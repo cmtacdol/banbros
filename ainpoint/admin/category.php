@@ -6,6 +6,10 @@ $_SESSION['PAGE_NAV_TITLE'] = "Category";
 include 'view/common/header.php';
 include 'controller/categoryController.php';
 
+if(isset($_POST['deleteCategory'])){
+    deleteCategory($_POST['deleteCategory']);
+}
+
 $getCategories = getAllCategories();
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
@@ -60,12 +64,12 @@ $getCategories = getAllCategories();
                                             <td class="text-center"><?php echo ($category['CategoryStatus'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?></td>
                                             <td class="text-center">
                                                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                                    <a href="article_modify.php?article_id=<?php echo $article['IdArticle']; ?>"
+                                                    <a href="category_edit.php?categoryId=<?php echo $category['IdCategory']; ?>"
                                                         class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>
-                                                    <button name="IdArticle" type="submit"
-                                                        value="<?php echo $article['IdArticle']; ?>"
+                                                    <button name="deleteCategory" type="submit"
+                                                        value="<?php echo $category['IdCategory']; ?>"
                                                         class="btn waves-effect waves-dark btn-danger btn-outline-danger btn-icon"><i
                                                             class="icofont icofont-trash"></i></button>
                                                 </form>
@@ -90,6 +94,7 @@ $getCategories = getAllCategories();
 
 
     <?php include 'view/common/scripts.php'; ?>
+    <?php include 'view/common/toast_messages.php'; ?>
 
     <script>
     $('#ctegory').DataTable({

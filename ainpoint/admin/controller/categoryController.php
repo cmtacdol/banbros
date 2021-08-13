@@ -31,11 +31,69 @@ function saveCategory($formDetails){
 
 }
 
+function updateCategory($formDetails){
+
+    global $pdo;
+
+    $data = [
+        'Parent' => $formDetails['Parent'],
+        'CategoryName' => $formDetails['CategoryName'],
+        'CategoryStatus' => $formDetails['CategoryStatus'],
+    ];
+
+    $sql = "UPDATE `category` SET 
+    `BrandId` = :Parent, 
+    `CategoryName` = :CategoryName, 
+    `CategoryStatus` = :CategoryStatus WHERE IdCategory = '".$formDetails['CategoryId']."'";
+
+    $stmt = $pdo->prepare($sql);
+    if($stmt->execute($data)){
+
+        $_SESSION['success_message'] = "Category Successfully Updated!";
+
+    }else{
+        $_SESSION['error_message'] = "Error occured!";
+
+    }
+
+}
+
+function deleteCategory($idCategory){
+
+    global $pdo;
+
+    $query = $pdo->prepare("DELETE FROM `category` WHERE `category`.`IdCategory` = :id");
+
+    if($query->execute(['id' => $idCategory])){
+
+        $_SESSION['success_message'] = "Category Successfully Deleted!";
+        return $data; 
+
+    }else{
+        $_SESSION['error_message'] = "Error occured!";
+
+    }
+
+}
+
 function getBrand(){
 
     global $pdo;
 
     $query = $pdo->query("SELECT * FROM brand")->fetchAll();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
+}
+
+function getCategoriesById($idCategory){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM category WHERE IdCategory = '$idCategory'")->fetch();
 
     if(empty($query ) || count($query) == 0){
         return [];
