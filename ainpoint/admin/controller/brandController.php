@@ -77,14 +77,124 @@ function saveBrand($formDetails, $filesData){
 
     }
 
+}
 
+function updateBrand($formDetails, $filesData){
+
+    global $pdo;
+
+    $directoryPath = str_replace(' ', '-', ''); // Replaces all spaces with hyphens.
+    $directoryPath =  preg_replace('/[^A-Za-z0-9\-]/', '', $directoryPath); 
+
+    // $datenow = date("Ymd"); 
+    
+    $date_added = date("Y-m-d H:i:s"); 
+
+    $data = [
+        'NavId' => $formDetails['Parent'],
+        'BrandName' => $formDetails['BrandName'],
+        'Description' => $formDetails['Content'],
+        'Status' => $formDetails['Status'],
+        'Date_added' => $date_added,
+        'Date_modified' => $date_added,
+    ];
+    $query = $pdo->query("SELECT * FROM brand WHERE IdBrand = '".$formDetails['brandId']."'")->fetch();
+
+    if($filesData['LogoImage']['name'] != ""){
+
+        @unlink("../../".$query['Logo']);
+       
+        $logoImage = imageUpload($directoryPath,$filesData['LogoImage']);
+
+        $data['Logo'] = $logoImage;
+
+        $sql = "UPDATE `brand` SET
+        `NavId` = :NavId, 
+        `BrandName` = :BrandName, 
+        `Logo` = :Logo, 
+        `Description` = :Description, 
+        `Status` = :Status, 
+        `Date_added` = :Date_added, 
+        `Date_modified` = :Date_modified WHERE IdBrand = '".$formDetails['brandId']."'";
+
+    }
+    else if($filesData['bannerImage']['name'] != ""){
+
+        @unlink("../../".$query['Banner']);
+
+        $bannerImage = imageUpload($directoryPath,$filesData['bannerImage']);
+        $data['Banner'] = $bannerImage;
+
+        $sql = "UPDATE `brand` SET
+        `NavId` = :NavId, 
+        `BrandName` = :BrandName, 
+        `Banner` = :Banner, 
+        `Description` = :Description, 
+        `Status` = :Status, 
+        `Date_added` = :Date_added, 
+        `Date_modified` = :Date_modified WHERE IdBrand = '".$formDetails['brandId']."'";
+
+    }else{
+
+        $sql = "UPDATE `brand` SET
+        `NavId` = :NavId, 
+        `BrandName` = :BrandName, 
+        `Description` = :Description, 
+        `Status` = :Status, 
+        `Date_added` = :Date_added, 
+        `Date_modified` = :Date_modified WHERE IdBrand = '".$formDetails['brandId']."'";
+
+    }
+    
+        $stmt = $pdo->prepare($sql);
+        if($stmt->execute($data)){
+    
+            $_SESSION['success_message'] = "Brand Successfully Updated!";
+    
+        }else{
+            $_SESSION['error_message'] = "Error occured!";
+    
+        }
+
+
+}
+
+function deleteBrand($idBrand){
+
+    global $pdo;
+    
+    $sql = "UPDATE `brand` SET `Status` = '9' WHERE IdBrand = :id";
+
+    $stmt = $pdo->prepare($sql);
+    if($stmt->execute(['id' => $idBrand])){
+
+        $_SESSION['success_message'] = "Brand Successfully Deleted!";
+
+    }else{
+        $_SESSION['error_message'] = "Error occured!";
+
+    }
+
+}
+
+function getSingleBrand($brandId){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM brand WHERE IdBrand = '$brandId'")->fetch();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
 }
 
 function getBrand(){
 
     global $pdo;
 
-    $query = $pdo->query("SELECT * FROM brand")->fetchAll();
+    $query = $pdo->query("SELECT * FROM brand WHERE Status != '9'")->fetchAll();
 
     if(empty($query ) || count($query) == 0){
         return [];

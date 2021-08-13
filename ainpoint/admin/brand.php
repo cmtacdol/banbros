@@ -6,6 +6,10 @@ $_SESSION['PAGE_NAV_TITLE'] = "Brand List";
 include 'view/common/header.php';
 include 'controller/brandController.php';
 
+if(isset($_POST['deleteBrand'])){
+    deleteBrand($_POST['deleteBrand']);
+}
+
 $getBrand = getBrand();
 
 ?>
@@ -57,19 +61,24 @@ $getBrand = getBrand();
                                         <?php foreach($getBrand as $brand){ ?>
                                         <tr>
                                             <td class="text-left">
-                                                <img src="../../<?php echo $brand['Logo']; ?>" style="width: 150px; height: 100px; object-fit: contain">
+                                                <img src="../../<?php echo $brand['Logo']; ?>"
+                                                    style="width: 150px; height: 100px; object-fit: contain">
                                             </td>
-                                            <td class="text-center"><?php echo $brand['Description']; ?> </td>
-                                            <td class="text-center"><?php echo ($brand['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?></td>
+                                            <td class="text-center">
+                                                <?php echo $brand['Description']; ?>
+                                            </td>
+                                            <td class="text-center">
+                                                <?php echo ($brand['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?>
+                                            </td>
                                             <td class="text-center"><?php echo $brand['Date_added']; ?></td>
                                             <td class="text-center">
                                                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                                    <a href="article_modify.php?article_id=<?php echo $article['IdArticle']; ?>"
+                                                    <a href="brand_edit.php?brand_id=<?php echo $brand['IdBrand']; ?>"
                                                         class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>
-                                                    <button name="IdArticle" type="submit"
-                                                        value="<?php echo $article['IdArticle']; ?>"
+                                                    <button name="deleteBrand" type="submit"
+                                                        value="<?php echo $brand['IdBrand']; ?>"
                                                         class="btn waves-effect waves-dark btn-danger btn-outline-danger btn-icon"><i
                                                             class="icofont icofont-trash"></i></button>
                                                 </form>
@@ -94,6 +103,7 @@ $getBrand = getBrand();
 
 
     <?php include 'view/common/scripts.php'; ?>
+    <?php include 'view/common/toast_messages.php'; ?>
 
     <script>
     $('#ctegory').DataTable({
