@@ -2,8 +2,12 @@
 session_start();
 $_SESSION['PAGE_TITLE'] = "Consumer";
 $_SESSION['PAGE_NAV_TITLE'] = "Consumer"; 
+$nav_id = 4;
 
 include 'view/common/header.php'; 
+include 'controllers/brandController.php'; 
+
+$getbrandBussiness = getBrandforBusinnes($nav_id);
 
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/modal.css">
@@ -17,12 +21,14 @@ include 'view/common/header.php';
     width: 100%;
     object-fit: cover;
 }
+
 @media screen and (max-width: 769px) {
     .imgCarousel {
         height: 600px;
         object-fit: cover;
     }
 }
+
 .card {
     height: 53vh;
 }
@@ -40,7 +46,8 @@ include 'view/common/header.php';
 #businessImage {
     width: 80%;
 }
-.border-0 img-thumbnail{
+
+.border-0 img-thumbnail {
     height: 150px;
     width: 100%;
     object-fit: contain;
@@ -86,151 +93,24 @@ include 'view/common/header.php';
         <div class="container">
 
             <div class="row text-center text-lg-left mt-5">
+                <?php if(count($getbrandBussiness) < 1){ ?>
+                        <h3 class="mb-4">No Data</h3>
+                <?php }else{ ?>
+                <?php foreach($getbrandBussiness as $brand){ ?>
+
                 <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/Ablerex SG Logo-01.png"
-                            alt="">
+                    <a href="view_brand.php?brand_id=<?php echo $brand['IdBrand']; ?>" class="d-block mb-4 h-100">
+                        <img class="img-fluid border-0 img-thumbnail" src="<?php echo $brand['Logo']; ?>" alt="">
                     </a>
                 </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/ACER (1).png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail"
-                            src="assets/img-temp/partners/altec-lansing-vector-logo.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/ANYTEK (1).png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail"
-                            src="assets/img-temp/partners/asus-world-motherboard-gaming-brand-2.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/balance.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/belkin.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/brother.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/EDGECORE.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/edifier.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/GD_Logo_Glod_H.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/hikvision.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/IFUTURE LOGO-01.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/Ignite Logo-01.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/KEBOS-01.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail"
-                            src="assets/img-temp/partners/KGuard-Security-Logo-1-5029.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/LIFAair.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/LOGO F_D-01.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail"
-                            src="assets/img-temp/partners/Philips_logo_logotype_emblem.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/poly.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/SDigital.png"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/Silicon_Power_logo.png"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/sony.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/THIEYE.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/toughtested.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/ubtech.png" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/WST.png" alt="">
-                    </a>
-                </div>
+                <?php } ?>
+                <?php } ?>
+
+
 
             </div>
-            <!-- /.container -->
+
+        </div>
 
     </main>
 

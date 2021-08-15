@@ -29,7 +29,7 @@ function saveBrand($formDetails, $filesData){
             $_SESSION['error_message'] = $logoImage;
         }
     }else{
-        $logoImage = null;
+        $logoImage = "";
     }
 
     if($filesData['bannerImage']['name'] != ""){
@@ -40,7 +40,7 @@ function saveBrand($formDetails, $filesData){
             $_SESSION['error_message'] = $bannerImage;
         }
     }else{
-        $bannerImage = null;
+        $bannerImage = "";
     }
 
     $naveIdArray = array();

@@ -2,8 +2,12 @@
 session_start();
 $_SESSION['PAGE_TITLE'] = "Business";
 $_SESSION['PAGE_NAV_TITLE'] = "Business"; 
+$nav_id = 3;
 
 include 'view/common/header.php'; 
+include 'controllers/brandController.php'; 
+
+$getbrandBussiness = getBrandforBusinnes($nav_id);
 
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/modal.css">
@@ -83,66 +87,18 @@ include 'view/common/header.php';
         <div class="container">
 
             <div class="row text-center text-lg-left mt-5">
-
+                <?php if(count($getbrandBussiness) < 1){ ?>
+                <h3 class="mb-4">No Data</h3>
+                <?php }else{ ?>
+                <?php foreach($getbrandBussiness as $brand){ ?>
                 <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/ACER (1).png" alt="">
+                    <a href="view_brand.php?brand_id=<?php echo $brand['IdBrand']; ?>" class="d-block mb-4 h-100">
+                        <img class="img-fluid border-0 img-thumbnail" src="<?php echo $brand['Logo']; ?>" alt="">
                     </a>
                 </div>
+                <?php } ?>
+                <?php } ?>
 
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail"
-                            src="assets/img-temp/partners/asus-world-motherboard-gaming-brand-2.png" alt="">
-                    </a>
-                </div>
-                <!-- asdaaaaaaaaaaaaaaaa -->
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="product_brother.php" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/brother.png" alt="">
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="product_edifier.php" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/edifier.png" alt="">
-                    </a>
-                </div>
-
-
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="product_lifaair.php" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/LIFAair.png" alt="">
-                    </a>
-                </div>
-
-
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/KEBOS-01.png" alt="">
-                    </a>
-                </div>
-
-
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="product_hikvision.php" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/hikvision.png" alt="">
-                    </a>
-                </div>
-
-
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/Ignite Logo-01.png" alt="">
-                    </a>
-                </div>
-
-
-                <div class="col-lg-3 col-md-4 col-6 previewImg revealOnScroll" data-animation="fadeInDown">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img class="img-fluid border-0 img-thumbnail" src="assets/img-temp/partners/EDGECORE.png" alt="">
-                    </a>
-                </div>
 
 
             </div>

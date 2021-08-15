@@ -14,6 +14,14 @@ $getBrand = getBrand();
 
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
+<style>
+.trunc {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+</style>
 
 </head>
 
@@ -65,7 +73,9 @@ $getBrand = getBrand();
                                                     style="width: 150px; height: 100px; object-fit: contain">
                                             </td>
                                             <td class="text-center">
-                                                <?php echo $brand['Description']; ?>
+                                                <div class="trunc">
+                                                    <?php echo $brand['Description']; ?>
+                                                </div>
                                             </td>
                                             <td class="text-center">
                                                 <?php echo ($brand['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?>

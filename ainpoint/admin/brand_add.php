@@ -92,7 +92,7 @@ $parentMenu = getMenu();
                                     <div class="col">
                                         <input type="file" id="bannerImage" name="bannerImage">
                                         <img src="view\images\imgpreview.png" id="previewBanner"
-                                            class="img-thumbnail w-100 previewBanner">
+                                            class="img-thumbnail w-100 previewBanner" style="width:100%; height: 100%; object-fit: cover">
                                     </div>
                                 </div>
 
