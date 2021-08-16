@@ -80,7 +80,7 @@ $getPost = getPost();
                                             <td class="text-center"><?php echo $post['Date_added']; ?></td>
                                             <td class="text-center">
                                                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                                    <a href="brand_edit.php?brand_id=<?php echo $post['IdBrand']; ?>"
+                                                    <a href="post_edit.php?post_id=<?php echo $post['IdNewsPost']; ?>"
                                                         class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>

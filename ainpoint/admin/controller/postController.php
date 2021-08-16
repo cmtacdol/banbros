@@ -55,7 +55,70 @@ function savePost($formDetails, $filesData){
 
     }
 
+}
 
+function editPost($formDetails, $filesData){
+
+    global $pdo;
+
+    $directoryPath = str_replace(' ', '-', ''); // Replaces all spaces with hyphens.
+    $directoryPath =  preg_replace('/[^A-Za-z0-9\-]/', '', $directoryPath); 
+
+    // $datenow = date("Ymd"); 
+    
+    $date_added = date("Y-m-d H:i:s"); 
+
+    $data = [
+        'NavId' => $formDetails['Parent'],
+        'Title' => $formDetails['Title'],
+        'Description' => $formDetails['Description'],
+        'PostStatus' => $formDetails['Status'],
+        'Date_modified' => $date_added,
+    ];
+
+    $sql = "UPDATE `news_post` SET 
+        `NavId` = :NavId, 
+        `Title` = :Title, ";
+
+    if($filesData['Image']['name'] != ""){
+
+        $post = getSinglePost($formDetails['idnewspost']);
+        @unlink('../../'.$post['Image']);
+       
+        $logoImage = imageUpload($directoryPath,$filesData['Image']);
+        $data['Image'] = $logoImage;
+        
+        $sql .= "`Image` = :Image, ";
+    }
+
+    $sql .= "
+    `Description` = :Description, 
+    `PostStatus` = :PostStatus, 
+    `Date_modified` = :Date_modified WHERE IdNewsPost = '".$formDetails['idnewspost']."'";
+
+    $stmt = $pdo->prepare($sql);
+    if($stmt->execute($data)){
+
+        $_SESSION['success_message'] = "Post Successfully Updated!";
+
+    }else{
+        $_SESSION['error_message'] = "Error occured!";
+
+    }
+
+}
+
+function getSinglePost($postId){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM news_post WHERE IdNewsPost = '$postId'")->fetch();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
 }
 
 function getPost(){
