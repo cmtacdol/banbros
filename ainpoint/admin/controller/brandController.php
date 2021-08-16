@@ -95,7 +95,6 @@ function updateBrand($formDetails, $filesData){
         'BrandName' => $formDetails['BrandName'],
         'Description' => $formDetails['Content'],
         'Status' => $formDetails['Status'],
-        'Date_added' => $date_added,
         'Date_modified' => $date_added,
     ];
     $query = $pdo->query("SELECT * FROM brand WHERE IdBrand = '".$formDetails['brandId']."'")->fetch();
@@ -114,7 +113,6 @@ function updateBrand($formDetails, $filesData){
         `Logo` = :Logo, 
         `Description` = :Description, 
         `Status` = :Status, 
-        `Date_added` = :Date_added, 
         `Date_modified` = :Date_modified WHERE IdBrand = '".$formDetails['brandId']."'";
 
     }
@@ -131,7 +129,6 @@ function updateBrand($formDetails, $filesData){
         `Banner` = :Banner, 
         `Description` = :Description, 
         `Status` = :Status, 
-        `Date_added` = :Date_added, 
         `Date_modified` = :Date_modified WHERE IdBrand = '".$formDetails['brandId']."'";
 
     }else{
@@ -141,7 +138,6 @@ function updateBrand($formDetails, $filesData){
         `BrandName` = :BrandName, 
         `Description` = :Description, 
         `Status` = :Status, 
-        `Date_added` = :Date_added, 
         `Date_modified` = :Date_modified WHERE IdBrand = '".$formDetails['brandId']."'";
 
     }

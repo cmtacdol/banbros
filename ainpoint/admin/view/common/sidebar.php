@@ -68,6 +68,36 @@
                         </li>
                     </ul>
 
+                    <ul class="pcoded-item pcoded-left-item">
+
+                        <li class="pcoded-hasmenu">
+                            <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                <span class="pcoded-micon">
+                                    <i class="feather icon-message-square"></i>
+                                </span>
+                                <span class="pcoded-mtext">News</span>
+                            </a>
+                            <ul class="pcoded-submenu">
+                                <li class="">
+                                    <a href="post.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Post</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="brand.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Article</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
                     <!-- Users -->
 
                     <div class="pcoded-navigation-label">Users</div>

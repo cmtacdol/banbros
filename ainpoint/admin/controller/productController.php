@@ -109,7 +109,6 @@ function updateProducts($formDetails, $filesData){
             'Specification' => $formDetails['Specification'],
             'Link' => $formDetails['Link'],
             'ProductStatus' => $formDetails['ProductStatus'],
-            'Date_added' => $date_added,
             'Date_modified' => $date_added,
         ];
 
@@ -132,7 +131,6 @@ function updateProducts($formDetails, $filesData){
             `Specification` = :Specification, 
             `Link` = :Link,
             `ProductStatus` = :ProductStatus, 
-            `Date_added` = :Date_added, 
             `Date_modified` = :Date_modified WHERE IdProduct = '".$formDetails['productid']."'";
     
         }else{
@@ -144,7 +142,6 @@ function updateProducts($formDetails, $filesData){
             `Specification` = :Specification, 
             `Link` = :Link,
             `ProductStatus` = :ProductStatus, 
-            `Date_added` = :Date_added, 
             `Date_modified` = :Date_modified WHERE IdProduct = '".$formDetails['productid']."'";
         }
 
