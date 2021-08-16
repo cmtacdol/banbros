@@ -8,6 +8,7 @@ include 'controller/productController.php';
 
 if(isset($_POST['DeleteProduct'])){
     deleteProduct($_POST['DeleteProduct']);
+    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
 $getProduct = getAllProduct();

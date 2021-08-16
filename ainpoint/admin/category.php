@@ -8,6 +8,7 @@ include 'controller/categoryController.php';
 
 if(isset($_POST['deleteCategory'])){
     deleteCategory($_POST['deleteCategory']);
+    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
 $getCategories = getAllCategories();

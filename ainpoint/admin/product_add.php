@@ -8,6 +8,7 @@ include 'controller/productController.php';
 
 if(isset($_POST['saveProduct'])){
     saveProducts($_POST,$_FILES);
+    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
 $getCategories = getAllCategories();

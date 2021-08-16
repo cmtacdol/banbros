@@ -4,55 +4,13 @@ $_SESSION['PAGE_TITLE'] = "View Product";
 $_SESSION['PAGE_NAV_TITLE'] = "View Product"; 
 
 include 'view/common/header.php'; 
+include 'controllers/productController.php'; 
+
+$product = getProducts($_GET['produc_id']);
+$product_gallery = getProductGallery($_GET['produc_id']);
 
 ?>
-<link rel="stylesheet" type="text/css" href="assets/css/modal.css">
-<style>
-body {
-    background: #fafafa;
-    height: 100%;
-}
-
-.image-gallery {
-    margin: 0 auto;
-    display: table;
-}
-
-.primary,
-.thumbnails {
-    display: table-cell;
-}
-
-.thumbnails {
-    width: 200px;
-
-}
-
-.primary {
-    border: 1px solid #cccc;
-    width: 85%;
-    height: 400px;
-    background-color: white;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.thumbnail:hover .thumbnail-image,
-.selected .thumbnail-image {
-    border: 2px solid #0094DA;
-}
-
-.thumbnail-image {
-    width: 70px;
-    height: 70px;
-    margin: 20px auto;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border: 4px solid transparent;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="assets/css/product_view.css">
 
 <body>
 
@@ -69,54 +27,61 @@ body {
 
             <div class="card">
                 <div class="card-body text-center">
-                    <div class="image-gallery">
-                        <aside class="thumbnails">
-                            <a href="#" class="selected thumbnail" data-big="http://placekitten.com/420/600">
-                                <div class="thumbnail-image"
-                                    style="background-image: url(http://placekitten.com/420/600); width: 80%">
-                                </div>
-                            </a>
-                            <a href="#" class="thumbnail" data-big="http://placekitten.com/450/600">
-                                <div class="thumbnail-image"
-                                    style="background-image: url(http://placekitten.com/450/600); width: 80%">
-                                </div>
-                            </a>
-                            <a href="#" class="thumbnail" data-big="http://placekitten.com/460/700">
-                                <div class="thumbnail-image"
-                                    style="background-image: url(http://placekitten.com/460/700); width: 80%">
-                                </div>
-                            </a>
-                            <a href="#" class="thumbnail" data-big="http://placekitten.com/480/700">
-                                <div class="thumbnail-image"
-                                    style="background-image: url(http://placekitten.com/480/700); width: 80%">
-                                </div>
-                            </a>
-                            <a href="#" class="thumbnail" data-big="http://placekitten.com/480/700">
-                                <div class="thumbnail-image"
-                                    style="background-image: url(http://placekitten.com/480/700); width: 80%">
-                                </div>
-                            </a>
-                        </aside>
+                    <div class="row">
+                        <div class="head-img">
+                            <img src="<?php echo $product['Image']; ?>"
+                                style="width:100%; height:100%; object-fit:contain" />
+                        <h3 class="text-center"><?php echo $product['ProductName']; ?></h3>
+                        <hr>
+                        </div>
+                    </div>
+                    <h1 class="section-header">Product Gallery</h1>
+                    <div class="video-gallery mt-5">
+                        <div class="row">
 
-                        <main class="primary" style="background-image: url('http://placekitten.com/420/600');"></main>
+                            <?php foreach($product_gallery as $gallery) { ?>
+                            <?php if(getimagesize($gallery['Path'])) { ?>
+                            <div class="col-lg-4">
+                                <div class="gallery-item">
+                                    <img src="<?php echo $gallery['Path']; ?>" alt="Olympic National Park" />
+                                    <div class="gallery-item-caption">
+                                        <a class="vimeo-popup" href="<?php echo $gallery['Path']; ?>"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php } ?>
+
+                            <?php if(mime_content_type($gallery['Path']) == 'video/mp4' || mime_content_type($gallery['Path']) == 'video/webm') { ?>
+                            <div class="col-lg-4">
+                                <div class="gallery-item">
+                                    <video controls>
+                                        <source src="<?php echo $gallery['Path']; ?>#t=0.5"
+                                            type="video/mp4">
+                                    </video>
+                                    <div class="gallery-item-caption">
+                                        <a class="vimeo-popup" href="<?php echo $gallery['Path']; ?>"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php } ?>
+                            <?php } ?>
+
+                        </div>
+
                     </div>
                     <div class="mt-5 text-left">
                         <h4 class="mb-0 mt-5 font-weight-bold">Desciption</h4>
                         <hr>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit tempore deserunt fuga id,
-                            aliquam ex. Adipisci, sit rerum fuga iste doloribus explicabo consequuntur modi recusandae
-                            perferendis inventore alias voluptatum nostrum.</p>
+                        <?php echo $product['Description']; ?>
                     </div>
 
                     <div class="mt-5 text-left">
                         <h4 class="mb-0 mt-5 font-weight-bold">Specification</h4>
                         <hr>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit tempore deserunt fuga id,
-                            aliquam ex. Adipisci, sit rerum fuga iste doloribus explicabo consequuntur modi recusandae
-                            perferendis inventore alias voluptatum nostrum.</p>
+                        <?php echo $product['Specification']; ?>
                     </div>
 
-                    <a href="#" class="btn btn-info mt-5 mb-2">Inquire Now</a>
+                    <a href="<?php echo $product['Link']; ?>" class="btn btn-info mt-5 mb-2">Inquire Now</a>
                 </div>
 
             </div>
@@ -130,13 +95,14 @@ body {
 
     <?php include 'view/common/scripts.php'; ?>
     <script>
-    $('.thumbnail').on('click', function() {
-        var clicked = $(this);
-        var newSelection = clicked.data('big');
-        var $img = $('.primary').css("background-image", "url(" + newSelection + ")");
-        clicked.parent().find('.thumbnail').removeClass('selected');
-        clicked.addClass('selected');
-        $('.primary').empty().append($img.hide().fadeIn('slow'));
+    $(document).ready(function() {
+        $('.video-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'iframe',
+            gallery: {
+                enabled: true
+            }
+        });
     });
     </script>
 </body>

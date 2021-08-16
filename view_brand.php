@@ -7,6 +7,7 @@ include 'view/common/header.php';
 include 'controllers/brandController.php'; 
 
 $categoryByBrand = getCategoryByBrand($_GET['brand_id']);
+$brand = getSingleBrand($_GET['brand_id']);
 
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/view_brand.css">
@@ -15,7 +16,6 @@ $categoryByBrand = getCategoryByBrand($_GET['brand_id']);
 
     <?php include 'view/common/nav.php'; ?>
     <?php include 'view/common/modal.php'; ?>
-
 
     <main role="main">
         <!-- header color -->
@@ -28,7 +28,7 @@ $categoryByBrand = getCategoryByBrand($_GET['brand_id']);
                         <div class="card-body">
 
                             <?php if(count($categoryByBrand) < 1){ ?>
-                                <span>No category added</span>
+                            <span>No category added</span>
                             <?php }else{ ?>
                             <?php foreach($categoryByBrand as $category){ ?>
                             <div class="funkyradio">
@@ -47,37 +47,13 @@ $categoryByBrand = getCategoryByBrand($_GET['brand_id']);
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <!-- Slider carousel -->
-                    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="assets/banner/brother.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <!-- <div class="carousel-item">
-                                <img src="assets/banner/asus1.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/banner/gam.jpg" class="d-block w-100" alt="...">
-                            </div> -->
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                    <div id="banners" class="banners">
+                        <img src="<?php echo $brand['Banner']; ?>" class="d-block w-100"
+                            style="width: 100%; height: 151px; object-fit: contain">
                     </div>
 
                     <h6 class="font-weight-light text-center text-lg-left mt-4 mb-0">
-                        Brother Industries, Ltd. is a Japanese multinational
-                        electronics and electrical equipment company headquartered in Nagoya, Japan
+                        <?php echo $brand['Description']; ?>
                     </h6>
 
                     <hr class="mt-2 mb-5">
@@ -97,7 +73,7 @@ $categoryByBrand = getCategoryByBrand($_GET['brand_id']);
                                     <h6 class="h-custom"><small
                                             class="font-weight-bold"><?php echo $product['ProductName']; ?>
                                         </small></h6>
-                                    <a href="product_view.php" class="btn btn-info">Check more</a>
+                                    <a href="product_view.php?produc_id=<?php echo $product['IdProduct']; ?>" class="btn btn-info">Check more</a>
                                 </div>
                             </div>
                         </div>

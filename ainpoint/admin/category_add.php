@@ -7,6 +7,7 @@ include 'controller/categoryController.php';
 
 if(isset($_POST['saveCategory'])){
     saveCategory($_POST);
+    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
 $getBrand = getBrand();

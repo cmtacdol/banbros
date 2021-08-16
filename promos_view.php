@@ -8,19 +8,6 @@ body {
     background: #F4F6F9;
     height: 100%;
 }
-
-/* 
-.card-text {
-    display: -webkit-box;
-    width: 100%;
-    height: 109.2px;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    overflow: hidden;
-} */
-
-
 #newsImage {
     width: 50%;
 }

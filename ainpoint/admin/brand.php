@@ -8,6 +8,7 @@ include 'controller/brandController.php';
 
 if(isset($_POST['deleteBrand'])){
     deleteBrand($_POST['deleteBrand']);
+    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
 $getBrand = getBrand();

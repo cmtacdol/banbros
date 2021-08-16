@@ -7,6 +7,7 @@ include 'controller/brandController.php';
 
 if(isset($_POST['updateBrand'])){
     updateBrand($_POST, $_FILES);
+    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
 $parentMenu = getMenu();

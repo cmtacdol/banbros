@@ -7,6 +7,7 @@ include 'controller/categoryController.php';
 
 if(isset($_POST['updateCategory'])){
     updateCategory($_POST);
+    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
 $category = getCategoriesById($_GET['categoryId']);

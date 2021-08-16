@@ -8,10 +8,12 @@ include 'controller/productController.php';
 
 if(isset($_POST['updateProduct'])){
     updateProducts($_POST,$_FILES);
+    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
 if($_POST['deleteProductImage']){
     deleteImagesByIdImage($_POST['deleteProductImage']);
+    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
 $getSingProduct = getSingleProduct($_GET['productId']);
@@ -33,7 +35,8 @@ $getCategories = getAllCategories();
             <?php include 'view/common/nav.php'; ?>
             <?php include 'view/common/sidebar.php'; ?>
             <div class="pcoded-content">
-                <form id="newProductForm" method="post" enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']; ?>?productId=<?php echo $_GET['productId']; ?>">
+                <form id="newProductForm" method="post" enctype="multipart/form-data"
+                    action="<?php echo $_SERVER['PHP_SELF']; ?>?productId=<?php echo $_GET['productId']; ?>">
                     <div class="page-header card">
                         <div class="row">
                             <div class="col-lg">
@@ -45,14 +48,14 @@ $getCategories = getAllCategories();
                                         class="icofont icofont-edit-alt"></i> Update</button>
                                 <a href="product.php" class="btn btn-danger py-1 btn-round waves-effect waves-light"><i
                                         class="icofont icofont-error"></i> Close</a>
-                                        
+
                             </div>
                         </div>
                         <div class="card comp-card mt-3">
                             <div class="card-body p-5">
                                 <div class="row align-items-top">
                                     <div class="col-lg-8">
-                                    <input type="hidden" name="productid" value="<?php echo $_GET['productId']; ?>">
+                                        <input type="hidden" name="productid" value="<?php echo $_GET['productId']; ?>">
                                         <div class="form-group scroll">
                                             <label for="exampleInputEmail1">Product Name</label>
                                             <input class="form-control" type="text" name="ProductName"
@@ -132,10 +135,24 @@ $getCategories = getAllCategories();
                                                     <?php foreach(getProductImages($_GET['productId']) as $image){ ?>
                                                     <tr>
                                                         <td class="text-left">
-                                                            <img src="../../<?php echo $image['Path']; ?>" style="width: 110px; height: 80px; object-fit: contain">
+                                                            <?php if(getimagesize('../../'.$image['Path'])) { ?>
+                                                                <img src="../../<?php echo $image['Path']; ?>"
+                                                                style="width: 110px; height: 80px; object-fit: contain">
+                                                            <?php } ?>
+
+                                                            <?php if(mime_content_type('../../'.$image['Path']) == 'video/mp4' || mime_content_type('../../'.$image['Path']) == 'video/webm') { ?>
+
+                                                            <video controls width="200">
+                                                                <source src="../../<?php echo $image['Path']; ?>#t=0.5"
+                                                                    type="video/mp4">
+                                                            </video>
+
+                                                            <?php } ?>
+                                                            
                                                         </td>
                                                         <td class="text-center">
-                                                            <button type="submit" name="deleteProductImage" value="<?php echo $image['IdProductImage']; ?>"
+                                                            <button type="submit" name="deleteProductImage"
+                                                                value="<?php echo $image['IdProductImage']; ?>"
                                                                 class="btn btn-danger"><i
                                                                     class="icofont icofont-trash tooltip-item">
                                                                 </i></button>
