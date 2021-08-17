@@ -4,14 +4,14 @@ $_SESSION['PAGE_TITLE'] = "Blog";
 $_SESSION['PAGE_NAV_TITLE'] = "Blog";
 // include 'scripts/session_check.php'; 
 include 'view/common/header.php';
-include 'controller/categoryController.php';
+include 'controller/newsController.php';
 
 if(isset($_POST['deleteCategory'])){
     deleteCategory($_POST['deleteCategory']);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-$getCategories = getAllCategories();
+$getBlogs = getAllBlogPost();
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
 
@@ -44,7 +44,7 @@ $getCategories = getAllCategories();
                     </div>
                     <div class="card mt-3">
                         <div class="card-header">
-                            <h5>Articles</h5>
+                            <h5>Blogs</h5>
                         </div>
                         <div class="card-block">
                             <div class="table-responsive dt-responsive">
@@ -54,19 +54,24 @@ $getCategories = getAllCategories();
                                             <th class="text-center">Image</th>
                                             <th class="text-left">Title</th>
                                             <th class="text-left">Author</th>
+                                            <th class="text-left">Date Added</th>
                                             <th class="text-center">Status</th>
                                             <th class="text-center">&nbsp;</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach($getCategories as $category){ ?>
+                                        <?php foreach($getBlogs as $blogs){ ?>
                                         <tr>
-                                            <td class="text-left"><?php echo $category['CategoryName']; ?></td>
-                                            <td class="text-center"><?php echo (getBrandbyId($category['BrandId']) == true) ? getBrandbyId($category['BrandId'])['BrandName'] : ""; ?></td>
-                                            <td class="text-center"><?php echo ($category['CategoryStatus'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?></td>
+                                            <td>
+                                                <img src="../../<?php echo $blogs['Image']; ?>" style="width: 150px; height: 80px; object-fit: contain">
+                                            </td>
+                                            <td><?php echo $blogs['Title']; ?></td>
+                                            <td><?php echo $blogs['Author']; ?></td>
+                                            <td><?php echo $blogs['Date_added']; ?></td>
+                                            <td class="text-center"><?php echo ($blogs['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?></td>
                                             <td class="text-center">
                                                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                                    <a href="category_edit.php?categoryId=<?php echo $category['IdCategory']; ?>"
+                                                    <a href="category_edit.php?categoryId=<?php echo $blogs['IdCategory']; ?>"
                                                         class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>

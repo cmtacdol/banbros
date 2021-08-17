@@ -16,7 +16,6 @@ $parentMenu = getSinglePost(1);
 
 </head>
 
-
 <body>
     <div class="loader-bg">
         <div class="loader-bar"></div>

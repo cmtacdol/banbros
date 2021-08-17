@@ -75,7 +75,7 @@
                                 <span class="pcoded-micon">
                                     <i class="feather icon-message-square"></i>
                                 </span>
-                                <span class="pcoded-mtext">Article</span>
+                                <span class="pcoded-mtext">News Articles</span>
                             </a>
                             <ul class="pcoded-submenu">
                                 <li class="">

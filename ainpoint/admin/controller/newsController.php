@@ -49,7 +49,7 @@ function saveBlog($formDetails, $filesData){
     $sql = "INSERT INTO `news_blog` 
     (`PostId`, `UserId`, `Author`, `Title`, `Description`, `Image`, `link_1`, `link_2`, `link_3`, `Status`, `Date_added`, `Date_modified`) 
     VALUES 
-    (:PostId, :UserId, :Author, :Title, :Description, :link_1, :link_2, :link_3, :Image, :Status, :Date_added, :Date_modified);";
+    (:PostId, :UserId, :Author, :Title, :Description, :Image, :link_1, :link_2, :link_3, :Status, :Date_added, :Date_modified);";
 
     $stmt = $pdo->prepare($sql);
     if($stmt->execute($data)){
@@ -61,6 +61,19 @@ function saveBlog($formDetails, $filesData){
 
     }
 
+}
+
+function getAllBlogPost(){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM news_blog")->fetchAll();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
 }
 
 
