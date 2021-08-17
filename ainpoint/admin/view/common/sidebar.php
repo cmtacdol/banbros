@@ -75,7 +75,7 @@
                                 <span class="pcoded-micon">
                                     <i class="feather icon-message-square"></i>
                                 </span>
-                                <span class="pcoded-mtext">News</span>
+                                <span class="pcoded-mtext">Article</span>
                             </a>
                             <ul class="pcoded-submenu">
                                 <li class="">
@@ -87,7 +87,7 @@
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
+                                    <a href="blog.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
                                         </span>

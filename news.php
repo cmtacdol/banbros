@@ -2,9 +2,12 @@
 session_start();
 $_SESSION['PAGE_TITLE'] = "News";
 $_SESSION['PAGE_NAV_TITLE'] = "News"; 
+$nav_id = 5;
 
 include 'view/common/header.php'; 
+include 'controllers/newsController.php'; 
 
+$getallpost = getPost($nav_id);
 ?>
 
 <head>
@@ -66,69 +69,42 @@ include 'view/common/header.php';
 
     <div class="container">
         <div class="row my-5">
-            <div class="col-lg-3 col-sm">
-                <div class="card revealOnScroll" data-animation="fadeInLeftBig">
-                    <div class="card-images">
-                        <img src="view/images/blog.png" class="card-img-top mx-auto d-block" id="newsImage">
-                    </div>
-                    <div class="card-body text-center">
-                        <h2 class="card-title text-center my-0 py-0">Blog</h2>
-                        <p class="card-text text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Praesentium voluptates eveniet quas atque iusto iste perferendis necessitatibus ipsum
-                            quidem, placeat quos dolorum ad non laboriosam velit autem unde! Et, corrupti! </p>
-
-                        <a href="blog.php" class="btn btn-info rounded-pill py-1" id="btnModals">Learn more</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm">
-                <div class="card revealOnScroll" data-animation="fadeInLeftBig">
-                    <div class="card-images">
-                        <img src="view/images/blog.png" class="card-img-top mx-auto d-block" id="newsImage">
-                    </div>
-                    <div class="card-body text-center">
-                        <h2 class="card-title text-center my-0 py-0">Events</h2>
-                        <p class="card-text text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Praesentium voluptates eveniet quas atque iusto iste perferendis necessitatibus ipsum
-                            quidem, placeat quos dolorum ad non laboriosam velit autem unde! Et, corrupti! </p>
-
-                        <a href="blog.php" class="btn btn-info rounded-pill py-1" id="btnModals">Learn more</a>
-                    </div>
-                </div>
-            </div>
+            <?php 
+            $link_path = "";
+                foreach($getallpost as $post){
+                    switch($post['Title']){
+                        case "Blog":
+                            $link_path = "blog.php";
+                            break;
+                        case "Events":
+                            $link_path = "#";
+                            break;
+                        case "Webinar":
+                            $link_path = "webinar.php";
+                            break;
+                        case "Promos":
+                            $link_path = "promos.php";
+                            break;
+                    }
+            ?>
 
             <div class="col-lg-3 col-sm">
                 <div class="card revealOnScroll" data-animation="fadeInLeftBig">
                     <div class="card-images">
-                        <img src="view/images/blog.png" class="card-img-top mx-auto d-block" id="newsImage">
+                        <img src="<?php echo $post['Image']; ?>" class="card-img-top mx-auto d-block" id="newsImage">
                     </div>
                     <div class="card-body text-center">
-                        <h2 class="card-title text-center my-0 py-0">Webinar</h2>
-                        <p class="card-text text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Praesentium voluptates eveniet quas atque iusto iste perferendis necessitatibus ipsum
-                            quidem, placeat quos dolorum ad non laboriosam velit autem unde! Et, corrupti! </p>
+                        <h2 class="card-title text-center my-0 py-0"><?php echo $post['Title']; ?></h2>
+                        <p class="card-text text-left"><?php echo $post['Description']; ?> </p>
 
-                        <a href="webinar.php" class="btn btn-info rounded-pill py-1" id="btnModals">Learn more</a>
+                        <a href="<?php echo $link_path; ?>?post_id=<?php echo $post['IdNewsPost']; ?>" class="btn btn-info rounded-pill py-1" id="btnModals">Learn more</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-sm">
-                <div class="card revealOnScroll" data-animation="fadeInLeftBig">
-                    <div class="card-images">
-                        <img src="view/images/blog.png" class="card-img-top mx-auto d-block" id="newsImage">
-                    </div>
-                    <div class="card-body text-center">
-                        <h2 class="card-title text-center my-0 py-0">Promos</h2>
-                        <p class="card-text text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Praesentium voluptates eveniet quas atque iusto iste perferendis necessitatibus ipsum
-                            quidem, placeat quos dolorum ad non laboriosam velit autem unde! Et, corrupti! </p>
+            <?php } ?>
 
-                        <a href="promos.php" class="btn btn-info rounded-pill py-1" id="btnModals">Learn more</a>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 
