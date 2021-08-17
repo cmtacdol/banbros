@@ -1,17 +1,17 @@
 <?php 
 session_start();
-$_SESSION['PAGE_TITLE'] = "Blog";
-$_SESSION['PAGE_NAV_TITLE'] = "Blog";
+$_SESSION['PAGE_TITLE'] = "Webinar";
+$_SESSION['PAGE_NAV_TITLE'] = "Webinar";
 // include 'scripts/session_check.php'; 
 include 'view/common/header.php';
-include 'controller/newsController.php';
+include 'controller/webinarController.php';
 
-if(isset($_POST['deleteBlog'])){
-    deleteBlog($_POST['deleteBlog']);
+if(isset($_POST['deleteWebinar'])){
+    deleteWebinar($_POST['deleteWebinar']);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-$getBlogs = getAllBlogPost();
+$getWebinar = getAllWebinar();
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
 
@@ -36,9 +36,9 @@ $getBlogs = getAllBlogPost();
                 <div class="page-header card">
                     <div class="row">
                         <div class="col-lg">
-                            <a href="blog_add.php"
+                            <a href="webinar_add.php"
                                 class="btn btn-success py-1 btn-round waves-effect waves-light"><i
-                                    class="icofont icofont-ui-add"></i> New Blog</a>
+                                    class="icofont icofont-ui-add"></i> New Webinar</a>
                         </div>
 
                     </div>
@@ -60,23 +60,23 @@ $getBlogs = getAllBlogPost();
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach($getBlogs as $blogs){ ?>
+                                        <?php foreach($getWebinar as $webinar){ ?>
                                         <tr>
                                             <td>
-                                                <img src="../../<?php echo $blogs['Image']; ?>" style="width: 150px; height: 80px; object-fit: contain">
+                                                <img src="../../<?php echo $webinar['Image']; ?>" style="width: 150px; height: 80px; object-fit: contain">
                                             </td>
-                                            <td><?php echo $blogs['Title']; ?></td>
-                                            <td><?php echo $blogs['Author']; ?></td>
-                                            <td><?php echo $blogs['Date_added']; ?></td>
-                                            <td class="text-center"><?php echo ($blogs['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?></td>
+                                            <td><?php echo $webinar['Title']; ?></td>
+                                            <td><?php echo $webinar['Author']; ?></td>
+                                            <td><?php echo $webinar['Date_added']; ?></td>
+                                            <td class="text-center"><?php echo ($webinar['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?></td>
                                             <td class="text-center">
                                                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                                    <a href="blog_edit.php?blog_id=<?php echo $blogs['IdBlog']; ?>"
+                                                    <a href="webinar_edit.php?webinar_id=<?php echo $webinar['IdWebinar']; ?>"
                                                         class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>
-                                                    <button name="deleteBlog" type="submit"
-                                                        value="<?php echo $blogs['IdBlog']; ?>"
+                                                    <button name="deleteWebinar" type="submit"
+                                                        value="<?php echo $webinar['IdWebinar']; ?>"
                                                         class="btn waves-effect waves-dark btn-danger btn-outline-danger btn-icon"><i
                                                             class="icofont icofont-trash"></i></button>
                                                 </form>

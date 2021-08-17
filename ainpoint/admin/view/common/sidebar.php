@@ -103,7 +103,7 @@
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
+                                    <a href="webinar.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
                                         </span>
