@@ -7,7 +7,7 @@ include 'view/common/header.php';
 include 'controller/banner.php';
 
 if(isset($_POST['saveBanner'])){
-    saveBanner($_POST,$_FILES);
+    savePostBanner($_POST,$_FILES);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
@@ -16,7 +16,7 @@ if(isset($_POST['deleteBanner'])){
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-$banner = getBannerByMenu($_GET['IdMenu']);
+$banner = getBannerByMenu($_GET['IdPost']);
 
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->

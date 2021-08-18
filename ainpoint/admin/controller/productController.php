@@ -198,8 +198,6 @@ function deleteProduct($idProduct){
     $count->bindParam(":product_id",$idProduct,PDO::PARAM_INT);
     if($count->execute()){
 
-    
-
         deleteImages($idProduct);
     
         $_SESSION['success_message'] = "Product Successfully Deleted!";

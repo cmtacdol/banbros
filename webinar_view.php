@@ -2,6 +2,10 @@
 session_start(); 
 $_SESSION['PAGE_TITLE']="Webinar view";   
 include 'view/common/header.php'; 
+include 'controllers/newsController.php'; 
+
+$getWebinar = getSingleWebinar($_GET['webinar_id']);
+
 ?>
 <style>
 body {
@@ -51,11 +55,16 @@ body {
                             <h4 class="text-muted mt-2">Webinar</h4>
                         </div>
                         <div class="card-body" style="height: 500px; overflow: auto">
-                            <?php for($i=0; $i < 9; $i++){ ?>
-                            <div class="p-1 mb-2">
-                                <p class="text-muted pb-0 mb-0">Lorem Ipsum</p>
-                                <small class="text-muted">01/20/2020 | by: Author</small>
-                            </div>
+                            <?php foreach(getWebinarRelated() as $webinar){ ?>
+                                <a href="webinar_view.php?webinar_id=<?php echo $webinar['IdWebinar']; ?>">
+                                    <img src="<?php echo $webinar['Image']; ?>" style="width: 100%; height: 140px; object-fit: contain">
+                                    <p class=" pb-0 mb-0"><?php echo $webinar['Title']; ?></p>
+                                    <small
+                                        class="text-muted"><?php echo date("Y-m-d", strtotime($webinar['Date_added'])); ?>
+                                        |
+                                        by: <?php echo $webinar['Author'] ?></small>
+                                </a>
+                            <hr>
                             <?php } ?>
                         </div>
                     </div>
@@ -64,31 +73,21 @@ body {
                 <div class="col-9 p-0">
                     <div class="card">
                         <div class="card-body pb-0 mb-0">
-                            <h2 class="card-title pb-0 mb-0">Lorem Ipsum</h2>
-                            <p><small class="text-muted">01/20/2020 | by: Author</small></p>
-                            <a href="#" id="share-fb" class="sharer button"><i
+                        <h2 class="card-title pb-0 mb-0"><?php echo $getWebinar['Title'] ?></h2>
+                            <p><small class="text-muted"><?php echo date("Y-m-d", strtotime($getWebinar['Date_added'])); ?> |
+                                    by: <?php echo $getWebinar['Author'] ?></small></p>
+                            <a href="<?php echo $getWebinar['link_1'] ?>" id="share-fb" class="sharer button"><i
                                     class="fab fa-2x fa-facebook-square"></i></a>
-                            <a href="#" id="share-tw" class="sharer button"><i
+                            <a href="<?php echo $getWebinar['link_2'] ?>" id="share-tw" class="sharer button"><i
                                     class="fab fa-2x fa-twitter-square"></i></a>
-                            <a href="#" id="share-em" class="sharer button"><i
+                            <a href="<?php echo $getWebinar['link_3'] ?>" id="share-em" class="sharer button"><i
                                     class="fa fa-2x fa-envelope-square"></i></a>
                         </div>
                         <div class="card-body mt-0">
-                            <div class="head-image text-center">
-                                <img src="view/images/blog1.jpg" class="card-img blog-img">
+                        <div class="head-image text-center mb-4">
+                                <img src="<?php echo $getWebinar['Image']; ?>" class="card-img blog-img">
                             </div>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, aut. Saepe iste mollitia
-                                cumque! Minus animi cupiditate, magnam rerum omnis repudiandae soluta enim magni velit
-                                autem, necessitatibus nesciunt itaque accusamus.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, aut. Saepe iste mollitia
-                                cumque! Minus animi cupiditate, magnam rerum omnis repudiandae soluta enim magni velit
-                                autem, necessitatibus nesciunt itaque accusamus.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, aut. Saepe iste mollitia
-                                cumque! Minus animi cupiditate, magnam rerum omnis repudiandae soluta enim magni velit
-                                autem, necessitatibus nesciunt itaque accusamus.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, aut. Saepe iste mollitia
-                                cumque! Minus animi cupiditate, magnam rerum omnis repudiandae soluta enim magni velit
-                                autem, necessitatibus nesciunt itaque accusamus.</p>
+                            <?php echo $getWebinar['Description'] ?>
                         </div>
                     </div>
                 </div>

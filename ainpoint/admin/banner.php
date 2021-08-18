@@ -6,7 +6,8 @@ $_SESSION['PAGE_NAV_TITLE'] = "Banner";
 include 'view/common/header.php';
 include 'controller/banner.php';
 
-$getmenu = getMenu();
+$getmenu = getMenu(); 
+$articlePost = getPost();
 
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
@@ -32,14 +33,14 @@ $getmenu = getMenu();
                 <div class="page-header card">
                     <div class="card mt-3">
                         <div class="card-header">
-                            <h5>Banner List</h5>
+                            <h5>Page Banner</h5>
                         </div>
                         <div class="card-block">
                             <div class="table-responsive dt-responsive">
                                 <table id="article_list" class="table table-striped table-bordered nowrap">
                                     <thead>
                                         <tr>
-                                            <th style="min-width:150px" class="text-left">Name</th>
+                                            <th style="min-width:150px" class="text-left">Pages</th>
                                             <th class="text-center">&nbsp;</th>
                                         </tr>
                                     </thead>
@@ -50,7 +51,42 @@ $getmenu = getMenu();
                                             <td class="text-center">
                                                 <a href="banner_add.php?banner&IdMenu=<?php echo $menu['IdNavMenu']; ?>"
                                                     class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
-                                                        class="icofont icofont-edit tooltip-item">
+                                                        class="icofont icofont-pencil fa-lg tooltip-item">
+                                                    </i></a>
+                                            </td>
+                                        </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="page-header card">
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            <h5>Article Banner</h5>
+                        </div>
+                        <div class="card-block">
+                            <div class="table-responsive dt-responsive">
+                                <table class="table table-striped ">
+                                    <thead>
+                                        <tr>
+                                            <th style="min-width:150px" class="text-left">Pages</th>
+                                            <th class="text-center">&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach($articlePost as $post){ ?>
+                                        <tr>
+                                            <td class="text-left"><?php echo $post['Title']; ?></td>
+                                            <td class="text-center">
+                                                <a href="banner_post_add.php?banner&IdPost=<?php echo $post['IdNewsPost']; ?>"
+                                                    class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
+                                                        class="icofont icofont-pencil fa-lg tooltip-item">
                                                     </i></a>
                                             </td>
                                         </tr>

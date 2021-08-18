@@ -19,6 +19,18 @@
                         </li>
 
                     </ul>
+
+                    <ul class="pcoded-item pcoded-left-item">
+                        <li class="">
+                            <a href="banner.php" class="waves-effect waves-dark">
+                                <span class="pcoded-micon">
+                                    <i class="feather icon-image"></i>
+                                </span>
+                                <span class="pcoded-mtext">Banner</span>
+                            </a>
+                        </li>
+
+                    </ul>
                     <!-- Contents -->
 
                     <ul class="pcoded-item pcoded-left-item">
@@ -39,14 +51,14 @@
                                         <span class="pcoded-mtext">Brand</span>
                                     </a>
                                 </li>
-                                <li class="">
+                                <!-- <li class="">
                                     <a href="banner.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
                                         </span>
                                         <span class="pcoded-mtext">Banners</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="">
                                     <a href="category.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
