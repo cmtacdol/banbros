@@ -2,8 +2,8 @@
 
 function imageUpload($directory,$file){
 
-  $structure = '../uploads/images/'.$directory.'/';
-  $databasepath = 'uploads/images/'.$directory.'/';
+  $structure = '../../uploads/images/'.$directory.'/';
+  $databasepath = 'uploads/images'.$directory.'/';
 
   $finfo = finfo_open(FILEINFO_MIME_TYPE);
   $mimetype = finfo_file($finfo, $file['tmp_name']);

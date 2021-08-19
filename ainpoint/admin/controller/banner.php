@@ -5,7 +5,7 @@ if (file_exists("../config.php")) {
     include "config.php";
 }
 
-require_once("controller/dynamic_function.php");
+require_once("controller/dynamic_function.php"); 
 
 function saveBanner($formDetails, $fileDetails){
 
@@ -64,7 +64,7 @@ function savePostBanner($formDetails, $fileDetails){
     $directoryPath =  preg_replace('/[^A-Za-z0-9\-]/', '', $directoryPath); 
         
     $imageuploadedpath = "";
-    if(isset($fileDetails['images'])){
+    if(isset($fileDetails['images']) && !empty($fileDetails['images'])){
         for ($a = 0; $a < count($fileDetails["images"]["name"]); $a++)
         {
          
@@ -154,6 +154,17 @@ function getBannerByMenu($idMenu){
 
     $query = $pdo->prepare("SELECT * FROM `banner` Where NavId = :id");
     $query->execute(['id' => $idMenu]);
+    $data = $query->fetchAll();
+
+    return $data; 
+}
+
+function getBannerByPost($idPost){
+
+    global $pdo;
+
+    $query = $pdo->prepare("SELECT * FROM `banner` Where PostId = :id");
+    $query->execute(['id' => $idPost]);
     $data = $query->fetchAll();
 
     return $data; 

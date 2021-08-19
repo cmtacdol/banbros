@@ -72,18 +72,15 @@ $banner = getBannerByMenu($_GET['IdMenu']);
                                                     <input type="hidden" name="idBanner[]"
                                                         class="form-control form-control-sm mt-4"
                                                         value="<?php echo $getbanner['IdBanner']; ?>">
-                                                    <img src="../<?php echo $getbanner['Image']; ?>"
+                                                    <img src="../../<?php echo $getbanner['Image']; ?>"
                                                         style="width: 300px; height: 100px; object-fit: contain">
                                                 </td>
                                                 <td>
-                                                <input type="text" name="Title[]"
-                                                        class="form-control form-control-sm mt-4"
-                                                        value="<?php echo $getbanner['Title']; ?>">
+
+                                                    <?php echo $getbanner['Title']; ?>
                                                 </td>
                                                 <td>
-                                                    <input type="text" name="link[]"
-                                                        class="form-control form-control-sm mt-4"
-                                                        value="<?php echo $getbanner['Link']; ?>">
+                                                    <?php echo $getbanner['Link']; ?>
                                                 </td>
                                                 <td>
                                                     <button type="submit" name="deleteBanner"

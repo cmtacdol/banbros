@@ -16,13 +16,12 @@ if(isset($_POST['deleteBanner'])){
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-$banner = getBannerByMenu($_GET['IdPost']);
+$banner = getBannerByPost($_GET['IdPost']);
 
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
 
 </head>
-
 
 <body>
 
@@ -76,16 +75,14 @@ $banner = getBannerByMenu($_GET['IdPost']);
                                                         style="width: 300px; height: 100px; object-fit: contain">
                                                 </td>
                                                 <td>
-                                                <input type="text" name="Title[]"
-                                                        class="form-control form-control-sm mt-4"
-                                                        value="<?php echo $getbanner['Title']; ?>">
+                                                        <?php echo $getbanner['Title']; ?>
                                                 </td>
                                                 <td>
-                                                    <input type="text" name="link[]"
-                                                        class="form-control form-control-sm mt-4"
-                                                        value="<?php echo $getbanner['Link']; ?>">
+                                                    
+                                                        <?php echo $getbanner['Link']; ?>
                                                 </td>
                                                 <td>
+
                                                     <button type="submit" name="deleteBanner"
                                                         value="<?php echo $getbanner['IdBanner']; ?>"
                                                         class="col-auto btn btn-danger mt-4"><i
@@ -139,7 +136,7 @@ $banner = getBannerByMenu($_GET['IdPost']);
             if (x3 < max_fields_image) { //max input box allowed
                 x3++; //text box increment
                 $(wrapper_image).append(
-                    '<tr><td><input type="file" name="images[]" class="form-control form-control-sm mt-4"></td><td><input type="text" name="title[]" class="form-control form-control-sm mt-4"></td><td><input type="text" name="links[]" class="form-control form-control-sm mt-4"></td><td><a href="#" class="col-auto remove_field btn btn-danger mt-4"><i class="icofont icofont-trash"></i></a></td></tr>'
+                    '<tr><td><input type="file" name="images[]" class="form-control form-control-sm mt-4" required></td><td><input type="text" name="title[]" class="form-control form-control-sm mt-4"></td><td><input type="text" name="links[]" class="form-control form-control-sm mt-4"></td><td><a href="#" class="col-auto remove_field btn btn-danger mt-4"><i class="icofont icofont-trash"></i></a></td></tr>'
                 ); //add input box
             }
         });

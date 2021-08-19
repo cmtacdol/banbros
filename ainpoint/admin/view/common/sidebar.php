@@ -51,14 +51,6 @@
                                         <span class="pcoded-mtext">Brand</span>
                                     </a>
                                 </li>
-                                <!-- <li class="">
-                                    <a href="banner.php" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon">
-                                            <i class="feather icon-image"></i>
-                                        </span>
-                                        <span class="pcoded-mtext">Banners</span>
-                                    </a>
-                                </li> -->
                                 <li class="">
                                     <a href="category.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
@@ -69,6 +61,44 @@
                                 </li>
                                 <li class="">
                                     <a href="product.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Products</span>
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="pcoded-item pcoded-left-item">
+
+                        <li class="pcoded-hasmenu">
+                            <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                <span class="pcoded-micon">
+                                    <i class="feather icon-tag"></i>
+                                </span>
+                                <span class="pcoded-mtext">Module</span>
+                            </a>
+                            <ul class="pcoded-submenu">
+                                <li class="">
+                                    <a href="#" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Featured</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Categories</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
                                         </span>

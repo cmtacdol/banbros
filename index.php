@@ -1,7 +1,24 @@
 <?php 
 session_start(); 
 $_SESSION['PAGE_TITLE']="Home";   
+$_SESSION['PAGE_NAV_TITLE'] = "Home"; 
+$nav_id = 1;
+
 include 'view/common/header.php'; 
+include 'controllers/homepageController.php'; 
+
+$getBanners = getBanner($nav_id);
+$totals = [];
+
+foreach($getBanners as $banner){
+    $total_formated = "\"".$banner['Title']."\"";
+
+    array_push($totals,$total_formated);
+}
+$totals_string = implode(",", $totals);
+// $countWords = str_word_count($totals_string, 2);
+// $withComma = implode(', ', $countWords);
+// var_dump($withComma); die();
 
 ?>
 
@@ -41,15 +58,19 @@ include 'view/common/header.php';
                     </div>
                 </div>
             </div>
-            <ol class="carousel-indicators">
-                <li data-target="#carouselIndicators1" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselIndicators1" data-slide-to="1"></li>
-                <li data-target="#carouselIndicators1" data-slide-to="2"></li>
-            </ol>
             <div class="carousel-inner main-banner-inner">
-                <div class="carousel-item active">
-                    <img src="assets/1920x1080/bgnew.jpg" class="d-block w-100 imgCarousel">
+                <?php 
+                $count = 0;
+                foreach($getBanners as $banner){ 
+                    $count++;
+                    if($count == 1){
+                        $count = "active";
+                    }
+                ?>
+                <div class="carousel-item <?php echo $count; ?>">
+                    <img src="<?php echo $banner['Image']; ?>" class="d-block w-100 imgCarousel">
                 </div>
+                <?php }  ?>
             </div>
             <a class="carousel-control-prev" href="#carouselIndicators1" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -59,9 +80,9 @@ include 'view/common/header.php';
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div> 
+        </div>
 
-        <?php include 'view/common/clientImage.php'; ?> 
+        <?php include 'view/common/clientImage.php'; ?>
 
         <!-- End Our Product -->
         <section class="u-content-space pb-1 mb-0 revealOnScroll" data-animation="fadeInUp">
@@ -173,12 +194,12 @@ include 'view/common/header.php';
                 <div class="col-md-12 text-center ">
                     <nav class="nav-justified tabbable">
                         <div class="nav nav-tabs pb-2" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link text-dark active" id="pop1-tab" data-toggle="tab" href="#pop1" role="tab"
-                                aria-controls="pop1" aria-selected="true">LIFAair</a>
-                            <a class="nav-item nav-link text-dark" id="pop2-tab" data-toggle="tab" href="#pop2" role="tab"
-                                aria-controls="pop2" aria-selected="false">Gamdias</a>
-                            <a class="nav-item nav-link text-dark" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab"
-                                aria-controls="pop3" aria-selected="false">Edifier</a>
+                            <a class="nav-item nav-link text-dark active" id="pop1-tab" data-toggle="tab" href="#pop1"
+                                role="tab" aria-controls="pop1" aria-selected="true">LIFAair</a>
+                            <a class="nav-item nav-link text-dark" id="pop2-tab" data-toggle="tab" href="#pop2"
+                                role="tab" aria-controls="pop2" aria-selected="false">Gamdias</a>
+                            <a class="nav-item nav-link text-dark" id="pop3-tab" data-toggle="tab" href="#pop3"
+                                role="tab" aria-controls="pop3" aria-selected="false">Edifier</a>
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
@@ -495,8 +516,7 @@ include 'view/common/header.php';
             // initialization of text animation (typing)
             $(".js-display-typing").typed({
                 strings: [
-                    "Your Value",
-                    "Added Distributor"
+                    <?php echo $totals_string; ?>
                 ],
                 typeSpeed: 60,
                 loop: true,
