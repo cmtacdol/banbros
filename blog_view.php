@@ -80,6 +80,7 @@ body {
                         </div>
                         <div class="card-body" style="height: 500px; overflow: auto">
                             <?php foreach(getBlogRelated() as $blogRelated){ ?>
+                            <?php if($_GET['blog_id'] != $blogRelated['IdBlog']){ ?>
                             <div class="p-1 mb-2">
                                 <a href="blog_view.php?blog_id=<?php echo $blogRelated['IdBlog']; ?>">
                                     <img src="<?php echo $blogRelated['Image']; ?>" style="width: 100%; height: 140px; object-fit: contain">
@@ -91,6 +92,7 @@ body {
                                 </a>
                             </div>
                             <hr>
+                            <?php } ?>
                             <?php } ?>
                         </div>
                     </div>

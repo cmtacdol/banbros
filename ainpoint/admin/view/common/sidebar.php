@@ -7,7 +7,6 @@
 
                     <!-- Contents -->
 
-                    <div class="pcoded-navigation-label">Home</div>
                     <ul class="pcoded-item pcoded-left-item">
                         <li class="">
                             <a href="index.php" class="waves-effect waves-dark">
@@ -71,14 +70,77 @@
                             </ul>
                         </li>
                     </ul>
+
+                    <div class="pcoded-navigation-label">Manage Content</div>
                     <ul class="pcoded-item pcoded-left-item">
 
                         <li class="pcoded-hasmenu">
                             <a href="javascript:void(0)" class="waves-effect waves-dark">
                                 <span class="pcoded-micon">
-                                    <i class="feather icon-tag"></i>
+                                    <i class="feather icon-home"></i>
                                 </span>
-                                <span class="pcoded-mtext">Module</span>
+                                <span class="pcoded-mtext">Home</span>
+                            </a>
+                            <ul class="pcoded-submenu">
+                                <li class="">
+                                    <a href="home_client_images.php" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Client Images</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Content</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Ads</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Featured Products</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Executives</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Press Realease</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="pcoded-item pcoded-left-item">
+                        <li class="pcoded-hasmenu">
+                            <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                <span class="pcoded-micon">
+                                    <i class="feather icon-info"></i>
+                                </span>
+                                <span class="pcoded-mtext">About</span>
                             </a>
                             <ul class="pcoded-submenu">
                                 <li class="">
@@ -86,26 +148,9 @@
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
                                         </span>
-                                        <span class="pcoded-mtext">Featured</span>
+                                        <span class="pcoded-mtext">Content</span>
                                     </a>
                                 </li>
-                                <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon">
-                                            <i class="feather icon-image"></i>
-                                        </span>
-                                        <span class="pcoded-mtext">Categories</span>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon">
-                                            <i class="feather icon-image"></i>
-                                        </span>
-                                        <span class="pcoded-mtext">Products</span>
-                                    </a>
-                                </li>
-                               
                             </ul>
                         </li>
                     </ul>
@@ -117,7 +162,7 @@
                                 <span class="pcoded-micon">
                                     <i class="feather icon-message-square"></i>
                                 </span>
-                                <span class="pcoded-mtext">News Articles</span>
+                                <span class="pcoded-mtext">News</span>
                             </a>
                             <ul class="pcoded-submenu">
                                 <li class="">
@@ -158,6 +203,43 @@
                                             <i class="feather icon-image"></i>
                                         </span>
                                         <span class="pcoded-mtext">Promos</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="pcoded-item pcoded-left-item">
+                        <li class="pcoded-hasmenu">
+                            <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                <span class="pcoded-micon">
+                                    <i class="feather icon-airplay"></i>
+                                </span>
+                                <span class="pcoded-mtext">Career</span>
+                            </a>
+                            <ul class="pcoded-submenu">
+                                <li class="">
+                                    <a href="#" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Featured Products</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Executives</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-image"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Press Realease</span>
                                     </a>
                                 </li>
                             </ul>
