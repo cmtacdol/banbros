@@ -18,7 +18,6 @@ foreach($getBanners as $banner){
 $totals_string = implode(",", $totals);
 // $countWords = str_word_count($totals_string, 2);
 // $withComma = implode(', ', $countWords);
-// var_dump($withComma); die();
 
 ?>
 
@@ -82,7 +81,23 @@ $totals_string = implode(",", $totals);
             </a>
         </div>
 
-        <?php include 'view/common/clientImage.php'; ?>
+        <!-- Clients Section -->
+        <section class="js-clients u-clients">
+            <?php foreach(getLogoSlider() as $slider){ ?>
+            <?php if(!empty($slider['Link'])){ ?>
+            <a href="<?php echo $slider['Link']; ?>">
+                <div class="u-clients__item">
+                    <img class="u-clients__image" src="<?php echo $slider['Path']; ?>" alt="Image Description">
+                </div>
+            </a>
+            <?php }else{ ?>
+            <div class="u-clients__item">
+                <img class="u-clients__image" src="<?php echo $slider['Path']; ?>" alt="Image Description">
+            </div>
+            <?php } } ?>
+
+        </section>
+        <!-- End Clients Section -->
 
         <!-- End Our Product -->
         <section class="u-content-space pb-1 mb-0 revealOnScroll" data-animation="fadeInUp">
@@ -90,17 +105,16 @@ $totals_string = implode(",", $totals);
 
                 <div class="card border-0">
                     <div class="card-body">
-                        <h3 class="text-center">About Us</h3>
-                        <img class="img-fluid products rounded w-100" src="assets/img/about2.jpg"
-                            alt="Iamge Description">
+                        <h3 class="text-center"><?php echo getContents('About Us')['Title']; ?> </h3>
+                        <?php echo getContents('About Us')['Description']; ?>
                     </div>
                 </div>
 
                 <div class="card border-0 mt-3 revealOnScroll" data-animation="fadeInRight">
                     <div class="card-body">
-                        <h5 style="color: #474a21" class="font-weight-bold">Banbros Commercial, Inc.</h5>
-                        <p class="mb-4"><small>Established in 1997, carrying the primary purpose of distributing high
-                                quality IT products in the Philippine Market.</small></p>
+                        <h5 style="color: #474a21" class="font-weight-bold">
+                            <?php echo getContents('Banbros Commercial')['Title']; ?></h5>
+                        <?php echo getContents('Banbros Commercial')['Description']; ?>
                     </div>
                 </div>
 
@@ -115,15 +129,8 @@ $totals_string = implode(",", $totals);
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <h5 class="mb-0">VISION</h5>
-                                        <small>Our vision is to be the Global forefront Top
-                                            Tier value-added Supplier of Innovative IT
-                                            products and end-to-end services in the
-                                            Information Technology distribution industry
-                                            by providing holistic and complementing
-                                            products to provide strong and consistent
-                                            growth in both revenues and profit for the
-                                            company and for its partners.</small>
+                                        <h5 class="mb-0"><?php echo getContents('VISION')['Title']; ?></h5>
+                                        <small><?php echo getContents('VISION')['Description']; ?></small>
                                     </div>
                                 </div>
                             </div>
@@ -140,16 +147,8 @@ $totals_string = implode(",", $totals);
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <h5 class="mb-0">MISSION</h5>
-                                        <small>Our mission is to be the top forefront
-                                            Innovator that provides IT products,
-                                            essentials, holistic solution and
-                                            excellent services all in one for customer
-                                            Satisfaction.<br><br>
-                                            We continuously seek improvements for
-                                            more efficient, productive and satisfied
-                                            employees, reseller and customer so we
-                                            can all gain growth in all aspects.</small>
+                                        <h5 class="mb-0"><?php echo getContents('MISSION')['Title']; ?></h5>
+                                        <small><?php echo getContents('MISSION')['Description']; ?></small>
                                     </div>
                                 </div>
                             </div>
@@ -157,23 +156,27 @@ $totals_string = implode(",", $totals);
                     </div>
                 </div>
 
-
             </div>
         </section>
         <!-- End Why We? -->
 
 
         <div class="container revealOnScroll" data-animation="fadeInUp">
-            <!-- Slider mini banner -->
+            <!-- Slider mini ads -->
             <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="assets/banner/belkin.jpg" class="d-block w-100" alt="...">
+                    <?php 
+                $count = 0;
+                foreach(getAdsSlider() as $sliderAds){ 
+                    $count++;
+                    if($count == 1){
+                        $count = "active";
+                    }
+                ?>
+                    <div class="carousel-item <?php echo $count; ?>">
+                        <img src="<?php echo $sliderAds['Path']; ?>" class="d-block w-100">
                     </div>
-
-                    <div class="carousel-item ">
-                        <img src="assets/banner/brother.jpg" class="d-block w-100" alt="...">
-                    </div>
+                    <?php } ?>
                 </div>
                 <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -194,135 +197,51 @@ $totals_string = implode(",", $totals);
                 <div class="col-md-12 text-center ">
                     <nav class="nav-justified tabbable">
                         <div class="nav nav-tabs pb-2" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link text-dark active" id="pop1-tab" data-toggle="tab" href="#pop1"
-                                role="tab" aria-controls="pop1" aria-selected="true">LIFAair</a>
-                            <a class="nav-item nav-link text-dark" id="pop2-tab" data-toggle="tab" href="#pop2"
-                                role="tab" aria-controls="pop2" aria-selected="false">Gamdias</a>
-                            <a class="nav-item nav-link text-dark" id="pop3-tab" data-toggle="tab" href="#pop3"
-                                role="tab" aria-controls="pop3" aria-selected="false">Edifier</a>
+
+                            <?php 
+                            $ctr = 0;
+                            foreach(featuredProducts() as $featuredNav){ 
+                                $ctr++;
+                                if($ctr == 1){
+                                    $ctr = "active";
+                                }
+                            ?>
+                            <a class="nav-item nav-link text-dark <?php echo $ctr; ?>"
+                                id="pop<?php echo $featuredNav['IdFeatured']; ?>-tab" data-toggle="tab"
+                                href="#pop<?php echo $featuredNav['IdFeatured']; ?>" role="tab"
+                                aria-controls="pop<?php echo $featuredNav['IdFeatured']; ?>"
+                                aria-selected="true"><?php echo $featuredNav['Title']; ?></a>
+                            <?php } ?>
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="pop1" role="tabpanel" aria-labelledby="pop1-tab">
+                        <?php 
+                        $ctr = 0;
+                        foreach(featuredProducts() as $featuredNav){ 
+                            $ctr++;
+                            if($ctr == 1){
+                                $ctr = "active";
+                            }
+                        ?>
+                        <div class="tab-pane fade show <?php echo $ctr; ?>"
+                            id="pop<?php echo $featuredNav['IdFeatured']; ?>" role="tabpanel"
+                            aria-labelledby="pop<?php echo $featuredNav['IdFeatured']; ?>-tab">
                             <div class="pt-3"></div>
                             <div class="row">
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img7.jpg"
+                                <?php foreach(featuredProductsContent($featuredNav['IdFeatured']) as $product){ ?>
+                                <a href="product_view.php?produc_id=<?php echo $product['ProductId']; ?>"
+                                    class="col-sm-4 col-md-3 mx-2 u-portfolio__item figures">
+                                    <img class="u-portfolio__image" src="<?php echo $product['Image']; ?>"
                                         alt="Image Description">
                                     <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">LA500V</h6>
-                                        <small class="d-block">LIFAair</small>
+                                        <h6 class="mb-0"><?php echo $product['ProductName']; ?></h6>
+                                        <small class="d-block"><?php echo $featuredNav['Title']; ?></small>
                                     </figcaption>
                                 </a>
-
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img8.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">LA350A</h6>
-                                        <small class="d-block">LIFAair</small>
-                                    </figcaption>
-                                </a>
-
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img9.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">LAC52</h6>
-                                        <small class="d-block">LIFAair</small>
-                                    </figcaption>
-                                </a>
-
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img9.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">LAC52</h6>
-                                        <small class="d-block">LIFAair</small>
-                                    </figcaption>
-                                </a>
-                            </div>
-
-
-                        </div>
-                        <div class="tab-pane fade" id="pop2" role="tabpanel" aria-labelledby="pop2-tab">
-                            <div class="pt-3"></div>
-
-                            <div class="row">
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img13.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">Achilles M1A</h6>
-                                        <small class="d-block">GAMDIAS</small>
-                                    </figcaption>
-                                </a>
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img14.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">Apollo DHD 356C Curved</h6>
-                                        <small class="d-block">GAMDIAS</small>
-                                    </figcaption>
-                                </a>
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img15.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">Atlas HD275C Curved Monitor</h6>
-                                        <small class="d-block">GAMDIAS</small>
-                                    </figcaption>
-                                </a>
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img15.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">Atlas HD275C Curved Monitor</h6>
-                                        <small class="d-block">GAMDIAS</small>
-                                    </figcaption>
-                                </a>
-                            </div>
-
-                        </div>
-                        <div class="tab-pane fade" id="pop3" role="tabpanel" aria-labelledby="pop3-tab">
-                            <div class="pt-3"></div>
-
-                            <div class="row">
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img19.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">XM3BT Multimedia Speaker</h6>
-                                        <small class="d-block">EDIFIER</small>
-                                    </figcaption>
-                                </a>
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img20.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">W855BT Premiere Bluetooth Headset</h6>
-                                        <small class="d-block">EDIFIER</small>
-                                    </figcaption>
-                                </a>
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img21.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">W820BT Bluetooth Headset</h6>
-                                        <small class="d-block">EDIFIER</small>
-                                    </figcaption>
-                                </a>
-                                <a href="#" class="col-sm-4 col-md mx-2 u-portfolio__item figures">
-                                    <img class="u-portfolio__image" src="assets/portfolio/img21.jpg"
-                                        alt="Image Description">
-                                    <figcaption class="u-portfolio__info">
-                                        <h6 class="mb-0">W820BT Bluetooth Headset</h6>
-                                        <small class="d-block">EDIFIER</small>
-                                    </figcaption>
-                                </a>
+                                <?php } ?>
                             </div>
                         </div>
-
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -340,50 +259,22 @@ $totals_string = implode(",", $totals);
                 <!-- End Testimonials: Header -->
 
                 <div class="row">
-                    <div class="col-lg col-sm">
+                    <?php foreach(getExecutives() as $executive){ ?>
+                        <div class="col-lg col-sm">
                         <div class="card text-center border border-0 revealOnScroll" data-animation="fadeInUp"
                             style="background: none">
-                            <div class="fixImage text-center p-3">
-                                <img src="assets/img-temp/ava/bangayan.png" class="card-img-top" style="width: 80%;"
+                            <div class="fixImage text-center py-3 w-100">
+                                <img src="<?php echo $executive['Image']; ?>" class="card-img-top" style="width: 80%;"
                                     alt="">
                             </div>
-                            <h5 style="color:white;" class="card-title font-weight-bold text-center mb-0">Richard
-                                Bangayan</h5>
-                            <p class="text-center pt-0 font-italic text-white"><small>Vice President for
-                                    Sales</small></p>
+                            <h5 style="color:white;" class="card-title font-weight-bold text-center mb-0"><?php echo $executive['Name']; ?></h5>
+                            <p class="text-center pt-0 font-italic text-white"><small><?php echo $executive['Position']; ?></small></p>
                             <div class="row socials mb-0 d-flex justify-content-center">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg col-sm">
-                        <div class="card text-center border border-0 revealOnScroll" data-animation="fadeInDown"
-                            style="background: none">
-                            <div class="fixImage text-center p-3">
-                                <img src="assets/img-temp/ava/lao.png" class="card-img-top" style="width: 80%;" alt="">
-                            </div>
-                            <h5 style="color:white;" class="card-title font-weight-bold text-center mb-0">Paton
-                                Lao</h5>
-                            <p class="text-center pt-0 font-italic text-white"><small>Vice President for
-                                    Operations</small></p>
-                            <div class="row socials mb-0 d-flex justify-content-center">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg col-sm">
-                        <div class="card text-center border border-0 revealOnScroll" data-animation="fadeInUp"
-                            style="background: none">
-                            <div class="fixImage text-center p-3">
-                                <img src="assets/img-temp/ava/trinidad.png" class="card-img-top" style="width: 80%;"
-                                    alt="">
-                            </div>
-                            <h5 style="color:white;" class="card-title font-weight-bold text-center mb-0">Gayle
-                                Trinidad</h5>
-                            <p class="text-center pt-0 font-italic text-white"><small>Vice President for
-                                    Sales and Marketing</small></p>
-                            <div class="row socials mb-0 d-flex justify-content-center">
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
+                    
                 </div>
             </div>
         </section>
