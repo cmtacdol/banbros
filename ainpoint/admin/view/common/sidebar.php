@@ -70,6 +70,7 @@
                             </ul>
                         </li>
                     </ul>
+                    
 
                     <div class="pcoded-navigation-label">Manage Content</div>
                     <ul class="pcoded-item pcoded-left-item">
@@ -87,11 +88,11 @@
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
                                         </span>
-                                        <span class="pcoded-mtext">Client Images</span>
+                                        <span class="pcoded-mtext">Logo Slider</span>
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
+                                    <a href="home_content.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
                                         </span>
@@ -99,7 +100,7 @@
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
+                                    <a href="home_ads.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
                                         </span>
@@ -107,7 +108,7 @@
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
+                                    <a href="home_featured_products.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
                                         </span>
@@ -115,7 +116,7 @@
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
+                                    <a href="home_executives.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
                                         </span>
@@ -135,24 +136,15 @@
                     </ul>
 
                     <ul class="pcoded-item pcoded-left-item">
-                        <li class="pcoded-hasmenu">
-                            <a href="javascript:void(0)" class="waves-effect waves-dark">
+                        <li class="">
+                            <a href="banner.php" class="waves-effect waves-dark">
                                 <span class="pcoded-micon">
                                     <i class="feather icon-info"></i>
                                 </span>
-                                <span class="pcoded-mtext">About</span>
+                                <span class="pcoded-mtext">About Us</span>
                             </a>
-                            <ul class="pcoded-submenu">
-                                <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon">
-                                            <i class="feather icon-image"></i>
-                                        </span>
-                                        <span class="pcoded-mtext">Content</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
+
                     </ul>
 
                     <ul class="pcoded-item pcoded-left-item">

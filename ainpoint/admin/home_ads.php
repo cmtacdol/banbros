@@ -1,22 +1,22 @@
 <?php 
 session_start();
-$_SESSION['PAGE_TITLE'] = "Logo Slider";
-$_SESSION['PAGE_NAV_TITLE'] = "Logo Slider";
+$_SESSION['PAGE_TITLE'] = "Ads Slider";
+$_SESSION['PAGE_NAV_TITLE'] = "Ads Slider";
 // include 'scripts/session_check.php'; 
 include 'view/common/header.php';
 include 'controller/homeController.php';
 
-if(isset($_POST['saveClientImage'])){
-    saveImages($_POST,$_FILES);
+if(isset($_POST['saveAdsBanner'])){
+    saveAdsBanner($_FILES);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-if(isset($_POST['deleteClientImage'])){
-    deleteImages($_POST['deleteClientImage']);
+if(isset($_POST['deleteAds'])){
+    deleteAdsImages($_POST['deleteAds']);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-$getImages = getAllImages();
+$getImages = getAllAdsImages();
 
 
 ?>
@@ -45,7 +45,7 @@ $getImages = getAllImages();
                     <div class="page-header card">
                         <div class="row">
                             <div class="col-lg">
-                                <button type="submit" name="saveClientImage"
+                                <button type="submit" name="saveAdsBanner"
                                     class="btn btn-primary py-1 btn-round waves-effect waves-light"><i
                                         class="icofont icofont-edit-alt"></i> Save</button>
                             </div>
@@ -56,8 +56,7 @@ $getImages = getAllImages();
                                     <table id="bannerTable" class="table table-striped table-bordered nowrap">
                                         <thead>
                                             <tr>
-                                                <th style="min-width:150px" class="text-left">Image</th>
-                                                <th style="min-width:150px" class="text-left">Link</th>
+                                                <th style="width: 800px" class="text-left">Image</th>
                                                 <th class="text-center">&nbsp;</th>
                                             </tr>
                                         </thead>
@@ -66,18 +65,12 @@ $getImages = getAllImages();
                                             <?php foreach($getImages as $images){ ?>
                                             <tr>
                                                 <td>
-                                                    <input type="hidden" name="IdClientImage[]"
-                                                        class="form-control form-control-sm mt-4"
-                                                        value="<?php echo $images['IdClientImage']; ?>">
                                                     <img src="../../<?php echo $images['Path']; ?>"
                                                         style="width: 300px; height: 100px; object-fit: contain">
                                                 </td>
                                                 <td>
-                                                    <?php echo $images['Link']; ?>
-                                                </td>
-                                                <td>
-                                                    <button type="submit" name="deleteClientImage"
-                                                        value="<?php echo $images['IdClientImage']; ?>"
+                                                    <button type="submit" name="deleteAds"
+                                                        value="<?php echo $images['IdAds']; ?>"
                                                         class="col-auto btn btn-danger mt-4"><i
                                                             class="icofont icofont-trash"></i></button>
                                                 </td>
@@ -87,7 +80,7 @@ $getImages = getAllImages();
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <td colspan="2"></td>
+                                                <td colspan="1"></td>
                                                 <td class="text-center">
                                                     <a href="#"
                                                         class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon add_image_option"><i
@@ -117,7 +110,7 @@ $getImages = getAllImages();
     <script>
     $(document).ready(function() {
 
-        var max_fields_image = 10; //maximum input boxes allowed
+        var max_fields_image = 4; //maximum input boxes allowed
         var wrapper_image = $(".image_wrap"); //Fields wrapper_image
         var add_button_image = $(".add_image_option"); //Add button ID
 
@@ -128,7 +121,7 @@ $getImages = getAllImages();
             if (x3 < max_fields_image) { //max input box allowed
                 x3++; //text box increment
                 $(wrapper_image).append(
-                    '<tr><td><input type="file" name="images[]" class="form-control form-control-sm mt-4"></td><td><input type="text" name="links[]" class="form-control form-control-sm mt-4"></td><td><a href="#" class="col-auto remove_field btn btn-danger mt-4"><i class="icofont icofont-trash"></i></a></td></tr>'
+                    '<tr><td><input type="file" name="images[]" class="form-control form-control-sm mt-4"></td><td><a href="#" class="col-auto remove_field btn btn-danger mt-4"><i class="icofont icofont-trash"></i></a></td></tr>'
                 ); //add input box
             }
         });
