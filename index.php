@@ -248,7 +248,6 @@ $totals_string = implode(",", $totals);
         </div>
 
 
-
         <!-- Testimonials -->
         <section class="u-content-space pt-5 pb-5" style="background:#0094DA">
             <div class="container">

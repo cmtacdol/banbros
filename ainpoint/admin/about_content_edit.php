@@ -1,17 +1,17 @@
 <?php 
 session_start();
-$_SESSION['PAGE_TITLE'] = "Edit Executives";
-$_SESSION['PAGE_NAV_TITLE'] = "Edit Executives";
+$_SESSION['PAGE_TITLE'] = "Edit Content";
+$_SESSION['PAGE_NAV_TITLE'] = "Edit Content";
 include 'view/common/header.php';
-include 'controller/homeController.php';
+include 'controller/aboutController.php';
 
-if(isset($_POST['updateExecutives'])){
-    updateExecutives($_POST, $_FILES);
+if(isset($_POST['UpdateContent'])){
+    updateContentAbout($_POST);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-$executives = getExecutivesById($_GET['executive_id']);
-
+$getsinglecontent = getSingleContent($_GET['id_content']);
+$parentMenu = getMenu(2);
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
 
@@ -32,43 +32,48 @@ $executives = getExecutivesById($_GET['executive_id']);
                     <div class="page-header card">
                         <div class="row">
                             <div class="col-lg">
-                                <button type="submit" name="updateExecutives"
+                                <button type="submit" name="UpdateContent"
                                     class="btn btn-warning py-1 btn-round waves-effect waves-light"><i
                                         class="icofont icofont-edit-alt"></i> Update</button>
-                                <a href="home_executives.php" class="btn btn-danger py-1 btn-round waves-effect waves-light"><i
+                                <a href="about_content.php?idTabContent=<?php echo $_GET['idTabContent']; ?>"
+                                    class="btn btn-danger py-1 btn-round waves-effect waves-light"><i
                                         class="icofont icofont-error"></i> Close</a>
+
                             </div>
                         </div>
                         <div class="card comp-card mt-3">
                             <div class="card-body p-5">
                                 <div class="row align-items-top">
+                                    <input class="form-control" type="hidden" name="parentTabId" value="<?php echo $_GET['idTabContent']; ?>">
+                                    <input class="form-control" type="hidden" name="id_content" value="<?php echo $_GET['id_content']; ?>">
                                     <div class="col-lg-9">
-                                        <input type="hidden" name="executive_id" value="<?php echo $executives['IdExecutives']; ?>">
-                                        <div class="form-group">
-                                            <img src="../../<?php echo $executives['Image']; ?>" id="preview" class="img-thumbnail"
-                                                style="width:100%; height: 450px; object-fit: contain">
-                                            <div class="">
-                                                <input type="file" class="form-control form-control-sm text-truncate"
-                                                    id="LogoImage" name="LogoImage">
-                                            </div>
-                                        </div>
                                         <div class="form-group scroll">
-                                            <label for="exampleInputEmail1">Name</label>
-                                            <input class="form-control" type="text" name="Name" value="<?php echo $executives['Name']; ?>">
+                                            <label for="exampleInputEmail1">Title</label>
+                                            <input class="form-control" type="text" name="Title" value="<?php echo $getsinglecontent['Title']; ?>">
                                         </div>
 
                                         <div class="form-group scroll">
-                                            <label for="exampleInputEmail1">Position</label>
-                                            <input class="form-control" type="text" name="Position" value="<?php echo $executives['Position']; ?>">
+                                            <label for="exampleInputEmail1">Description</label>
+                                            <textarea class="form-control" id="Content" name="Description"><?php echo $getsinglecontent['Description']; ?></textarea>
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="title">Parent</label>
+                                            <select class="custom-select" name="Parent" id="Parent" style="width: 100%">
+                                                <?php foreach($parentMenu as $menu){ ?>
+                                                <option value="<?php echo $menu['IdNavMenu']; ?>">
+                                                    <?php echo $menu['NavName']; ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+
 
                                         <div class="form-group">
                                             <label for="">Status</label>
                                             <select class="form-control form-control-sm" id="Status" name="Status">
-                                                <option value="0" <?php echo ($executives['Status'] == '0') ? 'selected' : ''; ?>>Active</option>
-                                                <option value="1" <?php echo ($executives['Status'] == '1') ? 'selected' : ''; ?>>Inactive</option>
+                                                <option value="0" <?php echo ($getsinglecontent['Status'] == '0') ? 'selected' : ''; ?>>Active</option>
+                                                <option value="1" <?php echo ($getsinglecontent['Status'] == '1') ? 'selected' : ''; ?>>Inactive</option>
                                             </select>
                                         </div>
 
@@ -95,22 +100,13 @@ $executives = getExecutivesById($_GET['executive_id']);
 
     <?php include 'view/common/toast_messages.php'; ?>
     <script>
-    $('#LogoImage').change(function(e) {
-        var fileName = e.target.files[0].name;
-        // $("#ImportImage").val(fileName);
-
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            // get loaded data and render thumbnail.
-            document.getElementById("preview").src = e.target.result;
-        };
-        // read the image file as a data URL.
-        reader.readAsDataURL(this.files[0]);
+    CKEDITOR.replace('Content', {
+        filebrowserUploadUrl: 'assets/ckeditor/ck_upload.php',
+        filebrowserUploadMethod: 'form',
+        height: '540px',
     });
 
-    $(document).ready(function() {
-        $('.selectpicker').select2();
-    });
+    $('#Parent').attr("style", "pointer-events: none;");
     </script>
 
     <script>

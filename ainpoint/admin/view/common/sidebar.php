@@ -137,14 +137,13 @@
 
                     <ul class="pcoded-item pcoded-left-item">
                         <li class="">
-                            <a href="banner.php" class="waves-effect waves-dark">
+                            <a href="about_tab.php" class="waves-effect waves-dark">
                                 <span class="pcoded-micon">
                                     <i class="feather icon-info"></i>
                                 </span>
                                 <span class="pcoded-mtext">About Us</span>
                             </a>
                         </li>
-
                     </ul>
 
                     <ul class="pcoded-item pcoded-left-item">
@@ -202,39 +201,13 @@
                     </ul>
 
                     <ul class="pcoded-item pcoded-left-item">
-                        <li class="pcoded-hasmenu">
-                            <a href="javascript:void(0)" class="waves-effect waves-dark">
+                        <li class="">
+                            <a href="career.php" class="waves-effect waves-dark">
                                 <span class="pcoded-micon">
                                     <i class="feather icon-airplay"></i>
                                 </span>
                                 <span class="pcoded-mtext">Career</span>
                             </a>
-                            <ul class="pcoded-submenu">
-                                <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon">
-                                            <i class="feather icon-image"></i>
-                                        </span>
-                                        <span class="pcoded-mtext">Featured Products</span>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon">
-                                            <i class="feather icon-image"></i>
-                                        </span>
-                                        <span class="pcoded-mtext">Executives</span>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
-                                        <span class="pcoded-micon">
-                                            <i class="feather icon-image"></i>
-                                        </span>
-                                        <span class="pcoded-mtext">Press Realease</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
 

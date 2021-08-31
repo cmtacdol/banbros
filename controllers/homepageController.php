@@ -34,7 +34,7 @@ function getLogoSlider(){
 
 function getContents($title){
 
-    global $pdo;
+    global $pdo; 
 
     $query = $pdo->query("SELECT * FROM `content` WHERE Title LIKE '%$title%'")->fetch();
 
