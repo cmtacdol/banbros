@@ -1,73 +1,26 @@
 <?php 
 session_start();
-$_SESSION['PAGE_TITLE'] = "Add Banner";
-$_SESSION['PAGE_NAV_TITLE'] = "Add Banner";
+$_SESSION['PAGE_TITLE'] = "Add Icons";
+$_SESSION['PAGE_NAV_TITLE'] = "Add Icons";
 // include 'scripts/session_check.php'; 
 include 'view/common/header.php';
-include 'controller/banner.php';
+include 'controller/careerController.php';
 
-if(isset($_POST['saveBanner'])){
-    saveBanner($_POST,$_FILES);
+if(isset($_POST['saveIcons'])){
+    saveIcons($_POST,$_FILES);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-if(isset($_POST['deleteBanner'])){
-    deleteBanner($_POST['deleteBanner']);
+if(isset($_POST['deleteIcons'])){
+    deleteIcons($_POST['deleteIcons']);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-
+$getAllIcons = getAllIcons($_GET['id_career']);
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
 
 </head>
-
-<style>
-.profile-pic {
-    max-width: 200px;
-    max-height: 200px;
-    display: block;
-}
-
-.file-upload {
-    display: none;
-}
-
-.circle {
-    border-radius: 1000px !important;
-    overflow: hidden;
-    width: 100%;
-    height: 80px;
-    border: 8px solid rgba(255, 255, 255, 0.7);
-}
-
-img {
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
-}
-
-.p-image {
-    position: absolute;
-    top: 7px;
-    right: 4px;
-    color: #666666;
-    transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-}
-
-.p-image:hover {
-    transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-}
-
-.upload-button {
-    font-size: 1.2em;
-}
-
-.upload-button:hover {
-    transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
-    color: #999;
-}
-</style>
 
 <body>
 
@@ -89,10 +42,10 @@ img {
                     <div class="page-header card">
                         <div class="row">
                             <div class="col-lg">
-                                <button type="submit" name="saveBanner"
+                                <button type="submit" name="saveIcons"
                                     class="btn btn-primary py-1 btn-round waves-effect waves-light"><i
                                         class="icofont icofont-edit-alt"></i> Save</button>
-                                <a href="banner.php" class="btn btn-danger py-1 btn-round waves-effect waves-light"><i
+                                <a href="career.php" class="btn btn-danger py-1 btn-round waves-effect waves-light"><i
                                         class="icofont icofont-error"></i> Close</a>
                             </div>
                         </div>
@@ -102,13 +55,30 @@ img {
                                     <table id="bannerTable" class="table table-striped table-bordered nowrap">
                                         <thead>
                                             <tr>
-                                                <th style="min-width:150px" class="text-left">Image</th>
+                                                <th style="min-width:150px" class="text-left">Icons</th>
                                                 <th style="min-width:150px" class="text-left">Title</th>
-                                                <th style="min-width:150px" class="text-left">Sub title</th>
+                                                <th style="min-width:150px" class="text-left">Description</th>
                                                 <th class="text-center">&nbsp;</th>
                                             </tr>
                                         </thead>
                                         <tbody class="image_wrap">
+                                            <?php foreach($getAllIcons as $icons){ ?>
+
+                                            <tr>
+                                                <td>
+                                                    <img src="../../<?php echo $icons['Path']; ?>" style="width: 65px; height: 65px; object-fit: contain">
+                                                </td>
+                                                <td><?php echo $icons['Title']; ?></td>
+                                                <td><?php echo $icons['Description']; ?></td>
+                                                <td>
+                                                <button type="submit" name="deleteIcons"
+                                                        value="<?php echo $icons['IdCareerImages']; ?>"
+                                                        class="col-auto btn btn-danger btn-icon mt-4"><i
+                                                            class="icofont icofont-trash"></i></button>
+                                                </td>
+                                            </tr>
+
+                                            <?php } ?>
 
                                         </tbody>
                                         <tfoot>
@@ -143,7 +113,7 @@ img {
     <script>
     $(document).ready(function() {
 
-        var max_fields_image = 10; //maximum input boxes allowed
+        var max_fields_image = 9; //maximum input boxes allowed
         var wrapper_image = $(".image_wrap"); //Fields wrapper_image
         var add_button_image = $(".add_image_option"); //Add button ID
 
@@ -154,7 +124,7 @@ img {
             if (x3 < max_fields_image) { //max input box allowed
                 x3++; //text box increment
                 $(wrapper_image).append(
-                    '<tr><td><input type="text" name="color" class="form-control" placeholder="Background Hex eg: (32a852)"><input type="file" name="images[]" class="form-control form-control-sm mt-4"></td><td><input type="text" name="title[]" class="form-control form-control-sm mt-4"></td><td><input type="text" name="links[]" class="form-control form-control-sm mt-4"></td><td><a href="#" class="col-auto remove_field btn btn-danger mt-4"><i class="icofont icofont-trash"></i></a></td></tr>'
+                    '<tr><td><input type="file" name="images[]" class="form-control form-control-sm mt-4" required></td><td><input type="text" name="title[]" class="form-control form-control-sm mt-4"></td><td><input type="text" name="description[]" class="form-control form-control-sm mt-4"></td><td><a href="#" class="col-auto remove_field btn btn-danger mt-4"><i class="icofont icofont-trash"></i></a></td></tr>'
                 ); //add input box
             }
         });

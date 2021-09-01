@@ -1,22 +1,18 @@
 <?php 
 session_start();
-$_SESSION['PAGE_TITLE'] = "Career";
-$_SESSION['PAGE_NAV_TITLE'] = "Career";
+$_SESSION['PAGE_TITLE'] = "Reseller";
+$_SESSION['PAGE_NAV_TITLE'] = "Reseller";
+$nav_id = 9;
 // include 'scripts/session_check.php'; 
 include 'view/common/header.php';
-include 'controller/careerController.php';
-
-if(isset($_POST['SaveCareer'])){
-    saveCareer($_POST);
-    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
-}
+include 'controller/resellerController.php';
 
 if(isset($_POST['UpdateCareer'])){
     updateCareer($_POST);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-$getCareer = getCareer();
+$resellersContent = getReseller($nav_id);
 
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
@@ -39,14 +35,12 @@ $getCareer = getCareer();
 
             <div class="pcoded-content">
 
-                <?php include 'view/common/modal.php'; ?>
-
                 <div class="page-header card">
                     <div class="row">
                         <div class="col-lg">
-                            <a href="#Career" data-toggle="modal"
+                            <a href="reseller_add.php"
                                 class="btn btn-success py-1 btn-round waves-effect waves-light"><i
-                                    class="icofont icofont-ui-add"></i> New Tab</a>
+                                    class="icofont icofont-ui-add"></i> New Content</a>
                         </div>
 
                     </div>
@@ -64,27 +58,15 @@ $getCareer = getCareer();
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach($getCareer as $careers){ ?>
+                                        <?php foreach($resellersContent as $reseller){ ?>
                                         <tr>
-                                            <td><?php echo $careers['Title']; ?></td>
+                                            <td><?php echo $reseller['Title']; ?></td>
                                             <td class="text-center">
-                                                <a href="#EditCareer" id="editModal" data-toggle="modal"
-                                                    data-id="<?php echo $careers['IdCareer']; ?>"
-                                                    data-title="<?php echo $careers['Title']; ?>"
-                                                    data-description="<?php echo $careers['Description']; ?>"
+                                                <a href="reseller_edit.php?id_content=<?php echo $reseller['IdContent']; ?>"
                                                     class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                         class="icofont icofont-edit tooltip-item">
                                                     </i></a>
 
-                                                <a href="career_images.php?id_career=<?php echo $careers['IdCareer']; ?>"
-                                                    class="btn waves-effect waves-dark btn-info btn-outline-info btn-icon"><i
-                                                        class="icofont icofont-image fa-lg tooltip-item">
-                                                    </i></a>
-
-                                                <a href="career_jobList.php?id_career=<?php echo $careers['IdCareer']; ?>"
-                                                    class="btn waves-effect waves-dark btn-info btn-outline-info btn-icon"><i
-                                                        class="icofont icofont-list fa-lg tooltip-item">
-                                                    </i></a>
                                             </td>
                                         </tr>
                                         <?php } ?>

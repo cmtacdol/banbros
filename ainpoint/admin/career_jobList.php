@@ -1,7 +1,7 @@
 <?php 
 session_start();
-$_SESSION['PAGE_TITLE'] = "Career";
-$_SESSION['PAGE_NAV_TITLE'] = "Career";
+$_SESSION['PAGE_TITLE'] = "Job List";
+$_SESSION['PAGE_NAV_TITLE'] = "Job List";
 // include 'scripts/session_check.php'; 
 include 'view/common/header.php';
 include 'controller/careerController.php';
@@ -11,12 +11,7 @@ if(isset($_POST['SaveCareer'])){
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-if(isset($_POST['UpdateCareer'])){
-    updateCareer($_POST);
-    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
-}
-
-$getCareer = getCareer();
+$getCareerJobs = getAllJobDescription($_GET['id_career']);
 
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
@@ -39,14 +34,12 @@ $getCareer = getCareer();
 
             <div class="pcoded-content">
 
-                <?php include 'view/common/modal.php'; ?>
-
                 <div class="page-header card">
                     <div class="row">
                         <div class="col-lg">
-                            <a href="#Career" data-toggle="modal"
+                            <a href="career_jobList_add.php?id_career=<?php echo $_GET['id_career']; ?>"
                                 class="btn btn-success py-1 btn-round waves-effect waves-light"><i
-                                    class="icofont icofont-ui-add"></i> New Tab</a>
+                                    class="icofont icofont-ui-add"></i> New Job Description</a>
                         </div>
 
                     </div>
@@ -60,31 +53,23 @@ $getCareer = getCareer();
                                     <thead>
                                         <tr>
                                             <th class="text-left">Title</th>
+                                            <th class="text-left">Status</th>
                                             <th class="text-center">&nbsp;</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach($getCareer as $careers){ ?>
+                                        <?php foreach($getCareerJobs as $jobs){ ?>
                                         <tr>
-                                            <td><?php echo $careers['Title']; ?></td>
+                                            <td><?php echo $jobs['Title']; ?></td>
+                                            <td class="text-center"><?php echo ($jobs['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?></td>
                                             <td class="text-center">
-                                                <a href="#EditCareer" id="editModal" data-toggle="modal"
-                                                    data-id="<?php echo $careers['IdCareer']; ?>"
-                                                    data-title="<?php echo $careers['Title']; ?>"
-                                                    data-description="<?php echo $careers['Description']; ?>"
+
+                                                <a href="career_jobList_edit.php?careerSection_id=<?php echo $jobs['IdCareerSection']; ?>&&id_career=<?php echo $_GET['id_career']; ?>"
                                                     class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                         class="icofont icofont-edit tooltip-item">
                                                     </i></a>
 
-                                                <a href="career_images.php?id_career=<?php echo $careers['IdCareer']; ?>"
-                                                    class="btn waves-effect waves-dark btn-info btn-outline-info btn-icon"><i
-                                                        class="icofont icofont-image fa-lg tooltip-item">
-                                                    </i></a>
 
-                                                <a href="career_jobList.php?id_career=<?php echo $careers['IdCareer']; ?>"
-                                                    class="btn waves-effect waves-dark btn-info btn-outline-info btn-icon"><i
-                                                        class="icofont icofont-list fa-lg tooltip-item">
-                                                    </i></a>
                                             </td>
                                         </tr>
                                         <?php } ?>
@@ -107,13 +92,6 @@ $getCareer = getCareer();
 
     <?php include 'view/common/scripts.php'; ?>
     <?php include 'view/common/toast_messages.php'; ?>
-    <script>
-    $(document).on("click", "#editModal", function() {
-        $(".modal-body #id_career").val($(this).data('id'));
-        $(".modal-body #Title").val($(this).data('title'));
-        $(".modal-body #Description").val($(this).data('description'));
-    });
-    </script>
 </body>
 
 </html>

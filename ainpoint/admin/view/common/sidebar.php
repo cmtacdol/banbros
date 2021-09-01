@@ -211,6 +211,17 @@
                         </li>
                     </ul>
 
+                    <ul class="pcoded-item pcoded-left-item">
+                        <li class="">
+                            <a href="reseller.php" class="waves-effect waves-dark">
+                                <span class="pcoded-micon">
+                                    <i class="feather icon-command"></i>
+                                </span>
+                                <span class="pcoded-mtext">Reseller</span>
+                            </a>
+                        </li>
+                    </ul>
+
                     <!-- Users -->
 
                     <div class="pcoded-navigation-label">Users</div>
