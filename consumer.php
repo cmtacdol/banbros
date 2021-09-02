@@ -8,6 +8,7 @@ include 'view/common/header.php';
 include 'controllers/brandController.php'; 
 
 $getbrandBussiness = getBrandforBusinnes($nav_id);
+$getBanners = getBanner($nav_id);
 
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/modal.css">
@@ -63,28 +64,37 @@ $getbrandBussiness = getBrandforBusinnes($nav_id);
     <main role="main">
 
         <!-- Slider carousel -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/1920x1080/CONSUMER.jpg" class="d-block w-100 imgCarousel">
+        <div id="carouselIndicators1" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="container u-overlay__inner u-ver-center u-content-space">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="text-center text-white">
+                            <p class="text-uppercase u-letter-spacing-sm mb-0"></p>
+                            <h1 class="display-sm-4 display-lg-3 mb-3"> <span class="js-display-typing"></span></h1>
+
+                        </div>
+                    </div>
                 </div>
-                <!-- <div class="carousel-item">
-                    <img src="assets/1920x1080/asus1.jpg" class="d-block w-100 imgCarousel">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/1920x1080/gam.jpg" class="d-block w-100 imgCarousel">
-                </div> -->
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <div class="carousel-inner main-banner-inner">
+                <?php 
+                $count = 0;
+                foreach($getBanners as $banner){ 
+                    $count++;
+                    if($count == 1){
+                        $count = "active";
+                    }
+                ?>
+                <div class="carousel-item <?php echo $count; ?>">
+                    <img src="<?php echo $banner['Image']; ?>" class="d-block w-100 imgCarousel">
+                </div>
+                <?php }  ?>
+            </div>
+            <a class="carousel-control-prev" href="#carouselIndicators1" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselIndicators1" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>

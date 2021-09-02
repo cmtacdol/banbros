@@ -36,18 +36,14 @@ $resellersContent = getReseller($nav_id);
             <div class="pcoded-content">
 
                 <div class="page-header card">
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-lg">
                             <a href="reseller_add.php"
                                 class="btn btn-success py-1 btn-round waves-effect waves-light"><i
                                     class="icofont icofont-ui-add"></i> New Content</a>
                         </div>
-
-                    </div>
+                    </div> -->
                     <div class="card mt-3">
-                        <div class="card-header">
-                            <h5>Tab List</h5>
-                        </div>
                         <div class="card-block">
                             <div class="table-responsive dt-responsive">
                                 <table id="ctegory" class="table table-striped table-bordered nowrap">
