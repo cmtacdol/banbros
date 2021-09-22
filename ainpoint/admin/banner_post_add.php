@@ -41,6 +41,7 @@ $banner = getBannerByPost($_GET['IdPost']);
 
                 <form method="post" enctype="multipart/form-data">
                     <div class="page-header card">
+                        <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                         <div class="row">
                             <div class="col-lg">
                                 <button type="submit" name="saveBanner"
@@ -50,6 +51,7 @@ $banner = getBannerByPost($_GET['IdPost']);
                                         class="icofont icofont-error"></i> Close</a>
                             </div>
                         </div>
+                        <?php } ?>
                         <div class="card mt-3">
                             <div class="card-block">
                                 <div class="table-responsive dt-responsive">
@@ -71,7 +73,7 @@ $banner = getBannerByPost($_GET['IdPost']);
                                                     <input type="hidden" name="idBanner[]"
                                                         class="form-control form-control-sm mt-4"
                                                         value="<?php echo $getbanner['IdBanner']; ?>">
-                                                    <img src="../<?php echo $getbanner['Image']; ?>"
+                                                    <img src="../../<?php echo $getbanner['Image']; ?>"
                                                         style="width: 300px; height: 100px; object-fit: contain">
                                                 </td>
                                                 <td>

@@ -18,7 +18,10 @@ td {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-td.column_b {width: 30%;}
+
+td.column_b {
+    width: 30%;
+}
 </style>
 
 <body>
@@ -40,6 +43,7 @@ td.column_b {width: 30%;}
                 <?php include 'view/common/modal.php'; ?>
 
                 <div class="page-header card">
+                    <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                     <div class="row">
                         <div class="col-lg">
                             <a href="about_content_add.php?idTabContent=<?php echo $_GET['idTabContent']; ?>"
@@ -48,6 +52,7 @@ td.column_b {width: 30%;}
                         </div>
 
                     </div>
+                    <?php } ?>
                     <div class="card mt-3">
                         <div class="card-header">
                             <h5>Content</h5>

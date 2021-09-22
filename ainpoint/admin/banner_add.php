@@ -42,6 +42,7 @@ $banner = getBannerByMenu($_GET['IdMenu']);
 
                 <form method="post" enctype="multipart/form-data">
                     <div class="page-header card">
+                        <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                         <div class="row">
                             <div class="col-lg">
                                 <button type="submit" name="saveBanner"
@@ -51,6 +52,7 @@ $banner = getBannerByMenu($_GET['IdMenu']);
                                         class="icofont icofont-error"></i> Close</a>
                             </div>
                         </div>
+                        <?php } ?>
                         <div class="card mt-3">
                             <div class="card-block">
                                 <div class="table-responsive dt-responsive">

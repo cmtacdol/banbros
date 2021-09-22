@@ -115,43 +115,6 @@ $parentMenu = getSinglePost(3);
                                                     aria-describedby="basic-addon1">
                                             </div>
                                         </div>
-                                        <hr>
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i
-                                                            class="feather icon-facebook"></i></span>
-                                                </div>
-                                                <input type="text" name="link1" class="form-control"
-                                                    placeholder="Shareable Link" aria-label="Shareable Link"
-                                                    aria-describedby="basic-addon1">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i
-                                                            class="feather icon-twitter"></i></span>
-                                                </div>
-                                                <input type="text" name="link2" class="form-control"
-                                                    placeholder="Shareable Link" aria-label="Shareable Link"
-                                                    aria-describedby="basic-addon1">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i
-                                                            class="feather icon-instagram"></i></span>
-                                                </div>
-                                                <input type="text" name="link3" class="form-control"
-                                                    placeholder="Shareable Link" aria-label="Shareable Link"
-                                                    aria-describedby="basic-addon1">
-                                            </div>
-                                        </div>
-
 
                                         <div class="form-group">
                                             <label for="">Status</label>

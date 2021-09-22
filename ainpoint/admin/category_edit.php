@@ -61,7 +61,7 @@ $getBrand = getBrand();
                                             <select class="custom-select form-control-md" name="Parent">
                                                 <?php foreach($getBrand as $brand){ ?>
                                                 <option value="<?php echo $brand['IdBrand']; ?>" <?php echo ($category['BrandId'] == $brand['IdBrand']) ? 'selected' : ''; ?>>
-                                                    <?php echo $brand['BrandName']; ?></option>
+                                                    <?php echo $brand['BrandName']; ?> - <?php echo getMenuById($brand['NavId'])['NavName'] ?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>

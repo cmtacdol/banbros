@@ -70,7 +70,7 @@ $getCategories = getAllCategories();
                                                 style="width: 100%">
                                                 <?php foreach($getCategories as $category){ ?>
                                                 <option value="<?php echo $category['IdCategory']; ?>">
-                                                    <?php echo $category['CategoryName']; ?></option>
+                                                    <?php echo $category['CategoryName']; ?> - <?php echo getBrandById($category['BrandId'])['BrandName'] ?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
@@ -159,7 +159,7 @@ $getCategories = getAllCategories();
 
     $(document).ready(function() {
         $('.selectpicker').select2();
-    });
+    }); 
 
     $('#ProductImage').change(function(e) {
         var fileName = e.target.files[0].name;

@@ -34,14 +34,14 @@ $getBlogs = getAllBlogPost();
             <div class="pcoded-content">
 
                 <div class="page-header card">
+                    <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                     <div class="row">
                         <div class="col-lg">
-                            <a href="blog_add.php"
-                                class="btn btn-success py-1 btn-round waves-effect waves-light"><i
+                            <a href="blog_add.php" class="btn btn-success py-1 btn-round waves-effect waves-light"><i
                                     class="icofont icofont-ui-add"></i> New Blog</a>
                         </div>
-
                     </div>
+                    <?php } ?>
                     <div class="card mt-3">
                         <div class="card-header">
                             <h5>Blogs</h5>
@@ -63,22 +63,27 @@ $getBlogs = getAllBlogPost();
                                         <?php foreach($getBlogs as $blogs){ ?>
                                         <tr>
                                             <td>
-                                                <img src="../../<?php echo $blogs['Image']; ?>" style="width: 150px; height: 80px; object-fit: contain">
+                                                <img src="../../<?php echo $blogs['Image']; ?>"
+                                                    style="width: 150px; height: 80px; object-fit: contain">
                                             </td>
                                             <td><?php echo $blogs['Title']; ?></td>
                                             <td><?php echo $blogs['Author']; ?></td>
                                             <td><?php echo $blogs['Date_added']; ?></td>
-                                            <td class="text-center"><?php echo ($blogs['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?></td>
+                                            <td class="text-center">
+                                                <?php echo ($blogs['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?>
+                                            </td>
                                             <td class="text-center">
                                                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                                                     <a href="blog_edit.php?blog_id=<?php echo $blogs['IdBlog']; ?>"
                                                         class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>
+                                                    <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                                                     <button name="deleteBlog" type="submit"
                                                         value="<?php echo $blogs['IdBlog']; ?>"
                                                         class="btn waves-effect waves-dark btn-danger btn-outline-danger btn-icon"><i
                                                             class="icofont icofont-trash"></i></button>
+                                                    <?php } ?>
                                                 </form>
                                             </td>
                                         </tr>

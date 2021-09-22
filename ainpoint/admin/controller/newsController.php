@@ -37,9 +37,6 @@ function saveBlog($formDetails, $filesData){
         'Author' => 'Author dummy',
         'Title' => $formDetails['Title'],
         'Description' => $formDetails['Description'],
-        'link_1' => $formDetails['link1'],
-        'link_2' => $formDetails['link2'],
-        'link_3' => $formDetails['link3'],
         'Image' => $logoImage,
         'Status' => $formDetails['Status'],
         'Date_added' => $date_added,
@@ -47,9 +44,9 @@ function saveBlog($formDetails, $filesData){
     ];
 
     $sql = "INSERT INTO `news_blog` 
-    (`PostId`, `UserId`, `Author`, `Title`, `Description`, `Image`, `link_1`, `link_2`, `link_3`, `Status`, `Date_added`, `Date_modified`) 
+    (`PostId`, `UserId`, `Author`, `Title`, `Description`, `Image`, `Status`, `Date_added`, `Date_modified`) 
     VALUES 
-    (:PostId, :UserId, :Author, :Title, :Description, :Image, :link_1, :link_2, :link_3, :Status, :Date_added, :Date_modified);";
+    (:PostId, :UserId, :Author, :Title, :Description, :Image, :Status, :Date_added, :Date_modified);";
 
     $stmt = $pdo->prepare($sql);
     if($stmt->execute($data)){
@@ -75,9 +72,6 @@ function updateBlog($formDetails, $filesData){
     $data = [
         'Title' => $formDetails['Title'],
         'Description' => $formDetails['Description'],
-        'link_1' => $formDetails['link1'],
-        'link_2' => $formDetails['link2'],
-        'link_3' => $formDetails['link3'],
         'Status' => $formDetails['Status'],
         'Date_modified' => $date_added,
     ];
@@ -88,15 +82,13 @@ function updateBlog($formDetails, $filesData){
 
     if($filesData['Image']['name'] != ""){
        
-        $logoImage = imageUpload($directoryPath,$filesData['Image']);
+        $logoImage = imageUpload($directoryPath,$filesData['Image']); 
         $data['Image'] = $logoImage;
 
         $sql .= "`Image` = :Image, ";
     }
     
-    $sql .= "`link_1` = :link_1, 
-    `link_2` = :link_2, 
-    `link_3` = :link_3, 
+    $sql .= "
     `Status` = :Status, 
     `Date_modified` = :Date_modified WHERE IdBlog = '".$formDetails['blog_id']."'";
 

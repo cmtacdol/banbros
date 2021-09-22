@@ -97,7 +97,7 @@
         <div class="container-fluid">
             <div class="row "> 
                 <div class="col-sm-12">
-                    <form action="admin/index.php" method="post" id="loginForm" name="loginForm"
+                    <form method="post" id="loginForm" name="loginForm"
                         class="md-float-material form-material">
                         <div class="auth-box card">
                             <div class="card-block">
@@ -173,7 +173,7 @@
             $.ajax({
                 type: 'POST',
                 async: false,
-                url: 'admin/scripts/login.php',
+                url: 'admin/controller/usersController.php',
                 data: {
                     username: username,
                     password: password,
@@ -191,7 +191,7 @@
                         toastr.error('Invalid input');
                         return false;
                     } else if (response == "Success") {
-                        window.location.replace("admin/index.php");
+                        window.location.replace("admin/banner.php");
                         return true;
                     }
                 }

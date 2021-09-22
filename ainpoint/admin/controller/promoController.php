@@ -7,7 +7,7 @@ if (file_exists("../config.php")) {
 
 // require_once("controller/dynamic_function.php");
 
-function saveWebinar($formDetails, $filesData){
+function savePromos($formDetails, $filesData){
 
     global $pdo;
 
@@ -31,7 +31,6 @@ function saveWebinar($formDetails, $filesData){
         $logoImage = "";
     }
 
-    $time = strtotime($formDetails['TimeWebinar']);
     $data = [
         'PostId' => $formDetails['Parent'],
         'UserId' => '1',
@@ -39,23 +38,21 @@ function saveWebinar($formDetails, $filesData){
         'Title' => $formDetails['Title'],
         'Description' => $formDetails['Description'],
         'Image' => $logoImage,
-        'Date' => $formDetails['DateWebinar'],
-        'Time' => date("h.i A", $time),
-        'Venue' => $formDetails['VenueWebinar'],
+        'Date_Validity' => $formDetails['DateValidity'],
         'Status' => $formDetails['Status'],
         'Date_added' => $date_added,
         'Date_modified' => $date_added,
     ];
 
-    $sql = "INSERT INTO `news_webinar` 
-    (`PostId`, `UserId`, `Author`, `Title`, `Description`, `Image`, `Date`, `Time`, `Venue`, `Status`, `Date_added`, `Date_modified`) 
+    $sql = "INSERT INTO `news_promos` 
+    (`PostId`, `UserId`, `Author`, `Title`, `Description`, `Image`, `Date_Validity`, `Status`, `Date_added`, `Date_modified`) 
     VALUES 
-    (:PostId, :UserId, :Author, :Title, :Description, :Image, :Date, :Time, :Venue, :Status, :Date_added, :Date_modified);";
+    (:PostId, :UserId, :Author, :Title, :Description, :Image, :Date_Validity, :Status, :Date_added, :Date_modified);";
 
     $stmt = $pdo->prepare($sql);
     if($stmt->execute($data)){
 
-        $_SESSION['success_message'] = "Webinar Successfully Save!";
+        $_SESSION['success_message'] = "Promos Successfully Save!";
 
     }else{
         $_SESSION['error_message'] = "Error occured!";
@@ -75,18 +72,16 @@ function updateWebinar($formDetails, $filesData){
     
     $date_added = date("Y-m-d H:i:s"); 
 
-    $time = strtotime($formDetails['TimeWebinar']);
     $data = [
+        'IdPromos' => $_GET['id_promo'],
         'Title' => $formDetails['Title'],
         'Description' => $formDetails['Description'],
-        'Date' => $formDetails['DateWebinar'],
-        'Time' => date("h.i A", $time),
-        'Venue' => $formDetails['VenueWebinar'],
+        'Date_Validity' => $formDetails['DateValidity'],
         'Status' => $formDetails['Status'],
         'Date_modified' => $date_added,
     ];
 
-    $sql = "UPDATE `news_webinar` SET
+    $sql = "UPDATE `news_promos` SET
     `Title` = :Title, 
     `Description` = :Description, ";
 
@@ -100,16 +95,14 @@ function updateWebinar($formDetails, $filesData){
     }
    
     $sql .="
-    `Date` = :Date, 
-    `Time` = :Time, 
-    `Venue` = :Venue, 
+    `Date_Validity` = :Date_Validity, 
     `Status` = :Status, 
-    `Date_modified` = :Date_modified WHERE IdWebinar = '".$formDetails['webinar_id']."'";
+    `Date_modified` = :Date_modified WHERE IdPromos = :IdPromos";
 
     $stmt = $pdo->prepare($sql);
     if($stmt->execute($data)){
 
-        $_SESSION['success_message'] = "Webinar Successfully Updated!";
+        $_SESSION['success_message'] = "Promos Successfully Updated!";
 
     }else{
         $_SESSION['error_message'] = "Error occured!";
@@ -118,34 +111,29 @@ function updateWebinar($formDetails, $filesData){
 
 }
 
-function deleteWebinar($IdWebinar){
+function deletePromos($promos_id){
     
     global $pdo;
 
-    $query = $pdo->prepare("SELECT * FROM news_webinar Where IdWebinar  = :id");
-    $query->execute(['id' => $IdWebinar]);
-    $data = $query->fetch();
+    @$promo_data_x = getSinglePromos($promos_id);
+    @unlink("../../".$promo_data_x['Image']);
 
-    $imageFile = $data['Image'];
-    unlink("../../".$imageFile);
-
-
-    $count=$pdo->prepare("DELETE FROM `news_webinar` WHERE `news_webinar`.`IdWebinar` = :webinar_id");
-    $count->bindParam(":webinar_id",$IdWebinar,PDO::PARAM_INT);
+    $count=$pdo->prepare("DELETE FROM `news_promos` WHERE `news_promos`.`IdPromos` = :promosId");
+    $count->bindParam(":promosId",$promos_id,PDO::PARAM_INT);
     if($count->execute()){
     
-        $_SESSION['success_message'] = "Webinar Successfully Deleted!";
+        $_SESSION['success_message'] = "Promos Successfully Deleted!";
     }else{
         $_SESSION['error_message'] = "Error occured!";
     }
 
 }
 
-function getSingleWebinar($webinarId){
+function getAllPromos(){
 
     global $pdo;
 
-    $query = $pdo->query("SELECT * FROM news_webinar WHERE IdWebinar = '$webinarId'")->fetch();
+    $query = $pdo->query("SELECT * FROM news_promos")->fetchAll();
 
     if(empty($query ) || count($query) == 0){
         return [];
@@ -154,11 +142,11 @@ function getSingleWebinar($webinarId){
     }
 }
 
-function getAllWebinar(){
+function getSinglePromos($id_promo){
 
     global $pdo;
 
-    $query = $pdo->query("SELECT * FROM news_webinar")->fetchAll();
+    $query = $pdo->query("SELECT * FROM news_promos WHERE IdPromos = '$id_promo'")->fetch();
 
     if(empty($query ) || count($query) == 0){
         return [];
@@ -166,7 +154,6 @@ function getAllWebinar(){
         return  $query;
     }
 }
-
 
 function getSinglePost($postId){
 

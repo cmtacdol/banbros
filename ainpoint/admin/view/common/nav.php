@@ -25,8 +25,8 @@
                 <li class="user-profile header-notification">
                     <div class="dropdown-primary dropdown">
                         <div class="dropdown-toggle" data-toggle="dropdown">
-                            <!-- <span><?php echo $_SESSION["admin_details"]['FirstName']." ".$_SESSION["admin_details"]['LastName']; ?></span> -->
-                            <i class="feather icon-chevron-down"></i>
+                            <span><?php echo $_SESSION["admin_details"]['Name']; ?></span> &nbsp;
+                            <img src="../../<?php echo $_SESSION["admin_details"]['Image']; ?>" style="width: 40px; height: 40px; object-fit: cover; border-radius: 50%; box-shadow: 0 0 5px 1px #00000032;">
                         </div>
                         <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn"
                             data-dropdown-out="fadeOut">

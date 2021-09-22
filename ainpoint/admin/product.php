@@ -35,13 +35,14 @@ $getProduct = getAllProduct();
             <div class="pcoded-content">
 
                 <div class="page-header card">
+                    <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                     <div class="row">
                         <div class="col-lg">
                             <a href="product_add.php" class="btn btn-success py-1 btn-round waves-effect waves-light"><i
                                     class="icofont icofont-ui-add"></i> New Products</a>
                         </div>
-
                     </div>
+                    <?php } ?>
                     <div class="card mt-3">
                         <div class="card-header">
                             <h5>Articles</h5>
@@ -53,7 +54,7 @@ $getProduct = getAllProduct();
                                         <tr>
                                             <th class="text-center">Image</th>
                                             <th class="text-left">Product Name</th>
-                                            <th class="text-center">Link</th>
+                                            <th class="text-center">Category</th>
                                             <th class="text-center">Status</th>
                                             <th class="text-center">Date Added</th>
                                             <th class="text-center">&nbsp;</th>
@@ -69,7 +70,11 @@ $getProduct = getAllProduct();
                                                 <?php }else{ echo 'No uploaded Image'; } ?>
                                             </td>
                                             <td class="text-left"><?php echo $product['ProductName']; ?></td>
-                                            <td class="text-left"><?php echo $product['Link']; ?></td>
+                                            <td class="text-left">
+                                                <?php echo getCategoriesBySpecificId($product['CategoryId'])['CategoryName']; ?>
+                                                -
+                                                <?php echo getCategoriesBySpecificId($product['CategoryId'])['BrandName']; ?>
+                                            </td>
                                             <td class="text-center">
                                                 <?php echo ($product['ProductStatus'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?>
                                             </td>
@@ -80,10 +85,12 @@ $getProduct = getAllProduct();
                                                         class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>
+                                                    <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                                                     <button name="DeleteProduct" type="submit"
                                                         value="<?php echo $product['IdProduct']; ?>"
                                                         class="btn waves-effect waves-dark btn-danger btn-outline-danger btn-icon"><i
                                                             class="icofont icofont-trash"></i></button>
+                                                    <?php } ?>
                                                 </form>
                                             </td>
                                         </tr>

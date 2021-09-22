@@ -3,7 +3,7 @@ session_start();
 $_SESSION['PAGE_TITLE']="Webinar";   
 include 'view/common/header.php'; 
 include 'controllers/newsController.php'; 
-
+ 
 $token = openssl_random_pseudo_bytes(5);
 $token = bin2hex($token);
 

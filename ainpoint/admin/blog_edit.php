@@ -61,40 +61,6 @@ $blog = getSingleBlogPost($_GET['blog_id']);
                                     <div class="col-lg-3">
 
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">&nbsp;</label>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i
-                                                            class="feather icon-facebook"></i></span>
-                                                </div>
-                                                <input type="text" name="link1" class="form-control" placeholder="Shareable Link"
-                                                    aria-label="Shareable Link" aria-describedby="basic-addon1" value="<?php echo $blog['link_1']; ?>">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i
-                                                            class="feather icon-twitter"></i></span>
-                                                </div>
-                                                <input type="text" name="link2" class="form-control" placeholder="Shareable Link"
-                                                    aria-label="Shareable Link" aria-describedby="basic-addon1" value="<?php echo $blog['link_2']; ?>">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i
-                                                            class="feather icon-instagram"></i></span>
-                                                </div>
-                                                <input type="text" name="link3" class="form-control" placeholder="Shareable Link"
-                                                    aria-label="Shareable Link" aria-describedby="basic-addon1" value="<?php echo $blog['link_3']; ?>">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
                                             <label class="w-100">Intro Image</label>
                                             <img src="<?php echo (isset($blog['Image']) && !empty($blog['Image'])) ? '../../'.$blog['Image'] : "view\images\no-image.jpg"; ?>" id="preview" class="img-thumbnail"
                                                 style="width:100%; height: 150px; object-fit: cover">

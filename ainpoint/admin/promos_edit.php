@@ -1,16 +1,17 @@
 <?php 
 session_start();
-$_SESSION['PAGE_TITLE'] = "Add New Blog";
-$_SESSION['PAGE_NAV_TITLE'] = "Add New Blog";
+$_SESSION['PAGE_TITLE'] = "Edit Promo";
+$_SESSION['PAGE_NAV_TITLE'] = "Edit Promo";
 include 'view/common/header.php';
-include 'controller/newsController.php';
+include 'controller/promoController.php';
 
-if(isset($_POST['saveBlog'])){
-    saveBlog($_POST, $_FILES);
+if(isset($_POST['updatePromos'])){
+    updateWebinar($_POST, $_FILES);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-$parentMenu = getSinglePost(1);
+$parentMenu = getSinglePost(4);
+$pullSinglePromo = getSinglePromos($_GET['id_promo']);
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
 
@@ -31,13 +32,10 @@ $parentMenu = getSinglePost(1);
                     <div class="page-header card">
                         <div class="row">
                             <div class="col-lg">
-                                <a href="<?php echo $_SERVER['PHP_SELF']; ?>"
-                                    class="btn btn-success py-1 btn-round waves-effect waves-light"><i
-                                        class="icofont icofont-ui-add"></i> New</a>
-                                <button type="submit" name="saveBlog"
-                                    class="btn btn-primary py-1 btn-round waves-effect waves-light"><i
-                                        class="icofont icofont-edit-alt"></i> Save</button>
-                                <a href="blog.php" class="btn btn-danger py-1 btn-round waves-effect waves-light"><i
+                                <button type="submit" name="updatePromos"
+                                    class="btn btn-warning py-1 btn-round waves-effect waves-light"><i
+                                        class="icofont icofont-edit-alt"></i> Update</button>
+                                <a href="promos.php" class="btn btn-danger py-1 btn-round waves-effect waves-light"><i
                                         class="icofont icofont-error"></i> Close</a>
 
                             </div>
@@ -48,12 +46,12 @@ $parentMenu = getSinglePost(1);
                                     <div class="col-lg-9">
                                         <div class="form-group scroll">
                                             <label for="exampleInputEmail1">Title</label>
-                                            <input class="form-control" type="text" name="Title">
+                                            <input class="form-control" type="text" name="Title" value="<?php echo $pullSinglePromo['Title']; ?>">
                                         </div>
 
                                         <div class="form-group scroll">
                                             <label for="exampleInputEmail1">Description</label>
-                                            <textarea class="form-control" id="Content" name="Description"></textarea>
+                                            <textarea class="form-control" id="Content" name="Description"><?php echo $pullSinglePromo['Description']; ?></textarea>
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
@@ -66,22 +64,38 @@ $parentMenu = getSinglePost(1);
                                                 <?php } ?>
                                             </select>
                                         </div> -->
-                                        <input class="form-control" type="hidden" name="Parent" value="<?php echo $menu['IdNewsPost']; ?>">
+                                        <input class="form-control" type="hidden" name="Parent"
+                                            value="<?php echo $menu['IdNewsPost']; ?>">
 
                                         <div class="form-group">
                                             <label class="w-100">Intro Image</label>
-                                            <img src="view\images\no-image.jpg" id="preview" class="img-thumbnail"
+                                            <img src="<?php echo (!empty($pullSinglePromo['Image'])) ? '../../'.$pullSinglePromo['Image'] : 'view\images\no-image.jpg'; ?>" id="preview" class="img-thumbnail"
                                                 style="width:100%; height: 150px; object-fit: cover">
                                             <div class="">
                                                 <input type="file" class="form-control form-control-sm text-truncate"
                                                     id="Image" name="Image">
                                             </div>
                                         </div>
+
+                                        <div class="form-group">
+                                            <label>Validity Date</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" style="background: rgba(60, 60, 60, 0.5);"><i
+                                                            class="feather icon-calendar"></i></span>
+                                                </div>
+                                                <input type="date" name="DateValidity" class="form-control"
+                                                    placeholder="Shareable Link" aria-label="Shareable Link"
+                                                    aria-describedby="basic-addon1" value="<?php echo $pullSinglePromo['Date_Validity']; ?>">
+                                            </div>
+                                        </div>
+                                       
+
                                         <div class="form-group">
                                             <label for="">Status</label>
                                             <select class="form-control form-control-sm" id="Status" name="Status">
-                                                <option value="0">Active</option>
-                                                <option value="1">Inactive</option>
+                                                <option value="0" <?php echo ($pullSinglePromo['Status'] == '0') ? 'selected' : ''; ?>>Active</option>
+                                                <option value="1" <?php echo ($pullSinglePromo['Status'] == '1') ? 'selected' : ''; ?>>Inactive</option>
                                             </select>
                                         </div>
 
@@ -111,7 +125,7 @@ $parentMenu = getSinglePost(1);
     CKEDITOR.replace('Content', {
         filebrowserUploadUrl: 'assets/ckeditor/ck_upload.php',
         filebrowserUploadMethod: 'form',
-        height: '350px',
+        height: '540px',
     });
 
     $('#Image').change(function(e) {

@@ -9,7 +9,7 @@ $token = openssl_random_pseudo_bytes(5);
 $token = bin2hex($token);
 
 
-global $pdo;
+global $pdo; 
 
 if(isset($_POST['records-limit'])){
     $_SESSION['records-limit'] = $_POST['records-limit'];

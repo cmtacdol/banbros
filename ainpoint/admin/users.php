@@ -1,17 +1,16 @@
 <?php 
 session_start();
-$_SESSION['PAGE_TITLE'] = "Featured Products";
-$_SESSION['PAGE_NAV_TITLE'] = "Featured Products";
+$_SESSION['PAGE_TITLE'] = "Users List";
+$_SESSION['PAGE_NAV_TITLE'] = "Users List";
 // include 'scripts/session_check.php'; 
 include 'view/common/header.php';
-include 'controller/homeController.php';
+include 'controller/usersController.php';
 
-if(isset($_POST['deleteCategory'])){
-    deleteCategory($_POST['deleteCategory']);
+if(isset($_POST['deleteBlog'])){
+    deleteBlog($_POST['deleteBlog']);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
-
-$getFeaturedProducts = getFeaturedProducts();
+$getAllUser = getAllUsers();
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
 
@@ -34,55 +33,56 @@ $getFeaturedProducts = getFeaturedProducts();
             <div class="pcoded-content">
 
                 <div class="page-header card">
-                    <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                     <div class="row">
                         <div class="col-lg">
-                            <a href="home_featured_products_add.php"
-                                class="btn btn-success py-1 btn-round waves-effect waves-light"><i
-                                    class="icofont icofont-ui-add"></i> New Featured Products</a>
+                            <a href="users_add.php" class="btn btn-success py-1 btn-round waves-effect waves-light"><i
+                                    class="icofont icofont-ui-add"></i> New User</a>
                         </div>
 
                     </div>
-                    <?php } ?>
                     <div class="card mt-3">
                         <div class="card-header">
-                            <h5>Articles</h5>
+                            <h5>Blogs</h5>
                         </div>
                         <div class="card-block">
                             <div class="table-responsive dt-responsive">
                                 <table id="ctegory" class="table table-striped table-bordered nowrap">
                                     <thead>
                                         <tr>
-                                            <th class="text-left">Title</th>
+                                            <th class="text-center">Profile</th>
+                                            <th class="text-left">Role</th>
+                                            <th class="text-left">Name</th>
+                                            <th class="text-left">Username</th>
+                                            <th class="text-left">Email</th>
+                                            <th class="text-center">Date Added</th>
                                             <th class="text-center">Status</th>
                                             <th class="text-center">&nbsp;</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach($getFeaturedProducts as $featuredProduct){ ?>
+                                        <?php foreach($getAllUser as $user){ ?>
                                         <tr>
-                                            <td class="text-left"><?php echo $featuredProduct['Title']; ?></td>
-                                            <td class="text-center">
-                                                <?php echo ($featuredProduct['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?>
+                                            <td>
+                                                <img src="../../<?php echo $user['Image']; ?>"
+                                                    style="width: 75px; height: 75px; object-fit: cover; border-radius: 50%">
                                             </td>
-                                            <td class="text-center">
-                                                <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                                    <a href="home_featured_products_edit.php?featured_id=<?php echo $featuredProduct['IdFeatured']; ?>"
+                                            <td><?php echo getIdRoles($user['PermissionId'])['PermissionName']; ?></td>
+                                            <td><?php echo $user['Name']; ?></td>
+                                            <td><?php echo $user['Username']; ?></td>
+                                            <td><?php echo $user['Email']; ?></td>
+                                            <td><?php echo $user['Date_added']; ?></td>
+                                            <td>
+                                                <?php echo ($user['UserStatus'] == '0') ? '<span class="badge badge-success">Enabled</span>' : '<span class="badge badge-danger">Disabled</span>'; ?>
+                                            </td>
+                                            <td>
+                                            <a href="users_edit.php?id_user=<?php echo $user['IdUsers']; ?>"
                                                         class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>
-                                                    <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
-                                                    <button name="deleteCategory" type="submit"
-                                                        value="<?php echo $category['IdCategory']; ?>"
-                                                        class="btn waves-effect waves-dark btn-danger btn-outline-danger btn-icon"><i
-                                                            class="icofont icofont-trash"></i></button>
-                                                    <?php } ?>
-                                                </form>
                                             </td>
                                         </tr>
                                         <?php } ?>
                                     </tbody>
-
                                 </table>
                             </div>
                         </div>

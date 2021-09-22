@@ -9,18 +9,6 @@
 
                     <ul class="pcoded-item pcoded-left-item">
                         <li class="">
-                            <a href="index.php" class="waves-effect waves-dark">
-                                <span class="pcoded-micon">
-                                    <i class="feather icon-pie-chart"></i>
-                                </span>
-                                <span class="pcoded-mtext">Dashboard</span>
-                            </a>
-                        </li>
-
-                    </ul>
-
-                    <ul class="pcoded-item pcoded-left-item">
-                        <li class="">
                             <a href="banner.php" class="waves-effect waves-dark">
                                 <span class="pcoded-micon">
                                     <i class="feather icon-image"></i>
@@ -173,7 +161,7 @@
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
+                                    <a href="events.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
                                         </span>
@@ -189,7 +177,7 @@
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#" class="waves-effect waves-dark">
+                                    <a href="promos.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon">
                                             <i class="feather icon-image"></i>
                                         </span>
@@ -224,28 +212,21 @@
 
                     <!-- Users -->
 
+                    <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                     <div class="pcoded-navigation-label">Users</div>
                     <ul class="pcoded-item pcoded-left-item">
-                        <li class="pcoded-hasmenu">
-                            <a href="javascript:void(0)" class="waves-effect waves-dark">
+                        <li class="">
+                            <a href="users.php" class="waves-effect waves-dark">
                                 <span class="pcoded-micon">
                                     <i class="feather icon-user"></i>
                                 </span>
                                 <span class="pcoded-mtext">Users Management</span>
                             </a>
-                            <ul class="pcoded-submenu">
-                                <li class="">
-                                    <a href="user_add.php" class="waves-effect waves-dark">
-                                        <span class="pcoded-mtext">Add User</span>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="users_list.php" class="waves-effect waves-dark">
-                                        <span class="pcoded-mtext">List of Users</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
+                    </ul>
+                    <?php } ?>
+                    <!-- <ul class="pcoded-item pcoded-left-item">
+                      
                         <li class="pcoded-hasmenu">
                             <a href="javascript:void(0)" class="waves-effect waves-dark">
                                 <span class="pcoded-micon">
@@ -267,7 +248,7 @@
                             </ul>
                         </li>
 
-                    </ul>
+                    </ul> -->
 
                     <!-- Navigation -->
 

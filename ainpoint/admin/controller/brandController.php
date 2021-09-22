@@ -190,7 +190,7 @@ function getBrand(){
 
     global $pdo;
 
-    $query = $pdo->query("SELECT * FROM brand WHERE Status != '9'")->fetchAll();
+    $query = $pdo->query("SELECT * FROM `brand` b INNER JOIN nav_menu nm ON b.NavId = nm.IdNavMenu WHERE b.Status != '9'")->fetchAll();
 
     if(empty($query ) || count($query) == 0){
         return [];

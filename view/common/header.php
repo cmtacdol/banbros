@@ -3,7 +3,7 @@
 <!-- Head -->
 
 <head>
-    <title><?php echo $_SESSION['PAGE_TITLE']; ?></title>
+    <title><?php echo $_SESSION['PAGE_TITLE']; ?></title> 
 
     <!-- Meta -->
     <meta charset="utf-8">

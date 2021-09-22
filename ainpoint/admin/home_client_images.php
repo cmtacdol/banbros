@@ -43,6 +43,7 @@ $getImages = getAllImages();
 
                 <form method="post" enctype="multipart/form-data">
                     <div class="page-header card">
+                        <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                         <div class="row">
                             <div class="col-lg">
                                 <button type="submit" name="saveClientImage"
@@ -50,6 +51,7 @@ $getImages = getAllImages();
                                         class="icofont icofont-edit-alt"></i> Save</button>
                             </div>
                         </div>
+                        <?php } ?>
                         <div class="card mt-3">
                             <div class="card-block">
                                 <div class="table-responsive dt-responsive">
@@ -62,7 +64,7 @@ $getImages = getAllImages();
                                             </tr>
                                         </thead>
                                         <tbody class="image_wrap">
-                                        <?php if(isset($getImages) && !empty($getImages)){ ?>
+                                            <?php if(isset($getImages) && !empty($getImages)){ ?>
                                             <?php foreach($getImages as $images){ ?>
                                             <tr>
                                                 <td>
@@ -85,6 +87,7 @@ $getImages = getAllImages();
                                             <?php } ?>
                                             <?php } ?>
                                         </tbody>
+                                        <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                                         <tfoot>
                                             <tr>
                                                 <td colspan="2"></td>
@@ -96,6 +99,7 @@ $getImages = getAllImages();
                                                 </td>
                                             </tr>
                                         </tfoot>
+                                        <?php } ?>
                                     </table>
                                 </div>
                             </div>

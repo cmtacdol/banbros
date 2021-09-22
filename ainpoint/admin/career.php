@@ -42,6 +42,7 @@ $getCareer = getCareer();
                 <?php include 'view/common/modal.php'; ?>
 
                 <div class="page-header card">
+                    <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                     <div class="row">
                         <div class="col-lg">
                             <a href="#Career" data-toggle="modal"
@@ -50,6 +51,7 @@ $getCareer = getCareer();
                         </div>
 
                     </div>
+                    <?php } ?>
                     <div class="card mt-3">
                         <div class="card-header">
                             <h5>Tab List</h5>
@@ -76,6 +78,7 @@ $getCareer = getCareer();
                                                         class="icofont icofont-edit tooltip-item">
                                                     </i></a>
 
+                                                <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                                                 <a href="career_images.php?id_career=<?php echo $careers['IdCareer']; ?>"
                                                     class="btn waves-effect waves-dark btn-info btn-outline-info btn-icon"><i
                                                         class="icofont icofont-image fa-lg tooltip-item">
@@ -85,6 +88,7 @@ $getCareer = getCareer();
                                                     class="btn waves-effect waves-dark btn-info btn-outline-info btn-icon"><i
                                                         class="icofont icofont-list fa-lg tooltip-item">
                                                     </i></a>
+                                                <?php } ?>
                                             </td>
                                         </tr>
                                         <?php } ?>

@@ -34,6 +34,7 @@ $getCategories = getAllCategories();
             <div class="pcoded-content">
 
                 <div class="page-header card">
+                    <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                     <div class="row">
                         <div class="col-lg">
                             <a href="category_add.php"
@@ -42,6 +43,7 @@ $getCategories = getAllCategories();
                         </div>
 
                     </div>
+                    <?php } ?>
                     <div class="card mt-3">
                         <div class="card-header">
                             <h5>Articles</h5>
@@ -52,7 +54,7 @@ $getCategories = getAllCategories();
                                     <thead>
                                         <tr>
                                             <th class="text-left">Category Name</th>
-                                            <th class="text-center">Parent Name</th>
+                                            <th class="text-center">Brand Name</th>
                                             <th class="text-center">Status</th>
                                             <th class="text-center">&nbsp;</th>
                                         </tr>
@@ -61,18 +63,24 @@ $getCategories = getAllCategories();
                                         <?php foreach($getCategories as $category){ ?>
                                         <tr>
                                             <td class="text-left"><?php echo $category['CategoryName']; ?></td>
-                                            <td class="text-center"><?php echo (getBrandbyId($category['BrandId']) == true) ? getBrandbyId($category['BrandId'])['BrandName'] : ""; ?></td>
-                                            <td class="text-center"><?php echo ($category['CategoryStatus'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?></td>
+                                            <td class="text-center">
+                                                <?php echo (getBrandbyId($category['BrandId']) == true) ? getBrandbyId($category['BrandId'])['BrandName'] : ""; ?>
+                                            </td>
+                                            <td class="text-center">
+                                                <?php echo ($category['CategoryStatus'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?>
+                                            </td>
                                             <td class="text-center">
                                                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                                                     <a href="category_edit.php?categoryId=<?php echo $category['IdCategory']; ?>"
                                                         class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>
+                                                    <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                                                     <button name="deleteCategory" type="submit"
                                                         value="<?php echo $category['IdCategory']; ?>"
                                                         class="btn waves-effect waves-dark btn-danger btn-outline-danger btn-icon"><i
                                                             class="icofont icofont-trash"></i></button>
+                                                    <?php } ?>
                                                 </form>
                                             </td>
                                         </tr>

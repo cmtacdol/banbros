@@ -41,14 +41,14 @@ $tabContents = getTabContent();
                 <?php include 'view/common/modal.php'; ?>
 
                 <div class="page-header card">
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-lg">
                             <a href="#TabContent" data-toggle="modal"
                                 class="btn btn-success py-1 btn-round waves-effect waves-light"><i
                                     class="icofont icofont-ui-add"></i> New Tab</a>
                         </div>
 
-                    </div>
+                    </div> -->
                     <div class="card mt-3">
                         <div class="card-header">
                             <h5>Tab List</h5>

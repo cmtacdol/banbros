@@ -315,6 +315,19 @@ function deleteImages($lastId)
 
 }
 
+function getCategoriesBySpecificId($idCategory){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM `category` c INNER JOIN brand b ON c.BrandId = b.IdBrand WHERE c.IdCategory = '$idCategory'")->fetch();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
+}
+
 function imageUpload($directory,$file){
 
     $structure = '../../uploads/product/'.$directory.'/';

@@ -1,28 +1,19 @@
 <?php 
 session_start();
-$_SESSION['PAGE_TITLE'] = "Brand List";
-$_SESSION['PAGE_NAV_TITLE'] = "Brand List";
+$_SESSION['PAGE_TITLE'] = "Promos";
+$_SESSION['PAGE_NAV_TITLE'] = "Promos";
 // include 'scripts/session_check.php'; 
 include 'view/common/header.php';
-include 'controller/brandController.php';
+include 'controller/promoController.php';
 
-if(isset($_POST['deleteBrand'])){
-    deleteBrand($_POST['deleteBrand']);
+if(isset($_POST['deletePromosId'])){
+    deletePromos($_POST['deletePromosId']);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
-} 
+}
 
-$getBrand = getBrand();
-
+$allPromos = getAllPromos();
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
-<style>
-.trunc {
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-</style>
 
 </head>
 
@@ -46,55 +37,52 @@ $getBrand = getBrand();
                     <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
                     <div class="row">
                         <div class="col-lg">
-                            <a href="brand_add.php" class="btn btn-success py-1 btn-round waves-effect waves-light"><i
-                                    class="icofont icofont-ui-add"></i> New Brand</a>
+                            <a href="promos_add.php" class="btn btn-success py-1 btn-round waves-effect waves-light"><i
+                                    class="icofont icofont-ui-add"></i> New Promos</a>
                         </div>
-
                     </div>
                     <?php } ?>
                     <div class="card mt-3">
                         <div class="card-header">
-                            <h5>Brand List</h5>
+                            <h5>Promos</h5>
                         </div>
                         <div class="card-block">
                             <div class="table-responsive dt-responsive">
                                 <table id="ctegory" class="table table-striped table-bordered nowrap">
                                     <thead>
                                         <tr>
-                                            <th class="text-left">Image</th>
-                                            <th class="text-center">Description</th>
+                                            <th class="text-center">Image</th>
+                                            <th class="text-left">Title</th>
+                                            <th class="text-left">Author</th>
+                                            <th class="text-left">Date Added</th>
                                             <th class="text-center">Status</th>
-                                            <th class="text-center">Date Created</th>
-                                            <th class="text-center">Parent Menu</th>
-                                            <th style="min-width:50px" class="text-center">&nbsp;</th>
+                                            <th class="text-center">&nbsp;</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach($getBrand as $brand){ ?>
+                                        <?php foreach($allPromos as $promos){ ?>
                                         <tr>
-                                            <td class="text-left">
-                                                <img src="../../<?php echo $brand['Logo']; ?>"
-                                                    style="width: 150px; height: 100px; object-fit: contain">
+                                            <td>
+                                                <img src="../../<?php echo $promos['Image']; ?>"
+                                                    style="width: 150px; height: 80px; object-fit: contain">
                                             </td>
+                                            <td><?php echo $promos['Title']; ?></td>
+                                            <td><?php echo $promos['Author']; ?></td>
+                                            <td><?php echo $promos['Date_added']; ?></td>
                                             <td class="text-center">
-                                                <div class="trunc">
-                                                    <?php echo $brand['Description']; ?>
-                                                </div>
+                                                <?php echo ($promos['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?>
                                             </td>
-                                            <td class="text-center">
-                                                <?php echo ($brand['Status'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?>
-                                            </td>
-                                            <td class="text-center"><?php echo $brand['Date_added']; ?></td>
-                                            <td class="text-center"><?php echo $brand['NavName']; ?></td>
                                             <td class="text-center">
                                                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                                    <a href="brand_edit.php?brand_id=<?php echo $brand['IdBrand']; ?>"
+
+                                                    <a href="promos_edit.php?id_promo=<?php echo $promos['IdPromos']; ?>"
                                                         class="btn waves-effect waves-dark btn-success btn-outline-success btn-icon"><i
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>
+
                                                     <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
-                                                    <button name="deleteBrand" type="submit"
-                                                        value="<?php echo $brand['IdBrand']; ?>"
+                                                    <button name="deletePromosId" type="submit"
+                                                        value="<?php echo $promos['IdPromos']; ?>"
                                                         class="btn waves-effect waves-dark btn-danger btn-outline-danger btn-icon"><i
                                                             class="icofont icofont-trash"></i></button>
                                                     <?php } ?>

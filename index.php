@@ -84,7 +84,7 @@ $totals_string = implode(",", $totals);
         <!-- Clients Section -->
         <section class="js-clients u-clients">
             <?php foreach(getLogoSlider() as $slider){ ?>
-            <?php if(!empty($slider['Link'])){ ?>
+            <?php if(!empty($slider['Link'])){ ?> 
             <a href="<?php echo $slider['Link']; ?>">
                 <div class="u-clients__item">
                     <img class="u-clients__image" src="<?php echo $slider['Path']; ?>" alt="Image Description">

@@ -7,7 +7,7 @@ if (file_exists("../config.php")) {
 
 // require_once("controller/dynamic_function.php");
 
-function saveWebinar($formDetails, $filesData){
+function saveEvents($formDetails, $filesData){
 
     global $pdo;
 
@@ -47,7 +47,7 @@ function saveWebinar($formDetails, $filesData){
         'Date_modified' => $date_added,
     ];
 
-    $sql = "INSERT INTO `news_webinar` 
+    $sql = "INSERT INTO `news_events` 
     (`PostId`, `UserId`, `Author`, `Title`, `Description`, `Image`, `Date`, `Time`, `Venue`, `Status`, `Date_added`, `Date_modified`) 
     VALUES 
     (:PostId, :UserId, :Author, :Title, :Description, :Image, :Date, :Time, :Venue, :Status, :Date_added, :Date_modified);";
@@ -55,7 +55,7 @@ function saveWebinar($formDetails, $filesData){
     $stmt = $pdo->prepare($sql);
     if($stmt->execute($data)){
 
-        $_SESSION['success_message'] = "Webinar Successfully Save!";
+        $_SESSION['success_message'] = "Events Successfully Save!";
 
     }else{
         $_SESSION['error_message'] = "Error occured!";
@@ -64,7 +64,7 @@ function saveWebinar($formDetails, $filesData){
 
 }
 
-function updateWebinar($formDetails, $filesData){
+function updateEvents($formDetails, $filesData){
 
     global $pdo;
 
@@ -77,6 +77,7 @@ function updateWebinar($formDetails, $filesData){
 
     $time = strtotime($formDetails['TimeWebinar']);
     $data = [
+        'IdEvents' => $_GET['events_id'],
         'Title' => $formDetails['Title'],
         'Description' => $formDetails['Description'],
         'Date' => $formDetails['DateWebinar'],
@@ -86,7 +87,7 @@ function updateWebinar($formDetails, $filesData){
         'Date_modified' => $date_added,
     ];
 
-    $sql = "UPDATE `news_webinar` SET
+    $sql = "UPDATE `news_events` SET
     `Title` = :Title, 
     `Description` = :Description, ";
 
@@ -104,12 +105,12 @@ function updateWebinar($formDetails, $filesData){
     `Time` = :Time, 
     `Venue` = :Venue, 
     `Status` = :Status, 
-    `Date_modified` = :Date_modified WHERE IdWebinar = '".$formDetails['webinar_id']."'";
+    `Date_modified` = :Date_modified WHERE IdEvents = :IdEvents";
 
     $stmt = $pdo->prepare($sql);
     if($stmt->execute($data)){
 
-        $_SESSION['success_message'] = "Webinar Successfully Updated!";
+        $_SESSION['success_message'] = "Events Successfully Updated!";
 
     }else{
         $_SESSION['error_message'] = "Error occured!";
@@ -141,11 +142,11 @@ function deleteWebinar($IdWebinar){
 
 }
 
-function getSingleWebinar($webinarId){
+function getSingleEvents($events_id){
 
     global $pdo;
 
-    $query = $pdo->query("SELECT * FROM news_webinar WHERE IdWebinar = '$webinarId'")->fetch();
+    $query = $pdo->query("SELECT * FROM news_events WHERE IdEvents = '$events_id'")->fetch();
 
     if(empty($query ) || count($query) == 0){
         return [];
@@ -154,11 +155,11 @@ function getSingleWebinar($webinarId){
     }
 }
 
-function getAllWebinar(){
+function getAllEvents(){
 
     global $pdo;
 
-    $query = $pdo->query("SELECT * FROM news_webinar")->fetchAll();
+    $query = $pdo->query("SELECT * FROM news_events")->fetchAll();
 
     if(empty($query ) || count($query) == 0){
         return [];

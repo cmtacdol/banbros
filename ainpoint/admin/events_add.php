@@ -1,16 +1,16 @@
 <?php 
 session_start();
-$_SESSION['PAGE_TITLE'] = "Add New Blog";
-$_SESSION['PAGE_NAV_TITLE'] = "Add New Blog";
+$_SESSION['PAGE_TITLE'] = "Add New Webinar";
+$_SESSION['PAGE_NAV_TITLE'] = "Add New Webinar";
 include 'view/common/header.php';
-include 'controller/newsController.php';
+include 'controller/eventsController.php';
 
-if(isset($_POST['saveBlog'])){
-    saveBlog($_POST, $_FILES);
+if(isset($_POST['saveEvent'])){
+    saveEvents($_POST, $_FILES);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
-$parentMenu = getSinglePost(1);
+$parentMenu = getSinglePost(2);
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
 
@@ -34,10 +34,10 @@ $parentMenu = getSinglePost(1);
                                 <a href="<?php echo $_SERVER['PHP_SELF']; ?>"
                                     class="btn btn-success py-1 btn-round waves-effect waves-light"><i
                                         class="icofont icofont-ui-add"></i> New</a>
-                                <button type="submit" name="saveBlog"
+                                <button type="submit" name="saveEvent"
                                     class="btn btn-primary py-1 btn-round waves-effect waves-light"><i
                                         class="icofont icofont-edit-alt"></i> Save</button>
-                                <a href="blog.php" class="btn btn-danger py-1 btn-round waves-effect waves-light"><i
+                                <a href="events.php" class="btn btn-danger py-1 btn-round waves-effect waves-light"><i
                                         class="icofont icofont-error"></i> Close</a>
 
                             </div>
@@ -66,7 +66,8 @@ $parentMenu = getSinglePost(1);
                                                 <?php } ?>
                                             </select>
                                         </div> -->
-                                        <input class="form-control" type="hidden" name="Parent" value="<?php echo $menu['IdNewsPost']; ?>">
+                                        <input class="form-control" type="hidden" name="Parent"
+                                            value="<?php echo $menu['IdNewsPost']; ?>">
 
                                         <div class="form-group">
                                             <label class="w-100">Intro Image</label>
@@ -77,6 +78,44 @@ $parentMenu = getSinglePost(1);
                                                     id="Image" name="Image">
                                             </div>
                                         </div>
+
+                                        <div class="form-group">
+                                            <label>Date</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" style="background: rgba(60, 60, 60, 0.5);"><i
+                                                            class="feather icon-calendar"></i></span>
+                                                </div>
+                                                <input type="date" name="DateWebinar" class="form-control"
+                                                    placeholder="Shareable Link" aria-label="Shareable Link"
+                                                    aria-describedby="basic-addon1">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Time</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" style="background: rgba(60, 60, 60, 0.5);"><i
+                                                            class="feather icon-clock"></i></span>
+                                                </div>
+                                                <input type="time" name="TimeWebinar" class="form-control"
+                                                    placeholder="Shareable Link" aria-label="Shareable Link"
+                                                    aria-describedby="basic-addon1">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Venue</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" style="background: rgba(60, 60, 60, 0.5);"><i
+                                                            class="feather icon-map-pin"></i></span>
+                                                </div>
+                                                <input type="text" name="VenueWebinar" class="form-control" aria-label="Shareable Link"
+                                                    aria-describedby="basic-addon1">
+                                            </div>
+                                        </div>
+
                                         <div class="form-group">
                                             <label for="">Status</label>
                                             <select class="form-control form-control-sm" id="Status" name="Status">
@@ -111,7 +150,7 @@ $parentMenu = getSinglePost(1);
     CKEDITOR.replace('Content', {
         filebrowserUploadUrl: 'assets/ckeditor/ck_upload.php',
         filebrowserUploadMethod: 'form',
-        height: '350px',
+        height: '540px',
     });
 
     $('#Image').change(function(e) {
