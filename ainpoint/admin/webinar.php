@@ -76,13 +76,10 @@ $getWebinar = getAllWebinar();
                                                     echo '<span class="badge badge-danger">Upcoming</span>';
                                                  } 
                                                  else if($webinar['Status'] == '1'){
-                                                    echo '<span class="badge badge-warning">Lorem</span>';
+                                                    echo '<span class="badge badge-warning">Ongoing</span>';
                                                  }
-                                                 else if($webinar['Status'] == '2'){
-                                                    echo '<span class="badge badge-warning">Lorem</span>';
-                                                 }
-                                                 else if($webinar['Status'] == '3'){
-                                                    echo '<span class="badge badge-warning">Lorem</span>';
+                                                 else{
+                                                    echo '<span class="badge badge-success">Completed</span>';
                                                  }
                                                 ?>
                                             </td>

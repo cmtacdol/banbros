@@ -56,7 +56,7 @@ body {
                         </div>
                         <div class="card-body" style="height: 500px; overflow: auto">
                             <?php foreach(getWebinarRelated() as $webinar){ ?>
-                                <a href="webinar_view.php?webinar_id=<?php echo $webinar['IdWebinar']; ?>">
+                                <a href="news_webinar_view.php?webinar_id=<?php echo $webinar['IdWebinar']; ?>">
                                     <img src="<?php echo $webinar['Image']; ?>" style="width: 100%; height: 140px; object-fit: contain">
                                     <p class=" pb-0 mb-0"><?php echo $webinar['Title']; ?></p>
                                     <small

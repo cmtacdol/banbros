@@ -6,8 +6,8 @@ $_SESSION['PAGE_NAV_TITLE'] = "Events";
 include 'view/common/header.php';
 include 'controller/eventsController.php';
 
-if(isset($_POST['deleteWebinar'])){
-    deleteWebinar($_POST['deleteWebinar']);
+if(isset($_POST['deleteEvents'])){
+    deleteEvent($_POST['deleteEvents']);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
@@ -80,8 +80,8 @@ $allEvents = getAllEvents();
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>
                                                     <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
-                                                    <button name="deleteWebinar" type="submit"
-                                                        value="<?php echo $events['IdWebinar']; ?>"
+                                                    <button name="deleteEvents" type="submit"
+                                                        value="<?php echo $events['IdEvents']; ?>"
                                                         class="btn waves-effect waves-dark btn-danger btn-outline-danger btn-icon"><i
                                                             class="icofont icofont-trash"></i></button>
                                                     <?php } ?>

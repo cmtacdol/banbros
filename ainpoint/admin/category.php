@@ -65,6 +65,8 @@ $getCategories = getAllCategories();
                                             <td class="text-left"><?php echo $category['CategoryName']; ?></td>
                                             <td class="text-center">
                                                 <?php echo (getBrandbyId($category['BrandId']) == true) ? getBrandbyId($category['BrandId'])['BrandName'] : ""; ?>
+                                                -
+                                                <?php echo getMenuById(getBrandbyId($category['BrandId'])['NavId'])['NavName']; ?>
                                             </td>
                                             <td class="text-center">
                                                 <?php echo ($category['CategoryStatus'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?>

@@ -9,7 +9,6 @@ include 'controller/banner.php';
 $getmenu = getMenu(); 
 $articlePost = getPost();
 
-
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
 

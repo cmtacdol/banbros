@@ -111,9 +111,8 @@ $webinar = getSingleWebinar($_GET['webinar_id']);
                                             <label for="">Status</label>
                                             <select class="form-control form-control-sm" id="Status" name="Status">
                                                 <option value="0" <?php echo ($webinar['Status'] == '0') ? 'selected' : ''; ?>>Upcoming</option>
-                                                <option value="1" <?php echo ($webinar['Status'] == '1') ? 'selected' : ''; ?>>Lorem</option>
-                                                <option value="2" <?php echo ($webinar['Status'] == '2') ? 'selected' : ''; ?>>Lorem</option>
-                                                <option value="3" <?php echo ($webinar['Status'] == '3') ? 'selected' : ''; ?>>Lorem</option>
+                                                <option value="1" <?php echo ($webinar['Status'] == '1') ? 'selected' : ''; ?>>Ongoing</option>
+                                                <option value="2" <?php echo ($webinar['Status'] == '2') ? 'selected' : ''; ?>>Completed</option>
                                             </select>
                                         </div>
 

@@ -19,6 +19,7 @@ $totals_string = implode(",", $totals);
 // $countWords = str_word_count($totals_string, 2);
 // $withComma = implode(', ', $countWords);
 
+$pressRelease = getPressRelease();
 ?>
 
 <link rel="stylesheet" href="assets/css/custome_hompage.css">
@@ -290,40 +291,22 @@ $totals_string = implode(",", $totals);
                 <!-- End Testimonials: Header -->
 
                 <div class="row">
-                    <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5 revealOnScroll" data-animation="fadeInLeftBig">
+                    <?php foreach($pressRelease as $press){ ?>
+                        <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5 revealOnScroll" data-animation="fadeInLeftBig">
                         <a href="https://preview.mailerlite.com/a8y3t4/1708399749796729310/l9y2/">
                             <div class="card u-box-shadow-lg">
                                 <div class="card-images">
-                                    <img src="view/images/othersrc/TipEdgecore.PNG" class="card-img-top mx-auto d-block"
+                                    <img src="<?php echo $press['Image']; ?>" class="card-img-top mx-auto d-block"
                                         id="newsImage">
+                                </div>
+                                <hr>
+                                <div class="card-body my-0 text-center">
+                                    <p><?php echo $press['Title']; ?></p>
                                 </div>
                             </div>
                         </a>
                     </div>
-
-                    <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5 revealOnScroll" data-animation="fadeInUpBig">
-                        <a href="https://mailchi.mp/764e819c6688/mltg-cn-the-best-point-to-point-choice?e=b4e161d2be">
-                            <div class="card u-box-shadow-lg">
-                                <div class="card-images">
-                                    <img src="view/images/othersrc/MetroLinq.PNG" class="card-img-top mx-auto d-block"
-                                        id="newsImage">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4 mb-7 mb-lg-0 px-lg-5 revealOnScroll" data-animation="fadeInRightBig">
-                        <a
-                            href="http://app.edm.sangfor.cn/e/es?s=1587972869&e=121325&elqTrackId=a72ae390af474d9c960befe4cc2eef6c&elq=d065ec4c4e6c48bda7ee0ac72d3acfa2&elqaid=1066&elqat=1">
-                            <div class="card u-box-shadow-lg">
-                                <div class="card-images">
-                                    <img src="view/images/othersrc/sangfor.PNG" class="card-img-top mx-auto d-block"
-                                        id="newsImage">
-                                </div>
-
-                            </div>
-                        </a>
-                    </div>
+                    <?php } ?>
 
                     <!-- End Testimonial -->
                 </div>

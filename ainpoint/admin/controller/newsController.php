@@ -20,7 +20,7 @@ function saveBlog($formDetails, $filesData){
 
     $logoImage = "";
 
-    if($filesData['Image']['name'] != ""){
+    if($filesData['Image']['name'] != ""){ 
        
         $logoImage = imageUpload($directoryPath,$filesData['Image']);
 
@@ -33,8 +33,8 @@ function saveBlog($formDetails, $filesData){
 
     $data = [
         'PostId' => $formDetails['Parent'],
-        'UserId' => '1',
-        'Author' => 'Author dummy',
+        'UserId' => $_SESSION["admin_id"],
+        'Author' => $_SESSION["admin_details"]['Username'],
         'Title' => $formDetails['Title'],
         'Description' => $formDetails['Description'],
         'Image' => $logoImage,

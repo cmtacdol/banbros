@@ -120,9 +120,8 @@ $parentMenu = getSinglePost(3);
                                             <label for="">Status</label>
                                             <select class="form-control form-control-sm" id="Status" name="Status">
                                                 <option value="0">Upcoming</option>
-                                                <option value="1">Lorem</option>
-                                                <option value="2">Lorem</option>
-                                                <option value="3">Lorem</option>
+                                                <option value="1">Ongoing</option>
+                                                <option value="2">Completed</option>
                                             </select>
                                         </div>
 

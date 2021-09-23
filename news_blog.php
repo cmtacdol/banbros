@@ -2,7 +2,7 @@
 session_start(); 
 $_SESSION['PAGE_TITLE']="Blog";   
 include 'view/common/header.php'; 
-include 'controllers/newsController.php'; 
+include 'controllers/newsController.php';  
 
 $token = openssl_random_pseudo_bytes(5);
 //Convert the binary data into hexadecimal representation.
@@ -12,7 +12,7 @@ $token = bin2hex($token);
 global $pdo; 
 
 if(isset($_POST['records-limit'])){
-    $_SESSION['records-limit'] = $_POST['records-limit'];
+    $_SESSION['records-limit'] = $_POST['records-limit']; 
 }
 
 $limit = 6;
@@ -32,21 +32,12 @@ $totoalPages = ceil($allRecrods / $limit);
 $prev = $page - 1;
 $next = $page + 1;
 
+$getbanner = getBannerByPost($_GET['post_id']);
 ?>
 <style>
 body {
     background: #F4F6F9;
     height: 100%;
-}
-
-.banner-image {
-    height: 600px;
-    position: relative;
-    padding-top: 6.25rem;
-    padding-bottom: 6.25rem;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
 }
 
 .blog-img {
@@ -62,6 +53,7 @@ body {
     overflow: hidden;
 }
 </style>
+<link rel="stylesheet" href="assets/css/banner.css">
 
 <body>
 
@@ -69,20 +61,63 @@ body {
 
     <main role="main">
 
-        <div class="banner-image" style="background-image: url(assets/1920x1080/CAREER.jpg); ">
+        <?php if (count($getbanner) <= 1) { ?>
+
+        <?php foreach ($getbanner as $banner) { ?>
+        <div class="banner-image" style="background-image: url(<?php echo $banner['Image']; ?>); ">
             <!-- <img src="assets/1920x1080/BBCC3.jpg" class="imgCarousel"> -->
-            <div class="container u-overlay__inner u-ver-center u-content-space text-white">
+            <div class="container u-overlay__inner u-ver-center u-content-space text-white" style="position: none">
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <div class="text-center">
                             <p class="text-uppercase u-letter-spacing-sm mb-0"></p>
-                            <h1 class="display-sm-4 display-lg-3 mb-3 revealOnScroll" data-animation="fadeInUp">BLOG
-                            </h1>
+                            <h1 class="display-sm-4 display-lg-3 mb-3 revealOnScroll" data-animation="fadeInUp">
+                                <?php echo $banner['Title']; ?></h1>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <?php } ?>
+
+        <?php } else { ?>
+        <div id="carouselIndicators1" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="container u-overlay__inner u-ver-center u-content-space">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="text-center text-white">
+                            <p class="text-uppercase u-letter-spacing-sm mb-0"></p>
+                            <h1 class="display-sm-4 display-lg-3 mb-3"> <span class="js-display-typing"></span></h1>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-inner main-banner-inner">
+                <?php
+            $count = 0;
+            foreach ($getbanner as $banner) {
+                $count++;
+                if ($count == 1) {
+                    $count = "active";
+                } ?>
+                <div class="carousel-item <?php echo $count; ?>">
+                    <img src="<?php echo $banner['Image']; ?>" class="d-block w-100 imgCarousel">
+                </div>
+                <?php
+            }  ?>
+            </div>
+            <a class="carousel-control-prev" href="#carouselIndicators1" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselIndicators1" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <?php } ?>
 
 
         <div class="container my-5">
@@ -97,7 +132,7 @@ body {
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body" style="height: 140px;">
-                                    <a href="blog_view.php?blog_id=<?php echo $blogs['IdBlog']; ?>">
+                                    <a href="news_blog_view.php?blog_id=<?php echo $blogs['IdBlog']; ?>">
                                         <h5 class="card-title"><?php echo $blogs['Title']; ?>
                                         </h5>
                                     </a>
@@ -136,7 +171,9 @@ body {
 
                     <?php for($i = 1; $i <= $totoalPages; $i++ ): ?>
                     <li class="page-item <?php if($page == $i) {echo 'active'; } ?>">
-                        <a class="page-link" href="blog.php?page=<?= $i; ?>&<?= $token; ?>&post_id=<?= $_GET['post_id']; ?>"> <?= $i; ?> </a>
+                        <a class="page-link"
+                            href="news_blog.php?page=<?= $i; ?>&<?= $token; ?>&post_id=<?= $_GET['post_id']; ?>"> <?= $i; ?>
+                        </a>
                     </li>
                     <?php endfor; ?>
 

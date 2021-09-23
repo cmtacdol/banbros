@@ -34,8 +34,8 @@ function saveEvents($formDetails, $filesData){
     $time = strtotime($formDetails['TimeWebinar']);
     $data = [
         'PostId' => $formDetails['Parent'],
-        'UserId' => '1',
-        'Author' => 'Author dummy',
+        'UserId' => $_SESSION["admin_id"],
+        'Author' => $_SESSION["admin_details"]['Username'],
         'Title' => $formDetails['Title'],
         'Description' => $formDetails['Description'],
         'Image' => $logoImage,
@@ -119,23 +119,19 @@ function updateEvents($formDetails, $filesData){
 
 }
 
-function deleteWebinar($IdWebinar){
+function deleteEvent($id_events){
     
     global $pdo;
 
-    $query = $pdo->prepare("SELECT * FROM news_webinar Where IdWebinar  = :id");
-    $query->execute(['id' => $IdWebinar]);
-    $data = $query->fetch();
-
-    $imageFile = $data['Image'];
-    unlink("../../".$imageFile);
+    @$event_query = getSingleEvents($id_events);
+    @unlink("../../".$event_query['Image']);
 
 
-    $count=$pdo->prepare("DELETE FROM `news_webinar` WHERE `news_webinar`.`IdWebinar` = :webinar_id");
-    $count->bindParam(":webinar_id",$IdWebinar,PDO::PARAM_INT);
+    $count=$pdo->prepare("DELETE FROM `news_events` WHERE `news_events`.`IdEvents` = :id");
+    $count->bindParam(":id",$id_events,PDO::PARAM_INT);
     if($count->execute()){
     
-        $_SESSION['success_message'] = "Webinar Successfully Deleted!";
+        $_SESSION['success_message'] = "Events Successfully Deleted!";
     }else{
         $_SESSION['error_message'] = "Error occured!";
     }

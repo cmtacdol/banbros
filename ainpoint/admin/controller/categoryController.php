@@ -113,9 +113,9 @@ function getCategoriesById($idCategory){
 
 function getAllCategories(){
 
-    global $pdo;
+    global $pdo; 
 
-    $query = $pdo->query("SELECT * FROM category")->fetchAll();
+    $query = $pdo->query("SELECT * FROM `category` c INNER JOIN brand b ON c.BrandId = b.IdBrand")->fetchAll();
 
     if(empty($query ) || count($query) == 0){
         return [];

@@ -34,8 +34,8 @@ function saveWebinar($formDetails, $filesData){
     $time = strtotime($formDetails['TimeWebinar']);
     $data = [
         'PostId' => $formDetails['Parent'],
-        'UserId' => '1',
-        'Author' => 'Author dummy',
+        'UserId' => $_SESSION["admin_id"],
+        'Author' => $_SESSION["admin_details"]['Username'],
         'Title' => $formDetails['Title'],
         'Description' => $formDetails['Description'],
         'Image' => $logoImage,

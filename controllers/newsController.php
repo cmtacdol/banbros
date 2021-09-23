@@ -18,6 +18,19 @@ function getBanner($navId){
     }
 }
 
+function getBannerByPost($post_id){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM banner WHERE PostId = '$post_id'")->fetchAll();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
+}
+
 function getPost($parentId){
 
     global $pdo;
@@ -110,6 +123,78 @@ function getWebinarRelated(){
     global $pdo;
 
     $query = $pdo->query("SELECT * FROM news_webinar")->fetchAll();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
+
+}
+
+function getPromos($parentId, $paginationStart, $limit){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM news_promos WHERE PostId = '$parentId' LIMIT $paginationStart, $limit")->fetchAll();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
+
+}
+
+function getSinglePromos($idPromos){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM news_promos WHERE IdPromos = '$idPromos'")->fetch();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
+
+}
+
+
+function getEvents($parentId, $paginationStart, $limit){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM news_events WHERE PostId = '$parentId' LIMIT $paginationStart, $limit")->fetchAll();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
+
+}
+
+function getSingleEvents($event_id){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM news_events WHERE IdEvents = '$event_id'")->fetch();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
+
+}
+
+
+function getEventsRelated(){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM news_events")->fetchAll();
 
     if(empty($query ) || count($query) == 0){
         return [];
