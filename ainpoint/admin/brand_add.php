@@ -62,7 +62,7 @@ $parentMenu = getMenu();
                                         <div class="form-group">
                                             <label for="title">Parent</label>
                                             <select class="selectpicker" name="Parent[]" multiple="multiple"
-                                                style="width: 100%">
+                                                style="width: 100%" required>
                                                 <?php foreach($parentMenu as $menu){ ?>
                                                 <option value="<?php echo $menu['IdNavMenu']; ?>">
                                                     <?php echo $menu['NavName']; ?></option>

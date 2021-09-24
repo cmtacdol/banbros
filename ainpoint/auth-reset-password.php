@@ -1,18 +1,17 @@
+<?php 
+include 'admin/controller/usersController.php';
+if(isset($_POST['btnPass'])){
+    saveEmailForgotPass($_POST);
+    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from colorlib.com/polygon/admindek/default/auth-reset-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Dec 2019 16:10:00 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
-    <title>Admindek | Admin Template</title>
-
-
-    <!--[if lt IE 10]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
+    <title>Reset Password | Ainpoint 2.0</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -46,6 +45,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
 
     <link rel="stylesheet" type="text/css" href="admin/assets/vendor/css/pages.css">
+    <link rel="stylesheet" type="text/css" href="admin/assets/vendor/css/toastr.min.css">
 </head>
 
 <body>
@@ -109,7 +109,7 @@
             <div class="row">
                 <div class="col-sm-12">
 
-                    <form class="md-float-material form-material">
+                    <form method="post" class="md-float-material form-material">
                         <div class="auth-box card">
                             <div class="card-block">
                                 <div class="row m-b-20">
@@ -121,13 +121,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group form-primary">
-                                    <input type="text" name="email-address" class="form-control" required="">
+                                    <input type="text" name="emailAccount" onkeyup="checkEmail(this.value)" class="form-control" required>
                                     <span class="form-bar"></span>
                                     <label class="float-label">Your Email Address</label>
                                 </div>
+                                <p id="emailResult" class="text-danger text-center"></p>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <button type="button"
+                                        <button type="submit" name="btnPass"
                                             class="btn bg-main btn-success btn-md btn-block waves-effect text-center m-b-20">Reset
                                             Password</button>
                                     </div>
@@ -139,17 +140,6 @@
                         </div>
                     </form>
 
-
-
-
-
-
-
-
-
-
-
-
                 </div>
 
             </div>
@@ -159,77 +149,52 @@
     </section>
 
 
-    <!--[if lt IE 10]>
-<div class="ie-warning">
-    <h1>Warning!!</h1>
-    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
-    <div class="iew-container">
-        <ul class="iew-download">
-            <li>
-                <a href="http://www.google.com/chrome/">
-                    <img src="../files/assets/images/browser/chrome.png" alt="Chrome">
-                    <div>Chrome</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="../files/assets/images/browser/firefox.png" alt="Firefox">
-                    <div>Firefox</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.opera.com">
-                    <img src="../files/assets/images/browser/opera.png" alt="Opera">
-                    <div>Opera</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.apple.com/safari/">
-                    <img src="../files/assets/images/browser/safari.png" alt="Safari">
-                    <div>Safari</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="../files/assets/images/browser/ie.png" alt="">
-                    <div>IE (9 & above)</div>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <p>Sorry for the inconvenience!</p>
-</div>
-<![endif]-->
 
+    <script src="admin/assets/vendor/js/jquery.min.js"></script>
+    <script src="admin/assets/vendor/js/jquery-ui.min.js"></script>
+    <script src="admin/assets/vendor/js/popper.min.js"></script>
+    <script src="admin/assets/vendor/js/bootstrap.min.js"></script>
+    <script src="admin/assets/vendor/js/waves.min.js"></script>
+    <script src="admin/assets/vendor/js/jquery.slimscroll.js"></script>
+    <script src="admin/assets/vendor/js/modernizr.js"></script>
+    <script src="admin/assets/vendor/js/css-scrollbars.js"></script>
+    <script src="admin/assets/vendor/js/pcoded.min.js"></script> 
+    <script src="admin/assets/vendor/js/vertical-layout.min.js"></script>
+    <script src="admin/assets/vendor/js/jquery.mcustomscrollbar.concat.min.js"></script>
+    <script src="admin/assets/vendor/js/script.js"></script>
+    <script src="admin/assets/vendor/js/toastr.min.js"></script>
+    <?php include 'admin/view/common/toast_messages.php'; ?>
 
-    <script type="f28c08a6420b3274d0dde77e-text/javascript" src="js/jquery.min.js"></script>
-    <script type="f28c08a6420b3274d0dde77e-text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="f28c08a6420b3274d0dde77e-text/javascript" src="js/popper.min.js"></script>
-    <script type="f28c08a6420b3274d0dde77e-text/javascript" src="js/bootstrap.min.js"></script>
+    <script>
+    function checkEmail(emailAccount) {
 
-    <script src="js/waves.min.js" type="f28c08a6420b3274d0dde77e-text/javascript"></script>
+        $.ajax({
+            type: 'POST',
+            async: false,
+            url: 'admin/controller/usersController.php',
+            data: {
+                emailAccount: emailAccount,
+                usage: "checkEmail",
+            },
+            success: function(response) {
 
-    <script type="f28c08a6420b3274d0dde77e-text/javascript" src="js/jquery.slimscroll.js"></script>
+                if (response == "Success") {
+                    $("#emailResult").text('');
+                    $("button").attr("disabled", false);
+                    return true;
+                } else if (response == "2") {
+                    $("#emailResult").text('Email not found!');
+                    $("#emailResult").show();
+                    $("button").attr("disabled", true);
+                    // $("button").remove();
+                    return false;
+                }
 
-    <script type="f28c08a6420b3274d0dde77e-text/javascript" src="js/modernizr.js"></script>
-    <script type="f28c08a6420b3274d0dde77e-text/javascript" src="js/css-scrollbars.js"></script>
-    <script type="f28c08a6420b3274d0dde77e-text/javascript" src="js/common-pages.js"></script>
+            }
+        });
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
-        type="f28c08a6420b3274d0dde77e-text/javascript"></script>
-    <script type="f28c08a6420b3274d0dde77e-text/javascript">
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
     }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-23581568-13');
     </script>
-    <script src="js/rocket-loader.min.js" data-cf-settings="f28c08a6420b3274d0dde77e-|49" defer=""></script>
 </body>
-
-<!-- Mirrored from colorlib.com/polygon/admindek/default/auth-reset-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Dec 2019 16:10:00 GMT -->
 
 </html>

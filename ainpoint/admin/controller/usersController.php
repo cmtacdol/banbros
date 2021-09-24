@@ -191,6 +191,82 @@ function memberLogin($username, $password)
    
 }
 
+
+if(isset($_POST['usage']) && $_POST['usage'] == 'checkEmail'){
+    
+    emailCheck($_POST['emailAccount']);
+
+}
+
+function emailCheck($email){
+
+    global $db_conn;
+
+    $result = mysqli_query($db_conn,"SELECT * FROM `users` WHERE Email = '$email' AND UserStatus != 1");
+    $result_log = mysqli_fetch_array($result);
+    $result_num = mysqli_num_rows($result);
+    
+    if($result_num != 0){
+        echo "Success";
+        return;
+    }
+    else{
+        echo "2";
+        return;
+    }
+
+}
+
+function saveEmailForgotPass($formDetails){
+
+    global $pdo;    
+
+    $created = date("Y-m-d H:i:s");
+    $temp_key = md5(time()+123456789% rand(4000, 55000000));
+    $email = $formDetails['emailAccount'];
+
+    $data = [
+        'Email' => $email,
+        'Temp_key' => $temp_key,
+        'Created' => $created,
+    ];
+
+    $sql = "INSERT INTO `users_forgot_password` 
+    (`Email`, `Temp_key`, `Created`) 
+    VALUES 
+    (:Email, :Temp_key, :Created);";
+
+    $stmt = $pdo->prepare($sql);
+    if ($stmt->execute($data)) {
+
+        $email_to = "$email";
+        $email_subject = "Password Reset Request – Banbros Commercial Incorporated";
+        $email_header = "MIME-Version: 1.0\r\n";
+        $email_header .= "Content-type: text/html; charset=ISO-8859-1; \r\n";
+        $email_header .= "From: Banbros Commercial Incorporated - <noreply@banbros.ph>";
+        
+        $email_message = "Hi ".$email.",
+        We recently received a request to reset your password for your Banbros Commercial Incorporated account.
+        To reset your password, please click the link below <br/><br/>
+        
+        https://ainpex.com/banbros/ainpoint/emailchangepass.php?key=".$temp_key."&email=".$email." <br/><br/>
+        
+        if you did not make this request, please disregard this email. <br/><br/>
+
+        Thank you, <br/><br/>
+
+        Copyright 2020 Banbros Commercial Incorporated
+        ";
+
+        mail($email_to,$email_subject,$email_message,$email_header);
+        
+        $_SESSION['success_message'] = "Please check your email inbox or spam folder and follow the steps!";
+    } else {
+        $_SESSION['error_message'] = "Error occured!";
+    }
+
+}
+
 function imageUpload($directory, $file)
 {
     $structure = '../../uploads/user_profile/'.$directory.'/';
