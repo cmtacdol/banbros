@@ -50,7 +50,7 @@ $getBrand = getBrand();
                                     <div class="col-lg">
                                         <div class="form-group scroll">
                                             <label for="exampleInputEmail1">Name</label>
-                                            <input class="form-control" name="CategoryName" type="text">
+                                            <input class="form-control" name="CategoryName" type="text" required>
                                         </div>
                                     </div>
                                     <div class="col-lg">
@@ -63,7 +63,7 @@ $getBrand = getBrand();
                                                 <?php } ?>
                                             </select> -->
                                             <select class="selectpicker" name="Parent[]" multiple="multiple"
-                                                style="width: 100%"> 
+                                                style="width: 100%" required> 
                                                 <?php foreach($getBrand as $brand){ ?>
                                                 <option value="<?php echo $brand['IdBrand']; ?>">
                                                     <?php echo $brand['BrandName']; ?> - <?php echo getMenuById($brand['NavId'])['NavName'] ?> </option>

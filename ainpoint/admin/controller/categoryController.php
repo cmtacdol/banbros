@@ -89,7 +89,7 @@ function getBrand(){
 
     global $pdo;
 
-    $query = $pdo->query("SELECT * FROM brand")->fetchAll();
+    $query = $pdo->query("SELECT * FROM brand WHERE Status != 9")->fetchAll();
 
     if(empty($query ) || count($query) == 0){
         return [];
@@ -119,7 +119,7 @@ function getAllCategories(){
 
     if(empty($query ) || count($query) == 0){
         return [];
-    }else{
+    }else{ 
         return  $query;
     }
 }
@@ -128,7 +128,7 @@ function getBrandbyId($idBrand){
 
     global $pdo;
 
-    $query = $pdo->prepare("SELECT * FROM brand Where IdBrand  = :id");
+    $query = $pdo->prepare("SELECT * FROM brand Where IdBrand  = :id AND Status != 9");
     $query->execute(['id' => $idBrand]);
     $data = $query->fetch();
 
