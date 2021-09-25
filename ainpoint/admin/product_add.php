@@ -50,7 +50,7 @@ $getCategories = getAllCategories();
                                     <div class="col-lg-8">
                                         <div class="form-group scroll">
                                             <label for="exampleInputEmail1">Product Name</label>
-                                            <input class="form-control" type="text" name="ProductName">
+                                            <input class="form-control" type="text" name="ProductName"> 
                                         </div>
 
                                         <div class="form-group scroll">
@@ -70,7 +70,10 @@ $getCategories = getAllCategories();
                                                 style="width: 100%">
                                                 <?php foreach($getCategories as $category){ ?>
                                                 <option value="<?php echo $category['IdCategory']; ?>">
-                                                    <?php echo $category['CategoryName']; ?> - <?php echo getBrandById($category['BrandId'])['BrandName'] ?></option>
+                                                    <?php echo $category['CategoryName']; ?> - <?php echo getBrandById($category['BrandId'])['BrandName']; ?> > 
+                                                    
+                                                (<?php echo getNavById(getBrandById($category['BrandId'])['NavId'])['NavName'] ?>)
+                                                </option>
                                                 <?php } ?>
                                             </select>
                                         </div>

@@ -310,7 +310,7 @@ function deleteImages($lastId)
     }
 
     $count=$pdo->prepare("DELETE FROM product_image WHERE ProductId=:id");
-    $count->bindParam(":id",$lastId,PDO::PARAM_INT);
+    $count->bindParam(":id",$lastId,PDO::PARAM_INT); 
     $count->execute();
 
 }
@@ -320,6 +320,19 @@ function getCategoriesBySpecificId($idCategory){
     global $pdo;
 
     $query = $pdo->query("SELECT * FROM `category` c INNER JOIN brand b ON c.BrandId = b.IdBrand WHERE c.IdCategory = '$idCategory'")->fetch();
+
+    if(empty($query ) || count($query) == 0){
+        return [];
+    }else{
+        return  $query;
+    }
+}
+
+function getNavById($id_menu){
+
+    global $pdo;
+
+    $query = $pdo->query("SELECT * FROM nav_menu WHERE IdNavMenu = '$id_menu'")->fetch();
 
     if(empty($query ) || count($query) == 0){
         return [];

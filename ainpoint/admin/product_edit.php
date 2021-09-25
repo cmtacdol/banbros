@@ -77,7 +77,10 @@ $getCategories = getAllCategories();
                                                 <?php foreach($getCategories as $category){ ?>
                                                 <option value="<?php echo $category['IdCategory']; ?>"
                                                     <?php echo($getSingProduct['CategoryId'] == $category['IdCategory']) ? 'selected' : ''; ?>>
-                                                    <?php echo $category['CategoryName']; ?> - <?php echo getBrandById($category['BrandId'])['BrandName'] ?></option>
+                                                    <?php echo $category['CategoryName']; ?> - <?php echo getBrandById($category['BrandId'])['BrandName'] ?> > 
+                                                    
+                                                    (<?php echo getNavById(getBrandById($category['BrandId'])['NavId'])['NavName'] ?>)
+                                                </option>
                                                 <?php } ?>
                                             </select>
                                         </div>

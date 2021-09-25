@@ -73,8 +73,9 @@ $getProduct = getAllProduct();
                                             <td class="text-left">
                                                 <?php echo getCategoriesBySpecificId($product['CategoryId'])['CategoryName']; ?>
                                                 -
-                                                <?php echo getCategoriesBySpecificId($product['CategoryId'])['BrandName']; ?>
-                                            </td>
+                                                <?php echo getCategoriesBySpecificId($product['CategoryId'])['BrandName']; ?> > 
+                                                (<?php echo getNavById(getCategoriesBySpecificId($product['CategoryId'])['NavId'])['NavName'] ?>)
+                                            </td> 
                                             <td class="text-center">
                                                 <?php echo ($product['ProductStatus'] == '0') ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>'; ?>
                                             </td>
