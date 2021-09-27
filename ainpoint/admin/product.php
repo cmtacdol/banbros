@@ -45,7 +45,7 @@ $getProduct = getAllProduct();
                     <?php } ?>
                     <div class="card mt-3">
                         <div class="card-header">
-                            <h5>Articles</h5>
+                            <h5>Product List</h5>
                         </div>
                         <div class="card-block">
                             <div class="table-responsive dt-responsive">

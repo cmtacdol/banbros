@@ -84,13 +84,14 @@ function savePostBanner($formDetails, $fileDetails){
         if($fileDetails['images']){
             
             $data = [
+                'NavId' => '0',
                 'PostId' => $_GET['IdPost'],
                 'imageuploadedpath' => $imageuploadedpath,
                 'Title' => $title,
                 'Link' => $link,
             ];
 
-            $sql = "INSERT INTO `banner` (`PostId`, `Image`, `Title`, `Link`, `SortOrder`) VALUES (:PostId, :imageuploadedpath, :Title, :Link, '0');";
+            $sql = "INSERT INTO `banner` (`NavId`, `PostId`, `Image`, `Title`, `Link`, `SortOrder`) VALUES (:NavId, :PostId, :imageuploadedpath, :Title, :Link, '0');";
             $stmt = $pdo->prepare($sql);
             if($stmt->execute($data)){
 
@@ -133,7 +134,7 @@ function getMenu(){
 
     global $pdo;
 
-    $query = $pdo->query("SELECT * FROM nav_menu WHERE NavStatus != 1")->fetchAll();
+    $query = $pdo->query("SELECT * FROM nav_menu WHERE NavStatus != 1 AND NavName != 'Partner'")->fetchAll();
 
     if(empty($query ) || count($query) == 0){
 

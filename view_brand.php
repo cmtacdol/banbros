@@ -7,7 +7,7 @@ include 'view/common/header.php';
 include 'controllers/brandController.php'; 
 
 $categoryByBrand = getCategoryByBrand($_GET['brand_id']);
-$brand = getSingleBrand($_GET['brand_id']);
+$brand = getSingleBrand($_GET['brand_id']); 
 
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/view_brand.css">

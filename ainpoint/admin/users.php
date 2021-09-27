@@ -42,7 +42,7 @@ $getAllUser = getAllUsers();
                     </div>
                     <div class="card mt-3">
                         <div class="card-header">
-                            <h5>Blogs</h5>
+                            <h5>Users</h5>
                         </div>
                         <div class="card-block">
                             <div class="table-responsive dt-responsive">

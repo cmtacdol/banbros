@@ -66,8 +66,7 @@ $getCategories = getAllCategories();
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label for="title">Category</label>
-                                            <select class="selectpicker" name="Category[]" multiple="multiple"
-                                                style="width: 100%">
+                                            <select class="custom-select" name="Category"style="width: 100%">
                                                 <?php foreach($getCategories as $category){ ?>
                                                 <option value="<?php echo $category['IdCategory']; ?>">
                                                     <?php echo $category['CategoryName']; ?> - <?php echo getBrandById($category['BrandId'])['BrandName']; ?> > 

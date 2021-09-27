@@ -11,6 +11,10 @@ if(isset($_POST['updateProduct'])){
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
+if(isset($_POST['deleteProductImage'])){
+    deleteImagesByIdImage($_POST['deleteProductImage']);
+    echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
+}
 
 $getSingProduct = getSingleProduct($_GET['productId']);
 $getCategories = getAllCategories();

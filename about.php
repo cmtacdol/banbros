@@ -69,15 +69,18 @@ $tabTitle = getTabTitle();
 
     <div id="carouselIndicators1" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="container u-overlay__inner u-ver-center u-content-space u-overlay--dark">
+            <?php if($totals_string != '""'){ ?>
             <div class="overay-dark"
                 style="background: #0a0a0a2a; position: absolute; width: 100%; top:0; bottom: 0; left: 0; right: 0;">
             </div>
+            <?php } ?>
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="text-center text-white">
-                        <h3 class="text-uppercase u-letter-spacing-sm mb-0 revealOnScroll" data-animation="fadeInUp">OUR
-                            COMPANY</h3>
+                        <?php if($totals_string != '""'){ ?>
                         <h1 class="display-sm-4 display-lg-3 mb-3"> <span class="js-display-typing"></span></h1>
+                        <?php } ?>
+
 
                     </div>
                 </div>

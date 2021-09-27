@@ -39,12 +39,12 @@ $product_gallery = getProductGallery($_GET['produc_id']);
                     <div class="video-gallery mt-5">
                         <div class="row">
 
-                            <?php foreach($product_gallery as $gallery) { ?>
+                            <?php foreach($product_gallery as $gallery) { ?> 
                             <?php if(getimagesize($gallery['Path'])) { ?>
                             <div class="col-lg-4">
                                 <div class="gallery-item">
                                     <img src="<?php echo $gallery['Path']; ?>" alt="Olympic National Park" />
-                                    <div class="gallery-item-caption">
+                                    <div class="gallery-item-caption image-product">
                                         <a class="vimeo-popup" href="<?php echo $gallery['Path']; ?>"></a>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@ $product_gallery = getProductGallery($_GET['produc_id']);
                                         <source src="<?php echo $gallery['Path']; ?>#t=0.5"
                                             type="video/mp4">
                                     </video>
-                                    <div class="gallery-item-caption">
+                                    <div class="gallery-item-caption video-product">
                                         <a class="vimeo-popup" href="<?php echo $gallery['Path']; ?>"></a>
                                     </div>
                                 </div>
@@ -96,7 +96,15 @@ $product_gallery = getProductGallery($_GET['produc_id']);
     <?php include 'view/common/scripts.php'; ?>
     <script>
     $(document).ready(function() {
-        $('.video-gallery').magnificPopup({
+        $('.image-product').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+
+        $('.video-product').magnificPopup({
             delegate: 'a',
             type: 'iframe',
             gallery: {

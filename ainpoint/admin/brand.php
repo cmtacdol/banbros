@@ -62,7 +62,7 @@ $getBrand = getBrand();
                                     <thead>
                                         <tr>
                                             <th class="text-left">Image</th>
-                                            <th class="text-center">Description</th>
+                                            <th class="text-center">Brand Name</th>
                                             <th class="text-center">Status</th>
                                             <th class="text-center">Date Created</th>
                                             <th class="text-center">Parent Menu</th>
@@ -78,7 +78,7 @@ $getBrand = getBrand();
                                             </td>
                                             <td class="text-center">
                                                 <div class="trunc">
-                                                    <?php echo $brand['Description']; ?>
+                                                    <?php echo $brand['BrandName']; ?>
                                                 </div>
                                             </td>
                                             <td class="text-center">
