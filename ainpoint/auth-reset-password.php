@@ -133,7 +133,7 @@ if(isset($_POST['btnPass'])){
                                             Password</button>
                                     </div>
                                 </div>
-                                <p class="f-w-600 text-left">Back to <a href="index.php">Login.</a></p>
+                                <p class="f-w-600 text-left"> <a href="index.php">Back to Login.</a></p>
                                 <div class="row">
                                 </div>
                             </div>

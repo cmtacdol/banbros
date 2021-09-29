@@ -101,6 +101,60 @@ function updateUsers($formDetails, $filesData)
     }
 }
 
+function updateProfile($formDetails, $filesData)
+{
+    global $pdo;
+
+    $directoryPath = str_replace(' ', '-', ''); // Replaces all spaces with hyphens.
+    $directoryPath =  preg_replace('/[^A-Za-z0-9\-]/', '', $directoryPath);
+
+    // $datenow = date("Ymd");
+    
+    $data = [
+        'IdUsers' => $_SESSION['admin_id'],
+        'Name' => $formDetails['Name'],
+        'Username' => $formDetails['Username'],
+        'Email' => $formDetails['Email'],
+    ];
+
+    $sql = "UPDATE `users` SET ";
+
+    if ($filesData['fileImage']['name'] != "") {
+        @$tobeRemoved = getSingleUsers($_SESSION['admin_id']);
+        @unlink('../../'.$tobeRemoved['Image']);
+       
+        $logoImage = imageUpload($directoryPath, $filesData['fileImage']);
+        $data['Image'] = $logoImage;
+
+        $sql .= "`Image` = :Image, ";
+    }
+
+    $sql .= "`Name` = :Name, `Username` = :Username, `Email` = :Email ";
+
+    if ($formDetails['Password'] != "") {
+
+        if($formDetails['Password'] == $formDetails['cPassword']){
+
+            $data['Password'] = md5($formDetails['Password']);
+            $sql .= ", `Password` = :Password ";
+        }
+        else{
+            $_SESSION['error_message'] = "Password and Confirm Password does not match";
+            return;
+        }
+
+    }
+
+    $sql .= "WHERE IdUsers = :IdUsers";
+
+    $stmt = $pdo->prepare($sql);
+    if ($stmt->execute($data)) {
+        $_SESSION['success_message'] = "Profile Successfully Updated!";
+    } else {
+        $_SESSION['error_message'] = "Error occured!";
+    }
+}
+
 function getAllUsers()
 {
     global $pdo;

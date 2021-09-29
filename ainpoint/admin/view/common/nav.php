@@ -32,7 +32,7 @@
                             data-dropdown-out="fadeOut">
                            
                             <li>
-                                <a href="#">
+                                <a href="users_profile.php">
                                     <i class="feather icon-user"></i> Profile
                                 </a>
                             </li>
