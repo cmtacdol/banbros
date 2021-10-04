@@ -49,6 +49,24 @@ body {
     background-position: 50% 0;
     background-size: cover;
 }
+
+.parallax {
+    /* The image used */
+    position: absolute;
+    top: 30px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .16;
+    z-index: -1;
+    background-image: url("assets/img/circlelogo.png");
+    /* min-height: 1700px; */
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 </style>
 <link rel="stylesheet" href="assets/css/banner.css">
 
@@ -56,8 +74,8 @@ body {
 
     <?php include 'view/common/nav.php'; ?>
 
-    <main role="main">
-
+    <main role="main" style="position: relative">
+        <div class="parallax"></div>
 
         <?php if (count($getbanner) < 1) { ?>
 

@@ -149,7 +149,7 @@ function updateProfile($formDetails, $filesData)
 
     $stmt = $pdo->prepare($sql);
     if ($stmt->execute($data)) {
-        $_SESSION['success_message'] = "Profile Successfully Updated!";
+        $_SESSION['success_message'] = "Profile Successfully Updated! Please re-login to apply changes.";
     } else {
         $_SESSION['error_message'] = "Error occured!";
     }

@@ -10,7 +10,7 @@ if(isset($_POST['updateProfile'])){
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 } 
 
-$profile = getSingleUsers($_SESSION['admin_id']);
+$profile = getSingleUsers($_SESSION['admin_id']); 
 
 ?>
 <!-- THIS SECTION IS FOR THE CSS FOR THIS PAGE ONLY -->
