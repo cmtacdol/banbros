@@ -21,7 +21,7 @@ $totals_string = implode(",", $totals);
 
 $pressRelease = getPressRelease();
 ?>
-
+ 
 <link rel="stylesheet" href="assets/css/custome_hompage.css">
 
 <body>

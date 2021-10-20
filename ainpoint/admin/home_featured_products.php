@@ -5,9 +5,9 @@ $_SESSION['PAGE_NAV_TITLE'] = "Featured Products";
 // include 'scripts/session_check.php'; 
 include 'view/common/header.php';
 include 'controller/homeController.php';
-
-if(isset($_POST['deleteCategory'])){
-    deleteCategory($_POST['deleteCategory']);
+ 
+if(isset($_POST['deleteFeaturedProducts'])){
+    deleteFeaturedProducts($_POST['deleteFeaturedProducts']);
     echo '<script>window.history.replaceState( null, null, window.location.href );</script>';
 }
 
@@ -72,8 +72,8 @@ $getFeaturedProducts = getFeaturedProducts();
                                                             class="icofont icofont-edit tooltip-item">
                                                         </i></a>
                                                     <?php if($_SESSION['admin_details']['PermissionId'] == 1){ ?>
-                                                    <button name="deleteCategory" type="submit"
-                                                        value="<?php echo $category['IdCategory']; ?>"
+                                                    <button name="deleteFeaturedProducts" type="submit"
+                                                        value="<?php echo $featuredProduct['IdFeatured']; ?>"
                                                         class="btn waves-effect waves-dark btn-danger btn-outline-danger btn-icon"><i
                                                             class="icofont icofont-trash"></i></button>
                                                     <?php } ?>

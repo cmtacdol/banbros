@@ -61,7 +61,7 @@ function featuredProducts()
 {
     global $pdo;
 
-    $query = $pdo->query("SELECT * FROM featured_products")->fetchAll();
+    $query = $pdo->query("SELECT * FROM featured_products WHERE Status != 1")->fetchAll();
 
     if (empty($query) || count($query) == 0) {
         return [];

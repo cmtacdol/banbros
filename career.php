@@ -108,7 +108,7 @@ $getbanner = getBanner($nav_id);
         <div class="row">
             <?php foreach(getCareerImage($careers['IdCareer']) as $imageCareer){ ?>
 
-            <div class="col-lg-3 col-sm-4 revealOnScroll" data-animation="fadeInLeftBig" revealOnScroll"
+            <div class="col-lg-3 col-sm-4 mt-2 revealOnScroll" data-animation="fadeInLeftBig" revealOnScroll
                 data-animation="fadeInLeftBig">
                 <div class="row">
                     <div class="col-2">
@@ -117,7 +117,7 @@ $getbanner = getBanner($nav_id);
                     </div>
                     <div class="ml-3 col-auto">
                         <p class="text-muted pb-0 mb-0"><?php echo $imageCareer['Title']; ?></p>
-                        <p><?php echo $imageCareer['Description']; ?></p>
+                        <p style="width: 170px; word-wrap: break-word;"><?php echo $imageCareer['Description']; ?></p>
                     </div>
                 </div>
             </div>
@@ -152,31 +152,7 @@ $getbanner = getBanner($nav_id);
                             <div class="col-lg">
                                 <a href="<?php echo $jobs['Link']; ?>" class="btn btn-info">Apply Now</a>
                             </div>
-                            <div class="col-lg">
-                                <div class="row justify-content-center">
-                                    <?php if(!empty($jobs['ShareLink1'])){ ?>
-                                    <div class="col-auto pr-0">
-                                        <a href="<?php echo $jobs['ShareLink1']; ?>" class="text-dark"><i
-                                                class="fab fa-facebook-square fa-lg"></i></a>
-                                    </div>
-                                    <?php } ?>
 
-                                    <?php if(!empty($jobs['ShareLink2'])){ ?>
-                                    <div class="col-auto pr-0">
-                                        <a href="<?php echo $jobs['ShareLink2']; ?>" class="text-dark"><i
-                                                class="fab fa-twitter-square fa-lg"></i></a>
-                                    </div>
-                                    <?php } ?>
-
-                                    <?php if(!empty($jobs['ShareLink3'])){ ?>
-                                    <div class="col-auto pr-0">
-                                        <a href="<?php echo $jobs['ShareLink3']; ?>" class="text-dark"><i
-                                                class="fab fa-instagram fa-lg"></i></a>
-                                    </div>
-                                    <?php } ?>
-
-                                </div>
-                            </div>
                         </div>
                     </div>
 

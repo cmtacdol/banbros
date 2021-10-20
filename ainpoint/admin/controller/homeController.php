@@ -356,6 +356,25 @@ function getFeaturedProductsImages($featured_id)
     return $query;
 }
 
+function deleteFeaturedProducts($idFeturedProduct)
+{
+    global $pdo;
+
+    if(count(getFeaturedProductsImages($idFeturedProduct)) > 0){
+        $_SESSION['error_message'] = "Cannot Delete! Please remove all product image first";
+    }
+    else{
+        $count=$pdo->prepare("DELETE FROM `featured_products` WHERE `featured_products`.`IdFeatured` = :id");
+        $count->bindParam(":id", $idFeturedProduct, PDO::PARAM_INT);
+        if ($count->execute()) {
+            $_SESSION['success_message'] = "Featured Product Successfully Deleted!";
+        } else {
+            $_SESSION['error_message'] = "Error occured!";
+        }
+
+    }
+
+}
 
 
 function updateExecutives($formDetails, $filesData)
