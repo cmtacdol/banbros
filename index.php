@@ -355,8 +355,13 @@ include 'view/common/header.php'; ?>
         </div>
         <div style="z-index: 99;" class="container text-center text-white">
             <div class="pt-9">
+<<<<<<< HEAD
                 <div class="col mb-1">
                     <h2 class="font-weight-bold">Newsletter</h2>
+=======
+                <div class="col">
+                    <h2 class="font-weight-bold">News Letter</h2>
+>>>>>>> parent of 68e5c70 (Policy)
                 </div>
                 <div class="mx-auto mt-1" style="width: 50%;">
                     <p><small class="font-italic">Be updated with the trends in technology. Subscribe to us and we will keep you posted. </small></p>

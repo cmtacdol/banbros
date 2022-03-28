@@ -116,6 +116,7 @@
           <small class="mb-0 text-white">Powered by Ainpex Solutions</small>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
 
     <!-- MOBILE -->
@@ -128,6 +129,39 @@
       </div>
       <div class="col-md-5 text-center">
         <small class="mb-0 text-white">Powered by Ainpex Solutions</small>
+=======
+      
+    </footer>
+    <div style="background: #28292b;" class="mt ml-0 mr-0 py-2">
+           <div class="container">
+           <div class="d-none d-lg-block">
+                   <div class="row">
+                   <div class="col text-center">
+                            <small class="mb-0 text-white">Copyright 2020 Banbros Commercial Incorporated</small>
+                    </div>
+                    <div class="col text-center">
+                            <a href=""><small class="mb-0 text-white">Privacy Policy</small></a>
+                    </div>
+                    <div class="col text-center">
+                            <small class="mb-0 text-white">Powered by Ainpex Solutions</small>
+                    </div>
+                   </div>
+              </div>
+
+              <!-- MOBILE -->
+              <div class="row d-lg-none">
+                    <div class="col-md-5 text-center">
+                            <small class="mb-0 text-white">Copyright 2020 Banbros Commercial Incorporated</small>
+                    </div>
+                    <div class="col-md-5 text-center">
+                            <a href=""><small class="mb-0 text-white">Privacy Policy</small></a>
+                    </div>
+                    <div class="col-md-5 text-center">
+                            <small class="mb-0 text-white">Powered by Ainpex Solutions</small>
+                    </div>
+              </div>
+           </div>
+>>>>>>> parent of 68e5c70 (Policy)
       </div>
     </div>
   </div>
