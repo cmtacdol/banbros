@@ -27,7 +27,7 @@ body {
 
 .overFooter {
     width: 100%;
-    height: 450px;
+    height: 270px;
     background-image: url('../img/footerimg.jpg');
     background-size: cover;
     position: relative;
@@ -1248,6 +1248,8 @@ h6 {
 .u-portfolio__item {
     overflow: hidden;
     z-index: 2;
+    margin: 10px;
+    border: #0094da 1px solid;
 }
 
 .u-portfolio__image {
@@ -1258,15 +1260,15 @@ h6 {
 }
 
 .u-portfolio__item:hover .u-portfolio__image {
-    transform: translate3d(0, -60px, 0);
+    transform: translate3d(0.5ch, 0.1in, 2em);
+    transform: scale(1.1);
 }
 
 .u-portfolio__info {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     left: 0;
     right: 0;
-    height: 3.75rem;
     overflow: hidden;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1275,15 +1277,17 @@ h6 {
     color: #fff;
     background-color: #0094da;
     transition: all .2s ease;
-    transform: translate3d(0, 3.75rem, 0);
+    /* transform: translate3d(0, 3.75rem, 0); */
 }
 
 .u-portfolio__info small {
     opacity: .7;
+    margin-top: -8px;
 }
 
 .u-portfolio__item:hover .u-portfolio__info {
     transform: translate3d(0, 0, 0);
+    background-color: #0054a6;
 }
 
 .u-portfolio__zoom {
@@ -1316,10 +1320,6 @@ h6 {
 
 .u-promo-block--mheight-450 {
     min-height: 450px;
-}
-
-. {
-    min-height: 500px;
 }
 
 .u-promo-block--mheight-600 {

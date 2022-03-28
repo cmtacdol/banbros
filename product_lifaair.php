@@ -171,7 +171,6 @@ a {
                     </div>
                 </div>
                 <div class="col-lg-9">
-                
                     <h6 class="font-weight-light text-center text-lg-left mt-4 mb-0">
                         LIFAair is an Air purification experts from Finland.
                         Founded in Helsinki in 1988 and has spent more than 30 years in air pollution control

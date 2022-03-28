@@ -1,9 +1,9 @@
-<?php 
+<?php
 session_start();
 $_SESSION['PAGE_TITLE'] = "About Us";
-$_SESSION['PAGE_NAV_TITLE'] = "About Us"; 
+$_SESSION['PAGE_NAV_TITLE'] = "About Us";
 
-include 'view/common/header.php'; 
+include 'view/common/header.php';
 
 ?>
 
@@ -27,6 +27,144 @@ include 'view/common/header.php';
         <!-- End Promo Content -->
     </section>
     <!-- End Promo Block -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Set a background color */
+        body {
+            /* background-color: #474e5d; */
+            font-family: Helvetica, sans-serif;
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #00aeef;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        /* Container around content */
+        .containerx {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        /* The circles on the timeline */
+        .containerx::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid #00aeef;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Place the container to the left */
+        .leftx {
+            left: 0;
+        }
+
+        /* Place the container to the right */
+        .rightx {
+            left: 50%;
+        }
+
+        /* Add arrows to the left container (pointing right) */
+        .leftx::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .rightx::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .rightx::after {
+            left: -13px;
+        }
+
+        /* The actual content */
+        .contentx {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 600px) {
+
+            /* Place the timelime to the left */
+            .timeline::after {
+                left: 31px;
+            }
+
+            /* Full-width containers */
+            .containerx {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            /* Make sure that all arrows are pointing leftwards */
+            .containerx::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            /* Make sure all circles are at the same spot */
+            .leftx::after,
+            .rightx::after {
+                left: 15px;
+            }
+
+            /* Make all right containers behave like the left ones */
+            .rightx {
+                left: 0%;
+            }
+        }
+    </style>
 </head>
 <!-- End Header -->
 
@@ -57,7 +195,7 @@ include 'view/common/header.php';
                     <div class="container">
                         <h2 class="text-center mb-2">HISTORY & GROWTH</h2>
                         <div class="row">
-                            <div class="col-lg-4 col-sm-4 mb-4">
+                            <!-- <div class="col-lg-4 col-sm-4 mb-4">
                                 <div class="card" style="width: 100%; height: 430px; border-radius: 10px">
                                     <div class="card-body">
                                         <h4 class="card-title mb-0">Banbros Commercial, Inc.</h4>
@@ -95,37 +233,82 @@ include 'view/common/header.php';
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 col-sm-12 mb-12">
-                                <div class="card" style="width: 100%; height: 280px; border-radius: 10px">
-                                    <div class="card-body">
-                                        <h1 class="card-title font-weight-bold mb-0">VISION</h1>
-                                        <div class="col ">
-                                            <div>
-                                                Banbros Commercial Inc. vision is to be the Global forefront Top Tier value-added Supplier of Innovative IT products and end-to-end services in the Information Technology distribution industry by providing holistic and complementing products to provide strong and consistent growth in both revenues and profit for the company and for its partners.
-                                            </div>
+                            </div> -->
+                            <div class="container mx-auto w-100 mt-8">
+                                <div class="timeline">
+                                    <div class="containerx leftx">
+                                        <div class="contentx">
+                                            <h2>Banbros Commercial, Inc.</h2>
+                                            <p>Established in 1997, carrying the primary purpose of distributing high quality IT products in the Philippine Market.</p>
+                                        </div>
+                                    </div>
+                                    <div class="containerx rightx">
+                                        <div class="contentx">
+                                            <h2>Banbros Commercial Inc. (BCI)</h2>
+                                            <p>One of the dominant players in the Innovation & Information Technology that provides products which have leadership position in the market.</p>
+                                        </div>
+                                    </div>
+                                    <div class="containerx leftx">
+                                        <div class="contentx">
+                                            <h2>Our company today, BCI continues to provides</h2>
+                                            <p>strong and consistent growth in the revenues and profits of the company. We aim to be the leader in the distribution channel for all products by being number one in all product categories.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="container mx-auto w-100 mt-8">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <img class="img-fluid products rounded" src="assets/img/about.jpg" alt="Iamge Description">
+                                    </div>
+                                    <div class="col-lg-6 mb-5 mb-lg-0 p-2 text-center text-lg-left">
 
-                            <div class="col-lg-12 col-sm-12 mb-12 mt-5">
-                                <div class="card" style="width: 100%; Height 280px; border-radius: 10px">
-                                    <div class="card-body">
-                                        <h1 class="card-title font-weight-bold mb-0">MISSION</h1>
-                                        <div class="col">
-                                            <div>
-                                                Banbros Commercial Inc. mission is to be the top forefront Innovator that provides IT products, essentials, holistic solution and excellent services all in one for customer Satisfaction.
-                                                We continuously seek improvements for more
-                                                efficient, productive and satisfied employees, reseller and customer so we can all gain growth in all aspects.
 
+                                        <div class="row">
+                                            <div class="mt-2 d-none d-lg-block">
+                                                <div class="rounded-border">
+                                                    <i class="far fa-eye"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <h5 class="mb-0">VISION</h5>
+                                                <small>Our vision is to be the Global forefront Top
+                                                    Tier value-added Supplier of Innovative IT
+                                                    products and end-to-end services in the
+                                                    Information Technology distribution industry
+                                                    by providing holistic and complementing
+                                                    products to provide strong and consistent
+                                                    growth in both revenues and profit for the
+                                                    company and for its partners.</small>
                                             </div>
                                         </div>
+
+                                        <div class="row mt-4">
+                                            <div class="mt-2 d-none d-lg-block">
+                                                <div class="rounded-border">
+                                                    <i class="fas fa-rocket"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <h5 class="mb-0">MISSION</h5>
+                                                <small>Our mission is to be the top forefront
+                                                    Innovator that provides IT products,
+                                                    essentials, holistic solution and
+                                                    excellent services all in one for customer
+                                                    Satisfaction.<br><br>
+                                                    We continuously seek improvements for
+                                                    more efficient, productive and satisfied
+                                                    employees, reseller and customer so we
+                                                    can all gain growth in all aspects.</small>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12 col-sm-12 mb12 mt-5">
-                                <div class="card" style="width: 100%; height 280px; border-radius: 10px">
+
+                            <div class="container-fluid mt-8">
+                                <div class="card" style="width: 100%;">
                                     <div class="card-body">
                                         <h1 class="card-title font-weight-bold text-center mb-0">STRATEGY</h1>
                                         <div class="col text-center">
@@ -173,14 +356,14 @@ include 'view/common/header.php';
 
                 <div class="tab-pane fade" id="pills-two" role="tabpanel" aria-labelledby="pills-two-tab">
                     <div class="container mt-8">
-                         <div class="container mt-8">
-                        <div class="mx-auto text-center">
-                            <div class="mx-auto text-center org_chart">
-                                <img src="assets/img/org-chart/tekzone.png" alt="">
+                        <div class="container mt-8">
+                            <div class="mx-auto text-center">
+                                <div class="mx-auto text-center org_chart">
+                                    <img src="assets/img/org-chart/tekzone.png" alt="">
+                                </div>
                             </div>
-                        </div>
 
-                    </div>
+                        </div>
 
                     </div>
                 </div>
@@ -215,7 +398,7 @@ include 'view/common/header.php';
                 <div class="tab-pane fade" id="pills-four" role="tabpanel" aria-labelledby="pills-four-tab">
                     <div class="container">
 
-                      
+
                         <div class="mx-auto text-center org_chart">
                             <img src="assets/img/org-chart/org4.png" alt=""><br><br><br>
                             <img src="assets/img/org-chart/org5.png" alt="">
@@ -227,7 +410,7 @@ include 'view/common/header.php';
                 <div class="tab-pane fade" id="pills-five" role="tabpanel" aria-labelledby="pills-five-tab">
                     <div class="container">
 
-                      
+
                         <div class="mx-auto text-center org_chart">
                             <img src="assets/img/org-chart/satelite.jpg" alt="">
                         </div>
@@ -520,7 +703,6 @@ include 'view/common/header.php';
             backDelay: 2500
         });
     });
-
 </script>
 </body>
 <!-- End Body -->

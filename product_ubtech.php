@@ -79,8 +79,7 @@ a {
     text-decoration: none !important;
     background-color: transparent
 }
-
-.h-custom {
+.h-custom{
     height: 50px;
 }
 </style>
@@ -147,35 +146,6 @@ a {
                     </div>
                 </div>
                 <div class="col-lg-9">
-
-                    <!-- Slider carousel -->
-                    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="assets/banner/ubtech.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <!-- <div class="carousel-item">
-                                <img src="assets/banner/asus1.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/banner/gam.jpg" class="d-block w-100" alt="...">
-                            </div> -->
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-
                     <h6 class="font-weight-light text-center text-lg-left mt-4 mb-0">UBTECH is the only company offering
                         such a broad, open
                         ecosystem of robot innovations, from entry level consumer products, to educational
@@ -189,8 +159,7 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/ubtech/astrobot-kit.jpg" class="card-img-top"
-                                        id="businessImage">
+                                    <img src="view/images/ubtech/astrobot-kit.jpg" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><span class="font-weight-bold">ASTROBOT KIT</span></h6>
@@ -215,8 +184,7 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/ubtech/ukit-advance.jpg" class="card-img-top"
-                                        id="businessImage">
+                                    <img src="view/images/ubtech/ukit-advance.jpg" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><span class="font-weight-bold">Ukit Advance</span></h6>
@@ -242,8 +210,7 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/ubtech/alpha1-pro.png" class="card-img-top"
-                                        id="businessImage">
+                                    <img src="view/images/ubtech/alpha1-pro.png" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><span class="font-weight-bold">UBTech Alpha1 Pro</span></h6>
@@ -256,8 +223,7 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/ubtech/storm-trooper.jpg" class="card-img-top"
-                                        id="businessImage">
+                                    <img src="view/images/ubtech/storm-trooper.jpg" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><span class="font-weight-bold">UBTECH Storm Trooper</span></h6>
@@ -270,12 +236,10 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center pt-4">
-                                    <img src="view/images/ubtech/buzzbot-muttbot.jpg" class="card-img-top"
-                                        id="businessImage">
+                                    <img src="view/images/ubtech/buzzbot-muttbot.jpg" class="card-img-top" id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h6 class="h-custom"><span class="font-weight-bold">UBTech Buzzbot and Muttbot
-                                            Kit</span></h6>
+                                    <h6 class="h-custom"><span class="font-weight-bold">UBTech Buzzbot and Muttbot Kit</span></h6>
 
                                     <button class="btn btn-info">Check more</button>
                                 </div>

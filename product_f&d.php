@@ -13,13 +13,6 @@ body {
     height: 100%;
 }
 
-.carousel-item{
-    width: 100%;
-}
-.carousel-item img{
-    object-fit: cover;
-    width: 100%;
-}
 
 .business-text {
     display: -webkit-box;
@@ -178,38 +171,6 @@ a {
                     </div>
                 </div>
                 <div class="col-lg-9">
-
-                    <!-- Slider carousel -->
-                    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="assets/banner/fnd.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <!-- <div class="carousel-item">
-                                <img src="assets/banner/asus1.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/banner/gam.jpg" class="d-block w-100" alt="...">
-                            </div> -->
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselIndicators" role="button"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselIndicators" role="button"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-
-
                     <h6 class="font-weight-light text-center text-lg-left mt-4 mb-0">Fenda Company was founded in 2005,
                         starting with
                         loudspeaker development and manufacturing, and achieved its own core competence of
@@ -282,12 +243,11 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/f&d/F&D A140X 2.1 Bluetooth Multimedia Speaker.jpg"
-                                        class="card-img-top" id="businessImage">
+                                    <img src="view/images/f&d/F&D A140X 2.1 Bluetooth Multimedia Speaker.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h6 class="h-custom"><small class="font-weight-bold">F&D A140X 2.1 Bluetooth
-                                            Multimedia Speaker
+                                    <h6 class="h-custom"><small class="font-weight-bold">F&D A140X 2.1 Bluetooth Multimedia Speaker
                                         </small></h6>
                                     <button class="btn btn-info">Check more</button>
                                 </div>
@@ -297,7 +257,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/f&d/F&D F550X.png" class="card-img-top" id="businessImage">
+                                    <img src="view/images/f&d/F&D F550X.png" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">F&D F550X
@@ -306,16 +267,15 @@ a {
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/f&d/F&D F210X 2.1 Bluetooth Multimedia Speaker.jpg"
-                                        class="card-img-top" id="businessImage">
+                                    <img src="view/images/f&d/F&D F210X 2.1 Bluetooth Multimedia Speaker.jpg" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h6 class="h-custom"><small class="font-weight-bold">F&D F210X 2.1 Bluetooth
-                                            Multimedia Speaker
+                                    <h6 class="h-custom"><small class="font-weight-bold">F&D F210X 2.1 Bluetooth Multimedia Speaker
                                         </small></h6>
                                     <button class="btn btn-info">Check more</button>
                                 </div>
@@ -339,7 +299,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/f&d/F&D T400x.png" class="card-img-top" id="businessImage">
+                                    <img src="view/images/f&d/F&D T400x.png" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">F&D T400x
@@ -366,7 +327,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/f&d/F&D T360x.png" class="card-img-top" id="businessImage">
+                                    <img src="view/images/f&d/F&D T360x.png" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">F&D T360x
@@ -379,7 +341,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/f&d/F&D T200x.png" class="card-img-top" id="businessImage">
+                                    <img src="view/images/f&d/F&D T200x.png" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">F&D T200x
@@ -392,7 +355,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/f&d/F&D T280x.png" class="card-img-top" id="businessImage">
+                                    <img src="view/images/f&d/F&D T280x.png" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">F&D T280x
@@ -405,12 +369,11 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/f&d/F&D W40 Portable Bluetooth Speaker.png"
-                                        class="card-img-top" id="businessImage">
+                                    <img src="view/images/f&d/F&D W40 Portable Bluetooth Speaker.png" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h6 class="h-custom"><small class="font-weight-bold">F&D W40 Portable Bluetooth
-                                            Speaker
+                                    <h6 class="h-custom"><small class="font-weight-bold">F&D W40 Portable Bluetooth Speaker
                                         </small></h6>
                                     <button class="btn btn-info">Check more</button>
                                 </div>
@@ -435,7 +398,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/f&d/F&D EW201.png" class="card-img-top" id="businessImage">
+                                    <img src="view/images/f&d/F&D EW201.png" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">F&D EW201
@@ -448,7 +412,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/f&d/F&D EW202.png" class="card-img-top" id="businessImage">
+                                    <img src="view/images/f&d/F&D EW202.png" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">F&D EW202
@@ -461,7 +426,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/f&d/F&D E310.png" class="card-img-top" id="businessImage">
+                                    <img src="view/images/f&d/F&D E310.png" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">F&D E310
@@ -474,7 +440,8 @@ a {
                         <div class="col-lg-3 col-md-4 col-6 previewImg">
                             <div class="card shadow-sm mb-4 border border-0">
                                 <div class="text-center img-strech">
-                                    <img src="view/images/f&d/F&D E330.png" class="card-img-top" id="businessImage">
+                                    <img src="view/images/f&d/F&D E330.png" class="card-img-top"
+                                        id="businessImage">
                                 </div>
                                 <div class="card-body text-center">
                                     <h6 class="h-custom"><small class="font-weight-bold">F&D E330
