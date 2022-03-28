@@ -1,7 +1,7 @@
 <?php 
 session_start();
-$_SESSION['PAGE_TITLE'] = "UBTECH Products";
-$_SESSION['PAGE_NAV_TITLE'] = "UBTECH Products"; 
+$_SESSION['PAGE_TITLE'] = "Thieye Products";
+$_SESSION['PAGE_NAV_TITLE'] = "Thieye Products"; 
 
 include 'view/common/header.php'; 
 
